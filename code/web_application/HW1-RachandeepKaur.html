@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--  Page title with HW1 - {Name} -->
+  <title>HW1 - Rachandeep Kaur</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-family: Arial, Helvetica, sans-serif;
+      padding: 24px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      max-width: 480px;
+      gap: 6px;
+    }
+
+    input,
+    select,
+    textarea,
+    button {
+      width: 100%;
+      padding: 10px;
+      box-sizing: border-box;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .checkbox-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .checkbox-row input {
+      width: auto;
+    }
+
+    button {
+      margin-top: 12px;
+      background-color: #2e7d32;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #256428;
+    }
+
+    /* Loader shown while the backend request is in flight */
+    .loader {
+      margin: 16px auto;
+      width: 32px;
+      height: 32px;
+      border: 4px solid #ccc;
+      border-top-color: #2e7d32;
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+    }
+
+    .loader[hidden] {
+      display: none;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Heading naming assigned domain entity using <h1> (biggest font size) -->
+  <h1>Local Restaurant Inspections</h1>
+
+  <!-- Form for domain entity -->
+  <form id="inspectionForm">
+
+    <!-- Requirement I.4.a: Required text input for primary field with autofocus & placeholder -->
+    <div>
+      <label for="facility_name">Facility Name / ID:</label><br>
+      <input 
+        type="text" 
+        id="facility_name" 
+        name="facility_name" 
+        placeholder="FA0206933 - YUMMY KITCHEN" 
+        autofocus 
+        required 
+      />
+    </div>
+    <br>
+
+    <!-- Requirement I.4.b: Required text input for secondary field with descriptive placeholder -->
+    <div>
+      <label for="site_address">Program Site Address:</label><br>
+      <input 
+        type="text" 
+        id="site_address" 
+        name="site_address" 
+        placeholder="1711 BRANHAM LN A9, SAN JOSE, CA 95118" 
+        required 
+      />
+    </div>
+    <br>
+
+    <!-- Requirement I.4.c: Required email input with descriptive placeholder -->
+    <div>
+      <label for="inspector_email">Submitter Email:</label><br>
+      <input 
+        type="email" 
+        id="inspector_email" 
+        name="inspector_email" 
+        placeholder="inspector@countyhealth.gov" 
+        required 
+      />
+    </div>
+    <br>
+
+    <!-- Requirement I.4.d: Required textarea for content/description field -->
+    <div>
+      <label for="inspection_summary">Inspection Findings Summary:</label><br>
+      <textarea 
+        id="inspection_summary" 
+        name="inspection_summary" 
+        rows="5" 
+        cols="50" 
+        placeholder="Provide inspection observations and compliance details (must be > 25 characters)..." 
+        required
+      ></textarea>
+    </div>
+    <br>
+
+    <!-- Requirement I.4.e: Dropdown with 4 domain-appropriate options -->
+    <div>
+      <label for="program_element">Program Element / Category:</label><br>
+      <select id="program_element" name="program_element" required>
+        <option value="" disabled selected>-- Select Inspection Category --</option>
+        <option value="FOOD PREP / FOOD SVC OP 0-5 EMPLOYEES RC 3 - FP11">FOOD PREP / FOOD SVC OP 0-5 EMPLOYEES RC 3 - FP11</option>
+        <option value="FOOD PREP / FOOD SVC OP 6-25 EMPLOYEES">FOOD PREP / FOOD SVC OP 6-25 EMPLOYEES</option>
+        <option value="ROUTINE HEALTH INSPECTION">ROUTINE HEALTH INSPECTION</option>
+        <option value="FOLLOW-UP COMPLIANCE CHECK">FOLLOW-UP COMPLIANCE CHECK</option>
+      </select>
+    </div>
+    <br>
+
+    <!-- Requirement I.4.f: Checkbox and exact label text -->
+    <div class="checkbox-row">
+      <input type="checkbox" id="terms" name="terms" required />
+      <label for="terms">I agree to the terms and conditions.</label>
+    </div>
+    <br>
+
+    <!-- Requirement I.4.g: Submit button with domain-appropriate text -->
+    <div>
+      <button type="submit">Submit Inspection Report</button>
+    </div>
+
+  </form>
+
+  <!-- Shown while script.js is waiting on the FastAPI /api/analyze response -->
+  <!-- This wasn't mentioned in the requirements but I just added so that anyone checking the application wait for agent call -->
+  <div id="loader" class="loader" hidden></div>
+
+  <!-- Populated by script.js with the FastAPI /api/analyze response -->
+  <div id="analysisResults"></div>
+
+</body>
+<footer>
+    <!-- Script tag linking JavaScript file at the end of the HTML file -->
+  <script src="script.js"></script>
+  
+</footer>
+</html>

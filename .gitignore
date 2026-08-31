@@ -216,3 +216,6 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Local installer downloads (not part of the project)
+AWSCLIV2.pkg

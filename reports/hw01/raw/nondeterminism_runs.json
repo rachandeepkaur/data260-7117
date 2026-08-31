@@ -1,0 +1,802 @@
+[
+  {
+    "temperature": 0.7,
+    "run": 1,
+    "started_at": "2026-08-31T09:04:45.477Z",
+    "error": "",
+    "tags": [
+      "health inspection",
+      "food safety",
+      "facility compliance"
+    ],
+    "summary": "YUMMY KITCHEN had cold-holding issues and missing handwashing signs. Corrections made on-site; signage to be posted within 48 hours.",
+    "approved": true,
+    "latency_ms": 27404,
+    "planner_ms": 11665,
+    "reviewer_ms": 15739,
+    "planner_total_tokens": 382,
+    "reviewer_total_tokens": 607,
+    "status": "ok",
+    "finished_at": "2026-08-31T09:05:12.882Z"
+  },
+  {
+    "temperature": 0.7,
+    "run": 2,
+    "started_at": "2026-08-31T09:05:12.882Z",
+    "error": "",
+    "tags": [
+      "health inspection",
+      "food safety",
+      "facility compliance"
+    ],
+    "summary": "YUMMY KITCHEN had cold-holding issues and missing handwashing signs, requiring corrective actions within 48 hours.",
+    "approved": true,
+    "latency_ms": 24239,
+    "planner_ms": 10083,
+    "reviewer_ms": 14155,
+    "planner_total_tokens": 375,
+    "reviewer_total_tokens": 596,
+    "status": "ok",
+    "finished_at": "2026-08-31T09:05:37.122Z"
+  },
+  {
+    "temperature": 0.7,
+    "run": 3,
+    "started_at": "2026-08-31T09:05:37.122Z",
+    "error": "",
+    "tags": [
+      "health inspection",
+      "food safety",
+      "facility compliance"
+    ],
+    "summary": "Routine health inspection found cold-holding issues and missing signage at YUMMY KITCHEN, with corrections made and signage to be posted soon.",
+    "approved": true,
+    "latency_ms": 27246,
+    "planner_ms": 10271,
+    "reviewer_ms": 16974,
+    "planner_total_tokens": 376,
+    "reviewer_total_tokens": 600,
+    "status": "ok",
+    "finished_at": "2026-08-31T09:06:04.368Z"
+  },
+  {
+    "temperature": 0.7,
+    "run": 4,
+    "started_at": "2026-08-31T09:06:04.368Z",
+    "error": "",
+    "tags": [
+      "health inspection",
+      "food safety",
+      "cold-holding temperatures"
+    ],
+    "summary": "YUMMY KITCHEN had improper cold-holding temperatures and missing handwashing signs, corrected on-site with signage to be posted within 48 hours.",
+    "approved": true,
+    "latency_ms": 28709,
+    "planner_ms": 11339,
+    "reviewer_ms": 17370,
+    "planner_total_tokens": 381,
+    "reviewer_total_tokens": 610,
+    "status": "ok",
+    "finished_at": "2026-08-31T09:06:33.077Z"
+  },
+  {
+    "temperature": 0.7,
+    "run": 5,
+    "started_at": "2026-08-31T09:06:33.077Z",
+    "error": "",
+    "tags": [
+      "health inspection",
+      "food safety",
+      "facility compliance"
+    ],
+    "summary": "YUMMY KITCHEN had cold-holding issues and missing signage, requiring corrections within 48 hours.",
+    "approved": true,
+    "latency_ms": 24775,
+    "planner_ms": 10020,
+    "reviewer_ms": 14754,
+    "planner_total_tokens": 373,
+    "reviewer_total_tokens": 591,
+    "status": "ok",
+    "finished_at": "2026-08-31T09:06:57.853Z"
+  },
+  {
+    "temperature": 0.7,
+    "run": 6,
+    "started_at": "2026-08-31T09:06:57.853Z",
+    "error": "",
+    "tags": [
+      "health inspection",
+      "food safety",
+      "cold-holding temperatures"
+    ],
+    "summary": "YUMMY KITCHEN had cold-holding temperature issues and missing signage during a health inspection. Manager fixed refrigerator settings on-site; signage to be posted within 48 hours.",
+    "approved": true,
+    "latency_ms": 29520,
+    "planner_ms": 9946,
+    "reviewer_ms": 19573,
+    "planner_total_tokens": 371,
+    "reviewer_total_tokens": 605,
+    "status": "ok",
+    "finished_at": "2026-08-31T09:07:27.373Z"
+  },
+  {
+    "temperature": 0.7,
+    "run": 7,
+    "started_at": "2026-08-31T09:07:27.373Z",
+    "error": "",
+    "tags": [
+      "health inspection",
+      "food safety",
+      "facility compliance"
+    ],
+    "summary": "YUMMY KITCHEN had cold-holding issues and missing signage, needing corrections within 48 hours.",
+    "approved": true,
+    "latency_ms": 25106,
+    "planner_ms": 9835,
+    "reviewer_ms": 15270,
+    "planner_total_tokens": 373,
+    "reviewer_total_tokens": 591,
+    "status": "ok",
+    "finished_at": "2026-08-31T09:07:52.479Z"
+  },
+  {
+    "temperature": 0.7,
+    "run": 8,
+    "started_at": "2026-08-31T09:07:52.479Z",
+    "error": "",
+    "tags": [
+      "health inspection",
+      "food safety",
+      "cold-holding temperatures"
+    ],
+    "summary": "YUMMY KITCHEN had cold-holding temperature issues and missing signage during a health inspection, requiring corrective actions.",
+    "approved": true,
+    "latency_ms": 26953,
+    "planner_ms": 10577,
+    "reviewer_ms": 16375,
+    "planner_total_tokens": 375,
+    "reviewer_total_tokens": 596,
+    "status": "ok",
+    "finished_at": "2026-08-31T09:08:19.433Z"
+  },
+  {
+    "temperature": 0.7,
+    "run": 9,
+    "started_at": "2026-08-31T09:08:19.433Z",
+    "error": "",
+    "tags": [
+      "health inspection",
+      "food safety",
+      "facility compliance"
+    ],
+    "summary": "Yummy Kitchen had cold-holding temperature issues and missing handwashing signs during a health inspection.",
+    "approved": true,
+    "latency_ms": 24294,
+    "planner_ms": 9088,
+    "reviewer_ms": 15205,
+    "planner_total_tokens": 368,
+    "reviewer_total_tokens": 583,
+    "status": "ok",
+    "finished_at": "2026-08-31T09:08:43.727Z"
+  },
+  {
+    "temperature": 0.7,
+    "run": 10,
+    "started_at": "2026-08-31T09:08:43.727Z",
+    "error": "",
+    "tags": [
+      "health inspection",
+      "food safety",
+      "facility compliance"
+    ],
+    "summary": "YUMMY KITCHEN had cold-holding temperature issues and missing handwashing signs during a health inspection.",
+    "approved": true,
+    "latency_ms": 24650,
+    "planner_ms": 9710,
+    "reviewer_ms": 14940,
+    "planner_total_tokens": 370,
+    "reviewer_total_tokens": 587,
+    "status": "ok",
+    "finished_at": "2026-08-31T09:09:08.378Z"
+  },
+  {
+    "temperature": 0.7,
+    "run": 11,
+    "started_at": "2026-08-31T09:09:08.378Z",
+    "error": "",
+    "tags": [
+      "health inspection",
+      "food safety",
+      "facility compliance"
+    ],
+    "summary": "YUMMY KITCHEN had cold-holding temperature issues and missing handwashing signs during a health inspection.",
+    "approved": true,
+    "latency_ms": 22254,
+    "planner_ms": 9159,
+    "reviewer_ms": 13095,
+    "planner_total_tokens": 370,
+    "reviewer_total_tokens": 587,
+    "status": "ok",
+    "finished_at": "2026-08-31T09:09:30.633Z"
+  },
+  {
+    "temperature": 0.7,
+    "run": 12,
+    "started_at": "2026-08-31T09:09:30.633Z",
+    "error": "",
+    "tags": [
+      "health inspection",
+      "food safety",
+      "facility compliance"
+    ],
+    "summary": "YUMMY KITCHEN had cold-holding issues and missing signage, requiring 48-hour corrective actions.",
+    "approved": true,
+    "latency_ms": 23252,
+    "planner_ms": 9658,
+    "reviewer_ms": 13594,
+    "planner_total_tokens": 373,
+    "reviewer_total_tokens": 591,
+    "status": "ok",
+    "finished_at": "2026-08-31T09:09:53.886Z"
+  },
+  {
+    "temperature": 0.7,
+    "run": 13,
+    "started_at": "2026-08-31T09:09:53.886Z",
+    "error": "",
+    "tags": [
+      "health inspection",
+      "food safety",
+      "facility compliance"
+    ],
+    "summary": "YUMMY KITCHEN had cold-holding issues and missing signage, requiring corrections within 48 hours.",
+    "approved": true,
+    "latency_ms": 23371,
+    "planner_ms": 9469,
+    "reviewer_ms": 13902,
+    "planner_total_tokens": 372,
+    "reviewer_total_tokens": 590,
+    "status": "ok",
+    "finished_at": "2026-08-31T09:10:17.258Z"
+  },
+  {
+    "temperature": 0.7,
+    "run": 14,
+    "started_at": "2026-08-31T09:10:17.258Z",
+    "error": "",
+    "tags": [
+      "health inspection",
+      "cold-holding temperatures",
+      "handwashing signage"
+    ],
+    "summary": "YUMMY KITCHEN had cold-holding temperature and handwashing signage issues during a health inspection.",
+    "approved": true,
+    "latency_ms": 24451,
+    "planner_ms": 9530,
+    "reviewer_ms": 14920,
+    "planner_total_tokens": 373,
+    "reviewer_total_tokens": 592,
+    "status": "ok",
+    "finished_at": "2026-08-31T09:10:41.709Z"
+  },
+  {
+    "temperature": 0.7,
+    "run": 15,
+    "started_at": "2026-08-31T09:10:41.709Z",
+    "error": "",
+    "tags": [
+      "health inspection",
+      "food safety",
+      "facility compliance"
+    ],
+    "summary": "YUMMY KITCHEN had cold-holding temperature issues and missing handwashing signs during a health inspection. Manager fixed refrigerator settings; signage to be posted within 48 hours.",
+    "approved": true,
+    "latency_ms": 27283,
+    "planner_ms": 9576,
+    "reviewer_ms": 17706,
+    "planner_total_tokens": 371,
+    "reviewer_total_tokens": 603,
+    "status": "ok",
+    "finished_at": "2026-08-31T09:11:08.992Z"
+  },
+  {
+    "temperature": 0.7,
+    "run": 16,
+    "started_at": "2026-08-31T09:11:08.992Z",
+    "error": "",
+    "tags": [
+      "health inspection",
+      "food safety",
+      "facility compliance"
+    ],
+    "summary": "YUMMY KITCHEN had cold-holding temperature issues and missing handwashing signs, requiring 48-hour corrective actions.",
+    "approved": true,
+    "latency_ms": 24656,
+    "planner_ms": 10030,
+    "reviewer_ms": 14626,
+    "planner_total_tokens": 375,
+    "reviewer_total_tokens": 596,
+    "status": "ok",
+    "finished_at": "2026-08-31T09:11:33.648Z"
+  },
+  {
+    "temperature": 0.7,
+    "run": 17,
+    "started_at": "2026-08-31T09:11:33.648Z",
+    "error": "",
+    "tags": [
+      "health inspection",
+      "food safety",
+      "facility compliance"
+    ],
+    "summary": "YUMMY KITCHEN had cold-holding temperature issues and missing handwashing signs during a health inspection.",
+    "approved": true,
+    "latency_ms": 22343,
+    "planner_ms": 9097,
+    "reviewer_ms": 13245,
+    "planner_total_tokens": 370,
+    "reviewer_total_tokens": 587,
+    "status": "ok",
+    "finished_at": "2026-08-31T09:11:55.992Z"
+  },
+  {
+    "temperature": 0.7,
+    "run": 18,
+    "started_at": "2026-08-31T09:11:55.992Z",
+    "error": "",
+    "tags": [
+      "health inspection",
+      "food safety",
+      "facility compliance"
+    ],
+    "summary": "Yummy Kitchen had cold-holding temperature issues and missing handwashing signs during a health inspection.",
+    "approved": true,
+    "latency_ms": 23665,
+    "planner_ms": 9201,
+    "reviewer_ms": 14463,
+    "planner_total_tokens": 368,
+    "reviewer_total_tokens": 583,
+    "status": "ok",
+    "finished_at": "2026-08-31T09:12:19.657Z"
+  },
+  {
+    "temperature": 0.7,
+    "run": 19,
+    "started_at": "2026-08-31T09:12:19.657Z",
+    "error": "",
+    "tags": [
+      "health inspection",
+      "food safety",
+      "facility compliance"
+    ],
+    "summary": "YUMMY KITCHEN had cold-holding temperature issues and missing signage, requiring 48-hour corrective actions.",
+    "approved": true,
+    "latency_ms": 23302721,
+    "planner_ms": 23283514,
+    "reviewer_ms": 19206,
+    "planner_total_tokens": 373,
+    "reviewer_total_tokens": 592,
+    "status": "ok",
+    "finished_at": "2026-08-31T15:40:42.378Z"
+  },
+  {
+    "temperature": 0.7,
+    "run": 20,
+    "started_at": "2026-08-31T15:40:42.378Z",
+    "error": "",
+    "tags": [
+      "health inspection",
+      "food safety",
+      "facility compliance"
+    ],
+    "summary": "YUMMY KITCHEN had cold-holding temperature issues and missing handwashing signs, requiring corrective actions.",
+    "approved": true,
+    "latency_ms": 24924,
+    "planner_ms": 9514,
+    "reviewer_ms": 15409,
+    "planner_total_tokens": 371,
+    "reviewer_total_tokens": 588,
+    "status": "ok",
+    "finished_at": "2026-08-31T15:41:07.303Z"
+  },
+  {
+    "temperature": 0.0,
+    "run": 1,
+    "started_at": "2026-08-31T15:41:07.358Z",
+    "error": "",
+    "tags": [
+      "health inspection",
+      "food safety",
+      "facility compliance"
+    ],
+    "summary": "YUMMY KITCHEN had cold-holding temperature issues and missing handwashing signs during a health inspection.",
+    "approved": true,
+    "latency_ms": 23202,
+    "planner_ms": 9604,
+    "reviewer_ms": 13597,
+    "planner_total_tokens": 370,
+    "reviewer_total_tokens": 587,
+    "status": "ok",
+    "finished_at": "2026-08-31T15:41:30.561Z"
+  },
+  {
+    "temperature": 0.0,
+    "run": 2,
+    "started_at": "2026-08-31T15:41:30.561Z",
+    "error": "",
+    "tags": [
+      "health inspection",
+      "food safety",
+      "facility compliance"
+    ],
+    "summary": "YUMMY KITCHEN had cold-holding temperature issues and missing handwashing signs during a health inspection.",
+    "approved": true,
+    "latency_ms": 22247,
+    "planner_ms": 9065,
+    "reviewer_ms": 13182,
+    "planner_total_tokens": 370,
+    "reviewer_total_tokens": 587,
+    "status": "ok",
+    "finished_at": "2026-08-31T15:41:52.809Z"
+  },
+  {
+    "temperature": 0.0,
+    "run": 3,
+    "started_at": "2026-08-31T15:41:52.809Z",
+    "error": "",
+    "tags": [
+      "health inspection",
+      "food safety",
+      "facility compliance"
+    ],
+    "summary": "YUMMY KITCHEN had cold-holding temperature issues and missing handwashing signs during a health inspection.",
+    "approved": true,
+    "latency_ms": 21852,
+    "planner_ms": 9039,
+    "reviewer_ms": 12812,
+    "planner_total_tokens": 370,
+    "reviewer_total_tokens": 587,
+    "status": "ok",
+    "finished_at": "2026-08-31T15:42:14.661Z"
+  },
+  {
+    "temperature": 0.0,
+    "run": 4,
+    "started_at": "2026-08-31T15:42:14.661Z",
+    "error": "",
+    "tags": [
+      "health inspection",
+      "food safety",
+      "facility compliance"
+    ],
+    "summary": "YUMMY KITCHEN had cold-holding temperature issues and missing handwashing signs during a health inspection.",
+    "approved": true,
+    "latency_ms": 22239,
+    "planner_ms": 9086,
+    "reviewer_ms": 13153,
+    "planner_total_tokens": 370,
+    "reviewer_total_tokens": 587,
+    "status": "ok",
+    "finished_at": "2026-08-31T15:42:36.901Z"
+  },
+  {
+    "temperature": 0.0,
+    "run": 5,
+    "started_at": "2026-08-31T15:42:36.901Z",
+    "error": "",
+    "tags": [
+      "health inspection",
+      "food safety",
+      "facility compliance"
+    ],
+    "summary": "YUMMY KITCHEN had cold-holding temperature issues and missing handwashing signs during a health inspection.",
+    "approved": true,
+    "latency_ms": 21787,
+    "planner_ms": 9104,
+    "reviewer_ms": 12683,
+    "planner_total_tokens": 370,
+    "reviewer_total_tokens": 587,
+    "status": "ok",
+    "finished_at": "2026-08-31T15:42:58.689Z"
+  },
+  {
+    "temperature": 0.0,
+    "run": 6,
+    "started_at": "2026-08-31T15:42:58.689Z",
+    "error": "",
+    "tags": [
+      "health inspection",
+      "food safety",
+      "facility compliance"
+    ],
+    "summary": "YUMMY KITCHEN had cold-holding temperature issues and missing handwashing signs during a health inspection.",
+    "approved": true,
+    "latency_ms": 22497,
+    "planner_ms": 9329,
+    "reviewer_ms": 13168,
+    "planner_total_tokens": 370,
+    "reviewer_total_tokens": 587,
+    "status": "ok",
+    "finished_at": "2026-08-31T15:43:21.187Z"
+  },
+  {
+    "temperature": 0.0,
+    "run": 7,
+    "started_at": "2026-08-31T15:43:21.187Z",
+    "error": "",
+    "tags": [
+      "health inspection",
+      "food safety",
+      "facility compliance"
+    ],
+    "summary": "YUMMY KITCHEN had cold-holding temperature issues and missing handwashing signs during a health inspection.",
+    "approved": true,
+    "latency_ms": 21744,
+    "planner_ms": 9064,
+    "reviewer_ms": 12680,
+    "planner_total_tokens": 370,
+    "reviewer_total_tokens": 587,
+    "status": "ok",
+    "finished_at": "2026-08-31T15:43:42.932Z"
+  },
+  {
+    "temperature": 0.0,
+    "run": 8,
+    "started_at": "2026-08-31T15:43:42.932Z",
+    "error": "",
+    "tags": [
+      "health inspection",
+      "food safety",
+      "facility compliance"
+    ],
+    "summary": "YUMMY KITCHEN had cold-holding temperature issues and missing handwashing signs during a health inspection.",
+    "approved": true,
+    "latency_ms": 24882,
+    "planner_ms": 9223,
+    "reviewer_ms": 15658,
+    "planner_total_tokens": 370,
+    "reviewer_total_tokens": 587,
+    "status": "ok",
+    "finished_at": "2026-08-31T15:44:07.815Z"
+  },
+  {
+    "temperature": 0.0,
+    "run": 9,
+    "started_at": "2026-08-31T15:44:07.815Z",
+    "error": "",
+    "tags": [
+      "health inspection",
+      "food safety",
+      "facility compliance"
+    ],
+    "summary": "YUMMY KITCHEN had cold-holding temperature issues and missing handwashing signs during a health inspection.",
+    "approved": true,
+    "latency_ms": 23017,
+    "planner_ms": 9172,
+    "reviewer_ms": 13844,
+    "planner_total_tokens": 370,
+    "reviewer_total_tokens": 587,
+    "status": "ok",
+    "finished_at": "2026-08-31T15:44:30.832Z"
+  },
+  {
+    "temperature": 0.0,
+    "run": 10,
+    "started_at": "2026-08-31T15:44:30.832Z",
+    "error": "",
+    "tags": [
+      "health inspection",
+      "food safety",
+      "facility compliance"
+    ],
+    "summary": "YUMMY KITCHEN had cold-holding temperature issues and missing handwashing signs during a health inspection.",
+    "approved": true,
+    "latency_ms": 25329,
+    "planner_ms": 9852,
+    "reviewer_ms": 15476,
+    "planner_total_tokens": 370,
+    "reviewer_total_tokens": 587,
+    "status": "ok",
+    "finished_at": "2026-08-31T15:44:56.162Z"
+  },
+  {
+    "temperature": 0.0,
+    "run": 11,
+    "started_at": "2026-08-31T15:44:56.162Z",
+    "error": "",
+    "tags": [
+      "health inspection",
+      "food safety",
+      "facility compliance"
+    ],
+    "summary": "YUMMY KITCHEN had cold-holding temperature issues and missing handwashing signs during a health inspection.",
+    "approved": true,
+    "latency_ms": 23467,
+    "planner_ms": 9367,
+    "reviewer_ms": 14099,
+    "planner_total_tokens": 370,
+    "reviewer_total_tokens": 587,
+    "status": "ok",
+    "finished_at": "2026-08-31T15:45:19.629Z"
+  },
+  {
+    "temperature": 0.0,
+    "run": 12,
+    "started_at": "2026-08-31T15:45:19.629Z",
+    "error": "",
+    "tags": [
+      "health inspection",
+      "food safety",
+      "facility compliance"
+    ],
+    "summary": "YUMMY KITCHEN had cold-holding temperature issues and missing handwashing signs during a health inspection.",
+    "approved": true,
+    "latency_ms": 23559,
+    "planner_ms": 10021,
+    "reviewer_ms": 13537,
+    "planner_total_tokens": 370,
+    "reviewer_total_tokens": 587,
+    "status": "ok",
+    "finished_at": "2026-08-31T15:45:43.189Z"
+  },
+  {
+    "temperature": 0.0,
+    "run": 13,
+    "started_at": "2026-08-31T15:45:43.189Z",
+    "error": "",
+    "tags": [
+      "health inspection",
+      "food safety",
+      "facility compliance"
+    ],
+    "summary": "YUMMY KITCHEN had cold-holding temperature issues and missing handwashing signs during a health inspection.",
+    "approved": true,
+    "latency_ms": 23703,
+    "planner_ms": 10237,
+    "reviewer_ms": 13465,
+    "planner_total_tokens": 370,
+    "reviewer_total_tokens": 587,
+    "status": "ok",
+    "finished_at": "2026-08-31T15:46:06.892Z"
+  },
+  {
+    "temperature": 0.0,
+    "run": 14,
+    "started_at": "2026-08-31T15:46:06.892Z",
+    "error": "",
+    "tags": [
+      "health inspection",
+      "food safety",
+      "facility compliance"
+    ],
+    "summary": "YUMMY KITCHEN had cold-holding temperature issues and missing handwashing signs during a health inspection.",
+    "approved": true,
+    "latency_ms": 21797,
+    "planner_ms": 9142,
+    "reviewer_ms": 12654,
+    "planner_total_tokens": 370,
+    "reviewer_total_tokens": 587,
+    "status": "ok",
+    "finished_at": "2026-08-31T15:46:28.689Z"
+  },
+  {
+    "temperature": 0.0,
+    "run": 15,
+    "started_at": "2026-08-31T15:46:28.689Z",
+    "error": "",
+    "tags": [
+      "health inspection",
+      "food safety",
+      "facility compliance"
+    ],
+    "summary": "YUMMY KITCHEN had cold-holding temperature issues and missing handwashing signs during a health inspection.",
+    "approved": true,
+    "latency_ms": 24179,
+    "planner_ms": 10894,
+    "reviewer_ms": 13284,
+    "planner_total_tokens": 370,
+    "reviewer_total_tokens": 587,
+    "status": "ok",
+    "finished_at": "2026-08-31T15:46:52.869Z"
+  },
+  {
+    "temperature": 0.0,
+    "run": 16,
+    "started_at": "2026-08-31T15:46:52.869Z",
+    "error": "",
+    "tags": [
+      "health inspection",
+      "food safety",
+      "facility compliance"
+    ],
+    "summary": "YUMMY KITCHEN had cold-holding temperature issues and missing handwashing signs during a health inspection.",
+    "approved": true,
+    "latency_ms": 23208,
+    "planner_ms": 9511,
+    "reviewer_ms": 13697,
+    "planner_total_tokens": 370,
+    "reviewer_total_tokens": 587,
+    "status": "ok",
+    "finished_at": "2026-08-31T15:47:16.077Z"
+  },
+  {
+    "temperature": 0.0,
+    "run": 17,
+    "started_at": "2026-08-31T15:47:16.077Z",
+    "error": "",
+    "tags": [
+      "health inspection",
+      "food safety",
+      "facility compliance"
+    ],
+    "summary": "YUMMY KITCHEN had cold-holding temperature issues and missing handwashing signs during a health inspection.",
+    "approved": true,
+    "latency_ms": 23133,
+    "planner_ms": 9784,
+    "reviewer_ms": 13348,
+    "planner_total_tokens": 370,
+    "reviewer_total_tokens": 587,
+    "status": "ok",
+    "finished_at": "2026-08-31T15:47:39.211Z"
+  },
+  {
+    "temperature": 0.0,
+    "run": 18,
+    "started_at": "2026-08-31T15:47:39.211Z",
+    "error": "",
+    "tags": [
+      "health inspection",
+      "food safety",
+      "facility compliance"
+    ],
+    "summary": "YUMMY KITCHEN had cold-holding temperature issues and missing handwashing signs during a health inspection.",
+    "approved": true,
+    "latency_ms": 26051,
+    "planner_ms": 11244,
+    "reviewer_ms": 14807,
+    "planner_total_tokens": 370,
+    "reviewer_total_tokens": 587,
+    "status": "ok",
+    "finished_at": "2026-08-31T15:48:05.263Z"
+  },
+  {
+    "temperature": 0.0,
+    "run": 19,
+    "started_at": "2026-08-31T15:48:05.263Z",
+    "error": "",
+    "tags": [
+      "health inspection",
+      "food safety",
+      "facility compliance"
+    ],
+    "summary": "YUMMY KITCHEN had cold-holding temperature issues and missing handwashing signs during a health inspection.",
+    "approved": true,
+    "latency_ms": 23785,
+    "planner_ms": 10457,
+    "reviewer_ms": 13327,
+    "planner_total_tokens": 370,
+    "reviewer_total_tokens": 587,
+    "status": "ok",
+    "finished_at": "2026-08-31T15:48:29.048Z"
+  },
+  {
+    "temperature": 0.0,
+    "run": 20,
+    "started_at": "2026-08-31T15:48:29.048Z",
+    "error": "",
+    "tags": [
+      "health inspection",
+      "food safety",
+      "facility compliance"
+    ],
+    "summary": "YUMMY KITCHEN had cold-holding temperature issues and missing handwashing signs during a health inspection.",
+    "approved": true,
+    "latency_ms": 22601,
+    "planner_ms": 9599,
+    "reviewer_ms": 13001,
+    "planner_total_tokens": 370,
+    "reviewer_total_tokens": 587,
+    "status": "ok",
+    "finished_at": "2026-08-31T15:48:51.649Z"
+  }
+]
