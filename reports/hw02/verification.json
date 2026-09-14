@@ -1,0 +1,93 @@
+{
+  "homework": "HW2",
+  "SID4": "7117",
+  "commit_hash": "",
+  "commit_note": "HW2 submission: FastAPI CRUD, LangGraph supervisor pattern, schema validation experiments",
+  "model_config": {
+    "model": "qwen3:8b",
+    "port_base": 8817,
+    "domain_id": 5
+  },
+  "timestamp": "2026-09-14T21:55:00Z",
+  "checks": [
+    {
+      "name": "fastapi_responds_on_port_base",
+      "description": "GET / on PORT_BASE (8817) returns HTTP 200, serving code/web_application/HW2-RachandeepKaur.html",
+      "passed": true,
+      "evidence": "Verified via curl (HTTP 200) and Playwright page load during CRUD UI testing"
+    },
+    {
+      "name": "add_record_endpoint",
+      "description": "POST /api/records creates a new record from the existing inspection form's primary+secondary fields and returns 201 Created with the new record (JSON API, not a redirect)",
+      "passed": true,
+      "evidence": "Verified via curl and a headless-browser run: submitting the form added a new row to the records table"
+    },
+    {
+      "name": "update_record_by_id",
+      "description": "PUT /api/records/{record_id} updates the named record's facility_name and returns 200 with the updated record; a nonexistent id returns 404",
+      "passed": true,
+      "evidence": "Verified via curl (id=2 -> 200, id=99 -> 404) and a headless-browser run updating record 1 by ID"
+    },
+    {
+      "name": "delete_highest_id",
+      "description": "DELETE /api/records/highest removes the record with the highest id and returns it",
+      "passed": true,
+      "evidence": "Verified via curl and a headless-browser run (table row count decreased, correct row removed)"
+    },
+    {
+      "name": "search_functionality",
+      "description": "Client-side search filters the records table to rows whose facility_name or site_address contains the query (case-insensitive substring)",
+      "passed": true,
+      "evidence": "Verified via a headless-browser run: query matched only the intended row, Clear restored the full list"
+    },
+    {
+      "name": "langgraph_terminates",
+      "description": "Graph invocation completes (does not hang) within the turn ceiling on both normal and adversarial inputs",
+      "passed": true,
+      "evidence": "Dozens of real runs across reports/hw02/raw/schema_validation_runs.json (30), raw/turn_ceiling_runs.json (40), and the in-progress adversarial run - every run terminated, none hung"
+    },
+    {
+      "name": "planner_output_schema",
+      "description": "PlannerOutput enforces exactly 3 tags (each 3-30 chars) and a <=25-word summary via Pydantic (Field constraints + a field_validator), not just prompt text",
+      "passed": true,
+      "evidence": "code/tests/test_planner_validation.py: 6/6 deterministic cases (1 valid, 5 invalid) behaved as expected"
+    },
+    {
+      "name": "validation_retry_feedback",
+      "description": "A Planner schema-validation failure (caught ModelClientError) is fed back into the next Planner attempt via reviewer_feedback and retried, bounded by MAX_TURNS - does not crash the graph",
+      "passed": true,
+      "evidence": "code/tests/test_planner_validation_retry.py (stub client, both a recovering case and an always-failing case bounded at MAX_TURNS); real confirmation in the adversarial run log (multiple 'FAILED VALIDATION' retries per run, graph still terminates)"
+    },
+    {
+      "name": "turn_ceiling_respected",
+      "description": "Graph never exceeds the configured MAX_TURNS, on both a forced-rejection run and the turn-ceiling comparison experiment",
+      "passed": true,
+      "evidence": "raw/turn_ceiling_runs.json: all 20 ceiling=2 runs stopped at exactly turn_count=2; adversarial run 1 stopped at exactly turn_count=8 (MAX_TURNS=8) - never exceeded in any observed run"
+    },
+    {
+      "name": "frozen_input_classification_30x",
+      "description": "Fixed input (cases/schema_input.json) run 30x through the graph, each run classified by Planner schema-validation retry count",
+      "passed": true,
+      "evidence": "raw/schema_validation_runs.json (30 real records) + METRICS.md outcome table: 30/30 valid_first_attempt, mean latency 26314.1 ms"
+    },
+    {
+      "name": "turn_ceiling_comparison_20x_each",
+      "description": "Same fixed input run 20x each at MAX_TURNS=2 and MAX_TURNS=10, completion rate + mean latency reported, one ceiling picked and justified",
+      "passed": true,
+      "evidence": "raw/turn_ceiling_runs.json (40 real records) + TURN_CEILING.md: ceiling=2 -> 0/20 (0.0%, structurally impossible - cap trips before the Reviewer ever runs), ceiling=10 -> 20/20 (100.0%); MAX_TURNS=10 recommended"
+    },
+    {
+      "name": "adversarial_case_5x",
+      "description": "One adversarial input (cases/adversarial_input.json: fact-dense summary + a task field demanding exhaustive detail, conflicting with the hard <=25-word/3-tag constraints) run 5x, ceiling-hit rate reported honestly",
+      "passed": null,
+      "status": "in_progress",
+      "evidence": "raw/adversarial_runs.json (partial: run 1/5 complete, HIT CEILING; run 2/5 in progress at time of writing). This check will be updated to a final true/false with the complete 5-run hit rate once finished."
+    }
+  ],
+  "summary": {
+    "total_checks": 12,
+    "passed": 11,
+    "failed": 0,
+    "in_progress": 1
+  }
+}

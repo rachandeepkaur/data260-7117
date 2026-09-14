@@ -11,7 +11,21 @@ const createSubmissionCounter = () => {
   
   const getSubmissionCount = createSubmissionCounter();
 
-  // Renders the JSON returned by the FastAPI 
+  // Toggles which of the three result states (empty / loading / error) is visible.
+  // Pass "success" once analysisResults has been populated to hide the other two.
+  const setResultState = (state) => {
+    const emptyState = document.getElementById("emptyState");
+    const errorState = document.getElementById("errorState");
+    const loader = document.getElementById("loader");
+    const loadingText = document.getElementById("loadingText");
+
+    emptyState.hidden = state !== "empty";
+    errorState.hidden = state !== "error";
+    loader.hidden = state !== "loading";
+    loadingText.hidden = state !== "loading";
+  };
+
+  // Renders the JSON returned by the FastAPI
   const renderAnalysis = (publish) => {
     const container = document.getElementById("analysisResults");
     if (!container) return;
@@ -39,9 +53,119 @@ const createSubmissionCounter = () => {
     });
   };
 
+  // --- Records CRUD table (Read/Update/Delete/Search) ---
+  // The inspection form above is reused as the Create/Add action (see the
+  // "Add to records store" block in the submit handler below); this state
+  // only tracks what's needed to render and filter the table client-side.
+  const recordsState = { records: [], query: "" };
+
+  const setRecordsStatus = (message, isError = false) => {
+    const status = document.getElementById("recordsStatus");
+    status.textContent = message;
+    status.classList.toggle("error", isError);
+    status.classList.toggle("success", !isError && Boolean(message));
+  };
+
+  const renderRecordsTable = () => {
+    const recordsBody = document.getElementById("recordsBody");
+    const needle = recordsState.query.trim().toLowerCase();
+    const filtered = needle
+      ? recordsState.records.filter(
+          (r) =>
+            r.facility_name.toLowerCase().includes(needle) ||
+            r.site_address.toLowerCase().includes(needle)
+        )
+      : recordsState.records;
+
+    recordsBody.innerHTML = "";
+
+    if (filtered.length === 0) {
+      const tr = document.createElement("tr");
+      const td = document.createElement("td");
+      td.colSpan = 3;
+      td.textContent = recordsState.records.length === 0 ? "No records yet." : "No records match.";
+      tr.appendChild(td);
+      recordsBody.appendChild(tr);
+      return;
+    }
+
+    filtered.forEach((record) => {
+      const tr = document.createElement("tr");
+      [record.id, record.facility_name, record.site_address].forEach((value) => {
+        const td = document.createElement("td");
+        td.textContent = value;
+        tr.appendChild(td);
+      });
+      recordsBody.appendChild(tr);
+    });
+  };
+
+  const loadRecords = async () => {
+    try {
+      const response = await fetch("/api/records");
+      if (!response.ok) throw new Error(`GET /api/records failed: ${response.status}`);
+      recordsState.records = await response.json();
+      renderRecordsTable();
+    } catch (error) {
+      console.error("Failed to load records:", error);
+      setRecordsStatus("Failed to load records.", true);
+    }
+  };
+
   document.addEventListener("DOMContentLoaded", () => {
+    loadRecords();
+
+    document.getElementById("searchForm").addEventListener("submit", (event) => {
+      event.preventDefault();
+      recordsState.query = document.getElementById("searchInput").value;
+      renderRecordsTable();
+    });
+
+    document.getElementById("clearSearchBtn").addEventListener("click", () => {
+      document.getElementById("searchInput").value = "";
+      recordsState.query = "";
+      renderRecordsTable();
+    });
+
+    document.getElementById("updateForm").addEventListener("submit", async (event) => {
+      event.preventDefault();
+      const form = event.target;
+      // NOTE: can't use form.id here - "id" collides with the built-in
+      // HTMLFormElement.id (the <form id="updateForm"> attribute itself),
+      // which shadows named-control lookup for the <input name="id">.
+      const recordId = document.getElementById("update_id").value;
+      const payload = { facility_name: document.getElementById("update_facility_name").value };
+
+      try {
+        const response = await fetch(`/api/records/${recordId}`, {
+          method: "PUT",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload),
+        });
+        if (!response.ok) throw new Error(`PUT /api/records/${recordId} failed: ${response.status}`);
+        form.reset();
+        setRecordsStatus(`Record ${recordId} updated.`);
+        await loadRecords();
+      } catch (error) {
+        console.error(`Failed to update record ${recordId}:`, error);
+        setRecordsStatus(`Failed to update record ${recordId} (does it exist?).`, true);
+      }
+    });
+
+    document.getElementById("deleteHighestBtn").addEventListener("click", async () => {
+      try {
+        const response = await fetch("/api/records/highest", { method: "DELETE" });
+        if (!response.ok) throw new Error(`DELETE /api/records/highest failed: ${response.status}`);
+        setRecordsStatus("Highest-ID record deleted.");
+        await loadRecords();
+      } catch (error) {
+        console.error("Failed to delete highest-ID record:", error);
+        setRecordsStatus("Failed to delete highest-ID record.", true);
+      }
+    });
+
     const form = document.getElementById("inspectionForm");
-  
+
     // Validation using an Arrow Function
     const validateForm = (summary, isChecked) => {
       // Verify content field has strictly more than 25 characters
@@ -108,9 +232,24 @@ const createSubmissionCounter = () => {
   
       alert(`Form submitted successfully! Total successful submissions: ${currentCount}`);
 
+      // Add this submission to the records store (Create) so it shows up
+      // in the table below, then refresh the table.
+      try {
+        const addResponse = await fetch("/api/records", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ facility_name: facilityName, site_address: siteAddress }),
+        });
+        if (!addResponse.ok) throw new Error(`POST /api/records failed: ${addResponse.status}`);
+        setRecordsStatus("Record added.");
+        await loadRecords();
+      } catch (error) {
+        console.error("Failed to add record to store:", error);
+        setRecordsStatus("Failed to add record to the records table.", true);
+      }
+
       // Send the submission to the FastAPI backend
-      const loader = document.getElementById("loader");
-      loader.hidden = false;
+      setResultState("loading");
 
       try {
         const response = await fetch("/api/analyze", {
@@ -126,11 +265,12 @@ const createSubmissionCounter = () => {
         const publish = await response.json();
         console.log("Agent Pipeline Result:", publish);
         renderAnalysis(publish);
+        setResultState("success");
       } catch (error) {
         console.error("Agent analysis request failed:", error);
-        alert("Form submitted, but the agent analysis request failed. See console for details.");
-      } finally {
-        loader.hidden = true;
+        const errorState = document.getElementById("errorState");
+        errorState.textContent = "Form submitted, but the agent analysis request failed. Please try again.";
+        setResultState("error");
       }
     });
   });

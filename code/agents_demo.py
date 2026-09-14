@@ -5,9 +5,9 @@ import json
 import sys
 import time
 from pathlib import Path
-from typing import List, Optional, Tuple
+from typing import Annotated, List, Optional, Tuple
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, field_validator
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "src"))
 from model_client import ModelClient, ModelClientError  # noqa: E402
@@ -23,11 +23,26 @@ class InspectionSubmission(BaseModel):
     program_element: str
 
 
+# Each tag must be a string 3-30 characters long (enforced per-item, not just list length).
+Tag = Annotated[str, Field(min_length=3, max_length=30)]
+
+
 class PlannerOutput(BaseModel):
-    tags: List[str] = Field(
-        ..., min_length=3, max_length=3, description="The 3 most important, specific topical concepts/themes"
+    tags: List[Tag] = Field(
+        ...,
+        min_length=3,
+        max_length=3,
+        description="Exactly 3 tags, each a 3-30 character topical concept/theme",
     )
     draft_summary: str = Field(..., description="One sentence, at most 25 words")
+
+    @field_validator("draft_summary")
+    @classmethod
+    def _draft_summary_word_limit(cls, value: str) -> str:
+        word_count = len(value.split())
+        if word_count > 25:
+            raise ValueError(f"draft_summary must be at most 25 words, got {word_count}")
+        return value
 
 
 class RevisedOutput(BaseModel):

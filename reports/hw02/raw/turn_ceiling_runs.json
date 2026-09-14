@@ -1,0 +1,402 @@
+[
+  {
+    "ceiling": 2,
+    "run": 1,
+    "completed": false,
+    "final_approved": false,
+    "final_turn_count": 2,
+    "latency_ms": 11646,
+    "started_at": "2026-09-14T21:21:08.439Z",
+    "finished_at": "2026-09-14T21:21:20.085Z"
+  },
+  {
+    "ceiling": 2,
+    "run": 2,
+    "completed": false,
+    "final_approved": false,
+    "final_turn_count": 2,
+    "latency_ms": 11007,
+    "started_at": "2026-09-14T21:21:20.085Z",
+    "finished_at": "2026-09-14T21:21:31.093Z"
+  },
+  {
+    "ceiling": 2,
+    "run": 3,
+    "completed": false,
+    "final_approved": false,
+    "final_turn_count": 2,
+    "latency_ms": 11459,
+    "started_at": "2026-09-14T21:21:31.093Z",
+    "finished_at": "2026-09-14T21:21:42.553Z"
+  },
+  {
+    "ceiling": 2,
+    "run": 4,
+    "completed": false,
+    "final_approved": false,
+    "final_turn_count": 2,
+    "latency_ms": 11765,
+    "started_at": "2026-09-14T21:21:42.553Z",
+    "finished_at": "2026-09-14T21:21:54.319Z"
+  },
+  {
+    "ceiling": 2,
+    "run": 5,
+    "completed": false,
+    "final_approved": false,
+    "final_turn_count": 2,
+    "latency_ms": 11690,
+    "started_at": "2026-09-14T21:21:54.319Z",
+    "finished_at": "2026-09-14T21:22:06.009Z"
+  },
+  {
+    "ceiling": 2,
+    "run": 6,
+    "completed": false,
+    "final_approved": false,
+    "final_turn_count": 2,
+    "latency_ms": 10938,
+    "started_at": "2026-09-14T21:22:06.009Z",
+    "finished_at": "2026-09-14T21:22:16.948Z"
+  },
+  {
+    "ceiling": 2,
+    "run": 7,
+    "completed": false,
+    "final_approved": false,
+    "final_turn_count": 2,
+    "latency_ms": 11036,
+    "started_at": "2026-09-14T21:22:16.948Z",
+    "finished_at": "2026-09-14T21:22:27.984Z"
+  },
+  {
+    "ceiling": 2,
+    "run": 8,
+    "completed": false,
+    "final_approved": false,
+    "final_turn_count": 2,
+    "latency_ms": 10353,
+    "started_at": "2026-09-14T21:22:27.984Z",
+    "finished_at": "2026-09-14T21:22:38.338Z"
+  },
+  {
+    "ceiling": 2,
+    "run": 9,
+    "completed": false,
+    "final_approved": false,
+    "final_turn_count": 2,
+    "latency_ms": 10562,
+    "started_at": "2026-09-14T21:22:38.338Z",
+    "finished_at": "2026-09-14T21:22:48.901Z"
+  },
+  {
+    "ceiling": 2,
+    "run": 10,
+    "completed": false,
+    "final_approved": false,
+    "final_turn_count": 2,
+    "latency_ms": 11272,
+    "started_at": "2026-09-14T21:22:48.901Z",
+    "finished_at": "2026-09-14T21:23:00.174Z"
+  },
+  {
+    "ceiling": 2,
+    "run": 11,
+    "completed": false,
+    "final_approved": false,
+    "final_turn_count": 2,
+    "latency_ms": 10513,
+    "started_at": "2026-09-14T21:23:00.174Z",
+    "finished_at": "2026-09-14T21:23:10.687Z"
+  },
+  {
+    "ceiling": 2,
+    "run": 12,
+    "completed": false,
+    "final_approved": false,
+    "final_turn_count": 2,
+    "latency_ms": 10442,
+    "started_at": "2026-09-14T21:23:10.687Z",
+    "finished_at": "2026-09-14T21:23:21.129Z"
+  },
+  {
+    "ceiling": 2,
+    "run": 13,
+    "completed": false,
+    "final_approved": false,
+    "final_turn_count": 2,
+    "latency_ms": 10805,
+    "started_at": "2026-09-14T21:23:21.129Z",
+    "finished_at": "2026-09-14T21:23:31.935Z"
+  },
+  {
+    "ceiling": 2,
+    "run": 14,
+    "completed": false,
+    "final_approved": false,
+    "final_turn_count": 2,
+    "latency_ms": 11559,
+    "started_at": "2026-09-14T21:23:31.935Z",
+    "finished_at": "2026-09-14T21:23:43.494Z"
+  },
+  {
+    "ceiling": 2,
+    "run": 15,
+    "completed": false,
+    "final_approved": false,
+    "final_turn_count": 2,
+    "latency_ms": 10901,
+    "started_at": "2026-09-14T21:23:43.494Z",
+    "finished_at": "2026-09-14T21:23:54.396Z"
+  },
+  {
+    "ceiling": 2,
+    "run": 16,
+    "completed": false,
+    "final_approved": false,
+    "final_turn_count": 2,
+    "latency_ms": 10787,
+    "started_at": "2026-09-14T21:23:54.396Z",
+    "finished_at": "2026-09-14T21:24:05.184Z"
+  },
+  {
+    "ceiling": 2,
+    "run": 17,
+    "completed": false,
+    "final_approved": false,
+    "final_turn_count": 2,
+    "latency_ms": 10666,
+    "started_at": "2026-09-14T21:24:05.184Z",
+    "finished_at": "2026-09-14T21:24:15.851Z"
+  },
+  {
+    "ceiling": 2,
+    "run": 18,
+    "completed": false,
+    "final_approved": false,
+    "final_turn_count": 2,
+    "latency_ms": 11131,
+    "started_at": "2026-09-14T21:24:15.851Z",
+    "finished_at": "2026-09-14T21:24:26.982Z"
+  },
+  {
+    "ceiling": 2,
+    "run": 19,
+    "completed": false,
+    "final_approved": false,
+    "final_turn_count": 2,
+    "latency_ms": 10974,
+    "started_at": "2026-09-14T21:24:26.982Z",
+    "finished_at": "2026-09-14T21:24:37.957Z"
+  },
+  {
+    "ceiling": 2,
+    "run": 20,
+    "completed": false,
+    "final_approved": false,
+    "final_turn_count": 2,
+    "latency_ms": 10796,
+    "started_at": "2026-09-14T21:24:37.957Z",
+    "finished_at": "2026-09-14T21:24:48.753Z"
+  },
+  {
+    "ceiling": 10,
+    "run": 1,
+    "completed": true,
+    "final_approved": true,
+    "final_turn_count": 2,
+    "latency_ms": 25706,
+    "started_at": "2026-09-14T21:24:48.760Z",
+    "finished_at": "2026-09-14T21:25:14.466Z"
+  },
+  {
+    "ceiling": 10,
+    "run": 2,
+    "completed": true,
+    "final_approved": true,
+    "final_turn_count": 2,
+    "latency_ms": 24904,
+    "started_at": "2026-09-14T21:25:14.466Z",
+    "finished_at": "2026-09-14T21:25:39.371Z"
+  },
+  {
+    "ceiling": 10,
+    "run": 3,
+    "completed": true,
+    "final_approved": true,
+    "final_turn_count": 2,
+    "latency_ms": 26305,
+    "started_at": "2026-09-14T21:25:39.371Z",
+    "finished_at": "2026-09-14T21:26:05.676Z"
+  },
+  {
+    "ceiling": 10,
+    "run": 4,
+    "completed": true,
+    "final_approved": true,
+    "final_turn_count": 2,
+    "latency_ms": 25965,
+    "started_at": "2026-09-14T21:26:05.676Z",
+    "finished_at": "2026-09-14T21:26:31.642Z"
+  },
+  {
+    "ceiling": 10,
+    "run": 5,
+    "completed": true,
+    "final_approved": true,
+    "final_turn_count": 2,
+    "latency_ms": 25962,
+    "started_at": "2026-09-14T21:26:31.642Z",
+    "finished_at": "2026-09-14T21:26:57.605Z"
+  },
+  {
+    "ceiling": 10,
+    "run": 6,
+    "completed": true,
+    "final_approved": true,
+    "final_turn_count": 2,
+    "latency_ms": 25514,
+    "started_at": "2026-09-14T21:26:57.605Z",
+    "finished_at": "2026-09-14T21:27:23.120Z"
+  },
+  {
+    "ceiling": 10,
+    "run": 7,
+    "completed": true,
+    "final_approved": true,
+    "final_turn_count": 2,
+    "latency_ms": 26409,
+    "started_at": "2026-09-14T21:27:23.120Z",
+    "finished_at": "2026-09-14T21:27:49.529Z"
+  },
+  {
+    "ceiling": 10,
+    "run": 8,
+    "completed": true,
+    "final_approved": true,
+    "final_turn_count": 2,
+    "latency_ms": 25196,
+    "started_at": "2026-09-14T21:27:49.529Z",
+    "finished_at": "2026-09-14T21:28:14.726Z"
+  },
+  {
+    "ceiling": 10,
+    "run": 9,
+    "completed": true,
+    "final_approved": true,
+    "final_turn_count": 2,
+    "latency_ms": 25951,
+    "started_at": "2026-09-14T21:28:14.726Z",
+    "finished_at": "2026-09-14T21:28:40.677Z"
+  },
+  {
+    "ceiling": 10,
+    "run": 10,
+    "completed": true,
+    "final_approved": true,
+    "final_turn_count": 2,
+    "latency_ms": 26522,
+    "started_at": "2026-09-14T21:28:40.677Z",
+    "finished_at": "2026-09-14T21:29:07.200Z"
+  },
+  {
+    "ceiling": 10,
+    "run": 11,
+    "completed": true,
+    "final_approved": true,
+    "final_turn_count": 2,
+    "latency_ms": 25878,
+    "started_at": "2026-09-14T21:29:07.200Z",
+    "finished_at": "2026-09-14T21:29:33.079Z"
+  },
+  {
+    "ceiling": 10,
+    "run": 12,
+    "completed": true,
+    "final_approved": true,
+    "final_turn_count": 2,
+    "latency_ms": 27053,
+    "started_at": "2026-09-14T21:29:33.079Z",
+    "finished_at": "2026-09-14T21:30:00.133Z"
+  },
+  {
+    "ceiling": 10,
+    "run": 13,
+    "completed": true,
+    "final_approved": true,
+    "final_turn_count": 2,
+    "latency_ms": 28148,
+    "started_at": "2026-09-14T21:30:00.133Z",
+    "finished_at": "2026-09-14T21:30:28.281Z"
+  },
+  {
+    "ceiling": 10,
+    "run": 14,
+    "completed": true,
+    "final_approved": true,
+    "final_turn_count": 2,
+    "latency_ms": 26558,
+    "started_at": "2026-09-14T21:30:28.281Z",
+    "finished_at": "2026-09-14T21:30:54.839Z"
+  },
+  {
+    "ceiling": 10,
+    "run": 15,
+    "completed": true,
+    "final_approved": true,
+    "final_turn_count": 2,
+    "latency_ms": 25058,
+    "started_at": "2026-09-14T21:30:54.839Z",
+    "finished_at": "2026-09-14T21:31:19.898Z"
+  },
+  {
+    "ceiling": 10,
+    "run": 16,
+    "completed": true,
+    "final_approved": true,
+    "final_turn_count": 2,
+    "latency_ms": 27460,
+    "started_at": "2026-09-14T21:31:19.898Z",
+    "finished_at": "2026-09-14T21:31:47.359Z"
+  },
+  {
+    "ceiling": 10,
+    "run": 17,
+    "completed": true,
+    "final_approved": true,
+    "final_turn_count": 2,
+    "latency_ms": 27403,
+    "started_at": "2026-09-14T21:31:47.359Z",
+    "finished_at": "2026-09-14T21:32:14.762Z"
+  },
+  {
+    "ceiling": 10,
+    "run": 18,
+    "completed": true,
+    "final_approved": true,
+    "final_turn_count": 2,
+    "latency_ms": 26460,
+    "started_at": "2026-09-14T21:32:14.762Z",
+    "finished_at": "2026-09-14T21:32:41.223Z"
+  },
+  {
+    "ceiling": 10,
+    "run": 19,
+    "completed": true,
+    "final_approved": true,
+    "final_turn_count": 2,
+    "latency_ms": 27454,
+    "started_at": "2026-09-14T21:32:41.223Z",
+    "finished_at": "2026-09-14T21:33:08.677Z"
+  },
+  {
+    "ceiling": 10,
+    "run": 20,
+    "completed": true,
+    "final_approved": true,
+    "final_turn_count": 2,
+    "latency_ms": 28851,
+    "started_at": "2026-09-14T21:33:08.677Z",
+    "finished_at": "2026-09-14T21:33:37.529Z"
+  }
+]

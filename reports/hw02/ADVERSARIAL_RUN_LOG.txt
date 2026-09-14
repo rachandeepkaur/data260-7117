@@ -1,0 +1,24 @@
+[2026-09-14T21:47:35.763Z] Starting adversarial case study on /Users/pc/Documents/sjsu/Data-260-HW-Git/data260-7117/reports/hw02/cases/adversarial_input.json, 5 runs, MAX_TURNS=8
+[2026-09-14T21:47:35.802Z] --- run 1/5: starting ---
+    turn=1 planner attempt #1: schema-valid
+    reviewer attempt #1: approved=False
+    turn=3 planner attempt #2: schema-valid
+    reviewer attempt #2: approved=False
+    turn=5 planner attempt #3: FAILED VALIDATION
+    turn=6 planner attempt #4: FAILED VALIDATION
+    turn=7 planner attempt #5: FAILED VALIDATION
+[2026-09-14T21:52:44.610Z] --- run 1/5 done (308807 ms): HIT CEILING (final_turn_count=8, planner_attempts=5, planner_failures=3, reviewer_rejections=2) ---
+
+[2026-09-14T21:52:44.610Z] --- run 2/5: starting ---
+    turn=1 planner attempt #1: schema-valid
+    reviewer attempt #1: approved=False
+    turn=3 planner attempt #2: FAILED VALIDATION
+    turn=4 planner attempt #3: FAILED VALIDATION
+    turn=5 planner attempt #4: schema-valid
+    reviewer attempt #2: approved=False
+    turn=7 planner attempt #5: schema-valid
+[2026-09-14T21:56:30.402Z] --- run 2/5 done (225792 ms): HIT CEILING (final_turn_count=8, planner_attempts=5, planner_failures=2, reviewer_rejections=2) ---
+
+[2026-09-14T21:56:30.402Z] --- run 3/5: starting ---
+    turn=1 planner attempt #1: schema-valid
+    reviewer attempt #1: approved=False

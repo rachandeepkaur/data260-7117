@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--  Page title with HW2 - {Name} -->
+  <title>HW2 - Rachandeep Kaur</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Heading naming assigned domain entity using <h1> (biggest font size) -->
+  <h1>Local Restaurant Inspections</h1>
+
+  <!-- Form for domain entity -->
+  <form id="inspectionForm">
+
+    <!-- Requirement I.4.a: Required text input for primary field with autofocus & placeholder -->
+    <div>
+      <label for="facility_name">Facility Name / ID:</label><br>
+      <input 
+        type="text" 
+        id="facility_name" 
+        name="facility_name" 
+        placeholder="FA0206933 - YUMMY KITCHEN" 
+        autofocus 
+        required 
+      />
+    </div>
+    <br>
+
+    <!-- Requirement I.4.b: Required text input for secondary field with descriptive placeholder -->
+    <div>
+      <label for="site_address">Program Site Address:</label><br>
+      <input 
+        type="text" 
+        id="site_address" 
+        name="site_address" 
+        placeholder="1711 BRANHAM LN A9, SAN JOSE, CA 95118" 
+        required 
+      />
+    </div>
+    <br>
+
+    <!-- Requirement I.4.c: Required email input with descriptive placeholder -->
+    <div>
+      <label for="inspector_email">Submitter Email:</label><br>
+      <input 
+        type="email" 
+        id="inspector_email" 
+        name="inspector_email" 
+        placeholder="inspector@countyhealth.gov" 
+        required 
+      />
+    </div>
+    <br>
+
+    <!-- Requirement I.4.d: Required textarea for content/description field -->
+    <div>
+      <label for="inspection_summary">Inspection Findings Summary:</label><br>
+      <textarea 
+        id="inspection_summary" 
+        name="inspection_summary" 
+        rows="5" 
+        cols="50" 
+        placeholder="Provide inspection observations and compliance details (must be > 25 characters)..." 
+        required
+      ></textarea>
+    </div>
+    <br>
+
+    <!-- Requirement I.4.e: Dropdown with 4 domain-appropriate options -->
+    <div>
+      <label for="program_element">Program Element / Category:</label><br>
+      <select id="program_element" name="program_element" required>
+        <option value="" disabled selected>-- Select Inspection Category --</option>
+        <option value="FOOD PREP / FOOD SVC OP 0-5 EMPLOYEES RC 3 - FP11">FOOD PREP / FOOD SVC OP 0-5 EMPLOYEES RC 3 - FP11</option>
+        <option value="FOOD PREP / FOOD SVC OP 6-25 EMPLOYEES">FOOD PREP / FOOD SVC OP 6-25 EMPLOYEES</option>
+        <option value="ROUTINE HEALTH INSPECTION">ROUTINE HEALTH INSPECTION</option>
+        <option value="FOLLOW-UP COMPLIANCE CHECK">FOLLOW-UP COMPLIANCE CHECK</option>
+      </select>
+    </div>
+    <br>
+
+    <!-- Requirement I.4.f: Checkbox and exact label text -->
+    <div class="checkbox-row">
+      <input type="checkbox" id="terms" name="terms" required />
+      <label for="terms">I agree to the terms and conditions.</label>
+    </div>
+    <br>
+
+    <!-- Requirement I.4.g: Submit button with domain-appropriate text -->
+    <div>
+      <button type="submit">Submit Inspection Report</button>
+    </div>
+
+  </form>
+
+  <!-- Loading state: shown while script.js is waiting on the FastAPI /api/analyze response -->
+  <div id="loader" class="loader" hidden></div>
+  <p id="loadingText" hidden>Loading…</p>
+
+  <!-- Empty state: shown before any submission has produced a result -->
+  <div id="emptyState" class="state-message">No records yet. Submit an inspection above to see the agent analysis here.</div>
+
+  <!-- Error state: shown if the /api/analyze fetch fails -->
+  <div id="errorState" class="state-message" role="alert" hidden></div>
+
+  <!-- Populated by script.js with the FastAPI /api/analyze response -->
+  <div id="analysisResults"></div>
+
+  <!-- CRUD table for the domain entity: the form above handles Create; this
+       section handles Read (table), Update (by ID, name only), Delete
+       (highest ID), and Search. Populated entirely client-side from
+       /api/records - no server-side HTML rendering. -->
+  <section id="recordsSection">
+    <h2>Inspection Records</h2>
+
+    <form id="searchForm" class="inline">
+      <input type="text" id="searchInput" placeholder="Search by facility name or site address">
+      <button type="submit">Search</button>
+      <button type="button" id="clearSearchBtn">Clear</button>
+    </form>
+
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr><th>ID</th><th>Facility Name / ID</th><th>Site Address</th></tr>
+        </thead>
+        <tbody id="recordsBody">
+          <tr><td colspan="3">Loading&hellip;</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p id="recordsStatus" role="status"></p>
+
+    <div class="records-actions">
+      <h3>Update Record</h3>
+      <form id="updateForm">
+        <label for="update_id">Record ID:</label>
+        <input type="number" id="update_id" name="id" min="1" step="1" required>
+        <label for="update_facility_name">New Name:</label>
+        <input type="text" id="update_facility_name" name="facility_name" required>
+        <button type="submit">Update Record</button>
+      </form>
+    </div>
+
+    <div class="records-actions">
+      <h3>Delete Highest-ID Record</h3>
+      <button type="button" id="deleteHighestBtn">Delete Highest ID</button>
+    </div>
+  </section>
+
+</body>
+<footer>
+    <!-- Script tag linking JavaScript file at the end of the HTML file -->
+  <script src="script.js"></script>
+  
+</footer>
+</html>
