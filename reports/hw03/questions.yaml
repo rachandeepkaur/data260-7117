@@ -1,0 +1,89 @@
+questions:
+  - id: q1
+    type: single_source
+    source_documents:
+      - retail-food-inspection-guide.txt
+    text: >
+      According to the LA County Retail Food Inspection Guide, what score range earns a food facility a "B" letter grade, and what happens
+      instead of a letter grade if the score is 69 or below?
+    expected_answer: >
+      A "B" Letter Grade is issued for a final routine inspection score between 80-89. A score of 69 or below does not get a letter grade at
+      all - it gets a "Score Card" instead.
+    grounding_location: "retail-food-inspection-guide.txt, line 162"
+    grounding_excerpt: >
+      "Placard Type Description "A" Letter Grade Final routine inspection score between 90 - 100 "B" Letter Grade Final routine inspection
+      score between 80 - 89 "C" Letter Grade Final routine inspection score between 70 - 79 Score Card Final routine inspection score of
+      69 or below"
+
+  - id: q2
+    type: single_source
+    source_documents:
+      - abc-retail-food-inspection-guide.pdf.txt
+    text: >
+      Per the San Bernardino County ABC Retail Food Inspection Guide, what must a food facility that receives a "C" grade do to avoid closure,
+      and what phone number should an operator call with questions about an inspection report?
+    expected_answer: >
+      The violations must be corrected, and the facility must submit a written request for a re-score inspection within 30 days of the
+      date on the OIR to avoid closure. Questions about the OIR, inspector actions, or applicable law/policy go to EHS at (800) 442-2283.
+    grounding_location: "abc-retail-food-inspection-guide.pdf.txt, lines 18-19 and 130-132"
+    grounding_excerpt: >
+      "If there are questions regarding the OIR, actions by the health inspector or the department, or any applicable law, regulation, or
+      policy, contact EHS at (800) 442-2283." / "C - Violations must be  corrected, and - The food facility must submit a written request
+      for a re-score inspection within 30 days of the date on the OIR to avoid closure."
+
+  - id: q3
+    type: single_source
+    source_documents:
+      - print1.txt
+    text: >
+      In the inspection report for Dat Thanh Restaurant (Est ID FA0003611, 5035 Fruitridge Rd, Sacramento), what specific cooling violation did
+      the inspector observe, and what temperature/time rule does it violate?
+    expected_answer: >
+      The inspector observed 5-gallon buckets cooling at room temperature measuring 155F, and cooked noodles cooling in the walk-in
+      refrigerator measuring 125F after only 30 minutes. Both violate the rule that potentially hazardous food must be rapidly cooled from
+      135F to 70F within the first 2 hours, and from 135F to 41F within a total of 6 hours (Cal Code 114002, 114002.1). Both were corrected on
+      site.
+    grounding_location: "print1.txt"
+    grounding_excerpt: >
+      "9.COOLING METHODS Observations: Observed 5-gallon buckets of both cooling at room temperature, measuring 155F. Provided education on
+      proper cooling methods. Corrected on site. Observed cooked noodles cooling in walk in refrigerator measuring 125F after 30 minutes.
+      Corrected on site. Code Description: All potentially hazardous foods shall be rapidly cooled from 135F to 41F within 6 hours. The
+      decrease in temperature from 135F to 70F shall occur within the first 2 hours."
+
+  - id: q4
+    type: shared_topic
+    source_documents:
+      - retail-food-inspection-guide.txt
+      - abc-retail-food-inspection-guide.pdf.txt
+    text: >
+      What are the required hot-holding and cold-holding temperatures for potentially hazardous food (PHF), and what exception lets some foods
+      be held up to 45F?
+    expected_answer: >
+      PHF must be held at or below 41F (cold holding) or at or above 135F (hot holding). Both guides carry the same exception: certain foods
+      (e.g. raw shell eggs, unshucked live molluscan shellfish, pasteurized milk/milk products in sealed containers, PHF held for dispensing on
+      serving lines/salad bars, PHF in transport or vending machines) may be held between 41F and 45F, and PHF received between 41-45F must be
+      cooled to 41F within 4 hours.
+    grounding_location: "retail-food-inspection-guide.txt line 462; abc-retail-food-inspection-guide.pdf.txt line 274"
+    grounding_excerpt: >
+      LA: "IN" shall be marked if PHFs are being held at 41F/45F or below or 135F or above within approved time allowances." / San Bernardino:
+      "Potentially hazardous foods shall be held at or below 41F or at or above 135F." plus "Foods approved for holding between 41F and 45F..."
+
+  - id: q5
+    type: shared_topic
+    source_documents:
+      - retail-food-inspection-guide.txt
+      - abc-retail-food-inspection-guide.pdf.txt
+    text: >
+      When are food employees required to wash their hands, and what makes an inability to wash hands especially serious under these
+      guides?
+    expected_answer: >
+      Per the San Bernardino guide, employees must wash their hands before beginning work, before handling food/equipment/utensils, as often
+      as necessary during food preparation, when switching from raw to ready-to-eat foods, after touching body parts, after using the
+      toilet room, or any time contamination may occur; hands/arms not clean, or not washed when necessary, are MAJOR violations. The LA
+      County guide separately lists "Inability of employees to wash their hands" as one of the imminent health hazards that can get a
+      facility's permit suspended and the facility closed immediately.
+    grounding_location: "abc-retail-food-inspection-guide.pdf.txt lines 231-235; retail-food-inspection-guide.txt line 154"
+    grounding_excerpt: >
+      "Employees are required to wash their hands: before beginning work; before handling food/equipment/utensils; as often as necessary...
+      MAJOR violations include the following: 1. Hands and exposed portions of their arms are not clean. 2. Hands are not thoroughly
+      washed when necessary." / LA: "Imminent health hazards include, but are not limited to: ... Inability of employees to wash their hands..."
