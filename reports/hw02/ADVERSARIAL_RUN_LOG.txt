@@ -22,3 +22,36 @@
 [2026-09-14T21:56:30.402Z] --- run 3/5: starting ---
     turn=1 planner attempt #1: schema-valid
     reviewer attempt #1: approved=False
+    turn=3 planner attempt #2: FAILED VALIDATION
+    turn=4 planner attempt #3: schema-valid
+    reviewer attempt #2: approved=False
+    turn=6 planner attempt #4: FAILED VALIDATION
+    turn=7 planner attempt #5: FAILED VALIDATION
+[2026-09-14T22:12:47.984Z] --- run 3/5 done (977581 ms): HIT CEILING (final_turn_count=8, planner_attempts=5, planner_failures=3, reviewer_rejections=2) ---
+
+[2026-09-14T22:12:47.984Z] --- run 4/5: starting ---
+    turn=1 planner attempt #1: schema-valid
+    reviewer attempt #1: approved=False
+    turn=3 planner attempt #2: schema-valid
+    reviewer attempt #2: approved=False
+    turn=5 planner attempt #3: FAILED VALIDATION
+    turn=6 planner attempt #4: FAILED VALIDATION
+    turn=7 planner attempt #5: FAILED VALIDATION
+[2026-09-14T22:17:18.811Z] --- run 4/5 done (270827 ms): HIT CEILING (final_turn_count=8, planner_attempts=5, planner_failures=3, reviewer_rejections=2) ---
+
+[2026-09-14T22:17:18.811Z] --- run 5/5: starting ---
+    turn=1 planner attempt #1: schema-valid
+    reviewer attempt #1: approved=False
+    turn=3 planner attempt #2: FAILED VALIDATION
+    turn=4 planner attempt #3: schema-valid
+    reviewer attempt #2: approved=False
+    turn=6 planner attempt #4: FAILED VALIDATION
+    turn=7 planner attempt #5: FAILED VALIDATION
+[2026-09-14T22:21:20.328Z] --- run 5/5 done (241516 ms): HIT CEILING (final_turn_count=8, planner_attempts=5, planner_failures=3, reviewer_rejections=2) ---
+
+[2026-09-14T22:21:20.329Z] Done. Ceiling hit in 5/5 runs. Wrote raw/adversarial_runs.{json,csv} under /Users/pc/Documents/sjsu/Data-260-HW-Git/data260-7117/reports/hw02
+  run 1: hit_ceiling=True final_approved=False final_turn_count=8 latency_ms=308807
+  run 2: hit_ceiling=True final_approved=False final_turn_count=8 latency_ms=225792
+  run 3: hit_ceiling=True final_approved=False final_turn_count=8 latency_ms=977581
+  run 4: hit_ceiling=True final_approved=False final_turn_count=8 latency_ms=270827
+  run 5: hit_ceiling=True final_approved=False final_turn_count=8 latency_ms=241516

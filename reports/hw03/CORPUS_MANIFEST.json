@@ -1,0 +1,42 @@
+[
+  {
+    "file": "abc-retail-food-inspection-guide.pdf.pdf",
+    "bytes": 758993,
+    "sha256": "eea6af4a62b1de5227d8fd8a859aeeeb0e89a4cadc98d9b911c12dc93642c86d"
+  },
+  {
+    "file": "abc-retail-food-inspection-guide.pdf.txt",
+    "bytes": 146266,
+    "sha256": "82499fc903f352197233efed6cee629e930577abc6a37b3041efb9563e07da71"
+  },
+  {
+    "file": "print.pdf",
+    "bytes": 310299,
+    "sha256": "45819ad1e2e0dc052f7df1056e1797d312567bdb6ecffa84c3230dbea915dd4f"
+  },
+  {
+    "file": "print.txt",
+    "bytes": 3316,
+    "sha256": "e13c7244dc438a48136aff7b18e7a5f900bcef4942956f8361d9a2c2a593e8b9"
+  },
+  {
+    "file": "print1.pdf",
+    "bytes": 548119,
+    "sha256": "01340fbc81b96edfd00906916258533c81c8e63a0b3799a206da19782afa43bc"
+  },
+  {
+    "file": "print1.txt",
+    "bytes": 6184,
+    "sha256": "477c8d958bc2c52e688c966042093665489a57466d84543d091d263a07b3b342"
+  },
+  {
+    "file": "retail-food-inspection-guide.pdf",
+    "bytes": 2263552,
+    "sha256": "bd8ad5210495705c50387a9d22da09d211f14f2c48de9f8328d79870bb123396"
+  },
+  {
+    "file": "retail-food-inspection-guide.txt",
+    "bytes": 444358,
+    "sha256": "794a183b446ec41cdece9a66e79ee1ce6d48a6480fd8f7d271fc6b9bfcd09ccd"
+  }
+]

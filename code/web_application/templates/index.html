@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}Home - Rachandeep Kaur{% endblock %}
+
+{% block content %}
+  <div class="text-center py-5">
+    <h1 class="display-5 fw-bold">Welcome to Local Restaurant Inspections</h1>
+    <p class="lead text-muted col-lg-8 mx-auto">
+      Browse, search, and manage San Jose restaurant inspection records, and
+      get an automated Planner &rarr; Reviewer &rarr; Publish analysis for
+      every new submission.
+    </p>
+    <div class="mt-4">
+      {% if user %}
+        <a class="btn btn-success btn-lg" href="/dashboard">Go to Dashboard</a>
+      {% else %}
+        <a class="btn btn-success btn-lg" href="/login">Log In to Get Started</a>
+      {% endif %}
+    </div>
+  </div>
+{% endblock %}

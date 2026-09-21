@@ -79,15 +79,13 @@
     {
       "name": "adversarial_case_5x",
       "description": "One adversarial input (cases/adversarial_input.json: fact-dense summary + a task field demanding exhaustive detail, conflicting with the hard <=25-word/3-tag constraints) run 5x, ceiling-hit rate reported honestly",
-      "passed": null,
-      "status": "in_progress",
-      "evidence": "raw/adversarial_runs.json (partial: run 1/5 complete, HIT CEILING; run 2/5 in progress at time of writing). This check will be updated to a final true/false with the complete 5-run hit rate once finished."
+      "passed": true,
+      "evidence": "raw/adversarial_runs.json (5 real records) + ADVERSARIAL_CASE.md: ceiling hit in 5/5 runs (100%, exceeding the ideal >=4/5 target), all stopped at exactly turn_count=8, mean latency 404904.6 ms (min 225792 ms, max 977581 ms)"
     }
   ],
   "summary": {
     "total_checks": 12,
-    "passed": 11,
-    "failed": 0,
-    "in_progress": 1
+    "passed": 12,
+    "failed": 0
   }
 }

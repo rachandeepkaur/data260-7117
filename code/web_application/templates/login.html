@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block title %}Login - Rachandeep Kaur{% endblock %}
+
+{% block content %}
+  <div class="row justify-content-center">
+    <div class="col-12 col-sm-8 col-md-6 col-lg-4">
+      <div class="card shadow-sm mt-4">
+        <div class="card-body p-4">
+          <h1 class="h3 text-center mb-3">Log In</h1>
+
+          {% if error %}
+          <div class="alert alert-danger" role="alert">Invalid username or password.</div>
+          {% endif %}
+
+          <!-- Classic Post/Redirect/Get: the browser posts this form directly to
+               /login (see routers/auth.py), which redirects to /dashboard on
+               success or back here with ?error=1 on bad credentials. -->
+          <form method="post" action="/login">
+            <div class="mb-3">
+              <label for="username" class="form-label">Username</label>
+              <input type="text" class="form-control" id="username" name="username" placeholder="admin" autofocus required>
+            </div>
+            <div class="mb-3">
+              <label for="password" class="form-label">Password</label>
+              <input type="password" class="form-control" id="password" name="password" placeholder="••••••••" required>
+            </div>
+            <button type="submit" class="btn btn-success w-100">Log In</button>
+          </form>
+          <p class="text-muted text-center mt-3 mb-0">Demo credentials: <strong>admin</strong> / <strong>password</strong></p>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

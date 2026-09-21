@@ -1,0 +1,6 @@
+run,hit_ceiling,final_approved,final_turn_count,planner_attempts,planner_failures,reviewer_attempts,reviewer_rejections,latency_ms,started_at,finished_at
+1,True,False,8,5,3,2,2,308807,2026-09-14T21:47:35.802Z,2026-09-14T21:52:44.610Z
+2,True,False,8,5,2,2,2,225792,2026-09-14T21:52:44.610Z,2026-09-14T21:56:30.402Z
+3,True,False,8,5,3,2,2,977581,2026-09-14T21:56:30.402Z,2026-09-14T22:12:47.984Z
+4,True,False,8,5,3,2,2,270827,2026-09-14T22:12:47.984Z,2026-09-14T22:17:18.811Z
+5,True,False,8,5,3,2,2,241516,2026-09-14T22:17:18.811Z,2026-09-14T22:21:20.328Z

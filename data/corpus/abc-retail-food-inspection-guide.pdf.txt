@@ -1,0 +1,1234 @@
+ABC RETAIL FOOD INSPECTION GUIDE
+San Bernardino County Public Health Environmental Health Services 385 N Arrowhead Ave., 2nd floor San Bernardino, CA 92415-0160 1-800-442-2283 Fax: 909-387-4323
+Public Health Environmental Health Services http://wp.sbcounty.gov/dph/programs/ehs/
+
+FOREWORD The San Bernardino County Department of Public Health, Environmental Health Services (EHS) is dedicated to ensuring public health and safety and preventing environmental hazards for all residents and visitors through innovation, education, surveillance, enforcement and community service.
+EHS’ Food Inspection Program (along with the food industry) plays a major role in keeping food safe for consumers. While the food supply in the United States is one of the safest in the world, the Centers for Disease Control and Prevention (CDC) still estimates approximately 48 million people suffer from foodborne illnesses each year. Of these people, more than 128,000 are hospitalized, and 3,000 die.
+Preventing foodborne illness and death remains a major public health challenge. To this end, Environmental Health Specialists inspect food facilities countywide to ensure safe food handling processes are in place. Improving the knowledge and understanding of safe food handling practices by food facility operators is a priority for EHS. Customers expect food facilities to prepare food safely, which is dependent on food handlers receiving proper training and implementing safe practices. Improvements in food production, processing, preparation and storage practices can be measured through the reduction in outbreaks of foodborne illnesses.
+This guide has been developed to assist food facility operators in determining the current status of their operation and provide information needed to improve all aspects of food storage, handling, preparation and service.
+Through a committed partnership with the food industry, EHS is dedicated to providing the highest quality service to both our customers and the public, while protecting public health.
+Joshua Dugas MBA, REHS Division Chief
+
+Table of Contents Introduction ........................................................................................................................... 1 Retail Food Inspection Common Terms ................................................................................ 2 Center for Disease Control Risk Factors ............................................................................... 5 Understanding the Inspection Process ................................................................................. 6 Understanding the California Code  Official Inspection Report (OIR).................................... 7 Understanding Your Grade ................................................................................................... 9 Understanding the Letter Grade Card ................................................................................. 11 General Marking Instructions for Data Fields ...................................................................... 12 Marking Instructions for Data Fields 1 Through 23 Marked IN, N.A., N.O., MAJOR, OUT .. 14 Demonstration of Knowledge .......................................................................................... 14 Employee Health & Hygienic Practices ........................................................................... 15 Preventing Contamination by Hands ............................................................................... 17 Time and Temperature Relationships ............................................................................. 19 Protection from Contamination ........................................................................................ 24 Food from Approved Sources ......................................................................................... 30 Conformance with Approved Procedures ........................................................................ 32 Consumer Advisory ......................................................................................................... 33 Highly Susceptible Populations ....................................................................................... 33 Water/Hot Water ............................................................................................................. 34 Liquid Waste Disposal .................................................................................................... 35 Vermin ............................................................................................................................ 35 Marking Instructions for Data Fields 24 Through 54 When Out of Compliance ................... 37 Supervision ..................................................................................................................... 37 Personal Cleanliness ...................................................................................................... 37 General Food Safety Requirements ................................................................................ 38 Food Storage/Display/Service ......................................................................................... 41 Equipment/Utensils/Linens .............................................................................................. 43 Physical Facilities ............................................................................................................ 52 Permanent Food Facilities .............................................................................................. 57 Signs Requirements ........................................................................................................ 59 Compliance and Enforcement ......................................................................................... 60 Appendix A Wiping Towel Violation Flow Chart ........................................................... 63 Appendix B Water Temperature Violations .................................................................. 64 Appendix C Self-Inspection Checklist ............................................................................... 65 Appendix C Self-Inspection Checklist (Cont.) ................................................................... 66 Agency Referral List ........................................................................................................... 67 Environmental Health Services Directory of Regional Offices ............................................. 68
+
+1 | Page
+Introduction The Retail Food Inspection Guide serves as a reference booklet and an educational tool for inspectors and food facility operators. This guide provides information on common terms used in the California Retail Food Code (Cal Code) and the San Bernardino County Code (SBCC) to assist in understanding violations, the retail food inspection process used by the Food Protection Program, the California Code Official Inspectio n Report (OIR), and Letter Grade Cards.
+The OIR is used to document the violations observed in the facility and to calculate the final score/grade based on those violations. It provides detailed information in each violation category along with some examples of the most common violations. This booklet also includes a sample of the Letter Grade Cards along with explanations of how they are to be marked and posted.
+The information in this reference booklet may change based on new and updated laws, policies, and safe practices. Environmental Health Services (EHS) will make every effort to ensure the food service industry is aware of significant changes in a timely manner.
+If there are questions regarding the OIR, actions by the health inspector or the department, or any applicable law, regulation, or policy, contact EHS at
+(800) 442-2283.
+
+2 | Page
+Retail Food Inspection Common Terms The following terms are intended to assist the operator in using this Retail Food Inspection Guide.
+Acute Gastrointestinal Illness – Short duration illness commonly associated with the agents most likely to be transmitted from infected food employees through contamination of food. Symptoms or groups of symptoms include:
+a) Diarrhea, either alone or in conjunction with other gastrointestinal symptoms, (e.g., vomiting, fever, or abdominal cramps).
+b) Vomiting in conjunction with either diarrhea or two other gastrointestinal symptoms, such as fever or abdominal cramps.
+Adulterated a) Food that bears or contains any poisonous or deleterious substance that may render the food impure or injurious to health.
+b) Food that is manufactured, prepared, or stored in a manner that deviates from a HACCP plan so as to pose a discernable increase in risk.
+Approved – Acceptable to the enforcement agency based on a determination of conformity with applicable laws, or, in the absence of applicable laws, current public health principles, practices, and generally recognized industry standards that protect public health.
+Approved Source – Food source allowed under Cal Code Article 3 (commencing with Section 114021) of Chapter 4, or a producer, manufacturer, distributor, or food facility that is acceptable to the enforcement agency based on a determination of conformity with applicable laws, or, in the absence of applicable laws, with current public health principles and practices, and generally recognized industry standards that protect public health.
+California Retail Food Code (Cal Code) – Part of the California Health and Safety Code addressing the regulation of retail food facilities.
+Code of Federal Regulations (CFR) –Part of the Federal government addressing general and permanent rules and regulations.
+Comminuted – Reduced in size by methods including chopping, flaking, grinding, or mincing.
+Cross Contamination – Transfer of harmful microorganisms from one food or food-contact s urface to another. Microorganisms may be transferred from contaminated equipment, utensils, and human hands to other food or food-contact surfaces. Microorganisms may also be transferred when raw meat or poultry are stored or thawed above other food or food-contact surfaces.
+Enforcement Officer-– generally known as the Health Inspector and as a Registered Environmental Health Specialist (REHS) or Environmental Health Specialist.
+Exclude – Prevent a person from working as a food employee or entering a food facility except for those areas open to the general public.
+
+3 | Page
+Facility Under Review Card – Placard posted at a food facility after a facility is reopened following a closure, but before a re-score inspection is conducted. This placard provides information on reasons for the initial closure as well as the corrections that were made to allow the facility to reopen.
+Food-Contact Surface – Surface of equipment or a utensil with which food normally comes into contact or from equipment or utensil from which food may drain, drip, or splash into a food or onto a surface normally in contact with food.
+Food Employee –Employee working with food, food equipment or utensils, or food- contact surfaces.
+Food Handler –Individual who is involved in the preparation, storage, or service of food in a food facility.
+Food Handler Card – Issued after passing an EHS approved training class. Each food handler must possess a valid Food Handler card from San Bernardino County within 14 days of hire. It will expire in 3 years.
+Food Manager Certification – Issued after successfully passing an American National Standards Institute ( ANSI) accredited exam. At least one person working at each food facility must have this within 60 days of employment.  It will expire in 5 years.
+Hazard Analysis and Critical Control Point (HACCP) Plan – Written document that complies with the requirements of Section 114419.1 and that delineates the formal procedures for following the HACCP principles developed by the National Advisory Committee on Microbiological Criteria for Foods.
+Imminent Health Hazard – Significant threat or danger to health that is considered to exist when there is evidence sufficient to show that a product, practice, circumstance, or event creates a situation that can cause food infection, food intoxication, disease transmission, vermin infestation, or hazardous condition that requires immediate correction or cessation of operation to prevent injury, illness, or death.
+Impound – Legal control exercised by the enforcement officer over the use, sale, disposal, or removal of any food, equipment, or utensils.
+Letter Grade Card – Placard that will be placed in the window or another approved location by the health inspector after a routine or re-score inspection.
+Multiservice Utensil – Utensil manufactured for use more than one time.
+Notice of Closure Card – Placard posted by the health inspector at a food facility when the establishment’s health permit is suspended or revoked. Once a Notice of Closure Card has been issued, the food facility is required to discontinue all operations. The Notice of Closure Card will be posted in the front window or in a location approved by the health inspector. Removal of the Notice of Closure by anyone other than the health inspector or the refusal of a food facility to close when issued a “Notice of Closure” is a violation of San Bernardino County Code, Section 33.1404.
+Permit – A document issued by San Bernardino County EHS that authorizes a person to operate a food facility or cottage food operation.
+
+4 | Page
+Permit Suspension/Revocation Hearing – A hearing requested by the operator within 15 calendar days following a permit suspension (facility closure). At this hearing, the hearing officer determines whether to uphold the suspension, revoke the permit or lift the suspension. Until a decision is reached, the facility must remain closed.
+Person in Charge (PIC) – Individual present at a food facility that is responsible for the operation of the food facility.
+Potable Water – Water that complies with the standards pursuant to the California Safe Drinking Water Act, Chapter 4 (commencing with Section 116270) of Part 12, to the extent permitted by federal law.
+Potentially Hazardous Food (PHF) – Food that requires time or temperature control to limit pathogenic micro-organism growth or toxin formation. Examples include: protein based food (meat, poultry, seafood, and eggs), dairy products (cheese, milk), cooked vegetables, cooked beans, cooked rice, and cooked pasta.
+Ready-to-Eat (RTE) Food– Food that is edible without additional preparation to achieve food safety such as cooking, acidifying, etc.
+Restrict – To limit the activities of a food employee so that there is no risk of transmitting a disease that is transmissible through food and the food employee does not work with exposed food, clean equipment, utensils, linens, and unwrapped single-use articles.
+Revocation – Action taken by EHS to take away a facility’s permit to operate resulting in a facility closure. A facility must apply for a new permit prior to being authorized to reopen.
+Sanitization –Application of cumulative heat or chemicals on cleaned food-contact surfaces that, when evaluated for efficacy, is sufficient to yield a reduction of five logs, which is equal to a 99.999 percent reduction, of representative disease microorganisms of public health importance.
+Sherman Food, Drug, and Cosmetic Act – Part of the California Health and Safety Code addressing labeling, advertising, and pure food.
+Suspension –Action taken by EHS to temporarily take away a facility’s permit to operate resulting in a facility’s closure.
+Time only control – When time only (rather than time in conjunction with temperature)
+is used as a control for working with or holding PHF. An approved procedure and time indicator must be provided and utilized.
+Variance –  Written document issued by the State Department of Public Health (DPH)
+that allows the use of an alternative practice or procedure which is equivalent to the existing requirements, and that a health hazard will not result from the alternative practice or procedure.
+Voluntary Condemnation and Destruction (VC&D) – Procedure by which food found to be adulterated or misbranded is voluntarily destroyed by the operator under the supervision of an authorized representative of Environmental Health.
+
+5 | Page
+Center for Disease Control Risk Factors California retail food safety agencies have refocused facility inspection practices based on the Centers for Disease Control and Prevention foodborne illness risk factors and public health interventions, in accordance with California Retail Food Code (Cal Code).
+The General Marking Instructions are intended to facilitate the transition of California food safety programs from Cal Code implementation to a risk and intervention based inspection approach. This approach focuses on the most prevalent contributing risk factors related to foodborne illness or injury.
+The following five major risk factors are most likely causes of foodborne illness:
+1. Improper hot/cold holding temperatures of PHF
+2. Improper cooking temperatures
+3. Contaminated utensils and equipment
+4. Poor employee health and hygiene
+5. Food from unsafe sources Immediate correction is required of any of the risk factor violations that have been identified as major violations. When a major violation cannot be immediately corrected, or a suitable alternative found, the food facility may be subject to closure.
+The five following public health interventions are the most effective methods to protect against foodborne illness:
+1. Demonstration of knowledge
+2. Employee health controls
+3. Controlling hands as a vehicle of contamination
+4. Time and temperature parameters for controlling pathogens
+5. The consumer advisory EHS inspectors primarily focus on the above major risk factors and interventions when conducting inspections in an effort to reduce the risk of foodborne illness.
+
+6 | Page
+Understanding the Inspection Process Health inspections are conducted to ensure that each food facility is in compliance with the law. The following table is an overview of the different types of inspections conducted.
+Inspection Type Description Routine Inspections Routine inspections are generally conducted twice a year and are unannounced. The inspector conducts an in-depth evaluation of the facility’s operation and records deficiencies on the OIR. A corresponding letter grade is issued to the facility at the conclusion of the inspection.
+Reinspections Follow-up inspections required when the routine inspection reveals serious or repeat violations at the facility.
+Repeated Non- Compliance Additional inspections conducted when violations are not corrected at the first reinspection. These inspections result in additional charges to the food facility.
+Complaints and Reports of Foodborne Illness Inspection initiated by complaints or reports of a foodborne illness.
+These investigations are generally not scored and may require follow-up inspections if violations are found.
+Re-score Inspection Inspection requested by the facility owner to have the facility re- scored. Facilities receiving less than a “B” rating are required to have a re-score inspection within 30 days of the initial inspection. The inspection will result in additional charges to the facility.
+Note: There is no guarantee that a higher score or grade will be received when receiving a re-score inspection.
+Elevated Risk Inspections Inspections that result from a facility demonstrating a higher risk for causing foodborne illness. These inspections are in addition to routine inspections and result in additional charge at the hourly rate.
+Facilities that received one or more of the following criteria will receive an elevated risk inspection:
+• Received a score letter of “C” or lower (79 or less) on one or more of the last two graded inspections.
+• Received a score letter of “B” or lower (89 or less) on two of the last three graded inspections.
+• Repeated four (4) point violation “Risk Factor” (critical violation codes 1-23) on the last two graded inspections.
+• Cited for four (4) or more critical violations (codes 1-23) during an inspection.
+• A permit suspension (closure) on the last graded inspection.
+
+7 | Page
+Understanding the California Code Official Inspection Report (OIR)
+Environmental Health Services is responsible for enforcing sections of California Retail Food Code and the San Bernardino County Code. Environmental Health Specialists conduct inspections to ensure that each food facility is in compliance with these regulations.
+Any violations of the regulations is documented on the OIR. This report is used to document current and previous violations committed by food facilities.
+The intent on the OIR is to identify violations of applicable laws, codes and regulations which increase the health risks to the public. The OIR consists of two parts:
+• Section one on the OIR  includes items that relate to CDC identified risk factors and public health interventions. Violations in this section include major and “out” or minor violations. Major violations will be documented on the OIR and highlighted in yellow to bring attention to these high risk violations.
+• Section two on the OIR  includes items that do not relate to major violations  and are considered Good Retail Practices (GRPs). Violations in this section are considered “out” or minor violations.
+The OIR consists of the following:
+• A list of all the data fields, as well as point values associated with each violation.
+• G eneral information about the facility in the header section.
+The OIR will be sent on the next business day following the inspection. The OIR will be sent by email with a link to open from our website. If no email address is on file a hard-copy will be mailed. Refer to the following page for an example of the OIR.
+
+8 | Page
+
+9 | Page
+Understanding Your Grade The purpose of performing food facility inspections is to protect public health by reducing and preventing incidents of foodborne illness. A grading system is used to help the public easily determine a food facility’s status in conforming to current health and safety code requirements.
+Violations are noted on the OIR during the health inspection. Each violation is assigned a point value based on to the associated public health risk. Point values are totaled and subtracted from a value of 100 points. The resulting score is used in determining a facility’s letter grade and reflects the status of the food facility at the time of the inspection.
+Beginning of the Inspection:     100 points Total Points Deducted:         - _______ Remaining Points:                  = Score The table below describes the letter grade achieved base on the score received.
+Score Grade Description 90 to 100 points A Generally superior in food handling practices and overall food facility maintenance and sanitation.
+80 to 89 points B Generally acceptable in food handling practices and overall food facility maintenance and sanitation.
+70 to 79 points C Generally unacceptable in food handling practices and overall general food facility maintenance and sanitation (A re-score inspection is required).
+0 to 69 points Closure Poor food handling practices and overall food facility maintenance and sanitation.
+At the conclusion of the inspection, the Health Inspector will place the Letter Grade Card in the facility’s window or other approved location. The Letter Grade Card must not be defaced, marred, camouflaged, relocated, hidden, or removed.
+
+10 | Page
+The following table lists the requirements associated with each letter grade.
+Grade Requirement A There will be no need for additional inspections.
+B There will be no re-score inspection required. A food facility operator may request a re-score inspection if desired. The re-score inspection will result in a charge for the time required to perform the evaluation.
+C
+• Violations must be corrected, and
+• T he food facility must submit a written request for a re-score inspection within 30 days of the date on the OIR to avoid closure.
+A re-score inspection will be conducted within 10 business days from the date a written request is received. EHS will close any food facility that does not receive at least a “B” grade on the re-score inspection.
+Grade below a C (Closure)
+A Notice of Closure will be posted and the facility will be closed for a period of no less than 24 hours. After the minimum 24 hour closure period, a re-score requested must be submitted by the facility operator. A reinspection will be conducted to determine if all the major violations have been corrected. If during the reinspection it is determined that major violations have been corrected, a Facility under Review sign will be posted until a letter grade card is issued after a re-score inspection. The facility must receive at least a “B” grade or the facility’s health permit will be suspended and the facility closed.
+Permit Suspension Any food facility found to pose an immediate danger to the public’s health and safety will be closed, regardless of a facility’s grade or score. Examples of an immediate danger include sewage backup, no hot water, power or water outages, and cockroach or rodent infestations. A letter grade card will not be posted while a facility is closed.
+The facility’s health permit is suspended and a Notice of Closure Card will be posted in an approved location when a food facility is ordered closed. The Notice of Closure Card will remain posted until a Letter Grade Card or Facility under Review Card is posted by the health inspector. A food facility operator may request a hearing within 15 days to explain why the Health Permit suspension should be lifted or why the facility’s Health Permit should not be revoked. Each food facility is required to maintain a copy of the most recent OIR and it must be made available for public review upon request.
+
+11 | Page
+Understanding the Letter Grade Card The Letter Grade Card displays the results from the California Code Official Inspection Report. The table below explains the various boxes on the Letter Grade Card.
+Box Description No Corrective Action Required No violations are documented on the OIR.
+Minor Violation(s) Observed One or more OUT violations are documented on the OIR.
+Major Violation(s) Observed One or more MAJOR violations are documented on the OIR.
+
+12 | Page
+General Marking Instructions for Data Fields
+Violations in data fields 1 through 23 of the report are considered to be associated with Centers for Disease Control and Prevention identified risk factors and Food and Drug Administration ( FDA) identified public health interventions. The violations in this section of the report can be marked as either Major or OUT violations.
+Compliance Status For each data field in S ection 1 to 23, indicate one of the following compliance status choices on the inspection form:
+IN indicates that the item is in compliance.
+N/O indicates that the item was not observed during the inspection, however the Enforcement Officer should determine through discussion with the food employee if there is adequate knowledge of a practice or procedure (this should be viewed as an educational opportunity rather than a violation of “Demonstration of Knowledge”).
+N/A indicates that the item is not applicable for the facility.
+MAJOR means that the item is not in compliance and it meets the criteria of a Major violation as described below.
+OUT means that the item is not in compliance and it meets the criteria of OUT or a minor violation as described below.
+If N/A or N/O is not given as an option for a particular item, this means that this item may not be observable during the inspection and a compliance status must be determined. If the item is marked MAJOR or OUT, document each violation for the item number in the “Observations and Corrective Actions” section on the OIR.
+CORRECTED ON SITE (COS):
+For items MAJOR / OUT an “X” will be in the corresponding box “COS” when the violation is Corrected On-Site.
+Marking COS indicates that all violations cited under that particular item number have been corrected and verified prior to the completion of the inspection.
+The actual corrective action taken for each violation should be documented in the “Observations and Corrective Actions” section of the OIR.
+For example, data field #6 “Adequate handwashing facilities supplied/accessible” is marked OUT if the food facility does not have soap and paper towels at the hand wash sink. During the inspection, if the operator partially corrects the problem by putting soap at the sink, but still does not have paper towels or any other effective means for drying hands, the COS box would not be checked. The corrective action taken for the soap is documented in the narrative on the form, but COS is not marked because all violations under that item were not corrected.
+
+13 | Page
+MAJOR VIOLATIONS Major violations are risk factor violations and are also found in Section 113725 of Cal Code. Major violations were also defined as part of the Senate Bill 180 implementation process and have traditionally been looked upon as rationale for suspension of a food facility permit due to an imminent health hazard. According to the CDC, these major violations are the most significant risk factors contributing to foodborne illness outbreaks, and are clearly an imminent health hazard to the public health and safety.
+When a major violation cannot be immediately corrected, or a suitable alternative found, the food facility may be subject to closure.
+OUT OF COMPLIANCE VIOLATIONS OUT violations do not meet the criteria in Section 113725. Though they are not considered an imminent health hazard they still present a risk to public health.
+Data fields 24 through 54 on the OIR are considered Good Retail Practices (GRP) and violations in this section are  considered OUT or minor violations. GRPs are preventive measures that include practices and procedures that effectively control the introduction of pathogens, chemicals, and physical objects into food. Since the major emphasis of an inspection is on the Risk Factors that cause foodborne illness, the GRPs have been given less importance on the inspection form and a differentiation between IN, MAJOR, OUT, N.A. and N.O. is not made in this area.
+Use of Multiple Major Violations - It is important that food facilities should not be marked out of compliance in more than one Data Field when a single violation occurs, unless the violation results in a major violation in another Data Field.
+Examples include:
+• Rodent droppings contaminating food-contact surface that require cleaning and sanitation.
+• Vermin are found in the facility and food has been adulterated due to the presence of vermin.
+• The facility does not have warm water, at least 100°F, but active handwashing is observed.
+
+14 | Page
+Marking Instructions for Data Fields 1 Through 23 Marked IN, N.A., N.O., MAJOR, OUT
+Demonstration of Knowledge
+01 Demonstration of knowledge; food safety certification Applicable Sections: 113947(a),(b)(1)(2), 113947.1, 113947.2, 113947.3
+All food employees shall have adequate knowledge of and be trained in food safety as it relates to their assigned duties. Food facilities that prepare, handle or serve nonprepackaged potentially hazardous food, shall have an employee who has passed an approved food safety certification examination.
+OUT violations include the following:
+1. PIC and/or food employees are unable to demonstrate food safety knowledge practices and principles applicable to their assigned duties. (§113947(a))
+2. PIC and/or food employees are unable to demonstrate knowledge of major food allergens as defined and symptoms that major food allergens could cause.
+(§113947(b)(1)(2))
+3. Food facilities that prepare, handle, or serve nonprepackaged PHF do not have an owner or employee who has successfully passed an approved and accredited food safety certification exam as specified in Sections 113947.2 and 113947.3.
+(§113947.1(a))
+4. Lack of an approved, valid “Certified Food Manager” certificate available during the inspection. (§113947.1)
+N.O.  This item is marked N.O. if there is no food safety certified owner or employee due to change of ownership, commencement of facility operations, or the facility no longer has a certified owner or employee and less than 60 days have elapsed. The OIR shall be documented to require proof of a certified owner or employee within 60 days. (§113947.1(e))
+Note:
+• Major food allergens include: milk, eggs, fish, crustacean shellfish, tree nuts, wheat, peanuts, soybeans, and any food ingredient that contains protein derived from these foods. (§113820.5)
+
+15 | Page
+Employee Health & Hygienic Practices
+02 Communicable disease; reporting, restrictions & exclusions Applicable Sections: 113949, 113949.2(a),(b), 113949.4(a),(b), 113949.5(a),(b), 113950(b)(1),(b)(2), 113950.5(a),(b), 113973(a),
+Employees with a communicable disease shall be excluded from the food facility and preparation of food. The permit holder shall require food employees to report incidents of illness or injury and comply with all applicable restrictions.
+MAJOR violations include the following:
+1. An employee who is suffering from symptoms associated with an acute gastrointestinal illness or known to be infected with a communicable disease that is transmissible through food is engaging in the handling of food. (§113949)
+REPORTING
+1. PIC is aware of a food employee who has been diagnosed with an “illness” as listed in Section 113949.2(a) and has not notified the enforcement agency. (§113949.5(a))
+“Illness” includes communicable diseases such as Salmonella typhi., Salmonella spp., Shigella spp., Entamoeba histolytica., Enterohemorrhagic, or shiga toxin producing Escherichia coli., Hepatitis A virus., Norovirus., and other communicable diseases that are transmissible through food. (§113949.2(a))
+2. A food employee has not reported to the PIC that they have been diagnosed with a reportable illness. (§113949.4(a))
+3. PIC is aware of a reportable illness or aware that two or more food employees are concurrently experiencing symptoms associated with an acute gastrointestinal illness and has not reported to the local enforcement agency. (§113949.5(b))
+RESTRICTIONS & EXCLUSIONS
+1. PIC has not excluded or restricted a food employee as required by Section 113949.1. (§113950(b)(1)(2))
+2. PIC has been made aware of a food employee who is suffering from an acute gastrointestinal illness and has not restricted the food employee. (§113950(b)(2))
+REMOVAL OF RESTRICTIONS & EXCLUSIONS
+1. A food employee has not complied with the exclusions or restrictions placed upon them. (§113949.4(b))
+2. PIC removes a restriction of a food employee before resolution of symptoms of acute gastrointestinal illness. (§113950.5(a))
+3. PIC removes exclusion prior to receiving local health officer clearance. (§113950.5(b))
+
+16 | Page
+LESIONS & WOUNDS
+1. PIC is aware of a food employee who has a lesion or wound that is exposed and not properly protected as specified in Section 113949.2(b).
+2. F ood employees are observed contacting food and food-contact surfaces with any wounds, cuts, sores, or rashes and are not wearing gloves. [(§113973(a)), (§113975)]
+N.A.  Do Not Mark this item N.A.
+N.O.  Do Not Mark this item N.O.
+03 No discharge from eyes, nose, and mouth Applicable Section: 113974
+Employees experiencing sneezing, coughing, or runny nose shall not work with exposed food, clean equipment, utensils, or linens.
+OUT violations include the following:
+1. Observed discharges from eyes, nose, and/or mouth and the employee is working with exposed food, clean equipment, clean utensils, or clean linens. (§113974)
+N.A.  Do Not Mark this item N.A.
+N.O.  This item may be marked N.O. for food facilities only in the RARE case when there are no food employees present at the time of inspection.
+04 Proper eating, tasting, drinking or tobacco use Applicable Section: 113977(a),(b)
+Employees shall not eat, drink, or use tobacco in non-designated areas where contamination may result. An employee shall not use a utensil to taste food more than once without being properly washed, rinsed, and sanitized between uses.
+OUT violations include the following:
+1. A food employee is observed eating, drinking, or using tobacco in non-designated areas where contamination can result (e.g., beverage container stored on an active prep table). (§113977(a))
+Note:
+• A food employee may drink from a closed beverage container if the container is handled to prevent contamination of the employee’s hands, the container, nonprepackaged food, and food-contact surfaces. In general, an employee’s beverage container should not be placed on or directly above a food-contact surface. (§113977(b))
+2. An open employee drink or food item is observed stored on or above utensils and/or food-contact surfaces. (§113977(a))
+
+17 | Page
+N.A.  Do Not Mark this item N.A.
+N.O.  This item may be marked N.O. for retail operations only in the RARE case when there are no food handlers present at the time of inspection.
+Preventing Contamination by Hands 05 Hands clean and properly washed; gloves used properly Applicable Section: 113952, 113953.3(a), 113953.4, 113961(a),(b),(c), 113968, 113973((a),(b),(c),(d),(e),(f))
+Employees are required to wash their hands: before beginning work; before handling food/equipment/utensils; as often as necessary, during food preparation, to remove soil and contamination; when switching from working with raw to ready-to-eat foods, after touching body parts; after using toilet room; or any time when contamination may occur.
+Gloves shall be worn if an employee has cuts, wounds, artificial nails, nail polish, and/or rashes. Gloves are to be used for no more than one task. Employees are not to wrap or package leftover food using bare hands or unclean utensils. Hand sanitizers may be used after proper handwashing. Employees handling food must have fingernails that are trimmed, cleanable, and smooth.
+MAJOR violations include the following:
+1. Hands and exposed portions of their arms are not clean. (§113952)
+2. Hands are not thoroughly washed when necessary. (§113953.3(a))
+3. Hands are washed in water measuring below 100°F. (§113953.3(a))
+4. Hands not washed prior to donning gloves. (§113953.3(a)(9))
+5. Improper use of hand antiseptic or hands are not cleaned prior to use of hand antiseptic. (§113953.4)
+6. Food employees are not minimizing bare hand contact by using utensils.
+(§113961(a),(b))
+7. Food has been served to the consumer and a food employee is observed wrapping or packaging left over food at the direction of the consumer by using bare hands or unclean utensils. (§113961(c))
+8. Single-use gloves are washed. (§113973(b))
+9. Gloves are not used correctly or used for more than only one task.
+(§113973(c),(d),(e),(f))
+OUT violations include the following:
+1. Food employees observed handling food with fingernails that are not trimmed, cleanable, and smooth. (§113968)
+2. Artificial nails, nail polish, rings other than a plain band, uncleanable orthopedic support devices worn, but no gloves are being used. (§113973(a))
+
+18 | Page
+N.A.  Do Not Mark this item N.A.
+N.O.  This item may be marked N.O. for retail operations only in the RARE case when there are no food handlers present at the time of inspection.
+Note:
+• If hands or fingers are unclean as a result of unmaintained fingernails, use of rings, etc., then a “Major” is cited.
+06 Adequate handwashing facilities supplied & accessible Applicable Sections: 113953(a),(b)(1)(2),(c), 113953.1(a),(b),(c),(d), 113953.2(a),(b), 114067(f)
+Handwashing soap and towels or drying device shall be provided in dispensers.
+Dispensers shall be maintained in good repair. Adequate facilities shall be provided for handwashing. Handwashing sink is to be separated from a warewashing sink by a 6 inch high metal splashguard or 24 inch separation. Handwashing sinks shall not be obstructed, inaccessible, used improperly, or kept unclean.
+OUT violations include the following:
+1. Handwashing facilities not provided within or adjacent to toilet rooms. (§113953(a))
+2. Lack of handwashing facilities that are sufficient in number and conveniently located in a food preparation area or warewashing area, if facility was constructed after January 1, 1996. [(§113953(b)(1)), (§114067(f))]
+3. Handwashing facility is not separated from a warewashing sink by a 6 inch high metal splashguard or 24 inch separation. (§113953(b)(2))
+4. Obstructed, inaccessible, improper use of, or unclean handwashing facilities.
+(§113953.1(a))
+5. Handwashing facilities used for purposes other than handwashing. (§113953.1(b))
+6. Employees clean their hands in a sink used for food preparation, warewashing, or a janitorial sink. A warewashing sink may be used for handwashing as specified in Section 114125. [(§113953.1(c)), (§113953.1(d))]
+7. Lack of required soap and paper towels in dispensers. (§113953.2(a),(b))
+N.A.  Do Not Mark this item N.A.
+N.O.  Do Not Mark this item N.O.
+Note:
+• Lack of warm water at handwashing facility is a violation of data field #21 on the OIR. (§113953(c))
+
+19 | Page
+Time and Temperature Relationships
+07 Proper hot and cold holding temperatures Applicable Sections: 113996(a),(b),(c)(1)(2)(3)(4)(5)(6),(d), 113998,114037(a)
+Potentially hazardous foods shall be held at or below 41°F or at or above 135°F.
+MAJOR violations include the following:
+1. Multiple PHFs (i.e., two or more food items in separate containers or compartments)
+are found held at temperatures of 50°F to 130°F without any other approved intervention. (§113996(a))
+2. Pooled eggs (i.e., more than one egg is broken and the eggs are combined) are found held at temperatures of 50°F to 130°F without any other intervention.
+(§113996(a))
+3. A single PHF food, container, or compartment stored/held independently of any other PHF food at temperatures of 50° to 130°F (e.g., soft serve in the machine, a piece of meat in the oven). (§113996(a))
+OUT violations include the following:
+1. PHFs (multiple containers) or pooled eggs, are found held at temperatures between 42°F to 49°F or from 131°F to 134°F without any other approved intervention.
+(§113996(a))
+2. A single container or compartment of PHF in a multifood holding unit (i.e., refrigerator or steamtable) at temperatures between 42°F to 134°F. (§113996(a))
+3. A single PHF food, container, or compartment stored/held independently of any other PHF food at temperatures between 42°F to 49°F or from 131°F to 134°F (e.g., soft serve in the machine, a piece of meat in the oven). (§113996(a))
+Notes:
+• Food item has begun to thaw using unapproved methods, but the food is not in the temperature danger zone, is a violation of data field #26 on the OIR. (§114018)
+• Roasts cooked per Section 114004(b) may be held at 130°F. (§113996(b))
+• During preparation, cooking, cooling, or transportation for a period of less than 30 minutes, or when time as a public health control is utilized. (§113996(a))
+• Foods approved for holding between 41°F and 45°F. These include the following:
+raw shell eggs, unshucked live molluscan shellfish, pasteurized milk and pasteurized milk products in original sealed containers, PHF held for dispensing in serving lines and salad bars during periods not to exceed 12 hours in any 24-hour period, PHF held during transportation, PHF held in vending machines, or PHF held for sampling at a Certified Farmers’ Market.
+(§113996(c)(1)(2)(3)(4)(5)(6),(d))Food can be removed from specified holding temperatures for up to two hours to facilitate food preparation. (§113998)PHF can be received at 45°F if the food is cooled to 41°F within 4 hours. (§114037(a))
+
+20 | Page
+N.A.  This item may be marked N.A. when the food facility does not hold hot or cold food.
+N.O.  This item may be marked N.O. when the food facility holds hot or cold foods, but no foods are being held hot or cold during the time of inspection.
+08 Time as a public health control; procedures & records Applicable Sections:
+111223,114000(a)(1)(2)(3)(4),(b),114429(a),114429.5(b)
+When time only, rather than time and temperature, is used as a public health control, food must be marked or otherwise identified as to what time the food was removed from temperature control. Food items shall not exceed the time marked.
+MAJOR violations include the following:
+1. Food that has been time marked and has exceeded the time marked. (§114000(a))
+2. Time as a public health control is used for food that has not been marked or otherwise identified and the food has been out of temperature control for more than four hours. (§114000(a)(1)(2))
+3. Manufactured Korean rice cakes held at room temperature exceeding one day from the date indicated on the label from the Korean Rice Cake Association.
+[(§111223), (§114429(a))]
+4. Asian rice noodles are held at room temperature exceeding four hours from the time the product was removed from temperature control if the product is PHF.
+(§114429.5(b))
+Note:
+• Food in unmarked containers or packages marked to exceed a four hour limit shall be discarded. (§114000(a)(3))
+OUT violations include the following:
+1. Time as a public health control is used for food but the food has not been marked or otherwise identified and the food has been out of temperature control for less than four hours. (§114000(a)(1)(2))
+2. Written procedures are not maintained and available for food that has been prepared, cooked, and refrigerated when using time as a public health control. (§114000(a)(4))
+N.A.  This item may be marked N.A. when the food facility does not use time only as a public health control.
+N.O.  This item may be marked N.O. when the food facility uses time only as a public health control, but is not using this practice at the time of inspection.
+Exception: Time as a public health control cannot be used for raw eggs in a licensed health facility or in a public or private school. (§114000(b))
+
+21 | Page
+09 Proper cooling methods Applicable Sections: 114002(a),(b),(c),(d), 114002.1(a),(b)
+All potentially hazardous food shall be rapidly cooled from 135°F to 70°F, within 2 hours, and then from 70°F to 41°F, within a total of 6 hours. Cooling shall be by one or more of the following methods: in shallow containers, separating food into smaller portions, adding ice as an ingredient, using an ice bath, stirring frequently, using rapid cooling equipment, or using containers that facilitate heat transfer. Potentially hazardous food is to be cooled within 4 hours to 41°F if prepared from ingredients at ambient temperature.
+Deliveries of potentially hazardous food is to be cooled to below 41°F within 4 hours if received between 41°F to 45°F.
+MAJOR violations include the following:
+1. PHF is not cooled rapidly from 135°F to 70°F within two hours. (§114002(b))
+2. After heating or hot holding, PHF is not cooled rapidly from 135°F to 41°F or below within six hours. (§114002(a),(b))
+3. PHF is not cooled within 4 hours to 41°F if prepared from ingredients at ambient temperature. (§114002(c))
+4. Deliveries of PHF not cooled to below 41°F within 4 hours if received between 41°F to 45°F. (§114002(d))
+OUT violations include the following:
+1. PHF is found cooling using procedures not listed as an approved method but found to be in the safe cooling temperature range of 135°F to 70°F within 2 hours, then to 41°F within a total of 6 hours. (§114002(b))
+N.A.  This item may be marked N.A. when the food facility does not: receive raw eggs, shellstock, or milk; prepares no PHF from ambient temperature ingredients that require cooling; and does not cool cooked PHF.
+N.O.  This item may be marked N.O. when the food facility does cool PHF, but proper cooling per the prescribed temperature and time parameters cannot be determined during the length of the inspection. In this case, the enforcement officer should recommend that the PIC verify that the cooling procedures meet the prescribed temperature and time parameters. These types of inquiries are opportunities for education.
+Notes:
+• Approved cooling methods include (§114002.1(a)):
+a) Placing the food in shallow pans (recommend using heat-conductive pans).
+b) Separating the food into smaller or thinner portions.
+c) Using rapid cooling equipment such as chill blasters.
+d) Using containers that facilitate heat transfer.
+e) Adding ice as an ingredient.
+f) Using ice paddles.
+g) Placing containers in an ice bath, stirring food frequently.
+h) In accordance with an approved HACCP plan.
+i) Utilizing other affecting means as approved by the enforcing agency.
+
+22 | Page
+• F ood containers shall be arranged in cooling or cold holding equipment to provide maximum heat transfer through the container walls. Containers may be stored loosely covered or uncovered if protected from overhead contamination during the cooling period. This will facilitate heat transfer from the surface of the food. Food must be stirred as necessary to evenly cool a liquid or a semi-liquid food.
+(§114002.1(b))
+10 Proper cooking time & temperature Applicable Sections: 114004, 114008, 114010
+Comminuted meat, raw eggs, or any food containing comminuted meat or raw eggs, shall be heated to 155°F for 15 seconds. Single pieces of meat, and eggs for immediate service, shall be heated to 145°F for 15 seconds. Poultry, comminuted poultry, and stuffed fish/meat/poultry shall be heated to 165°F. Other temperature requirements may apply.
+MAJOR violations include the following:
+1. Food items checked do not meet the temperature requirements for cooking and an employee attempts to serve the product without returning the product to the cooking process. [(§114004), (§114008), (§114010)]
+N.A.  This item may be marked N.A. when no raw animal foods are cooked in the food facility.
+N.O.  This item may be marked N.O. when no raw animal foods are cooked during the time of inspection.
+Notes:
+• Minimal cooking time and temperatures:
+a) Comminuted meat (e.g., ground beef, hamburger, or ground pork), injected meats, and raw shell eggs not cooked per request for immediate service shall be heated to 155°F for 15 seconds. (§114004(a)(2))
+b) Single pieces of beef, lamb, veal, pork, fish, or eggs served for immediate service shall be heated to 145°F for 15 seconds unless otherwise requested by the customer or disclosed. (§114004(a)(1))
+c) Poultry, comminuted poultry (e.g., ground turkey, ground chicken), baluts, stuffed fish/meat/poultry shall be heated to 165°F for 15 seconds.
+(§114004(a)(3))
+d) A raw or undercooked whole-muscle intact beef steak may be served or offered for sale in a ready-to-eat form if steak is labeled to indicate it meets the definition of “whole-muscle intact beef” and steak is cooked on top and bottom to a surface temperature of 145°F. (§114004(c)(2)(3))
+
+23 | Page
+• Raw foods of animal origin cooked in a microwave oven shall meet all of the following requirements (§114008):
+a) Be rotated or stirred throughout or midway during cooking to compensate for uneven distribution of heat.
+b) Be covered to retain surface moisture.
+c) Be heated to a temperature of at least 165°F in all parts of the food.
+d) Stand covered for at least two minutes after cooking to obtain temperature equilibrium.
+• A raw animal food (e.g., raw eggs, raw fish, raw marinated fish, raw molluscan shellfish, steak tartare), or a partially cooked food (e.g., lightly cooked fish, soft cooked eggs, rare meat), may be served if consumer is informed that the food should be cooked as specified in subdivisions (a) and (b) to ensure its safety, or granted a variance from subdivision (a) and (b) by the department.
+(§114004(d)(1)(2))
+• Fruits and vegetables that are cooked for hot holding shall be cooked to a minimum temperature of 135°F. (§114010)
+11 Proper reheating procedures for hot holding Applicable Sections: 114014, 114016(a),(b),(c),(d),(e)
+Any potentially hazardous food cooked, cooled, and subsequently reheated for hot holding must be brought to an internal temperature of 165°F for 15 seconds within 2 hours. Potentially hazardous food reheated in a microwave to 165°F for 15 seconds must be rotated or stirred, covered, and allowed to stand covered for two minutes after reheating.
+MAJOR violations include the following:
+1. PHF is not rapidly reheated within 2 hours to 165°F for 15 seconds for hot holding such as reheating in a steam table. (§114016(a),(d))
+2. PHF is not reheated in a microwave to 165°F and the food is not rotated or stirred, covered, and not allowed to stand covered for two minutes after reheating.
+(§114016(b))
+3. Commercially processed ready-to-eat PHF is not reheated to 135°F or above for hot holding. (§114016(c))
+4. Remaining unsliced portions of roasts are not reheated for hot holding using minimum oven parameters as specified in Section 114004. (§114016(e))
+Note:
+• Cooked and refrigerated food that is prepared for immediate service in response to an individual consumer order may be served at any temperature. (§114014)
+N.A.  This item may be marked N.A. when foods are not held over for a second service and/or reheated for hot holding is not performed in the food facility.
+N.O.  This item may be marked N.O. such as when foods are held over for a second service, but no foods are reheated during the time of inspection.
+
+24 | Page
+Protection from Contamination
+12 Returned and consumed food Applicable Sections: 114079(a),(b)
+No unpackaged food that has been served shall be reserved or used for human consumption.
+OUT violations include the following:
+1. Food that has been in the possession of a consumer is served to another consumer (unless it is not potentially hazardous and served in an approved dispenser e.g., salt and pepper shakers, a narrow-neck bottle containing ketchup, steak sauce, or wine). (§114079(a),(b))
+2. Food in an opened or un-original package that has been in the possession of a consumer is served to another consumer. (§114079(b))
+3. Food that is not maintained in sound condition and checked on a regular basis that has been in the possession of a consumer is served to another consumer.
+(§114079(b))
+N.A.  Mark this N.A. if the facility only handles prepackaged food.
+N.O.  This item may be marked N.O. if food is not observed returned and served again during the time of inspection.
+13 Food in good condition, safe and unadulterated Applicable Sections: 113967, 113976, 113980, 113988, 113990, 114035(a),(b)(1)(2)(3)(4), 114041(a), 114125(b), 114254.3, 114377
+All food shall be manufactured, produced, prepared, compounded, packed, transported, kept for sale, and served so as to be pure and free from adulteration and spoilage. Any food is adulterated if it bears or contains any poisonous or deleterious substance that may render it impure or injurious to health.
+Major violations include any violation of these sections when actual contamination or adulteration of food has occurred. Violations involving potential contamination of food would be marked under data fields #26 through #29 on the OIR.
+MAJOR violations include the following:
+1. A food handler contaminates food by any intentional or unintentional act. (§113967)
+2. A food handler is observed using a utensil to taste food more than once without being properly washed, rinsed, and sanitized between uses. (§113976)
+3. Food is found to be adulterated or contaminated. (§113980)
+4. Canned food exhibiting leakage or swelling. (§113980)
+5. Canned food with severe dents on seam(s). (§113980)
+6. Unapproved additives are used in food such as sulfites being applied to fresh fruits, vegetables, or any PHF item, including meat. (§113988)
+
+25 | Page
+7. Ice used for cooling the exterior of food items or food containers or used for refrigeration purposes is used for consumption in food or beverages. (§113990)
+8. Food packaging is not in good condition, or food or food containers and pallets are infested with vermin or otherwise contaminated. (§114035(b)(3)(4))
+9. Shell eggs not received clean and sound. (§114041(a))
+10. Washing produce in a warewashing compartment without first cleaning and sanitizing the compartment. (§114125(b))
+11. A container that previously held poisonous or toxic material is used to store, transport, or dispense food, utensils, linen, or single-use articles. (§114254.3)
+12. Observed serving foods with artificial trans-fat greater than 0.5 grams per serving.
+(§114377)
+OUT violations include the following:
+1. Food is not inspected upon receipt (as soon as practical) and prior to any use, storage, or resale. (§114035(a))
+2. Food is accepted without satisfying all conditions required in Section 114035(b)(1)(2)(3)(4). The required conditions are:
+(1) Prepared and received from approved sources.
+(2) Received in wholesome condition.
+(3) Received in packages that are in good condition and food is not exposed to adulteration.
+(4) In containers or on pallets not invested with vermin.
+3. Limited insect infestation (e.g., grain pests in flour, beans, rice, or fruit flies in alcohol). Must also use data field #52 in the OIR (VC&D Procedure). (§113980)
+4. Observed ingredients containing trans-fat stored onsite but not used in food preparation. (§114377(b)(2))
+N.A.  Do not mark this item N.A.
+N.O.  Do not mark this item N.O.
+Note:
+• Violations involving non severe dented seams would be marked under data field #27 on the OIR.
+
+26 | Page
+14 Food-contact surfaces: clean and sanitized Applicable Sections: 113984(d), 114095, 114097, 114099.1, 114099.2(a),(b),(c),(d),(e),(f), 114099.3, 114099.6(a),(b)(1)(2)(3),(c), 114099.7(a),(b)(1)(3), 114101(b),(c),(d), 114105, 114109(a),(b), 114111(a),(b), 114113, 114115(a),(c), 114117(a),(b),(c),(d),(e), 114118
+All food-contact surfaces of utensils and equipment shall be clean and sanitized.
+A food facility shall not be operating if there is no method to properly clean and sanitize equipment or utensils. If found operating, the Environmental Health Specialist shall suspend the permit. All equipment and utensils will be required to be cleaned and sanitized prior to the permit being reinstated. A food facility shall not be operating if there is gross contamination of food-contact surfaces that may result in the contamination of food products.
+Refer to Appendix A for wiping towel violation flowchart Required sanitizer levels for food- contact surfaces are as follows : 100 parts per million
+(ppm) of chlorine for 30 seconds, 200 ppm of quaternary ammonia for one minute, and 25 ppm of iodine for one minute , or any sanitizer that complies wit h Title 40 of the CFR .
+(§114099.6(a),(b),(c))
+SANITIZING FOOD-CONTACT SURFACES MAJOR violations include the following:
+1. Food-contact surfaces of equipment, utensils , and fabric implements (which come in direct contact with food) are not cleaned and  sanitized. [(§113984(d)), (§114097), (§114113), (§114118)]
+2. Sanitizer level is below 50 ppm for chlorine and/or inadequate contact time of less than 30 seconds. (§114099.6(b)(1))
+3. Sanitizer level is below 25 ppm for iodine and/or inadequate contact time of less than 1 minute. (§114099.6(b)(2))
+4. Sanitizer level is below 100 ppm for quaternary ammonia and/or inadequate contact time of less than 1 minute. (§114099.6(b)(3))
+5. Equipment food-contact surfaces or utensils are not cleaned at the frequency required. (§114117(a),(b),(c),(d),(e))
+Notes:
+• Examples of frequency for cleaning and sanitizing food-contact surfaces and utensils:
+a) If used with PHF throughout the day, at least every four hours.
+b) Before each use with a different type of raw food of animal origin (e.g., beef, fish, lamb, pork, or poultry).
+c) Each time there is a change from working with raw foods to working with ready-to-eat foods.
+d) Between uses with raw produce and with PHF.
+e) Before using or storing a food temperature measuring device.
+f) Any time during the operation when contamination may have occurred.
+
+27 | Page
+OUT violations include the following:
+1. Sanitizer level is between 50 ppm and 100 ppm for chlorine. (§114099.6(b)(1))
+2. Sanitizer level is between 100 ppm and 200 ppm for quaternary ammonia.
+(§114099.6(b)(3))
+3. Food-contact surfaces and/or equipment currently in use, are not clean to sight and touch. (§114115)
+4. Food-contact surfaces of cooking equipment and pans are not kept free of encrusted grease deposits and other soil accumulations. (§114115(a))
+5. Food-contact surfaces are contaminated during the process of reassembling equipment. (§114115(c))
+Notes:
+• If sanitizer is observed actively in use, should be marked under data field #14 on the OIR. If not observed actively in use, should be marked under data field #40 on the OIR.
+• Equipment food-contact surfaces that are not currently in use and are not clean to sight and touch should be marked under data field #36 on the OIR. [(§114115), (§114178)]
+MANUAL WAREWASHING Required sanitizer levels for manual sanitization of food-contact surfaces are as follows:
+immersion for at least 30 seconds where the water temperature is maintained at 171°F or above, 100 ppm of chlorine for 30 seconds and 200 ppm of quaternary ammonia for one minute, and 25ppm of iodine for one minute or any sanitizer that complies with Section 180.940 of Title 40 of the CFR. (§114099.6(a),(b),(c))
+MAJOR violations include the following:
+1. Food-contact surfaces of utensils are not cleaned and sanitized. [(§113984(d)), (§114097),(§114113)]
+2. Manual methods of warewashing not provided. (§114095)
+3. Manual warewashing is not accomplished by the use of a three compartment sink where utensils are first pre-cleaned, then washed, rinsed, and sanitized as prescribed in Section 114099.1 and 114099.2(a),(b),(c),(d),(e),(f).
+Notes:
+• Observed violations when actively warewashing is data field #14 on the OIR.
+Sanitizer may be lower if it meets the requirements of Section 178.1010 of Title 21 of CFR. When used in accordance with the manufacturer’s use directions as specified on the product label.
+• Alternative methods may be approved as specified in Section 114099.3 such as Clean In Place (CIP), high pressure detergent sprayers, or low-or-line pressure spray detergent foamers.
+
+28 | Page
+• A two compartment sink may continue to be used provided that; (§114099.3(e))
+a) The number of utensils cleaned and sanitized is limited to batch operations.
+b) The operator makes up the cleaning and sanitizing solutions immediately before use and drains them immediately after use, additionally uses an approved detergent sanitizer to clean and sanitize in accordance with the manufacturer’s label instructions. The detergent sanitizer applied in the sanitizing step shall be the same approved detergent sanitizer that is used in the washing step.
+4. Wash water temperature in the sink compartment during active warewashing is below 100°F or is below the temperature specified on the cleaning agent manufacturer’s label instructions. (§114099.2(b))
+Note:
+• Wash water may be below 100°F if specified on the cleaning agent manufacturer’s label instructions.
+5. Hot water immersion sanitization is below 171°F and/or inadequate contact time of less than 30 seconds. (§114099.6(a))
+6. Sanitizer level is below 50 ppm for chlorine and/or inadequate contact time of less than 30 seconds. (§114099.6(b)(1))
+7. Sanitizer level is below 25 ppm for iodine and/or inadequate contact time of less than 1 minute. (§114099.6(b)(2))
+8. Sanitizer level is below 100 ppm for quaternary ammonia and/or inadequate contact time of less than 1 minute. (§114099.6(b)(3))
+OUT violations include the following:
+1. Sanitizer level is between 50 ppm and 100 ppm for chlorine. (§114099.6(b)(1))
+2. Sanitizer level is between 100 ppm and 200 ppm for quaternary ammonia.
+(§114099.6(b)(3))
+3. Towel drying of cleaned and sanitized utensils. (§114105)
+4. Equipment and utensils are not allowed to adequately drain or air-dry before reuse.
+(§114105)
+MECHANICAL “MACHINE” WAREWASHING Required sanitizer levels for mechanical sanitization of food-contact surfaces are as follows: achieving a verified utensil surface temperature of 160°F, 50 ppm of chlorine for 30 seconds and 25 ppm of iodine for one minute, or any sanitizer that complies with Section 180.940 of Title 40 of the CFR when used in accordance with the machine and sanitizer manufacturer’s use specifications. (§114099.7(a),(b))
+MAJOR violations include the following:
+1. Food-contact surfaces of utensils are not cleaned and sanitized. [(§113984(d)), (§114097), (§114113)]
+2. The temperature of the sanitizing rinse is less than 160°F as measured at the utensil surface or the automatic dishwasher is reaching a temperature that is below the recommended temperature per manufacturer’s specifications (must be at least 160°F). (§114099.7(a))
+
+29 | Page
+3. Sanitizer level is below 50 ppm for chlorine and/or inadequate contact time of less than 30 seconds. (§114099.7(b)(1))
+4. Sanitizer does not comply with Section 180.940 of Title 40 of the CFR and/or is not used in accordance with the machine and sanitizer manufacturers’ use specifications.
+(§114099.7(b)(3))
+5. Soiled items are not loaded in the warewashing machine correctly or the wash water or detergents are insufficient. (§114101(b),(c),(d))
+6. Drying agents used during sanitization contain compounds other than those listed as noted in Section 114109(a),(b).
+7. Dry cleaning methods (e.g., brushing, scraping, and vacuuming), are used with other than dry non-PHF residues. (§114111(a))
+8. Cleaning equipment used in dry cleaning of food-contact surfaces is used for other purposes. (§114111(b))
+OUT violations include the following:
+1. Equipment and utensils are not scraped of food debris, or are not pre-flushed, pre-soaked, or scrubbed, if necessary. (§114099.1)
+2. Towel drying of cleaned and sanitized utensils. (§114105)
+• Sanitizer level is between 25 ppm and 50 ppm for Chlorine. (§114099.7 (b)(1))
+3. Equipment and utensils are not allowed to adequately drain or air-dry before reuse.
+(§114105)
+N.A.  This item may be marked N.A. only when there is no requirement to clean equipment and utensils (e.g., when only prepackaged foods are sold).
+N.O.  This item may be marked N.O. if there is no cleaning and sanitizing operations taking place at the time of inspection. However, the EHS should ask how food-contact surfaces are cleaned and sanitized to ensure they are using appropriate methods.
+Notes:
+• If sanitizer is observed actively in use, should be marked under data field #14 on the OIR. If not observed actively in use, should be marked under data field #40 on the OIR.
+• In lieu of direct observation, if an inspector determines, based on questioning, that food-contact surfaces have not been properly sanitized when required, a MAJOR violation under data field #14 on the OIR may be cited.
+
+30 | Page
+Food from Approved Sources 15 Food obtained from approved source Applicable Sections: 113758, 113980, 114021, 114023, 114024, 114025, 114027, 114029, 114031, 114365, 114376, 114041(b)
+All food shall be obtained from an approved source. Liquid, frozen, and dry eggs, and egg products shall be obtained pasteurized. Frozen milk products (e.g., ice cream), shall be obtained pasteurized.
+MAJOR violations include the following:
+1. Food or ice is not from an approved food source. [ (§113758), (§113980), (§114021), (§114023), (§114025), (§114365), (§114376)]
+2. Retail food facility manufacturing yogurt/ice cream without the required dairy license.
+(§113980)
+3. Liquid, frozen, and dry eggs, and egg products are not obtained pasteurized.
+(§114024)
+4. Frozen milk products (e.g., ice cream) are not pasteurized. (§114024)
+5. Fish is not commercially and legally caught or harvested. (§114027)
+6. Molluscan shellfish are not received from sources listed in the Interstate Certified Shellfish Shippers list. (§114029)
+7. Game animals are not from an approved source. (§114031)
+8. Food stored or prepared in a private home, other than an approved cottage food item, is offered for sale in a food facility. (§114021)
+9. Shell eggs do not meet at least Grade B Standards. (§114041(b))
+N.A.  Do Not Mark this item N.A.
+N.O.  Do Not Mark this item N.O.
+16 Compliance with shellstock tags, condition, display Applicable Sections: 114039(a),(b), 114039.1(a),(b), 114039.2, 114039.3(a),(b),(c), 114039.4(a),(b),(c), 114039.5(a),(b)
+Shellstock shall have complete certification tags and shall be properly stored, and displayed.
+OUT violations include the following:
+1. A package of raw shucked shellfish is not properly labeled. (§114039(a))
+2. Shellstock is not obtained with proper tags or labels. (§114039.1(a))
+3. Shellstock received is not discarded when they are not reasonably free of mud, dead shellfish, or broken shells. (§114039.2)
+4. Molluscan shellfish removed from the container in which they were received and not in compliance with Section 114039.3(a),(b),(c).
+5. Shell stock tags are not attached to the container they are received in until empty, or tags/ labels are not held for 90 calendar days from the date the lot is emptied.
+(§114039.4(a)(b))
+
+31 | Page
+6. Shellstock tags are not kept in chronological order.(§114039.4(b))
+7. Identity of shellstock is not maintained after removal from original container by: (1)
+failing to keep records, (2) commingling shellstock, (3) repackaging shellstock without shellstock tag or approved labeling. (§114039.4(c)(1)(2)(3))
+8. Shellstock from one harvest date/location has been commingled with different shellstock. (§114039.4(c)(2))
+9. If molluscan shellfish life support system display tanks are operated in a manner that allows water used for other fish to flow into the tank. If safety of the shellfish as they are received are compromised by use of the tank. (§114039.5(a))
+10. Molluscan shellfish tanks are not marked, so it is obvious to the consumer that the shellfish are for display only. (§114039.5(a))
+11. Molluscan shellfish life support systems are not operated under a HACCP plan.
+(§114039.5(b))
+Notes:
+• T his HACCP plan must ensure all of the following: (1) water used with fish other than molluscan shellfish does not flow into the molluscan tank, (2) the safety and quality of the shellfish when they were received are not compromised by the use of the tank, and (3) the identity of the source of the shellstock is retained as required in Section 114039.4.(§114039.5(b))
+• A package of raw shucked shellfish that does not bear a label or bears a label that does not contain all the information required by subdivision (a) shall be subject to impound pursuant to Section 114393. (§114039(b))
+• A container of shellstock that does not bear a tag or label or bears a tag or label that does not contain all the information required by subdivision (a) shall be subject to impound pursuant to Section 114393. (§114039.1(b))
+N.A.  This item may be marked N.A. when shellstock are not sold or served in the facility.
+N.O.  This item may be marked N.O. when shellstock are not being sold at the time of inspection.
+17 Compliance with Gulf Oyster Regulations Applicable Sections: Title 17 CA Code Regulations Section13675
+Comply with Gulf Oyster warning seasonal requirements.
+OUT violations include the following:
+1. Raw Gulf Oysters are offered for sale, without evidence of approved treatment, between the months of April 1 – October 31.
+2. Raw Gulf Oyster warning signs are not posted for untreated oysters between the months of November 1 – March 31. (Title 17 CCR 13675)
+N.A.  This item may be marked N/A when Gulf oysters are not used sold or served in the food facility.
+
+32 | Page
+N.O.  This item may be marked N/O when Gulf oysters are not being sold at the time of inspection and prior compliance through tags, invoices or purchase records can be verified.
+Conformance with Approved Procedures 18 Compliance with variance, specialized process, & HACCP Plan Applicable Sections: 114057(a), 114057.1(b)(1)(2)(3)(4)(5)(6)(7)(8), 114057.1(c), 114057.1(d)(1)(2)(3), 114067(c), 114417.5, 114417.6,
+A Hazard Analysis Critical Control Point (HACCP) plan is a written document that delineates the formal procedures developed for safe food handling approved by the National Advisory Committee on Microbiological Criteria for Foods. A written document approving a deviation from standard health code requirements shall be maintained at the food facility. Food facility operator must submit for an HACCP approval or follow an approved HACCP plan.
+OUT violations include the following:
+1. PHF packed in reduced-oxygen packaging not plainly date coded. (§114057(a))
+2. Food packaged using a reduced-oxygen packaging method, and Clostridium Botulinum is identified as a hazard, does not have an approved HACCP plan.
+(§114057.1(b)(1)(2)(3)(4)(5)(6)(7)(8))
+3. Exception: A food facility is not required to have an HACCP plan if the food facility uses a reduced-oxygen packaging method to package hazardous food that always complies with the following: (1) The food is labeled with the production time and date,
+(2) The food is held at 41°F or lower during refrigerated storage, and (3) the food is removed from its package in the food facility within 48 hours after packaging.
+(§114057.1(d)(1)(2)(3)).
+4. A food facility is packaging non-frozen fish using a reduced-oxygen packaging method. (§114057.1(c))
+5. A satellite food facility is operating without EHS approved written standard operating procedures. (§114067(c))
+6. Permit holder does not retain a copy of the variance letter on file and make it available for inspection. (§114417.5)
+7. If an operator violates the conditions of a variance or HACCP plan. (§114417.6)
+8. If the food facility operator does not submit a HAACP plan for approval by the enforcement agency for smoking, curing, using vinegar or other additives for food preservation, use of a molluscan shellfish tank (if use started after adoption of Cal Code), custom processing of animals, or as otherwise required. (§114419)
+N.A.  This item may be marked N.A. if the facility is not required by the regulatory authority to have a variance or HACCP plan.
+N.O.  Do Not Mark this item N.O.
+
+33 | Page
+Consumer Advisory 19 Consumer advisory provided for raw or undercooked foods Applicable Sections: 114012, 114093
+Ready-to-eat food containing undercooked food or raw eggs and unpackaged confectionery may be served if the facility notifies the consumer.
+OUT violations include the following:
+1. Pasteurized eggs or pasteurized egg products are not substituted for raw shell eggs in foods (e.g., Caesar salad dressing or hollandaise sauce), and no consumer warning is provided. (§114012)
+2. The facility serves raw or undercooked food and fails to provide an advisory of the significantly increased risk of consuming those foods by way of a disclosure and reminder using brochures, deli case or menu advisories, label statements, table tents, placards, or other effective written means. (§114093)
+N.A.  This item may be marked N.A. when the food facility does not serve raw or undercooked animal foods.
+Note:
+• A consumer advisory is not required when a consumer specifically orders food raw or undercooked.
+Highly Susceptible Populations 20 Licensed health care facilities/public & private schools:
+prohibited foods not offered Applicable Section: 114091
+Prohibited foods may not be offered in licensed health care facilities/public and private schools.
+MAJOR violations include the following:
+1. Unpasteurized juice, fluid milk, or dry milk is served. (§114091)
+2. Unpasteurized shell eggs are used, unless raw eggs are used for one consumer’s serving at a single meal and cooked as required by code (145°F), or combined as an ingredient before baking and thoroughly cooked to a ready-to-eat form, or the facility is operating pursuant to a HACCP Plan. (§114091)
+3. Ready-to-eat food that contains raw food of an animal origin, or partially cooked food is served. (§114091)
+4. Raw seed sprouts are served. (§114091)
+N.A.  This item may be marked N.A. if a highly susceptible population is not served.
+N.O.  Do not mark this item N.O.
+
+34 | Page
+Water/Hot Water 21 Hot and cold water available Applicable Sections: 113953(c), 114192(a),(d), 114189
+An adequate, protected, pressurized, potable supply of hot water and cold water shall be provided at all times.
+If there is no water, no hot water, or the water supply is unapproved/contaminated, a food facility shall immediately cease preparation of food. The food facility shall close or EHS may allow for the continued sale of packaged foods provided potable water is available for hand washing in toilet rooms.
+MAJOR violations include the following:
+1. Temperature of water at handwashing sink is not readily adjustable and is below 100°F or above 108°F. (§113953(c))
+2. Unapproved water supply. (§114192(a))
+3. No adequate, protected, pressurized, or potable water is available to the facility.
+[(§114189), (§114192(a))]
+4. The food facility is unable to provide water in the facility at or above 100°F as measured from the faucets (120°F required). (§114192(a))
+Notes:
+• Manual wash water temperature in the warewashing sink compartment not maintained at 100°F during active warewashing is marked under data field #14 on the OIR.
+• A food facility is subject to closure when unable to provide hot water at or above 100°F.
+• A food facility may provide only warm water (100°F) if the water supply is used only for handwashing. [(§113953(c)), (§114192(d))]
+OUT violations include the following:
+1. Lack of warm water, less than 100°F, at a handwash sink.
+2. Lack of warm water, less than 100°F, at a warewash sink.
+3. Lack of hot water, less than 120°F, at a janitorial sink.
+4. Lack of hot water, less than 120°F, at a food prep sink.
+N.A. Do not mark this item N.A.
+N.O. Do not mark this item N.O.
+Notes:
+• Hot water shall be supplied at a minimum temperature of at least 120°F is measured from the faucet.
+
+35 | Page
+Liquid Waste Disposal 22 Sewage and wastewater properly disposed Applicable Sections: 114123, 114197, 114276(a),(b)
+All liquid waste must drain to an approved fully functioning sewage disposal system.
+Toilet facilities must be operable.
+A food facility shall not operate if there is sewage overflowing or backing up in the food facility or there are no operable toilets available for food employees. Any contaminated food product shall be properly disposed of. The affected area must be cleaned and sanitized prior to reopening.
+MAJOR violations include the following:
+1. Overflows or backups of sewage/wastewater in the food facility that can result in contamination of food or food-contact surfaces and/or warrants immediate closure.
+(§114197)
+2. Overflowing or clogged grease trap/interceptor. (§114197)
+3. Lack of operable toilet facilities. (§114276(a),(b))
+OUT violations include the following:
+1. Food preparation sinks, handwashing sinks, and warewashing equipment shall not be used for the cleaning of maintenance tools, preparation or holding of maintenance materials, or the disposal of mop water and similar liquid wastes. (§114123)
+2. Floor sinks clogged with standing water but sewage not backing up. (§114197)
+3. Liquid waste (not sewage) is not disposed of through the approved plumbing system or does not discharge into the public sewer system or an approved private disposal system. (§114197)
+N.A.  Do not mark this item N.A.
+N.O.  Do not mark this item N.O.
+Vermin 23 No rodents, insects, birds, or animals Applicable Sections: 114259, 114259.1, 114259.4, 114259.5(b),(c),(d)
+Food facility shall be kept free of vermin: rodents (rats, mice), cockroaches, flies. Live animals are not allowed in a food facility except as specified in Section 114259.5. Food employees with service animals may handle or care for their service animal if they wash their hands as required. Dogs under the control of uniformed law enforcement or private operators who are licensed pursuant to Chapter 11.5 of Division 3 of the Business and Professions Code are exempt.
+
+36 | Page
+A food facility shall not operate when there is a vermin infestation that has resulted in the contamination of food-contact surfaces, food packaging, utensils, food equipment, or adulteration of food. All affected areas must be cleaned and sanitized. All adulterated food must be discarded.
+MAJOR violations include the following:
+1. The premise of the facility is not free of vermin which have contaminated or would be likely to contaminate food, food-contact surfaces, or food utensils. [(§114259), (§114259.1)]
+2. Food handlers care for or handle animals that may be present (e.g., patrol dogs, service animals, or pets), in areas that are used for food preparation, storage, or display. (§114259.4)
+3. Live animals are allowed in a food facility outside of the provisions that allow their presence as specified in Section 114259.5(b),(c),(d).
+OUT violations include the following:
+1. The premises of the facility is not free of vermin but the infestation is limited to non- critical areas and no contamination of food, food-contact surfaces, food utensils is likely, or there is evidence of a past infestation, and no evidence of a current active infestation can be observed (e.g., old rodent droppings that are located in an area that is not cleaned very frequently). [(§114259), (§114259.1)]
+N.A.  Do not mark this item N.A.
+N.O.  Do not mark this item N.O.
+
+37 | Page
+Marking Instructions for Data Fields 24 Through 54 When Out of Compliance Supervision 24 Person in charge present and performs duties Applicable Sections: 113945, 113945.1(a),(b), 113984.1, 114075(c)
+A person in charge shall be present at the food facility during all hours of operation.
+Customers are not allowed access through the food preparation area, unless the customer's route is separated from raw or undercooked foods by at least three feet of clearly delineated space or the route of access is separated by a rail or wall at least three feet high. Consumers must be notified that they must use clean tableware when returning to self-service areas (e.g., salad bars and buffets).
+1. A PIC is not present during operating hours. (§113945)
+2. The PIC allows people unnecessary to the food facility operation in the food preparation, storage, or warewashing areas. (§113945.1(a))
+3. Consumers are not notified that they must use clean tableware when returning to self-service areas (e.g., salad bars and buffets). [(§113945.1(b)), (§114075(c))]
+4. Consumers are allowed access through the food preparation area and the consumer’s route is not separated from raw or undercooked foods by at least three feet of clearly delineated space, or the route of access is not separated by a rail or wall at least 3 feet high. (§113984.1)
+Notes:
+• The permit holder or person designated by the permit holder is the PIC.
+• The PIC does not have to be the certified owner or employee.
+Personal Cleanliness 25 Personal cleanliness and hair restraints Applicable Sections: 113969(a),(b), 113971
+All employees preparing, serving, or handling food or utensils, shall wear clean, washable outer garments or uniformsand shall wear a hairnet, cap, or other suitable covering to confine hair.
+1. Food handlers preparing, serving, or handling food or utensils, are not wearing hair restraints. (§113969(a))
+
+38 | Page
+2. Food handlers observed with soiled clothing. (§113971)
+Note:
+• Hair restraints are not required for handlers who present minimal risk of contaminating food (e.g., counter staff who only serve beverages or wrapped foods). (§113969(b))
+General Food Safety Requirements 26 Approved thawing methods used, frozen food Applicable Sections: 114018, 114020
+Food shall be thawed under refrigeration; completely submerged under cold running water (less than 70°F) of sufficient velocity to flush loose particles for less than 2 hours;
+in microwave oven; or during the cooking process.
+1. Frozen foods not stored or displayed in their frozen state unless being thawed in accordance with Section 114020. (§114018)
+2. Food is observed found not being thawed by one of the approved methods.
+(§114020)
+Approved Thawing Methods: (§114020)
+a) Under refrigeration that maintains the food temperature at 41°F or below.
+b) Completely submerged under potable running water for a period not to exceed two hours at a water temperature of 70°F or below, and with sufficient water velocity to agitate and flush off loose particles into the sink drain.
+c) In a microwave oven if immediately followed by immediate preparation.
+d) As part of a cooking process.
+Note:
+• Thawing foods found in the temperature danger zone should be marked under data field #7 on the OIR.
+27 Food separated and protected Applicable Sections: 113984(a),(b),(c),(e),(f), 113986, 114049, 114053(a),(b),(c),(d), 114055(a),(b), 114060, 114067(d),(e),(h), 114069(a),(b), 114073, 114077, 114089.1(c), 114141, 114143(c)
+All food shall be separated and protected from contamination. All food shall be stored, prepared, displayed, or held so that it is protected from contamination.
+1. Adequate and suitable counter space is not provided for all food preparation operations. (§113984(a))
+2. Food preparation is not being conducted within a fully enclosed food facility, unless exempted. (§113984(b))
+
+39 | Page
+3. Limited food preparation is not conducted within an approved food compartment defined in Section 113784 or as approved by the enforcement agency. [(§113984(c)), (§114067(d))]
+4. Food is being thawed, washed, sliced, or cooled in an unenclosed unapproved facility or overhead protection is not provided where required (e.g., outdoor food displays, vending machines, or satellite food service operations).
+[(§113984(e),(f)), (§114067(e)), (§114069(a))]
+5. Food is not stored, prepared, displayed, or held so that it is protected from cross- contamination (e.g., sneeze guards, lids, display cases, dispensers, and labeled containers separating raw food from RTE food.). ((§113986), (§114060), (§114077))
+6. Raw meats, eggs, or shellfish stored over RTE foods but no cross-contamination has occurred. (§113986(a))
+7. Food is stored in lockers, toilet rooms, dressing rooms, refuse rooms, mechanical rooms, under unshielded sewer lines, leaking water lines, under stairwells, or under other sources of contamination. (§114049)
+8. Prepackaged food may not be stored in direct contact with ice or water if the food is subject to the entry of water because of the nature of the packaging, wrapping, container, or the positioning in the ice or water. (§114053(a))
+9. Nonprepackaged food stored in direct contact with undrained ice. (§114053(a))
+• Whole raw fruits or vegetables, cut raw vegetables, and tofu may be immersed in ice or water. (§114053(c))
+• Raw chicken and raw fish that are received immersed in ice in shipping containers may remain in that condition while in storage awaiting preparation, display, service, or sale. (§114053(d))
+10. Returned or damaged products; products where the label has been removed; and food products held for return to distributors are not separated and stored in a manner that prevents adulteration of other foods or contributes to a vermin problem.
+(§114055(a),(b))
+11. During non-operating hours and/or periods of inclement weather, satellite food service operations, outdoor displays are not fully enclosed; or food and food-contact surfaces are not stored inside a fully enclosed permanent food facility.
+[(§114067(h)), (§114069(b))]
+12. Bulk milk container dispensing tubes not cut diagonally, as to leave not more than one inch protruding from the chilled dispensing head. (§114073)
+13. French style, hearth baked, or hard crusted loaves and rolls are not properly wrapped. These shall be considered properly wrapped if in an open-end bag that encloses the product. (§114089.1(c))
+14. Lubricants that are not food grade are used on food-contact surfaces (potential contamination). (§114141)
+15. The open-air barbecue or outdoor wood-burning oven is not separated from public access to prevent food contamination or injury to public. (§114143(c))
+Note:
+• This section addresses prevention measures only. Actual contamination of food is cited in data field #13 on the OIR “Food in good condition, safe, and unadulterated”.
+
+40 | Page
+28 Washing fruits and vegetables Applicable Section: 113992(a),(b)
+Raw, whole produce shall be washed prior to preparation.
+1. Raw whole produce has not been thoroughly washed in potable water prior to being cut, combined with other ingredients, cooked, served, or offered for human consumption in RTE form. (§113992(a))
+2. Chemicals used to wash or peel produce do not meet the requirements specified in 21 CFR 173.315. (§113992(b))
+29 Toxic substances properly identified, stored, used Applicable Sections: 114254, 114254.1(a),(b), 114254.2
+All poisonous substances, detergents, bleaches, and cleaning compounds shall be stored separate from food, utensils, packing material, and food-contact surfaces. An insecticide, rodenticide, or other pesticide must be used in accordance with the manufacturer's instructions.
+1. An insecticide, rodenticide, or other pesticide is not used in accordance with the manufacturer’s instructions. (§114254 )
+2. A poisonous substance, detergent, bleach, cleaning compound, personal care item, or any other injurious or poisonous material is stored or used in a manner likely to cause contamination or adulteration of food, food-contact surfaces, utensils, or packaging materials. [(§114254),(§114254.2)]
+3. Containers of poisonous or toxic materials and personal care items do not bear a legible manufacturer’s label. (§114254.1(a))
+4. Working containers used for storing poisonous or toxic materials (e.g., cleaners and sanitizers), taken from bulk supplies are not clearly and individually identified with the common name of the material. (§114254.1(b))
+Note:
+• If food is found to be contaminated or adulterated during storage, mark data field #13 in the OIR, “Food in good condition, safe and unadulterated”. (§113980)
+
+41 | Page
+Food Storage/Display/Service 30 Food storage space, food storage containers identified Applicable Sections: 114047(a),(b),(c),(d), 114051, 114069
+Food shall be stored in approved containers and labeled as to contents. Food shall be stored at least 6" above the floor on approved shelving in an approved location to prevent possible contamination.
+1. Adequate and suitable space not provided for the storage of food. (§114047(a))
+2. Food is not stored at least 6 inches above floor to protect from splash, dust, vermin, or other forms of contamination or adulteration. (§114047(b))
+Notes:
+• Food in packages and working containers may be stored less than 6 inches above the floor if stored on dollies, pallets, racks, and skids designed to be moved by hand or by conveniently available hand trucks or fork lifts.(§114047(c))
+• Pressurized beverage containers, cased food in waterproof containers (e.g., bottles or cans, and milk containers in plastic crates) may be stored on a floor that is clean and not exposed to moisture. (§114047(d))
+3. Working containers of food or ingredients removed from original packages are not identified with common name of the food (except food that can be easily recognized e.g., pasta, rice, or beans). (§114051)
+4. Foods other than prepackaged non-PHF or uncut produce are displayed out of doors.
+(§114069)
+5. Prepackaged non-PHF or uncut produce displayed out of doors are not periodically checked on a regular basis. (§114069(d))
+31 Consumer self-service Applicable Sections: 114063(a),(b),(d),(e), 114065(d)
+Unpackaged food shall be displayed and dispensed in a manner that protects the food from contamination.
+1. Raw, nonprepackaged food of animal origin (e.g., lamb, beef, pork, poultry, and uneviscerated fish) is offered for consumer self-service. (§114063(a))
+2. Nonprepackaged food displayed in bulk for consumer self-service does not meet the conditions as set forth in Section 114063. (§114063(b))
+3. A food dispensing utensil is not provided for each container at buffets and salad bars.
+(§114063(d))
+4. Consumer self-service operations are not checked periodically on a regular basis by employees. (§114063(e))
+5. Consumer self-service bulk beverage dispensers not properly operated or maintained. (§114065)
+
+42 | Page
+6. Single-use utensils for bulk beverage dispensing operations are not protected from contamination and/or individually wrapped or dispensed from approved sanitary dispensers. (§114065(d))
+32 Food properly labeled & honestly presented Applicable Sections: 114087(a),(b), 114089(a),(b),(c), 114089.1(b), 114090(b), 114093.1, 114094, 114094.5(a), 114365.2(e), 114429(d), 114429.5(a), Sherman 110700, 111223(b)
+Any food is misbranded if its labeling is false or misleading, if it is offered for sale under the name of another food, or if it is an imitation of another food for which a definition and standard of identity has been established by regulation. Bulk food available for consumer self-service must have an information label, sign, and/or other method of notification that includes the label information. Prepackaged food must bear a label that complies with the labeling requirements as prescribed by the Sherman Food, Drug, and Cosmetic Law.
+Restaurants must provide a brochure placed at the point of sale that includes at least calories, sodium, saturated fat, and carbohydrates information per menu item. For sit- down restaurants, the information must be provided at the table. Drive-thrus restaurants are required to have the brochures available upon request and have a notice of the availability at the point of sale.
+1. Food is found offered for human consumption and is not honestly presented which misleads or misinforms the consumer. (§114087(a))
+2. Misleading artificial means are used to represent the true appearance, color, or quality of a food. (§114087(b))
+3. Prepackaged food does not bear a label that complies with the labeling requirements.
+(§114089(a),(b))
+4. Bulk food available for consumer self-service does not have label information, does not have a sign, or other method of notification that includes the label information.
+(§114089(c))
+5. The food facility or manufacturer’s dating information on foods is concealed or altered. (§114090(b))
+6. Unpackaged confectionary food contains more than one-half of 1 percent by weight of alcohol and is not labeled to identify alcohol content. (§114093.1)
+7. Food facility does not comply with necessary information and format requirements for menu labeling specified in United States Code, Title 21, Section 343(q),(5),(h) as it read on July 1, 2011 and the regulations adopted pursuant thereto. (§114094)
+8. Expired baby formula available for sale. (§114094.5(a))
+9. Korean rice cakes do not have a label from the Korean Rice Cake Association with the date of manufacture with the statement "must be consumed within 1 day of manufacture" as prescribed in Section111223(b). (§114429(d))
+10. Asian rice noodle labeling does not include the date and time the product was removed from temperature control if the product is PHF or, is missing the statement “perishable". (§114429.5(a))
+
+43 | Page
+Exceptions:
+• Bakery products, including tortillas, sold directly to a restaurant, catering service, retail bakery, or over the counter directly to the consumer by the manufacturer or bakery distributor are exempt from labeling provisions. (§114089.1(b))
+• Foods processed and prepared primarily in a retail establishment and not offered for sale outside that establishment (e.g., bakeries and deli’s).
+• Label information shall include the following (§114089(b))
+a) Common name of the food or descriptive identity statement.
+b) If made with two or more ingredients, a list of ingredients in descending order of predominance by weight.
+c) An accurate declaration of the quantity of contents.
+d) The name and place of business of the manufacturer, packer, or distributor.
+e) The statement "Perishable Keep Refrigerated" for PHF preserved by refrigeration. (§110700)
+f) Nutritional labeling, unless exempted in the Federal Food, Drug, and Cosmetic Act.
+• In addition, food from a Cottage Food operation shall include the following label information: (§114365.2(e))
+a) The words “Made in a Home Kitchen” in 12-point type on the cottage food product’s primary display panel and allergens.
+b) The registration or permit number of the “Class A” or “Class B” cottage food operation, respectively, and, in the case of a “Class B” cottage food operation, the name of the county of the local enforcement agency that issued the permit number. (§114365.2(e)(4))
+Equipment/Utensils/Linens 33 Nonfood-contact surfaces clean Applicable Section: 114115(b)
+All nonfood-contact surfaces of utensils and equipment shall be clean.
+1. Nonfood-contact surfaces of equipment are not kept free of an accumulation of dust, dirt, food residue, or other debris. (§114115(b))
+For example:
+• Refrigerator handle or door seals are unclean.
+• Sides of fryers, grills, or refrigerators, etc. are unclean.
+• Dry storage racks/shelving are unclean.
+• Fan guards of walk-in cooler are unclean.
+
+44 | Page
+34 Warewashing facilities: installed, maintained, used; test strips Applicable Sections: 114067(f),(g), 114099(a),(b),(c), 114099.3, 114099.5, 114101(a), 114101.1, 114101.2, 114103(a),(b),(c),(d),(e), 114107(a),(b), 114125(a),(b)
+Food facilities that prepare food shall be equipped with warewashing facilities. Testing equipment and materials shall be provided to measure the applicable sanitization method. A thermometer must be readily available to monitor the temperature of the water at the warewashing sink. A warewashing sink used to wash wiping cloths, wash produce, or thaw food must be cleaned and sanitized before and after each use.
+1. The food facility prepares food and does not have a three compartment sink with two integral metal drainboards. [(§114099(a)), (§114067(f))]
+Exceptions:
+• A two compartment sink that is in use on January 1, 1996, need not be replaced when used as specified in Section 114099.3 (batch operations/detergent sanitizer). (§114099(c))
+• The local enforcement agency may approve the use of alternative warewashing facilities. (§114067(g))
+2. The sink compartments are not large enough to accommodate the largest equipment and utensil. (§114099(b))
+3. Alternative manual warewashing equipment listed in Section 114099.3 (a) through (e)) is used and the enforcement agency has not approved its use. [(§114099.3), (§114067(g))]
+4. Temperature measuring device not provided during manual warewashing operations.
+(§114099.5)
+5. The mechanical warewashing machine is not approved, installed, and operated according to manufacturer’s specifications. (§114101(a))
+6. The warewashing machine does not have an easily readable data plate affixed to the machine. (§114101.1)
+7. Temperature measuring device not provided during machine warewashing operations. (§114101.2)
+8. Two approved integral metal drain-boards attached at point of entry and exit of machine, or sink not provided. (§114103(a),(b),(c),(d),(e))
+Note:
+• Mechanical warewashing machines may share manual warewashing drainboards.
+9. Means for adequately measuring the applicable sanitization method (e.g., test strips)
+are not provided. (§114107(a))
+10. The concentration of the sanitizing solution is not accurately determined to ensure proper dosage. (§114107(b))
+11. The warewashing sink is used for handwashing except as allowed by Section 114125(a).
+
+45 | Page
+12. If a warewashing sink is used to wash wiping cloths, wash produce, or thaw food, and the sink is not cleaned and sanitized before and after each time it is used.
+(§114125(b))
+Notes:
+• Violations related to the actual improper cleaning sanitization of food-contact surfaces are cited in data field #14 on the OIR “Food-contact surfaces: cleaned and sanitized.”
+• Violations related to actual food contamination as a result of a sink not properly cleaned or sanitized are cited in date field #14 on the OIR.
+35 Equipment/Utensils-approved; installed; good repair; capacity Applicable Sections: 114130(a),(b),(c),(d), 114130.1, 114130.2, 114130.3(a),(b), 114130.4, 114130.5(a),(b), 114130.6, 114132(a),(b),(c),(d), 114133(a),(b), 114137, 114139, 114153, 114163(a),(b)(1), 114165, 114167, 114169(a)(1)(2)(3),(b),(c),(d), 114175, 114177, 114180(a),(b)(1)(2)(3)(4),(c), 114182
+All utensils and equipment shall be fully operative and in good repair. All utensils and equipment shall be approved, installed properly, and meet applicable standards.
+APPROVED EQUIPMENT
+1. Equipment and utensils are not designed and constructed to be durable and retain characteristic qualities under normal use. (§114130(a))
+2. All new and replacement food-related and utensil-related equipment are not certified by an ANSI accredited certification program, or if no standard exists, is not approved by the local enforcement agency. (§114130(b))
+Exception: Restricted food service facilities may not need to comply with the ANSI requirements. (§114130(c))
+3. New and replacement electrical appliances do not meet Underwriters Laboratories
+(UL) standards for electrical equipment. (§114130(d))
+4. Materials used in the construction of single-use articles, utensils, and food-contact surfaces of equipment are porous, impart colors, odors, or tastes to food.
+[(§114130.1), (§114130.2)]
+5. Multiuse food-contact surfaces are not smooth, easily cleanable, or in good repair.
+(§114130.3(a),(b))
+6. Nonfood-contact surfaces, subject to food splash or spillage, are not smooth, nonabsorbent corrosion-resistant, and easily cleanable. (§114130.4)
+7. CIP equipment is not self-draining or designed for effective cleaning and sanitizing.
+(§114130.5(a),(b))
+8. Fabric implements allow the migration of deleterious substances or impart colors, odors, or tastes to food and are not safe, durable, and resistant to fraying and deterioration. (§114130.6)
+9. Wood or wood wicker is used as a food-contact surface. (§114132(a))
+
+46 | Page
+Exceptions:
+• Hard maple or equivalent may be used for cutting boards, rolling pins, chopsticks, and as specified. (§114132(b))
+• Raw fruit and veggies, and nuts in the shell may be kept in approved wood/cardboard shipping containers. (§114132(c),(d))
+10.  Copper or copper alloys are used in contact with food that has a pH below 6.0 (e.g., vinegar, fruit juice, or wine), or for a fitting between a backflow preventer and a carbonator. (§114133(a))
+Note:
+• Copper and copper alloys (brass) may be used in contact with beer brewing ingredients. (§114133(b))
+11.  Dollies, pallets, racks, or skids are not designed to be moved by hand, hand truck, or forklifts. (§114165)
+INSTALLED EQUIPMENT
+1. “V” type threads are used on food-contact surfaces. (§114137)
+Exception: Approved for hot oil cooking or filtering equipment.
+2. Cutting or piercing parts of can openers are not readily removable. (§114139)
+3. Beverage tubing or cold-plate beverage cooling devices are installed in contact with ice intended to be used for food or drink. (§114167)
+Exception: Does not apply to cold plates constructed integrally with an ice storage bin. (§114167)
+4. Fixed equipment that is not easily movable is not installed with adequate spacing or sealing, or floor-mounted equipment that is not easily movable is not sealed to floor or elevated on 6 inch legs. [(§114169(a)(1)(2)(3)), (§114169(b))]
+Exception: Does not apply to display shelving, refrigeration, and freezer units located in consumer shopping areas if floor under these units is maintained clean. (§114169(c))
+5. Table-mounted equipment that is not easily movable is not sealed to table or elevated on 4 inch legs. (§114169(d))
+GOOD REPAIR
+1. Equipment and utensils are not fully operative and in good repair. (§114175)
+2. Surfaces of equipment (e.g., cutting blocks and boards) are scratched and scored so that they can no longer be effectively cleaned and sanitized. (§114177)
+Note:
+• Violations related to unclean equipment are cited in data field #14 on the OIR (Food-contact surfaces: clean and sanitized) or data field #33 on the OIR (nonfood-contact surfaces clean).
+
+47 | Page
+CAPACITY
+1. Equipment used for cooling and heating food, and for holding cold and hot food, is not sufficient in number and/or capacity to ensure proper food temperature control during transportation and operation. (§114153)
+2. Electrical power is not supplied to operate the exhaust, lighting, electric water heaters, refrigeration units, or other appliances/accessories. (§114182)
+FOOD PREPARATION SINK An approved food preparation sink is not provided when the food facility conducts washing, rinsing, soaking, thawing, or similar preparation of food. (§114163(a))
+Exception: Food facilities that were approved for operation without a food preparation sink prior to July 1, 2007 need not provide a food preparation sink unless the food facility makes a menu change or changes their method of operation. (§114163(b)(1))
+FOGGING DEVICES
+1. Reservoirs that supply water to a device (e.g., a produce fogger) are not maintained and cleaned according to manufacturer’s specifications or Section 114180(b)(1)(2)(3)(4), whichever is more stringent. (§114180(a))
+2. Fogging device installed after July 1, 2007 using a reservoir instead of water under pressure for fogging or misting of food. (§114180(c))
+36 Equipment, utensils, and linens: Storage and Use Applicable Sections: 113778.4, 114074, 114075(a),(b), 114081(a),(b),(c),(d), 114083, 114118, 114119(a),(b),(c),(d),(e),(f), 114121, 114161(a),(b), 114172, 114178(a),(b),(c),(d), 114179(a),(c), 114185, 114185.2, 114185.3(a),(b),(c), 114185.4(a),(b), 114185.5(a),(b),(c)
+All clean and soiled linens shall be properly stored; nonfood items shall be stored and displayed separate from food and food-contact surfaces. Utensils and equipment shall be handled and stored so as to be protected from contamination. Pressurized cylinders must be securely fastened to a rigid structure.
+UTENSILS/TABLEWARE
+1. Preset tableware is exposed, or unused settings are not removed when a customer is seated, or are not cleaned and sanitized before further use. (§114074)
+2. Consumer soiled tableware is used to obtain second portions. (§114075(a),(b))
+3. Utensils are not handled, displayed, and dispensed so as to prevent contamination of lip-contact surfaces or single-use articles are reused. (§114081(a),(d))
+4. Utensils are not presented so that only the handles are touched. (§114081(b))
+5. Single–use articles are not contained in intact original wrappers or from an approved dispenser. (§114081(c))
+6. Soiled tableware is removed from the consumer area and is handled so that clean tableware, food, or food-contact surfaces are contaminated. (§114083)
+
+48 | Page
+7. Utensils are stored in an unapproved manner during pauses in food preparation or dispensing. (§114119(a),(b),(c),(d),(f))
+8. Food scoops are not stored so the handles are out of the food. (§114119(a),(b))
+Notes on utensil storage.
+The following are acceptable practices:
+a) On a clean portion of the food preparation table or cooking equipment only if the “in use” utensil is cleaned as prescribed in Section 114117. (§114119(c))
+b) In a container of water, if the water is maintained at a temperature of at least 135°F or below 41°F (ice water) and the container is cleaned at least every 24 hours or at a frequency necessary to preclude accumulation of residues.
+(§114119(f))
+9. Clean equipment and utensils are not stored covered or inverted such that they are self-draining. (§114178(b))
+10. Single-use articles are not kept in original protective package or otherwise protected from contamination until used. (§114178(c))
+REFILLING CONTAINERS
+1. Returned empty containers intended for refilling with food or beverage are not cleaned and refilled in an approved facility or an approved manner. (§114121)
+STORAGE AREAS
+1. Cleaned and sanitized equipment, cabinets used for storing food, or a cabinet used to store cleaned and sanitized equipment, utensils, laundered linens, or single-use articles found in or stored in any of the following areas:
+• Locker rooms, toilet rooms, refuse rooms, mechanical rooms, under sewer lines that are not shielded to intercept potential drips, under open stairwells, and under other sources of contamination. [(§114161(a)), (§114179(a))]
+Exception: Laundered linens and single-use articles may be stored in a locker room if protected by packaging or a storage compartment. (§114179(c))
+2. Pressurized cylinders are not securely fastened to a rigid structure. (§114172)
+3. Cleaned equipment and utensils, laundered linens, and single-use articles are stored where they are subject to contamination or are not at least 6 inches above the floor.
+(§114178(a))
+Exception: Items in enclosed packages may be stored less than six inches above the floor on dollies, pallets, racks, or skids that are designed to be easily movable. (§114178(d))
+LINENS
+1. Linens are used in contact with food except for lining serving containers, or are not laundered after each use. (§114185)
+2. Linens are not free of food residue and soil. (§114185.2)
+3. Linens, cloth gloves, or cloth napkins are not laundered as required.
+(§114185.3(a),(b),(c))
+4. Adequate space is not provided for storage of clean linens. (§114185.4(a))
+
+49 | Page
+5. Soiled linens are not kept in proper receptacles or handled to prevent contamination of food, equipment, and utensils. (114185.4(b))
+Note:
+• Fabric implements may come in direct contact with food that is subsequently cooked if they are laundered and sanitized prior to use. [(§113778.4), (§114118)]
+LAUNDERING OF LINENS, WIPING CLOTHS, AND WORK CLOTHES
+1. A mechanical clothes washer or dryer is exposed to contamination or where there is exposed food, utensils, linens, or unwrapped single-use articles. (§114161(b))
+2. Laundry facilities on-premises are used for laundering items other than those used in the operation of the food facility. (§114185.5(a))
+3. Linens and work clothes are laundered on the premises and a mechanical clothes washer and dryer are not provided. (§114185.5(b))
+4. Wiping cloths are laundered on the premises, and a mechanical clothes washer and dryer or a clean and sanitized warewashing sink is not in use. (§114185.5(c))
+37 Not in use at this time
+38 Adequate ventilation and lighting, designated areas, use Applicable Sections: 114149(a),(b), 114149.1(a),(b),(d), 114149.2(a),(b),(c),(d),(e),(f), 114149.3, 114252(a),(b),(c), 114252.1(a),(b),(c)
+Exhaust hoods shall be provided to remove toxic gases, heat, grease, vapors, and smoke, and be approved by the local building department. Canopy-type hoods shall extend 6" beyond all cooking equipment. All areas shall have sufficient ventilation to facilitate proper food storage. Toilet rooms shall be vented to the outside air by a screened openable window, an air shaft, or a light-switch activated exhaust fan, consistent with local building codes. Adequate lighting shall be provided in all areas to facilitate cleaning and inspection. Light fixtures in areas where open food is stored, served, prepared, and where utensils are washed shall be of shatterproof construction or protected with light shields.
+VENTILATION
+1. Sufficient ventilation not provided to facilitate proper food storage and provide a reasonable comfort consistent with job performed by handlers. (§114149(a))
+2. Toilet rooms are not ventilated to the outside air by means of an openable, screened window, air shaft, or light-switch-activated exhaust fan. (§114149(b))
+3. Mechanical exhaust ventilation equipment not installed and maintained in accordance with the Uniform Mechanical Code. [(§114149(a)), (§114149.1), (§114149.2)]
+
+50 | Page
+4. Mechanical exhaust ventilation equipment not provided over cooking equipment (unless exempt) to effectively remove cooking odors, smoke, steam, grease, heat, and vapors. (§114149.1(a))
+Note:
+• Restricted food service facilities are exempt from Section 114149.1(a), but must still provide ventilation to remove gases, odors, steam, heat, grease, vapors, and smoke from the food facility. (1149149.1(b))
+1. Makeup air is not provided in the amount of that exhausted. (§114149.1(d))
+2. Hood is not installed in a manner that provides for thorough cleaning of all surfaces.
+(§114149.2(a))
+3. Hood systems in food prep and warewashing areas not designed to prevent grease or condensation from draining or dripping onto food, equipment, utensils, or linens.
+(§114149.2(b))
+4. Filters or other grease extracting equipment are not designed to be readily removable for cleaning and replacement. (§114149.2(c))
+5. Every joint and seam is not substantially tight. (§114149.2(d))
+6. Grease gutters, when provided, do not drain to a collecting receptacle fabricated, designed and installed to be readily accessible for cleaning. (§114149.2(e))
+7. Exhaust hood ducting is not completely tight, have sufficient clean-outs, properly sloped, or not cleaned and filters changed so they are not a source of contamination.
+(§114149.2(f))
+8. HVAC systems are designed and installed such that intake and exhaust vents cause contamination of food, food-contact surfaces, equipment, or utensils, or create air currents that cause difficulty in maintaining required temperatures of PHFs.
+(§114149.3)
+LIGHTING
+1. Not maintaining at least 10 foot candles on working surfaces in bar area and inside equipment (e.g., reach-in refrigerators). Not maintaining at least 10 foot candles measured 30 inches above the floor in walk-ins and dry food storage areas.
+(§114252(a))
+2. Not maintaining at least 20 foot candles at a surface where food is provided for consumer self-service or prepackaged foods are sold or offered; in server stations and all areas during cleaning. (§114252(b))
+3. Not maintaining at least 20 foot candles measured 30 inches above the floor in areas for handwashing, warewashing area, and equipment/ utensil storage, and toilet rooms; and all areas during cleaning. (§114252(b))
+4. Not maintaining at least 50 foot candles at a surface where a food handler is working with food (except server stations)or utensils,  or equipment (e.g., knives, slicers, grinders, or saws) where handler safety is a factor. (§114252(c))
+5. Light bulbs, infrared, or other heat lamps, are not shielded, shatter-resistant in areas where there is open food, clean equipment, utensils, or linens. (§114252.1(a),(b),(c))
+
+51 | Page
+39 Thermometers provided an accurate Applicable Sections: 114157(a),(b),(c),(d),(e), 114159(a),(b),(c),(d),(e)
+An accurate easily readable metal probe thermometer suitable for measuring temperature of food shall be available to the food handler. A thermometer +/- 2°F shall be provided for each hot and cold holding unit of potentially hazardous food.
+THERMOMETERS FOR HOT AND COLD HOLDING EQUIPMENT
+1. A readily visible thermometer is not provided and placed in the warmest part of each refrigeration unit. (§114157(a),(b))
+2. A temperature measuring device is not integral or permanently affixed to cold or hot holding equipment used for PHFs, or does not allow easy viewing of the device’s temperature display. (§114157(c))
+Exception: This requirement does not apply to equipment for which the placement of a temperature measuring device is not practical (e.g., steam tables and salad bars). (§114157(d))
+3. Temperature measuring devices are not easily readable or have increments that are greater than 2°F. (§114157(e))
+THERMOMETERS FOR MEASURING FOOD TEMPERATURES
+1. A metal probe thermometer suitable for measuring the temperature of food is not readily available on the premises where PHFs are held. (§114159(a))
+2. A temperature measuring device with a suitable probe designed to measure the temperature of thin masses of food is not provided and readily accessible to measure thin foods (e.g., meat patties, and fish filets). (§114159(b))
+3. Temperature measuring devices used for food and scaled only in Fahrenheit are not accurate to within plus or minus 2°F. (§114159(c))
+4. Glass stem temperature measuring devices are used, unless they are candy thermometers encased in a shatterproof coating. (§114159(d))
+5. The temperature measuring devices are not calibrated to ensure accuracy.
+(§114159(e))
+40 Wiping cloths properly used and stored Applicable Sections: 114135, 114185.1(a),(b),(c),(d),(e) 114185.3(d),(e)
+Wiping cloths used to wipe service counters, scales, or other surfaces that may come into contact with food shall be used only once, unless kept in clean water with sanitizer.
+Sponges shall not be used in contact with cleaned and sanitized or in-use food-contact surfaces.
+
+52 | Page
+Refer to Appendix A for wiping towel violation flowchart
+1. Sponges are used in contact with cleaned and sanitized or in-use food-contact surfaces. (§114135)
+2. Wiping cloths used for wiping food spills are used for another purpose.
+(§114185.1(a))
+3. Cloths used for wiping food spills from tableware and carry-out containers are used repeatedly prior to laundering and are not held in an approved sanitizing solution.
+(§114185.1(b))
+4. Dry or wet cloths used with raw animal foods are not kept separate from cloths used for other purposes. (§114185.1(c))
+5. Wet wiping cloths and dry wiping cloths are not free of food debris and visible soil.
+(§114185.1(d))
+6. Working containers of sanitizing solutions for storage of in-use wiping cloths are not used in a manner that prevents contamination of food, equipment, utensils, linens, or single-use articles. (§114185.1(e))
+7. Wet wiping cloths are not laundered daily. (§114185.3(d))
+8. Dry wiping cloths are not laundered as necessary to prevent contamination of food and clean serving utensils. (§114185.3(e))
+Notes:
+• Gross contamination of food-contact surfaces by soiled wiping cloths should be cited in data field #14 on the OIR, “Food-Contact Surfaces: cleaned and sanitized”.
+• Sanitizer buckets only need to be set up when wet wiping towels are being used.
+Physical Facilities 41 Plumbing; proper backflow devices Applicable Sections: 114171, 114190, 114192(b),(c), 114192.1(a),(b), 114193(a),(b),(c), 114193.1, 114199, 114201(a),(b),(c), 114269(a),(b)
+The potable water supply shall be protected with a backflow or back siphonage protection device, as required by applicable plumbing codes. All plumbing and plumbing fixtures shall be installed in compliance with local plumbing ordinances, shall be maintained so as to prevent any contamination, and shall be kept clean, fully operative, and in good repair. Any hose used for conveying potable water shall be of approved materials, labeled, properly stored, and used for no other purpose.
+PLUMBING AND PLUMBING FIXTURES
+1. Liquid waste drain lines pass through an ice machine or ice storage bin. (§114171)
+2. Plumbing and plumbing fixtures not properly installed, or not maintained to prevent contamination, or not fully operative, or in good repair. (§114190)
+3. Hose used for conveying potable water is not constructed of nontoxic materials, is used for other purposes, is not clearly labeled as to its use, or is not properly stored.
+(§114192(b))
+
+53 | Page
+4. Non-potable water piping is not identified so as to be readily distinguishable from potable water piping. (§114192(c))
+5. Water with a sufficient pressure level is not permanently plumbed as required.
+(§114192.1(a),(b))
+6. Indirect waste receptors are not readily accessible. (§114193(c))
+BACKFLOW/BACK SIPHONAGE PROTECTION
+1. Potable water supply is not protected by backflow or back siphonage protection.
+(§114192(c))
+Note:
+• Mop sinks and sinks equipped with hose threaded faucets should be protected with a backflow prevention device.
+2. Equipment that discharge liquid wastes are not drained through an airgap into a floor sink or other approved receptor. (§114193(a),(b))
+Note:
+• An evaporator for refrigeration units is acceptable if properly installed and functioning. (§114193(b))
+3. An airgap between a water supply inlet and flood level rim of a plumbing fixture, equipment, or nonfood equipment is not at least twice the diameter of the inlet, or is less than one inch. (§114193.1)
+GREASE TRAPS
+1. A grease trap or grease interceptor is located in a food or utensil handling area without approval. (§114201(a))
+2. A grease trap or grease interceptor is not easily accessible for servicing.
+(§114201(b))
+Exception: Food facilities approved with a grease trap or grease interceptor that were in operation before July 1, 2007 of this part of Cal Code are not required to comply with this Section. (§114201(c))
+DRAINAGE
+1. Equipment compartments that are subject to accumulation of moisture from condensation, food or beverage drip, or water from melting ice, are not sloped to an outlet that allows complete draining. (§114199)
+2. In new construction and extensive remodels, floor drains are not installed in floors that are water flushed or where pressure spray methods of cleaning equipment are used. (§114269(a),(b))
+
+54 | Page
+42 Garbage and refuse properly disposed, facilities maintained Applicable Sections: 114244(a),(b),(c), 114245(a),(b), 114245.1(a),(b),(c),(d),(e), 114245.2, 114245.3, 114245.4, 114245.5, 114245.6,(a),(b), 114245.7(a),(b)
+All food waste and rubbish shall be kept in leakproof and rodentproof containers.
+Containers shall be covered at all times. All waste must be removed and disposed of as frequently as necessary to prevent a nuisance. The exterior premises of each food facility shall be kept clean and free of litter and rubbish.
+FACILITIES PROVIDED
+1. Facilities and equipment items necessary to store or dispose of all waste material are not present. (§114244(a))
+2. Waste receptacles are not present for use by consumers when needed. (§114244(b))
+3. A waste receptacle is not provided in each area where refuse is generated or discarded, or where recyclables or returnables are placed. (§114244(c))
+4. Receptacles and areas that are designated for refuse, recyclables, returnables, or a redeeming machine for recyclables or returnables, is not separate from food, equipment, utensils, linens, and single-service and single-use articles, and a public health hazard or nuisance is created by refuse. (§114245(a),(b))
+5. Indoor refuse storage area does not comply with finish schedules for floors, walls, ceilings, and vermin exclusion. (§114245.3)
+6. An outside refuse storage area or enclosure is not constructed of nonabsorbent material or is not easily cleanable, durable, and sloped to drain. (§114245.4)
+7. Receptacles and waste handling units for refuse and recyclables not installed so that accumulation of debris and insect and rodent attraction and harborage are minimized and effective cleaning is facilitated around and, if the unit is not installed flush with the base pad, under the unit. (§114245.5)
+FACILITIES MAINTAINED
+1. Refuse, recyclables, or returnables are not kept in nonabsorbent, durable, cleanable, leakproof, and rodentproof containers. (§114245.1(a))
+2. Refuse not removed and disposed in a sanitary manner to prevent a nuisance.
+(§114245.1(c))
+3. Containers are not covered with close-fitting lids, or sealeddisposable bags that are impervious to moisture are not used. (§114245.1(a))
+Exception: Refuse containers inside a food facility do not need to be covered during periods of operation. (§114245.1(b))
+4. Storage areas, enclosures, and receptacles are not maintained in good repair.
+(§114245.1(d))
+5. Receptacles and waste-handling units are cleaned in a way that causes contamination, or at a frequency that does not prevent buildup of debris, or wastewater is not disposed of as specified in Section 114241. (§114245.6(a),(b))
+6. Suitable cleaning implements and supplies are not provided as necessary or off- premises cleaning services are not provided. (§114245.7(a),(b))
+
+55 | Page
+DISPOSAL
+1. All refuse, recyclables, and returnables are not removed and disposed of in a sanitary manner as frequently as may be necessary to prevent the creation of a nuisance.
+(§114245.1(e))
+2. Cardboard or other packaging material that contains food residue and is stored outside creates a rodent harborage problem or is not removed on a regularly scheduled basis. (§114245.2)
+Note:
+• Cardboard or other packaging material that does not contain food residue and that is stored outside may be stored without being in a covered receptacle if it does not create a rodent harborage problem. (§114245.2)
+43 Toilet facilities: properly supplied, cleaned Applicable Sections: 114250, 114250.1(a), 114276(a),(b)(2),(c)(1)(2)
+Toilet facilities shall be maintained clean, sanitary, and in good repair for use by employees and patrons. Toilet rooms shall be separated by a well-fitting, self-closing door. Toilet tissue shall be provided in a permanently installed dispenser at each toilet.
+Location of toilet facilities used by patrons shall not be located to pass through food preparation, food storage, or utensil washing areas.
+1. Toilets are not clean, and in good repair. [(§114250),(§114276 (a))]
+2. Toilets are not accessible for use by employees at all times the facility is in operation.
+(§114250)
+3. Toilet paper not provided in permanently installed dispensers at each toilet. (§114250)
+4. Toilet facilities are located where patrons, guests, or invitees pass through food preparation, food storage, or utensil washing areas to reach the toilet facilities.
+(§114276(b)(2))
+5. Doors are not kept closed, or are not self-closing or well-fitted. (§114276(c)(1)(2))
+Note:
+• Food facilities located within amusement parks, stadiums, arenas, food courts, fairgrounds, temporary food facilities, and similar premises are not required to provide toilet facilities for employee use within each food facility if approved toilet facilities are located within 200 feet. (§114250.1(a))
+
+56 | Page
+44 Premises; personal/cleaning items; vermin-proofing Applicable Sections: 114143(a),(b), 114256(a),(b), 114256.1(a),(b),(c), 114256.2, 114256.4, 114257, 114257.1, 114259, 114259.2, 114259.3(a),(b), 114279(a),(b), 114281, 114282
+The premises of each food facility shall be kept clean, free of litter, and rubbish; all clean and soiled linen shall be properly stored; nonfood items shall be stored and displayed separate from food and food-contact surfaces; and the facility shall be kept vermin proof.
+Open-air barbecue and/or outdoor wood-burning oven must operate on the same premises, in conjunction with a permanent food facility and not in an area that may pose as a fire hazard. Janitorial sink or approved curbed cleaning facility (exemption for restricted food service facilities, Section 114279(b)) shall be provided. First aid supplies must have a legible manufacturer's label and stored in a kit or container that is located to prevent contamination. Insect electrocution devices are not allowed in food or utensil handling areas.
+PREMISES
+1. The open-air barbecue or outdoor wood-burning oven is not operated on the same premises, in conjunction with a permanent food facility or is operated in an area that may pose a fire hazard. (§114143(a),(b))
+2. All premises of a food facility are not kept clean, fully operative, and in good repair.
+(§114257)
+3. The premises not kept free of litter or items that are unnecessary to the operation or maintenance of the facility. (§114257.1)
+4. No janitorial sink or approved curbed cleaning facility (exemption for restricted food service facilities in Section 114279(b)). (§114279(a))
+5. No room, area, or cabinet that is separate from any food prep or storage area, or warewashing or storage area, is provided for storage of cleaning equipment and supplies. (§114281)
+6. After use, mops are not placed in a position that allows them to air-dry without soiling walls, equipment, or supplies. (§114282)
+STORAGE OF PERSONAL/CLEANING ITEMS
+1. Lockers or areas designated for employees to eat or drink are located in an area where contamination of food, equipment, linens, and single use articles can occur.
+(§114256(a),(b))
+2. Lockers or other suitable facilities are not provided for the storage of employee clothing or other possessions. Dressing rooms or dressing areas are not provided for employees who regularly change clothes in the facility. (§114256.1(a),(b))
+3. Personal storage of clothing or personal effects in any area used for the storage and preparation of food. (§ 114256.1(c))
+4. Medicines not labeled and stored to prevent contamination. (§114256.2)
+5. First aid supplies are not labeled with a legible manufacturer’s label and stored in a kit, or container that is located to prevent contamination. (§114256.4)
+VERMIN PROOFING
+
+57 | Page
+1. The food facility is not constructed, equipped, maintained, or operated in a manner that prevents the entrance or harborage of vermin. (§114259)
+2. Air curtain is missing (if required) or non-operational. [(§114259), (§114259.2)]
+3. Pass thru window opening exceeds 216 square inches without an air curtain, or is not covered with screen or glass, or is not self-closing, or the pass-thru window exceeds 432 square inches. (§114259.2)
+4. Insect electrocution devices do not retain the insect or are located over food or utensil handling areas. (§114259.3(a),(b))
+Note:
+• Gnats, ants, spiders and other non-vectors not associated with an adulteration of food, is not a violation, but should be noted on the OIR.
+Permanent Food Facilities 45 Floors, walls and ceilings: built, maintained, and clean Applicable Sections: 114143(d), 114266(a), 114268(a),(b),(c), 114268.1(a),(b), 114271(a),(b),(e), 114272,
+The walls/ceilings shall have durable, smooth, nonabsorbent, and washable surfaces. All floor surfaces, other than the customer service areas, shall be approved, smooth, durable and made of nonabsorbent material that is easily cleanable. Approved base coving shall be provided in all areas, except customer service areas, and where food is stored in original unopened containers. Food facilities shall be fully enclosed. All food facilities shall be kept clean and in good repair. Cleaning must be an approved dustless method. Mats and duckboards, if used, must be removable and easily cleanable. Open- air barbecues or wood-burning ovens floor surfaces must extend a minimum of five feet and be impervious or easily cleanable.
+1. The floor surfaces extending from the open-air barbecue or wood-burning oven a minimum of five feet are not impervious or easily cleanable. (§114143(d))
+2. A permanent food facility not fully enclosed in a building or does not consist of permanent floors, walls, and an overhead structure that meet minimum standards.
+(§114266(a))
+3. Floor surfaces are not clean and in good repair; or not smooth, durable, and nonabsorbent, as required; or floor surfaces are not coved at the floor-wall juncture with a minimum 3/8 inch radius coving and don’t extend up the wall 4 inches.
+(§114268(a),(b)). See exception for public and private schools. (§114268(c))
+
+58 | Page
+4. Unapproved methods of cleaning other than dustless methods including wet cleaning, vacuum cleaning, mopping with treated dust mops, or sweeping using a broom, and dust-arresting compounds are used except for small spills or drippage.
+(§114268.1(a),(b))
+5. Walls and ceiling surfaces are not clean and in good repair; or not durable, smooth, nonabsorbent, and easily cleanable. (§114271(a))
+6. Attachments to walls and ceilings, such as light fixtures, mechanical room ventilation system components, vent covers, wall mounted fans, decorative items, and other attachments are not easily cleanable.  (§114271(e))
+7. Mats and duckboards, if used, are not removable and easily cleanable. (§114272)
+Exception: This does not apply to walls and ceilings of bar areas (except wall areas adjacent to bar sinks and areas where food is prepared); or where food is stored only in unopened bottles, cans, cartons, sacks, or other shipping containers; or dining and sales areas, offices, or restrooms used exclusively by patrons. (§114271(b))
+46 No unapproved private homes/living or sleeping quarters Applicable Sections: 114285(a),(c), 114285(b)(1), 114286(a),(b),
+No sleeping accommodations shall be in any room where food is prepared, stored or sold. A private home, a room used as living or sleeping quarters, or an area directly opening into a room used as living or sleeping quarters shall not be used for conducting food facility operations.
+1. A room used as living or sleeping quarters, or an area directly opening into a room used as living or sleeping quarters is used for conducting food facility operations.
+(§114285(a))
+2. A sleeping accommodation is kept in a room where food is prepared, stored, or sold, or living or sleeping quarters that are located on the premises of a food facility are not separated from rooms and areas used for food facility operations by complete partitioning and solid, self-closing doors. (§114286(a),(b))
+Exceptions:
+• Restricted food service facilities are exempt provided that no sleeping accommodations are in any area where food is prepared or stored. (§114285(c))
+• Nonperishable, prepackaged food may be given away, sold, or handled from a private home. No food that has exceeded the labeled shelf life date recommended by the manufacturer shall be deemed to be nonperishable food. (§114285(b)(1))
+• Cottage food operations are exempt when registered or permitted by the local enforcement agency. (§114365)
+
+59 | Page
+Signs Requirements 47 Signs posted, last California Code Official Inspection Report available Applicable Sections: 113725.1, 113953.5(a),(b), 113978, SBCC 33.1406
+Handwashing signs shall be posted in each toilet room, directing attention to the need to thoroughly wash hands after using the restroom. No smoking signs shall be posted in food preparation, food storage, warewashing, and utensil storage areas. Consumers shall be notified that clean tableware is to be used when they return to self-service areas (e.g., salad bars and buffets). Any food facility constructed before January 1, 2004 without public toilet facilities, shall prominently post a sign within the food facility in a public area stating that toilet facilities are not provided. A sign shall be posted stating that a copy of the most recent routine inspection report is available upon request. Permit shall be posted in conspicuous location. Letter Grade Placard shall be properly posted.
+1. A copy of the most recent routine OIR is not maintained at the food facility and is not available upon request. (§113725.1)
+2. Handwashing sign is not posted at handwashing sinks used by food employees.
+(§113953.5(a))
+Exception: Does not apply to toilet rooms in guestrooms of restricted food service facilities. (§113953.5(b))
+3. “No Smoking” sign is not posted in food preparation, food storage, or warewashing areas. (§113978)
+4. Letter Grade Card is not properly posted. (SBCC 33.1406)
+Note:
+• Gulf oyster warning signs of the data field #17 on the OIR.
+48 Food Handler Cards Applicable Sections: SBCC 33.0409(d)
+All food handlers must obtain a valid food handler certificate within fourteen (14) days of employment. Failure to provide proof of food handler certification within fourteen (14)
+days will result in unannounced billable reinspections to verify compliance. These reinspections will be charged at the current hourly rate.
+This facility operator must complete the “Missing Food Handler” form provided by the inspector and fax to 909-387-4272 or email it to sbcfoodworker@gmail.com.
+1. Persons working as a food handler do not possess unexpired, unsuspended, San Bernardino County food handler certificates or a valid Food Managers Certificate.
+(SBCC 33.0409(d))
+
+60 | Page
+Compliance and Enforcement 49 Permits available Applicable Sections: 114381, 114067(a),(b),(c),(h),(i),(j), 113899, 114387, SBCC 33.0404
+A food facility shall not be open for business without a valid permit. A permit shall be valid only for the specified permittee, location, and type of food sales or distribution activity. No food facility shall conduct activities that are inconsistent with the permit(s)
+issued by the enforcement agency.
+1. Food facility is open for business and does not have a valid permit.
+[(§114381), (SBCC 33.0404)]
+2. Food facility is operating outside the scope of their permit or limitations. (§114381(b))
+3. Permit is not posted in conspicuous location. (§114381(e))
+4. Satellite food service not operated in conjunction with a fully enclosed permanent facility, written procedures are not available, food and utensils are not stored inside the fully enclosed food facility during periods of closure, or if the activities are not conducted under constant and complete control of the permit holder or satellite food service is not restricted to limited food preparation. (§114067(a),(b),(c),(h),(i))
+5. The permit holder of the permanent food facility and the permit holder of the satellite food service are not the same. (§114067(j))
+Notes:
+• Satellite food service means a remotely located food service operation that is conducted on the same property as, in reasonable proximity to, and in conjunction with and by, a fully enclosed permanent food facility (e.g., an outdoor beverage bar). Satellite food service does not include remote food service operations located within a fully enclosed food facility. (§113899)
+• Food facilities that operate without a valid permit shall be subject to closure of the food facility and a penalty not to exceed three times the cost of the permit.
+(§114387)
+
+61 | Page
+50 Required restrooms Applicable Sections: 114250, 114276(b)(1)
+A food facility shall provide toilet facilities for use by employees. Toilet facilities shall be provided for patrons when there is onsite consumption of food. A food facility with more than 20,000 square feet shall provide at least one separate toilet facility for men and one separate toilet facility for women.
+1. The number of toilet facilities is not in accordance with local building and plumbing ordinances. (§114250)
+2. Toilet facilities are not provided for patrons where there is on-site food consumption of foods; or when the food facility has more than 20,000 square feet of floor space.
+(§114276(b)(1))
+51 Plan review Applicable Sections: 114380, SBCC 33.0403
+A person proposing to build or remodel a food facility shall submit plans for approval before starting any new construction or remodeling of any facility for use as a retail food facility.
+1. Complete, easily readable plans drawn to scale, for new construction or remodel of a food facility are not submitted prior to construction. (§114380)
+2. Construction of a new facility or remodel of an existing retail food facility begins prior to plan approval. [(§114380), (SBCC 33.0403)]
+52 VC & D Applicable Section: 111895
+Operator has voluntarily consented to the condemnation and destruction of food as said material being unfit for human consumption or otherwise in violation of California Health and Safety Code, Division 104, Part 5, Chapter 1 through 8, the disposition of which is provided for by Chapter 8, Article 3, Section 111895.
+This item is marked when the operator has voluntarily consented to the destruction and condemnation of food, equipment, or utensils. (§111895)
+Note:
+• If an operator does not volunteer to the destruction and condemnation of food, equipment or utensils, refer to data field #53 on the OIR .
+
+62 | Page
+53 Impoundment Applicable Sections: 114393(a),(b),(c)
+An enforcement officer may impound food, equipment, or utensils that are found to be adulterated, unsanitary, or in disrepair.
+1. Enforcement officer impounds food, equipment, or utensils that are found to be, or suspected of being unsanitary or in such disrepair that food, equipment, or utensils may become contaminated or adulterated. (§114393(a))
+2. Enforcement Officer impounds any utensil that is suspected of releasing lead or cadmium. (§114393(a))
+3. Enforcement Officer finds food, equipment, or utensils that have been impounded in use. (§114393 (b))
+Note:
+• Within 30 days, the enforcement agency that has impounded the food, equipment, or utensils pursuant to subdivision (a) shall commence proceedings to release the impounded materials or to seek administrative or legal remedy for its disposition.
+(§114393(c))
+54 Permit suspension Applicable Sections: 114409, 114405, SBCC 33.0404
+If an imminent health hazard is found, an enforcement officer may temporarily suspend the permit and order the food facility immediately closed.
+A food facility’s permit has been suspended due to an imminent health hazard or when a facility does not have a valid health permit. [(§114409), (§114405), (SBCC 33.0404)]
+
+63 | Page
+Appendix A Wiping Towel Violation Flow Chart
+Reminders:
+• In lieu of direct observation, if an inspector determines, based on questioning, that food contact surfaces have not been properly sanitized when required, a major violation under #14 may be cited.
+• Wet wiping towels sitting out on countertops, Violation #40 “Improper storage of wet wiping towels”.
+Reminders:
+• In lieu of direct observation, if an inspector determines, based on questioning, that food-contact surfaces have not been properly sanitized when required, a major violation under data field #14 on the OIR may be cited.
+• Wet wiping towels sitting out on countertops, Violation #40 on the OIR “Improper storage of wet wiping towels”.
+Sanitizing Bucket Flow Chart High Sanitizer Level Low Sanitizer Level Towels in Use (Employee using wiping towel)
+Towel NOT In Use (Stored in bucket)
+Very low/NO Sanitizer <50 ppm CI <100 PPM Quat Low Level Sanitizer 50-99 ppm CI 100-199 PPM Quat “No Violation” Violation #14 of the OIR “Major” Violation #14 of the OIR “Out” Violation #40 of the OIR “Store in approved solution”
+
+64 | Page
+Appendix B Water Temperature Violations
+Temp Location Major/Out Data Field Possible Outcome <100°F In facility- in general Major 21 Closure <100°F At any sink Out 21 Mediate <100°F While handwashing Major 5 Mediate <100°F During active warewashing Major 14 Mediate
+Hot water shall be supplied at a minimum temperature of at least 120°F measured from the faucets.
+Sinks should run for an adequate time to determine maximum available temperature at the sink.
+
+65 | Page
+Appendix C Self-Inspection Checklist
+
+66 | Page
+Appendix C Self-Inspection Checklist (Cont.)
+
+67 | Page
+Agency Referral List Type of Complaint  Agency BURRITOS (Packaged-meat or poultry)
+(Packaged - without meat)
+U.S. Department of Agriculture (USDA)
+California Department of Public Health (CDPH) – Food and Drug Branch (FDB), U.S. Food and Drug Administration (FDA)
+CANNED FOODS: (Fruit, vegetable, and fish- packed in or not packed in CA.)
+Meat or poultry products FDB FDA USDA DAIRY FOODS: (Produced in CA)
+Produced out-of-state California Department of Food and Agriculture (CDFA)
+FDA FISH: Canned out-of-state FDA FISH: Fresh, caught locally California Department of Fish and Game (CDFG)
+FOOD REGISTRATION State registration- wholesale/manufacturing FDB FOOD TAMPERING Meat FDB, USDA FROZEN DINNERS: (Meat or poultry)
+Seafood (processed in CA.)
+Seafood (processed out-of-state)
+USDA FDB FDA FRUIT, FRESH: (Quarantine, pest exclusion)
+Pesticide enforcement CDFA LICENSES: (Bottling water, Canning food, Cold storage, Frozen food lockers, Water)
+FDB MEAT AND POULTRY: Packaged USDA ORGANIC FOOD FDB OUT-OF-DATE FOODS: Dairy (only) CDFA OTHER EXPIRED FOODS Local Health Department (See Environmental Health Directory for information)
+POPSICLES: Produced out-of-state Produced in CA FDA CDFA SANDWICHES (Fresh packaged) FDB VENDING MACHINES Water FDB WATER: Bottled (Imported and out-of-state) Vended FDB FDB Websites:
+• California Cal Code http://wp.sbcounty.gov/dph/wpcontent/uploads/sites/7/2018/01/CRFC-effective-010118.pdf
+• California Department of Fish and Game  www.wildlife.ca.gov/regulations
+• California Department of Food and Agriculture www.cdfa.ca.gov/exec/county/countymap/
+• Food and Drug Administration http://www.fda.gov/
+• Food and Drug Branch California Dept. of Health Services www.cdph.ca.gov/Programs/CEH/DFDCS/Pages/FDBPrograms/FoodSafetyProgram.aspx
+• Government Food Safety Information www.foodsafety.gov/
+• U.S. Department. of Agriculture Food Safety and Inspection Service www.fsis.usda.gov/
+
+68 | Page
+Environmental Health Services Directory of Regional Offices Rancho Cucamonga San Bernardino Hesperia 8575 Haven Ave., Ste. 130 Rancho Cucamonga, CA.
+385 N. Arrowhead Ave., 2nd Floor San Bernardino, CA.
+15900 Smoke Tree St.
+Hesperia, CA. 92345 Phone: 1-800-442-2283 Fax: 909-387-4323 Social media
+After Hours Emergency Contact Emergency Communication Center 1-800-472-2376
+After hours emergency contact number is to be used to report and obtain assistance during emergencies such as:
+• Food facility fires
+• Power or water outages
+• Sewer overflow
+• Outbreaks of potential foodborne illness
+• Reopening inspection following closures by EHS
+• Serious problems that may impact public health and safety
+Organized Camps In the event that organized camp participants experience an increase in symptoms that may be related to communicable diseases, infections, and foodborne illnesses, camp staff should immediately notify EHS as required by State law. This will allow EHS and camp staff to implement measures to help limit or curtail the spread of the outbreak.
+Use the following table to determine the appropriate phone number to call:
+If the incident occurs…  Then call… During working hours, Monday - Friday,  (800) 422-2283 After business hours, holidays, or weekends, (800) 472-2376
+
+69 | Page
+Notes

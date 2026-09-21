@@ -1,0 +1,198 @@
+=== RUN START: 2026-09-21T20:57:41.336959+00:00 ===
+
+Loaded 4 document(s)
+
+[token] 693 nodes
+[token] index built, 693 nodes, vector_store=SimpleVectorStore
+[semantic] 243 nodes
+[semantic] index built, 243 nodes, vector_store=SimpleVectorStore
+[sentence_window] 4749 nodes
+[sentence_window] index built, 4749 nodes, vector_store=SimpleVectorStore
+
+
+=== TECHNIQUE: Token | question=q1 ===
+Query: According to the LA County Retail Food Inspection Guide, what score range earns a food facility a "B" letter grade, and what happens instead of a letter grade if the score is 69 or below?
+Query embedding dimension: 384
+First 8 values: [0.043800000101327896, -0.039400000125169754, -0.014600000344216824, 0.007600000128149986, -0.07900000363588333, 0.10379999876022339, -0.06419999897480011, -0.01679999940097332]
+query shape=(384,), docs shape=(3, 384)
+latency=36.58 ms, 3 node(s) returned
+
+ rank  store_score  cosine_sim  chunk_len                                                                                                                                                          preview
+    1       0.7003      0.6488       1104 - _______ Remaining Points:                  = Score The table below describes the letter grade achieved base on the score received. Score Grade Description 90 
+    2       0.6489      0.6833       1059 POSTING REQUIREMENTS An EHS shall verify at the time of an inspection that a Grade Card, Score Card, or Notice of Closure sign (if applicable) is posted as requ
+    3       0.6346      0.6696       1018 cities within Los Angeles County that have adopted Ordinance #97-0071, the grade/score card a facility receives at the conclusion of a routine inspection must b
+
+=== TECHNIQUE: Token | question=q2 ===
+Query: Per the San Bernardino County ABC Retail Food Inspection Guide, what must a food facility that receives a "C" grade do to avoid closure, and what phone number should an operator call with questions about an inspection report?
+Query embedding dimension: 384
+First 8 values: [0.03779999911785126, -0.011599999852478504, -0.039799999445676804, 0.038600001484155655, -0.08990000188350677, 0.05950000137090683, -0.04149999842047691, -0.04050000011920929]
+query shape=(384,), docs shape=(3, 384)
+latency=40.58 ms, 3 node(s) returned
+
+ rank  store_score  cosine_sim  chunk_len                                                                                                                                                          preview
+    1       0.7394      0.6776       1029 ABC RETAIL FOOD INSPECTION GUIDE San Bernardino County Public Health Environmental Health Services 385 N Arrowhead Ave., 2nd floor San Bernardino, CA 92415-0160
+    2       0.7189      0.6905       1084 Notice of Closure Card will be posted in the front window or in a location approved by the health inspector. Removal of the Notice of Closure by anyone other th
+    3       0.6860      0.6063       1110 who is involved in the preparation, storage, or service of food in a food facility. Food Handler Card – Issued after passing an EHS approved training class. Eac
+
+=== TECHNIQUE: Token | question=q3 ===
+Query: In the inspection report for Dat Thanh Restaurant (Est ID FA0003611, 5035 Fruitridge Rd, Sacramento), what specific cooling violation did the inspector observe, and what temperature/time rule does it violate?
+Query embedding dimension: 384
+First 8 values: [-0.005799999926239252, 0.07800000160932541, 0.047200001776218414, 0.041999999433755875, 0.025200000032782555, -0.028599999845027924, -0.029200000688433647, -0.037300001829862595]
+query shape=(384,), docs shape=(3, 384)
+latency=40.28 ms, 3 node(s) returned
+
+ rank  store_score  cosine_sim  chunk_len                                                                                                                                                          preview
+    1       0.6799      0.5580       1088 foods prepared it would be impossible to generalize how fast a typical product loses temperature after cooking but holding a food product for 4 hours at room co
+    2       0.6350      0.6431        889 41°F within 4 hours. (§114037(a))  20 | Page N.A.  This item may be marked N.A. when the food facility does not hold hot or cold food. N.O.  This item may be ma
+    3       0.6311      0.5905       1083 Additional Violations section.  A food facility that prepares food shall not operate if the water temperature at the warewashing sink faucet is below 100°F and
+
+=== TECHNIQUE: Token | question=q4 ===
+Query: What are the required hot-holding and cold-holding temperatures for potentially hazardous food (PHF), and what exception lets some foods be held up to 45F?
+Query embedding dimension: 384
+First 8 values: [0.020400000736117363, -0.043699998408555984, 0.012000000104308128, 0.0414000004529953, 0.011500000022351742, 0.026399999856948853, -0.007699999958276749, -0.00989999994635582]
+query shape=(384,), docs shape=(3, 384)
+latency=37.34 ms, 3 node(s) returned
+
+ rank  store_score  cosine_sim  chunk_len                                                                                                                                                          preview
+    1       0.7855      0.7388       1237 the more permissive conditions are for growth. Hot holding The hot holding of food at 135°F or greater is sufficient to prevent the growth of pathogens and is t
+    2       0.7101      0.6760       1234 Do not rely solely upon discussions with managers or cooks to determine compliance or non-compliance. The temperature of cooked potentially hazardous foods duri
+    3       0.7096      0.7384       1184 hot holding carts being used to transport food to buffet tables, satellite kitchens, or off-site catering events).  As a rule, every effort should be made to a
+
+=== TECHNIQUE: Token | question=q5 ===
+Query: When are food employees required to wash their hands, and what makes an inability to wash hands especially serious under these guides?
+Query embedding dimension: 384
+First 8 values: [-0.009800000116229057, 0.01489999983459711, 0.04800000041723251, 0.050700001418590546, 0.012600000016391277, -0.03370000049471855, -0.012199999764561653, -0.03150000050663948]
+query shape=(384,), docs shape=(3, 384)
+latency=37.27 ms, 3 node(s) returned
+
+ rank  store_score  cosine_sim  chunk_len                                                                                                                                                          preview
+    1       0.7388      0.7720        930 food employee is washing their hands while wearing single-use gloves or donning previously worn single-use gloves. [§113973(b)(c)] Examples of MINOR violations 
+    2       0.7123      0.5635       1092 be followed by thorough handwashing. Handwashing is a critical factor in reducing fecal-oral pathogens that can be transmitted from hands to ready- to-eat food 
+    3       0.6684      0.5889        904 the washing of hands. Because handwashing is such an important factor in the prevention of foodborne illness, sufficient facilities must be available to make ha
+
+
+=== TECHNIQUE: Semantic | question=q1 ===
+Query: According to the LA County Retail Food Inspection Guide, what score range earns a food facility a "B" letter grade, and what happens instead of a letter grade if the score is 69 or below?
+Query embedding dimension: 384
+First 8 values: [0.043800000101327896, -0.039400000125169754, -0.014600000344216824, 0.007600000128149986, -0.07900000363588333, 0.10379999876022339, -0.06419999897480011, -0.01679999940097332]
+query shape=(384,), docs shape=(3, 384)
+latency=20.87 ms, 3 node(s) returned
+
+ rank  store_score  cosine_sim  chunk_len                                                                                                                                                          preview
+    1       0.6489      0.6833       4077 POSTING REQUIREMENTS An EHS shall verify at the time of an inspection that a Grade Card, Score Card, or Notice of Closure sign (if applicable) is posted as requ
+    2       0.6274      0.6079       8484 Refer to the following page for an example of the OIR.  8 | Page  9 | Page Understanding Your Grade The purpose of performing food facility inspections is to pr
+    3       0.5861      0.5474        331 This guide provides information on common terms used in the California Retail Food Code (Cal Code) and the San Bernardino County Code (SBCC) to assist in unders
+
+=== TECHNIQUE: Semantic | question=q2 ===
+Query: Per the San Bernardino County ABC Retail Food Inspection Guide, what must a food facility that receives a "C" grade do to avoid closure, and what phone number should an operator call with questions about an inspection report?
+Query embedding dimension: 384
+First 8 values: [0.03779999911785126, -0.011599999852478504, -0.039799999445676804, 0.038600001484155655, -0.08990000188350677, 0.05950000137090683, -0.04149999842047691, -0.04050000011920929]
+query shape=(384,), docs shape=(3, 384)
+latency=21.14 ms, 3 node(s) returned
+
+ rank  store_score  cosine_sim  chunk_len                                                                                                                                                          preview
+    1       0.7394      0.6776        693 ABC RETAIL FOOD INSPECTION GUIDE San Bernardino County Public Health Environmental Health Services 385 N Arrowhead Ave., 2nd floor San Bernardino, CA 92415-0160
+    2       0.6892      0.6415       1624 • A permit suspension (closure) on the last graded inspection.  7 | Page Understanding the California Code Official Inspection Report (OIR) Environmental Health
+    3       0.6844      0.6315        331 This guide provides information on common terms used in the California Retail Food Code (Cal Code) and the San Bernardino County Code (SBCC) to assist in unders
+
+=== TECHNIQUE: Semantic | question=q3 ===
+Query: In the inspection report for Dat Thanh Restaurant (Est ID FA0003611, 5035 Fruitridge Rd, Sacramento), what specific cooling violation did the inspector observe, and what temperature/time rule does it violate?
+Query embedding dimension: 384
+First 8 values: [-0.005799999926239252, 0.07800000160932541, 0.047200001776218414, 0.041999999433755875, 0.025200000032782555, -0.028599999845027924, -0.029200000688433647, -0.037300001829862595]
+query shape=(384,), docs shape=(3, 384)
+latency=23.48 ms, 3 node(s) returned
+
+ rank  store_score  cosine_sim  chunk_len                                                                                                                                                          preview
+    1       0.6320      0.5705       4492 9. Time as a public health control; procedures & records Authority: California Retail Food Code, § 114000 This violation category is used to indicate the compli
+    2       0.6211      0.6235       3696 This item may be marked N.A. when the food facility does not hold hot or cold food. N.O.  This item may be marked N.O. when the food facility holds hot or cold 
+    3       0.6094      0.5044        398 Proper hot and cold holding temperatures • Food is received at proper temperatures when delivered. • Proper PHF hot (135°F or above) and cold (41°F or below) ho
+
+=== TECHNIQUE: Semantic | question=q4 ===
+Query: What are the required hot-holding and cold-holding temperatures for potentially hazardous food (PHF), and what exception lets some foods be held up to 45F?
+Query embedding dimension: 384
+First 8 values: [0.020400000736117363, -0.043699998408555984, 0.012000000104308128, 0.0414000004529953, 0.011500000022351742, 0.026399999856948853, -0.007699999958276749, -0.00989999994635582]
+query shape=(384,), docs shape=(3, 384)
+latency=20.71 ms, 3 node(s) returned
+
+ rank  store_score  cosine_sim  chunk_len                                                                                                                                                          preview
+    1       0.7582      0.6899       3326 For this, no specific temperature is required for the consumer’s protection. Reheating for hot holding When food is held, cooled, and reheated in a food facilit
+    2       0.7101      0.6760       4583 Do not rely solely upon discussions with managers or cooks to determine compliance or non-compliance. The temperature of cooked potentially hazardous foods duri
+    3       0.6938      0.7532        398 Proper hot and cold holding temperatures • Food is received at proper temperatures when delivered. • Proper PHF hot (135°F or above) and cold (41°F or below) ho
+
+=== TECHNIQUE: Semantic | question=q5 ===
+Query: When are food employees required to wash their hands, and what makes an inability to wash hands especially serious under these guides?
+Query embedding dimension: 384
+First 8 values: [-0.009800000116229057, 0.01489999983459711, 0.04800000041723251, 0.050700001418590546, 0.012600000016391277, -0.03370000049471855, -0.012199999764561653, -0.03150000050663948]
+query shape=(384,), docs shape=(3, 384)
+latency=23.92 ms, 3 node(s) returned
+
+ rank  store_score  cosine_sim  chunk_len                                                                                                                                                          preview
+    1       0.6436      0.5551        586 6. Hands clean and properly washed; proper glove use Where do the employees wash their hands? How often to employees wash their hands? What is the minimum time 
+    2       0.5998      0.6407      19312 to assemble ready-to-eat food or to place ready-to-eat food on tableware or in other containers. However, if a food employee’s hands are properly cleaned, they 
+    3       0.5487      0.5469       1699 Interventions include demonstration of knowledge, employee health controls, controlling hands as a vehicle of contamination, time and temperature parameters for
+
+
+=== TECHNIQUE: Sentence-window | question=q1 ===
+Query: According to the LA County Retail Food Inspection Guide, what score range earns a food facility a "B" letter grade, and what happens instead of a letter grade if the score is 69 or below?
+Query embedding dimension: 384
+First 8 values: [0.043800000101327896, -0.039400000125169754, -0.014600000344216824, 0.007600000128149986, -0.07900000363588333, 0.10379999876022339, -0.06419999897480011, -0.01679999940097332]
+query shape=(384,), docs shape=(3, 384)
+latency=164.36 ms, 3 node(s) returned
+
+ rank  store_score  cosine_sim  chunk_len                                                                                                                                                          preview
+    1       0.6308      0.5759        288 POSTING REQUIREMENTS An EHS shall verify at the time of an inspection that a Grade Card, Score Card, or Notice of Closure sign (if applicable) is posted as requ
+    2       0.6297      0.6325        143                  Score Grade Description 90 to 100 points A Generally superior in food handling practices and overall food facility maintenance and sanitation. 
+    3       0.6227      0.5880        100                                                             • Received a score letter of “B” or lower (89 or less) on two of the last three graded inspections. 
+
+=== TECHNIQUE: Sentence-window | question=q2 ===
+Query: Per the San Bernardino County ABC Retail Food Inspection Guide, what must a food facility that receives a "C" grade do to avoid closure, and what phone number should an operator call with questions about an inspection report?
+Query embedding dimension: 384
+First 8 values: [0.03779999911785126, -0.011599999852478504, -0.039799999445676804, 0.038600001484155655, -0.08990000188350677, 0.05950000137090683, -0.04149999842047691, -0.04050000011920929]
+query shape=(384,), docs shape=(3, 384)
+latency=155.42 ms, 3 node(s) returned
+
+ rank  store_score  cosine_sim  chunk_len                                                                                                                                                          preview
+    1       0.7394      0.6539        578 ABC RETAIL FOOD INSPECTION GUIDE San Bernardino County Public Health Environmental Health Services 385 N Arrowhead Ave., 2nd floor San Bernardino, CA 92415-0160
+    2       0.6964      0.6368        312 5 | Page Center for Disease Control Risk Factors California retail food safety agencies have refocused facility inspection practices based on the Centers for Di
+    3       0.6939      0.6140        399 A copy of this guide and additional information regarding the permitting and inspection of restaurants and retail food stores can be found at our website at: ht
+
+=== TECHNIQUE: Sentence-window | question=q3 ===
+Query: In the inspection report for Dat Thanh Restaurant (Est ID FA0003611, 5035 Fruitridge Rd, Sacramento), what specific cooling violation did the inspector observe, and what temperature/time rule does it violate?
+Query embedding dimension: 384
+First 8 values: [-0.005799999926239252, 0.07800000160932541, 0.047200001776218414, 0.041999999433755875, 0.025200000032782555, -0.028599999845027924, -0.029200000688433647, -0.037300001829862595]
+query shape=(384,), docs shape=(3, 384)
+latency=155.92 ms, 3 node(s) returned
+
+ rank  store_score  cosine_sim  chunk_len                                                                                                                                                          preview
+    1       0.6776      0.6921        178 Proper cooling methods Authority: California Retail Food Code, §§ 114002, 114002.1 This violation category is used to indicate the compliance status with proper
+    2       0.6697      0.5567        256 (§114000(b))  21 | Page 09 Proper cooling methods Applicable Sections: 114002(a),(b),(c),(d), 114002.1(a),(b) All potentially hazardous food shall be rapidly co
+    3       0.6469      0.4828        242 Examples of MAJOR violations include: • After cooking or hot holding, PHF is not cooled rapidly from 135°F to 41°F or below within 6 hours using approved method
+
+=== TECHNIQUE: Sentence-window | question=q4 ===
+Query: What are the required hot-holding and cold-holding temperatures for potentially hazardous food (PHF), and what exception lets some foods be held up to 45F?
+Query embedding dimension: 384
+First 8 values: [0.020400000736117363, -0.043699998408555984, 0.012000000104308128, 0.0414000004529953, 0.011500000022351742, 0.026399999856948853, -0.007699999958276749, -0.00989999994635582]
+query shape=(384,), docs shape=(3, 384)
+latency=161.09 ms, 3 node(s) returned
+
+ rank  store_score  cosine_sim  chunk_len                                                                                                                                                          preview
+    1       0.7593      0.7803        403  Foods approved for holding up to 45°F include the following: raw shell eggs; un-shucked live molluscan shellfish; pasteurized milk and pasteurized milk produc
+    2       0.7124      0.7745        219 Public Health Reason: Hot and cold holding, potentially hazardous food Bacterial growth and/or toxin production can occur if potentially hazardous food remains 
+    3       0.7063      0.6591        242 Examples of MAJOR violations include: • After cooking or hot holding, PHF is not cooled rapidly from 135°F to 41°F or below within 6 hours using approved method
+
+=== TECHNIQUE: Sentence-window | question=q5 ===
+Query: When are food employees required to wash their hands, and what makes an inability to wash hands especially serious under these guides?
+Query embedding dimension: 384
+First 8 values: [-0.009800000116229057, 0.01489999983459711, 0.04800000041723251, 0.050700001418590546, 0.012600000016391277, -0.03370000049471855, -0.012199999764561653, -0.03150000050663948]
+query shape=(384,), docs shape=(3, 384)
+latency=154.81 ms, 3 node(s) returned
+
+ rank  store_score  cosine_sim  chunk_len                                                                                                                                                          preview
+    1       0.6609      0.6676        385 Hands clean and properly washed; proper glove use • Employees wash their hands with soap and warm water at 100°F for at least 10 seconds: before starting work; 
+    2       0.6306      0.7010        249 [§113977] Additional Violations: o Category #6 (Hands clean and properly washed; proper glove use) shall also be marked if an employee handles food/utensils wit
+    3       0.6245      0.7798        220 [§113952, §113953.3] • Food workers handling open food are unable to wash their hands due to the lack of soap or paper towels at the facility, and the handwashi
+
+Wrote 45 rows to /Users/pc/Documents/sjsu/Data-260-HW-Git/data260-7117/reports/hw03/raw/retrieval_runs.jsonl and /Users/pc/Documents/sjsu/Data-260-HW-Git/data260-7117/reports/hw03/raw/retrieval_runs.csv
+Wrote 5685 rows to /Users/pc/Documents/sjsu/Data-260-HW-Git/data260-7117/reports/hw03/raw/chunk_stats.csv
+
+=== RUN END: 2026-09-21T20:59:54.535006+00:00 (elapsed 133.2s) ===

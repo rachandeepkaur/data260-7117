@@ -1,0 +1,499 @@
+technique,question_id,rank,store_score,cosine_similarity,chunk_length,window_length,latency_ms,preview,text
+token,q1,1,0.7002996304722631,0.6488123466084393,1104,,36.583,- _______ Remaining Points:                  = Score The table below describes the letter grade achieved base on the score received. Score Grade Description 90 ,"- _______ Remaining Points:                  = Score The table below describes the letter grade achieved base on the score received.
+Score Grade Description 90 to 100 points A Generally superior in food handling practices and overall food facility maintenance and sanitation.
+80 to 89 points B Generally acceptable in food handling practices and overall food facility maintenance and sanitation.
+70 to 79 points C Generally unacceptable in food handling practices and overall general food facility maintenance and sanitation (A re-score inspection is required).
+0 to 69 points Closure Poor food handling practices and overall food facility maintenance and sanitation.
+At the conclusion of the inspection, the Health Inspector will place the Letter Grade Card in the facility’s window or other approved location. The Letter Grade Card must not be defaced, marred, camouflaged, relocated, hidden, or removed.
+
+10 | Page
+The following table lists the requirements associated with each letter grade.
+Grade Requirement A There will be no need for additional inspections.
+B There will be no re-score inspection"
+token,q1,2,0.648912059998736,0.6833225416553643,1059,,36.583,"POSTING REQUIREMENTS An EHS shall verify at the time of an inspection that a Grade Card, Score Card, or Notice of Closure sign (if applicable) is posted as requ","POSTING REQUIREMENTS
+An EHS shall verify at the time of an inspection that a Grade Card, Score Card, or Notice of Closure sign (if applicable) is posted as required at food facilities located in unincorporated areas of Los Angeles County and in cities that have adopted Ordinance 97-007. In addition, the food facility will post a notice advising consumers that a copy of the most recent routine inspection report is available for review by any interested party and provide a copy of the report upon request. The current Letter Grade/Score Cards have been combined with the public notification requirements.
+A food facility will be issued one of the following by the EHS at the time of inspection:
+Placard Type Description “A” Letter Grade Final routine inspection score between 90 – 100 “B” Letter Grade Final routine inspection score between 80 – 89 “C” Letter Grade Final routine inspection score between 70 – 79 Score Card Final routine inspection score of 69 or below Notice of Closure A public notice posted at a food facility when the PHP is suspended,"
+token,q1,3,0.6346450358416436,0.6696143032039985,1018,,36.583,"cities within Los Angeles County that have adopted Ordinance #97-0071, the grade/score card a facility receives at the conclusion of a routine inspection must b","cities within Los Angeles County that have adopted Ordinance #97-0071, the grade/score card a facility receives at the conclusion of a routine inspection must be posted in a location that is clearly visible to the general public and to patrons. This informs the public of the facility’s compliance status at the time of the routine inspection and allows for the consumer to make informative choices as to where they dine.
+48. Permits Available
+Authority: California Retail Food Code, §§ 114381, 114387
+This violation category is used to indicate the compliance status with permit requirements.
+OUT – “OUT” shall be marked if a food facility does not have a valid public health permit (PHP) and/or is operating outside the scope of their permit.
+Examples of violations include:
+• A food facility is open for business and does not have a valid PHP. [§114381(a), §114387]
+• Food facility is handling/storing food beyond the scope of the issued permit (e.g., liquor store preparing food). (Refer to the Plan Check program)"
+token,q2,1,0.7394482548886978,0.6775545231147125,1029,,40.583,"ABC RETAIL FOOD INSPECTION GUIDE San Bernardino County Public Health Environmental Health Services 385 N Arrowhead Ave., 2nd floor San Bernardino, CA 92415-0160","ABC RETAIL FOOD INSPECTION GUIDE
+San Bernardino County Public Health Environmental Health Services 385 N Arrowhead Ave., 2nd floor San Bernardino, CA 92415-0160 1-800-442-2283 Fax: 909-387-4323
+Public Health Environmental Health Services http://wp.sbcounty.gov/dph/programs/ehs/
+
+FOREWORD The San Bernardino County Department of Public Health, Environmental Health Services (EHS) is dedicated to ensuring public health and safety and preventing environmental hazards for all residents and visitors through innovation, education, surveillance, enforcement and community service.
+EHS’ Food Inspection Program (along with the food industry) plays a major role in keeping food safe for consumers. While the food supply in the United States is one of the safest in the world, the Centers for Disease Control and Prevention (CDC) still estimates approximately 48 million people suffer from foodborne illnesses each year. Of these people, more than 128,000 are hospitalized, and 3,000 die.
+Preventing foodborne illness and death remains"
+token,q2,2,0.7188564028222282,0.69046998290416,1084,,40.583,Notice of Closure Card will be posted in the front window or in a location approved by the health inspector. Removal of the Notice of Closure by anyone other th,"Notice of Closure Card will be posted in the front window or in a location approved by the health inspector. Removal of the Notice of Closure by anyone other than the health inspector or the refusal of a food facility to close when issued a “Notice of Closure” is a violation of San Bernardino County Code, Section 33.1404.
+Permit – A document issued by San Bernardino County EHS that authorizes a person to operate a food facility or cottage food operation.
+
+4 | Page
+Permit Suspension/Revocation Hearing – A hearing requested by the operator within 15 calendar days following a permit suspension (facility closure). At this hearing, the hearing officer determines whether to uphold the suspension, revoke the permit or lift the suspension. Until a decision is reached, the facility must remain closed.
+Person in Charge (PIC) – Individual present at a food facility that is responsible for the operation of the food facility.
+Potable Water – Water that complies with the standards pursuant to the California Safe Drinking Water Act, Chapter 4 (commencing with Section 116270) of Part"
+token,q2,3,0.6859661778038839,0.6062873695687092,1110,,40.583,"who is involved in the preparation, storage, or service of food in a food facility. Food Handler Card – Issued after passing an EHS approved training class. Eac","who is involved in the preparation, storage, or service of food in a food facility.
+Food Handler Card – Issued after passing an EHS approved training class. Each food handler must possess a valid Food Handler card from San Bernardino County within 14 days of hire. It will expire in 3 years.
+Food Manager Certification – Issued after successfully passing an American National Standards Institute ( ANSI) accredited exam. At least one person working at each food facility must have this within 60 days of employment.  It will expire in 5 years.
+Hazard Analysis and Critical Control Point (HACCP) Plan – Written document that complies with the requirements of Section 114419.1 and that delineates the formal procedures for following the HACCP principles developed by the National Advisory Committee on Microbiological Criteria for Foods.
+Imminent Health Hazard – Significant threat or danger to health that is considered to exist when there is evidence sufficient to show that a product, practice, circumstance, or event creates a situation that can cause food infection, food intoxication, disease transmission,"
+token,q3,1,0.6798702631633442,0.5580102675768057,1088,,40.281,foods prepared it would be impossible to generalize how fast a typical product loses temperature after cooking but holding a food product for 4 hours at room co,"foods prepared it would be impossible to generalize how fast a typical product loses temperature after cooking but holding a food product for 4 hours at room conditions would need to be consumed or discarded within the four hours.
+10. Proper cooling methods
+Authority: California Retail Food Code, §§ 114002, 114002.1
+This violation category is used to indicate the compliance status with proper cooling methods.
+Proper cooling time and temperature parameters are as follows:
+Examples of approved cooling methods include:
+ Using ice paddles  Adding ice as an ingredient  Placing food in shallow pans  Using rapid cooling equipment  Using containers that facilitate heat transfer  In accordance with an approved HACCP plan  Separating food into smaller or thinner portions  Utilizing other effective means that have been approved by the Department  Inserting appropriately designed containers in an ice bath and stirring frequently
+IN – “IN” shall be marked if a facility is observed properly cooling PHFs within approved time and temperature parameters and using approved cooling"
+token,q3,2,0.6350296540214728,0.6430664945650464,889,,40.281,41°F within 4 hours. (§114037(a))  20 | Page N.A.  This item may be marked N.A. when the food facility does not hold hot or cold food. N.O.  This item may be ma,"41°F within 4 hours. (§114037(a))
+
+20 | Page
+N.A.  This item may be marked N.A. when the food facility does not hold hot or cold food.
+N.O.  This item may be marked N.O. when the food facility holds hot or cold foods, but no foods are being held hot or cold during the time of inspection.
+08 Time as a public health control; procedures & records Applicable Sections:
+111223,114000(a)(1)(2)(3)(4),(b),114429(a),114429.5(b)
+When time only, rather than time and temperature, is used as a public health control, food must be marked or otherwise identified as to what time the food was removed from temperature control. Food items shall not exceed the time marked.
+MAJOR violations include the following:
+1. Food that has been time marked and has exceeded the time marked. (§114000(a))
+2. Time as a public health control is used for food that has not been marked or otherwise identified and the"
+token,q3,3,0.6310749881822323,0.59054438107632,1083,,40.281,Additional Violations section.  A food facility that prepares food shall not operate if the water temperature at the warewashing sink faucet is below 100°F and,"Additional Violations section.
+ A food facility that prepares food shall not operate if the water temperature at the warewashing sink faucet is below 100°F and the detergent is ineffective at this temperature. If the water temperature cannot be restored immediately (e.g., relighting a hot water heater pilot light, increasing the water temperature at the hot water heater, etc.) by the end of the inspection, the EHS will suspend the permit to operate until either hot water or an effective detergent is available. The facility shall cease operations immediately and remain closed until hot water is restored. When hot water is restored, the food facility’s permit will be reinstated by the EHS prior to resuming operation.
+ If the facility only sells prepackaged food and the water temperature has not been restored to a minimum temperature of 100°F by the end of inspection, the operation may be allowed to continue, however the facility will be given 24 hours to abate this violation (e.g., repair/replace water heater).
+ A food facility that cannot provide the required water"
+token,q4,1,0.7855028225650195,0.7388036286867461,1237,,37.339,the more permissive conditions are for growth. Hot holding The hot holding of food at 135°F or greater is sufficient to prevent the growth of pathogens and is t,"the more permissive conditions are for growth.
+Hot holding The hot holding of food at 135°F or greater is sufficient to prevent the growth of pathogens and is therefore an effective measure in the prevention of foodborne illness.
+Time limits for food preparation For potentially hazardous foods, it is required that the food be returned for refrigeration or hot holding after two hours at room temperature. After two cumulative hours at room temperature some pathogens begin entering the log phase of growth where the multiplication of microbes replicates logarithmically to produce enough toxins or pathogens to cause illness if ingested.
+Receiving temperatures Temperature is one of the prime factors that control the growth of bacteria in food. Many, though not all, types of pathogens and spoilage bacteria are prevented from multiplying to microbiologically significant levels in properly refrigerated foods that are not out of date. Therefore, it is imperative that refrigerated and frozen potentially hazardous foods be received at the temperature specified in Code.
+High temperatures for a long enough time, such as those associated with thorough cooking kill or inactivate many types of microorganisms. However, cooking does not"
+token,q4,2,0.710102516306247,0.6760397684307948,1234,,37.339,Do not rely solely upon discussions with managers or cooks to determine compliance or non-compliance. The temperature of cooked potentially hazardous foods duri,"Do not rely solely upon discussions with managers or cooks to determine compliance or non-compliance. The temperature of cooked potentially hazardous foods during the inspection should be taken upon
+
+completion of the cooking process. Food cooking temperatures should be verified by the EHS during each inspection. Every effort should be made to assess the cooking temperatures of a variety of products served in the food facility.
+ Critical limits for cooking PHFs as specified in Sections §114004 and §114010 include specifications that all parts of the food be heated to a certain temperature. For large roasts, temperature measurement should take into account post-cooking heat rise which allows the temperature to reach equilibrium throughout the food. The critical limit of time at the terminal temperature must also be measured during inspections. For example, a roast beef cooked to 130°F is required to be held at this temperature for 112 minutes to ensure destruction of pathogens. Cooking temperatures should be noted on the inspection report.
+ The correct temperature measuring device and technique are essential in accurately determining the temperatures of potentially hazardous foods. The geometric center or thickest"
+token,q4,3,0.7095906497086475,0.7384483230115864,1184,,37.339,"hot holding carts being used to transport food to buffet tables, satellite kitchens, or off-site catering events).  As a rule, every effort should be made to a","hot holding carts being used to transport food to buffet tables, satellite kitchens, or off-site catering events).
+ As a rule, every effort should be made to assess every hot and cold holding unit in the food facility during each inspection.
+Public Health Reason:
+Hot and cold holding, potentially hazardous food Bacterial growth and/or toxin production can occur if potentially hazardous food remains in the temperature ""Danger Zone"" (42°F to 134°F) too long. The rate of growth increases with a rise in temperature within this zone. Beyond the ideal temperature range for a particular organism, the rate of growth decreases. Operations requiring heating or cooling of food should be performed as rapidly as possible to avoid the possibility of bacterial growth.
+Cold holding When considering growth rate of microbial pathogens, time and temperature are integral and must be considered together. Increases in storage and/or display temperature will decrease shelf life of refrigerated foods since the higher in temperature, the more permissive conditions are for growth.
+Hot holding The hot holding of food at 135°F or greater is sufficient to prevent the growth of pathogens and is"
+token,q5,1,0.7387709931198365,0.771961954202486,930,,37.273,food employee is washing their hands while wearing single-use gloves or donning previously worn single-use gloves. [§113973(b)(c)] Examples of MINOR violations ,"food employee is washing their hands while wearing single-use gloves or donning previously worn single-use gloves. [§113973(b)(c)]
+Examples of MINOR violations include:
+• A food employee washes their hands with cold water (less than 100°F). [§113953.3]
+• An employee washes their hands for less than 10 seconds. [§113953.3(a)]
+• Food employee is handling non-ready-to-eat food with fingernails that are not trimmed, cleanable, and smooth. [§113968]
+• Food has been served to the consumer and a food employee is observed wrapping or packaging left- over food for the consumer by using their bare hands. [§113961(c)]
+• An employee wearing latex gloves in the facility. [§113973]
+• Food employees with artificial nails, nail polish, rings (other than a plain ring, such as a wedding band), or uncleanable orthopedic support devices are observed preparing unpackaged food or
+
+handling clean utensils without wearing single-use gloves."
+token,q5,2,0.712324837380059,0.5634699891948609,1092,,37.273,be followed by thorough handwashing. Handwashing is a critical factor in reducing fecal-oral pathogens that can be transmitted from hands to ready- to-eat food ,"be followed by thorough handwashing.
+Handwashing is a critical factor in reducing fecal-oral pathogens that can be transmitted from hands to ready- to-eat food as well as other pathogens that can be transmitted via cross-contamination from raw to ready-to eat foods. Many employees fail to wash their hands as often as necessary and even those who do may use a flawed technique.
+The greatest concentration of microbes exists around and under the fingernails of the hands. The area under the fingernails, known as the “subungual space”, has by far the largest concentration of microbes on the hand and this is also the most difficult area of the hand to decontaminate.
+All aspects of proper handwashing are important in reducing transient microbes on the hands. However, friction
+
+and water have been found to play the most important role. This is why the amount of time spent scrubbing the hands is critical in proper handwashing. It takes more than just the use of soap and running water to remove the transient pathogens that may be present. It is the abrasive action obtained by vigorously"
+token,q5,3,0.6684367479303917,0.5889469418756493,904,,37.273,"the washing of hands. Because handwashing is such an important factor in the prevention of foodborne illness, sufficient facilities must be available to make ha","the washing of hands. Because handwashing is such an important factor in the prevention of foodborne illness, sufficient facilities must be available to make handwashing not only possible, but also likely. A handwash sign is posted in the restroom to remind workers and patrons to wash their hands.
+To minimize hand contact with fecal waste, toilet tissue is necessary for hygienic cleaning following use of toilet facilities. Toilet tissue must be supplied to meet the demand.
+44. Premises; personal/cleaning items; vermin proofing
+Authority: California Retail Food Code, §§ 114143(a, b), 114256, 114256.1, 114256.2, 114256.4, 114257,114257.1, 114259, 114259.2, 114259.3, 114279, 114281, 114282
+This violation category is used to indicate the compliance status with storage of personal items and cleaning supplies, availability of dressing room(s), and vermin proofing requirements.
+OUT – “OUT” shall be"
+semantic,q1,1,0.648912059998736,0.6833225416553643,4077,,20.871,"POSTING REQUIREMENTS An EHS shall verify at the time of an inspection that a Grade Card, Score Card, or Notice of Closure sign (if applicable) is posted as requ","POSTING REQUIREMENTS
+An EHS shall verify at the time of an inspection that a Grade Card, Score Card, or Notice of Closure sign (if applicable) is posted as required at food facilities located in unincorporated areas of Los Angeles County and in cities that have adopted Ordinance 97-007. In addition, the food facility will post a notice advising consumers that a copy of the most recent routine inspection report is available for review by any interested party and provide a copy of the report upon request. The current Letter Grade/Score Cards have been combined with the public notification requirements.
+A food facility will be issued one of the following by the EHS at the time of inspection:
+Placard Type Description “A” Letter Grade Final routine inspection score between 90 – 100 “B” Letter Grade Final routine inspection score between 80 – 89 “C” Letter Grade Final routine inspection score between 70 – 79 Score Card Final routine inspection score of 69 or below Notice of Closure A public notice posted at a food facility when the PHP is suspended, revoked, or for operating without a valid public health permit. The reason for closure will be indicated on the sign by the EHS.
+Note: The cities of Avalon, Bradbury, Hidden Hills, La Habra Heights, San Marino, Sierra Madre, and Signal Hill have not adopted the posting requirements as stated in Ordinance 97-0071.
+V. UNDERSTANDING THE RETAIL FOOD OFFICIAL INSPECTION REPORT
+The Retail Food Official Inspection Report (FOIR) is the official document that is used by the EHS to indicate the compliance status of each violation category observed during a routine inspection. The goal of the report is to fairly document and present the conditions of the food facility at the time of inspection to consumers and food operators. A sample of the FOIR is shown in Appendix A.
+For each inspection violation category on the FOIR, the inspector is required to select the applicable compliance status:
+• “IN” – indicates that the category was observed in compliance with applicable code(s) during the routine inspection.
+• “N/A” – indicates that the category is not applicable to the facility.
+• “N/O” – indicates that the category, which normally occurs at the food facility (e.g., cooling, warewashing, etc.), could not be evaluated because it was not observed at the time of the routine inspection.
+• “COS” – indicates that the category was not in compliance with applicable code(s), but the facility corrected the violation(s) prior to the end of the inspection. The corrective action is to be documented on the inspection report. Critical Risk Factors marked “COS” will be scheduled for a reinspection to ensure ongoing compliance.
+• “OUT” – indicates that the category was not observed in compliance with applicable code(s) during the routine inspection and warrants correction by the re-inspection date.
+•  indicates the item is not in compliance.
+Critical Risk Factors Critical Risk Factors (CRF) violations may be marked as a major or minor violation. Major violations consist of a 4-point deduction and a minor violation is a 2-point deduction. In some cases, if a major violation results in a permit suspension, then an additional 7-points are deducted resulting in a total of 11 points being deducted. A major violation that poses an imminent health hazard requires immediate correction or may require the closure
+
+of the food facility. A minor violation may require immediate correction but does not result in a permit suspension.
+If two (2) or more major (4-point) critical risk violations are marked, Category #53 (Multiple Major Critical Violations/Increased Risk to Public Health) shall be marked, and an additional three (3) points will be deducted.
+Category #53 (Multiple Major Critical Violations/Increased Risk to Public Health) shall NOT be marked if a permit is suspended due to sewage or vermin infestation.
+Good Retail Practices Good Retail Practices (GRP) are marked for low-risk violations that do not require an immediate action.
+Violations observed in this category result in a 1-point deduction.
+"
+semantic,q1,2,0.6274488793454139,0.6078584753984086,8484,,20.871,Refer to the following page for an example of the OIR.  8 | Page  9 | Page Understanding Your Grade The purpose of performing food facility inspections is to pr,"Refer to the following page for an example of the OIR.
+
+8 | Page
+
+9 | Page
+Understanding Your Grade The purpose of performing food facility inspections is to protect public health by reducing and preventing incidents of foodborne illness. A grading system is used to help the public easily determine a food facility’s status in conforming to current health and safety code requirements.
+Violations are noted on the OIR during the health inspection. Each violation is assigned a point value based on to the associated public health risk. Point values are totaled and subtracted from a value of 100 points. The resulting score is used in determining a facility’s letter grade and reflects the status of the food facility at the time of the inspection.
+Beginning of the Inspection:     100 points Total Points Deducted:         - _______ Remaining Points:                  = Score The table below describes the letter grade achieved base on the score received.
+Score Grade Description 90 to 100 points A Generally superior in food handling practices and overall food facility maintenance and sanitation.
+80 to 89 points B Generally acceptable in food handling practices and overall food facility maintenance and sanitation.
+70 to 79 points C Generally unacceptable in food handling practices and overall general food facility maintenance and sanitation (A re-score inspection is required).
+0 to 69 points Closure Poor food handling practices and overall food facility maintenance and sanitation.
+At the conclusion of the inspection, the Health Inspector will place the Letter Grade Card in the facility’s window or other approved location. The Letter Grade Card must not be defaced, marred, camouflaged, relocated, hidden, or removed.
+
+10 | Page
+The following table lists the requirements associated with each letter grade.
+Grade Requirement A There will be no need for additional inspections.
+B There will be no re-score inspection required. A food facility operator may request a re-score inspection if desired. The re-score inspection will result in a charge for the time required to perform the evaluation.
+C
+• Violations must be corrected, and
+• T he food facility must submit a written request for a re-score inspection within 30 days of the date on the OIR to avoid closure.
+A re-score inspection will be conducted within 10 business days from the date a written request is received. EHS will close any food facility that does not receive at least a “B” grade on the re-score inspection.
+Grade below a C (Closure)
+A Notice of Closure will be posted and the facility will be closed for a period of no less than 24 hours. After the minimum 24 hour closure period, a re-score requested must be submitted by the facility operator. A reinspection will be conducted to determine if all the major violations have been corrected. If during the reinspection it is determined that major violations have been corrected, a Facility under Review sign will be posted until a letter grade card is issued after a re-score inspection. The facility must receive at least a “B” grade or the facility’s health permit will be suspended and the facility closed.
+Permit Suspension Any food facility found to pose an immediate danger to the public’s health and safety will be closed, regardless of a facility’s grade or score. Examples of an immediate danger include sewage backup, no hot water, power or water outages, and cockroach or rodent infestations. A letter grade card will not be posted while a facility is closed.
+The facility’s health permit is suspended and a Notice of Closure Card will be posted in an approved location when a food facility is ordered closed. The Notice of Closure Card will remain posted until a Letter Grade Card or Facility under Review Card is posted by the health inspector. A food facility operator may request a hearing within 15 days to explain why the Health Permit suspension should be lifted or why the facility’s Health Permit should not be revoked. Each food facility is required to maintain a copy of the most recent OIR and it must be made available for public review upon request.
+
+11 | Page
+Understanding the Letter Grade Card The Letter Grade Card displays the results from the California Code Official Inspection Report. The table below explains the various boxes on the Letter Grade Card.
+Box Description No Corrective Action Required No violations are documented on the OIR.
+Minor Violation(s) Observed One or more OUT violations are documented on the OIR.
+Major Violation(s) Observed One or more MAJOR violations are documented on the OIR.
+
+12 | Page
+General Marking Instructions for Data Fields
+Violations in data fields 1 through 23 of the report are considered to be associated with Centers for Disease Control and Prevention identified risk factors and Food and Drug Administration ( FDA) identified public health interventions. The violations in this section of the report can be marked as either Major or OUT violations.
+Compliance Status For each data field in S ection 1 to 23, indicate one of the following compliance status choices on the inspection form:
+IN indicates that the item is in compliance.
+N/O indicates that the item was not observed during the inspection, however the Enforcement Officer should determine through discussion with the food employee if there is adequate knowledge of a practice or procedure (this should be viewed as an educational opportunity rather than a violation of “Demonstration of Knowledge”).
+N/A indicates that the item is not applicable for the facility.
+MAJOR means that the item is not in compliance and it meets the criteria of a Major violation as described below.
+OUT means that the item is not in compliance and it meets the criteria of OUT or a minor violation as described below.
+If N/A or N/O is not given as an option for a particular item, this means that this item may not be observable during the inspection and a compliance status must be determined. If the item is marked MAJOR or OUT, document each violation for the item number in the “Observations and Corrective Actions” section on the OIR.
+CORRECTED ON SITE (COS):
+For items MAJOR / OUT an “X” will be in the corresponding box “COS” when the violation is Corrected On-Site.
+Marking COS indicates that all violations cited under that particular item number have been corrected and verified prior to the completion of the inspection.
+The actual corrective action taken for each violation should be documented in the “Observations and Corrective Actions” section of the OIR.
+For example, data field #6 “Adequate handwashing facilities supplied/accessible” is marked OUT if the food facility does not have soap and paper towels at the hand wash sink. During the inspection, if the operator partially corrects the problem by putting soap at the sink, but still does not have paper towels or any other effective means for drying hands, the COS box would not be checked. The corrective action taken for the soap is documented in the narrative on the form, but COS is not marked because all violations under that item were not corrected.
+
+13 | Page
+MAJOR VIOLATIONS Major violations are risk factor violations and are also found in Section 113725 of Cal Code. Major violations were also defined as part of the Senate Bill 180 implementation process and have traditionally been looked upon as rationale for suspension of a food facility permit due to an imminent health hazard. According to the CDC, these major violations are the most significant risk factors contributing to foodborne illness outbreaks, and are clearly an imminent health hazard to the public health and safety.
+When a major violation cannot be immediately corrected, or a suitable alternative found, the food facility may be subject to closure.
+OUT OF COMPLIANCE VIOLATIONS OUT violations do not meet the criteria in Section 113725. Though they are not considered an imminent health hazard they still present a risk to public health.
+Data fields 24 through 54 on the OIR are considered Good Retail Practices (GRP) and violations in this section are  considered OUT or minor violations. GRPs are preventive measures that include practices and procedures that effectively control the introduction of pathogens, chemicals, and physical objects into food. Since the major emphasis of an inspection is on the Risk Factors that cause foodborne illness, the GRPs have been given less importance on the inspection form and a differentiation between IN, MAJOR, OUT, N.A. and N.O. "
+semantic,q1,3,0.5861128573431955,0.5474497443781864,331,,20.871,This guide provides information on common terms used in the California Retail Food Code (Cal Code) and the San Bernardino County Code (SBCC) to assist in unders,"This guide provides information on common terms used in the California Retail Food Code (Cal Code) and the San Bernardino County Code (SBCC) to assist in understanding violations, the retail food inspection process used by the Food Protection Program, the California Code Official Inspectio n Report (OIR), and Letter Grade Cards.
+"
+semantic,q2,1,0.7394482548886978,0.6775545231147125,693,,21.142,"ABC RETAIL FOOD INSPECTION GUIDE San Bernardino County Public Health Environmental Health Services 385 N Arrowhead Ave., 2nd floor San Bernardino, CA 92415-0160","ABC RETAIL FOOD INSPECTION GUIDE
+San Bernardino County Public Health Environmental Health Services 385 N Arrowhead Ave., 2nd floor San Bernardino, CA 92415-0160 1-800-442-2283 Fax: 909-387-4323
+Public Health Environmental Health Services http://wp.sbcounty.gov/dph/programs/ehs/
+
+FOREWORD The San Bernardino County Department of Public Health, Environmental Health Services (EHS) is dedicated to ensuring public health and safety and preventing environmental hazards for all residents and visitors through innovation, education, surveillance, enforcement and community service.
+EHS’ Food Inspection Program (along with the food industry) plays a major role in keeping food safe for consumers. "
+semantic,q2,2,0.6891836887103913,0.6414778742519917,1624,,21.142,• A permit suspension (closure) on the last graded inspection.  7 | Page Understanding the California Code Official Inspection Report (OIR) Environmental Health,"• A permit suspension (closure) on the last graded inspection.
+
+7 | Page
+Understanding the California Code Official Inspection Report (OIR)
+Environmental Health Services is responsible for enforcing sections of California Retail Food Code and the San Bernardino County Code. Environmental Health Specialists conduct inspections to ensure that each food facility is in compliance with these regulations.
+Any violations of the regulations is documented on the OIR. This report is used to document current and previous violations committed by food facilities.
+The intent on the OIR is to identify violations of applicable laws, codes and regulations which increase the health risks to the public. The OIR consists of two parts:
+• Section one on the OIR  includes items that relate to CDC identified risk factors and public health interventions. Violations in this section include major and “out” or minor violations. Major violations will be documented on the OIR and highlighted in yellow to bring attention to these high risk violations.
+• Section two on the OIR  includes items that do not relate to major violations  and are considered Good Retail Practices (GRPs). Violations in this section are considered “out” or minor violations.
+The OIR consists of the following:
+• A list of all the data fields, as well as point values associated with each violation.
+• G eneral information about the facility in the header section.
+The OIR will be sent on the next business day following the inspection. The OIR will be sent by email with a link to open from our website. If no email address is on file a hard-copy will be mailed. "
+semantic,q2,3,0.6843847055940752,0.6314785541508581,331,,21.142,This guide provides information on common terms used in the California Retail Food Code (Cal Code) and the San Bernardino County Code (SBCC) to assist in unders,"This guide provides information on common terms used in the California Retail Food Code (Cal Code) and the San Bernardino County Code (SBCC) to assist in understanding violations, the retail food inspection process used by the Food Protection Program, the California Code Official Inspectio n Report (OIR), and Letter Grade Cards.
+"
+semantic,q3,1,0.6320426069017229,0.5704681731491924,4492,,23.48,"9. Time as a public health control; procedures & records Authority: California Retail Food Code, § 114000 This violation category is used to indicate the compli","9. Time as a public health control; procedures & records
+Authority: California Retail Food Code, § 114000
+This violation category is used to indicate the compliance status with the proper implementation and use of Time as a Public Health Control (TPHC).
+IN – “IN” shall be marked if a food facility is properly implementing TPHC and maintains all required written procedures.
+N/A – “NA” shall be marked if the food facility does not use time as a public health control.
+N/O – “N/O” shall be marked if the food facility utilizes TPHC but is not implementing it at the time of inspection.
+OUT – This violation shall be marked either MAJOR or MINOR.
+Examples of MAJOR violations include:
+• Written procedures are not available for foods using TPHC at the time of inspection. [§114000]
+• The four-hour time marking has been exceeded. (VC&D) [§114000]
+• Foods using TPHC are not marked or otherwise identified. (VC&D) [§114000]
+Example of a MINOR violation includes:
+• The written procedures for food items utilizing TPHC are not maintained, missing pertinent information, and/or are incomplete. [§114000]
+Additional Violation:
+o Category #51 (Impoundment/VC&D/Sampling) shall also be marked if food/equipment has been voluntarily condemned and disposed of or impounded/red tagged. (See VC&D/Red Tag/Impound instructions under Inspection Services) [§114393]
+Notes:
+ Food facilities using TPHC shall mark the time that is four hours past the point in time the food was removed from temperature control and shall discard the food at the end of the four-hour time limit.
+ Preparation time is included in the four-hour time limit if food is prepared and offered for consumption/sale directly thereafter without returning the food to proper temperature control.
+Example: A food facility uses TPHC for their ready-to-eat sandwiches. If the food facility takes 1 hour to prepare and package the sandwiches then immediately takes them to the non- temperature-controlled display for sale, then the food items will be marked and disposed of within three (3) hours.
+ Written procedures shall be maintained at the food facility and made available upon request.
+ TPHC cannot be used for dishes containing raw/undercooked eggs at licensed health facilities or public and private school cafeterias.
+Public Health Reason:
+Holding cold food without temperature control When a food is removed from refrigerated storage and begins to warm to room temperature, Listeria monocytogenes is a primary organism of concern. Even while food is held at refrigeration temperatures, the growth potential of L. monocytogenes warrants concern for time/temperature control for food safety of ready to eat foods. By ensuring minimal Listeria growth in food, the threat from Salmonella would be negligible.
+Warming conditions will allow food to remain exposed to temperatures that allow B. cereus to produce emetic toxin. However, the 4-hour time constraint in the California Retail Food Code (CRFC) is sufficient to prevent any toxin formation. The conservative nature of the 4-hour limit for keeping foods without temperature control allows for a needed margin of safety if the temperature of the environment is higher than 75°F. It is important to note that time/temperature control for foods held without cold holding temperature control for a period of 4
+
+hours, does not require any temperature control or monitoring. These foods can reach any temperature when held at ambient air temperatures as long as they are discarded or consumed within the four hours.
+Holding hot food without temperature control The second scenario for food without temperature control exists when food is cooked according to the CRFC requirements, then kept at room temperature for 4 hours before discarding. Foodborne pathogens of concern for an uncontrolled temperature scenario are spore formers including Clostridium perfringens and Bacillus cereus.
+Food cooked according to the CRFC should be free of vegetative cells. However, the heat requirements are not sufficient to kill spores of C. perfringens or B. cereus and may actually serve as a heat shock that activates the spores. B. cereus is found commonly in outbreaks attributed to inadequate hot holding of starchy foods like rice and has been isolated in a multitude of food products. During the time without temperature control, the temperature of the food could decrease slowly enough to expose spores of both organisms to optimal growth conditions for a significant length of time. "
+semantic,q3,2,0.6211233098466798,0.6234769473531705,3696,,23.48,This item may be marked N.A. when the food facility does not hold hot or cold food. N.O.  This item may be marked N.O. when the food facility holds hot or cold ,"This item may be marked N.A. when the food facility does not hold hot or cold food.
+N.O.  This item may be marked N.O. when the food facility holds hot or cold foods, but no foods are being held hot or cold during the time of inspection.
+08 Time as a public health control; procedures & records Applicable Sections:
+111223,114000(a)(1)(2)(3)(4),(b),114429(a),114429.5(b)
+When time only, rather than time and temperature, is used as a public health control, food must be marked or otherwise identified as to what time the food was removed from temperature control. Food items shall not exceed the time marked.
+MAJOR violations include the following:
+1. Food that has been time marked and has exceeded the time marked. (§114000(a))
+2. Time as a public health control is used for food that has not been marked or otherwise identified and the food has been out of temperature control for more than four hours. (§114000(a)(1)(2))
+3. Manufactured Korean rice cakes held at room temperature exceeding one day from the date indicated on the label from the Korean Rice Cake Association.
+[(§111223), (§114429(a))]
+4. Asian rice noodles are held at room temperature exceeding four hours from the time the product was removed from temperature control if the product is PHF.
+(§114429.5(b))
+Note:
+• Food in unmarked containers or packages marked to exceed a four hour limit shall be discarded. (§114000(a)(3))
+OUT violations include the following:
+1. Time as a public health control is used for food but the food has not been marked or otherwise identified and the food has been out of temperature control for less than four hours. (§114000(a)(1)(2))
+2. Written procedures are not maintained and available for food that has been prepared, cooked, and refrigerated when using time as a public health control. (§114000(a)(4))
+N.A.  This item may be marked N.A. when the food facility does not use time only as a public health control.
+N.O.  This item may be marked N.O. when the food facility uses time only as a public health control, but is not using this practice at the time of inspection.
+Exception: Time as a public health control cannot be used for raw eggs in a licensed health facility or in a public or private school. (§114000(b))
+
+21 | Page
+09 Proper cooling methods Applicable Sections: 114002(a),(b),(c),(d), 114002.1(a),(b)
+All potentially hazardous food shall be rapidly cooled from 135°F to 70°F, within 2 hours, and then from 70°F to 41°F, within a total of 6 hours. Cooling shall be by one or more of the following methods: in shallow containers, separating food into smaller portions, adding ice as an ingredient, using an ice bath, stirring frequently, using rapid cooling equipment, or using containers that facilitate heat transfer. Potentially hazardous food is to be cooled within 4 hours to 41°F if prepared from ingredients at ambient temperature.
+Deliveries of potentially hazardous food is to be cooled to below 41°F within 4 hours if received between 41°F to 45°F.
+MAJOR violations include the following:
+1. PHF is not cooled rapidly from 135°F to 70°F within two hours. (§114002(b))
+2. After heating or hot holding, PHF is not cooled rapidly from 135°F to 41°F or below within six hours. (§114002(a),(b))
+3. PHF is not cooled within 4 hours to 41°F if prepared from ingredients at ambient temperature. (§114002(c))
+4. Deliveries of PHF not cooled to below 41°F within 4 hours if received between 41°F to 45°F. (§114002(d))
+OUT violations include the following:
+1. PHF is found cooling using procedures not listed as an approved method but found to be in the safe cooling temperature range of 135°F to 70°F within 2 hours, then to 41°F within a total of 6 hours. (§114002(b))
+N.A.  "
+semantic,q3,3,0.6094258034298498,0.5044213774636024,398,,23.48,Proper hot and cold holding temperatures • Food is received at proper temperatures when delivered. • Proper PHF hot (135°F or above) and cold (41°F or below) ho,"Proper hot and cold holding temperatures
+• Food is received at proper temperatures when delivered.
+• Proper PHF hot (135°F or above) and cold (41°F or below) holding temperatures.
+9. Time as a public health control; procedures & records
+• Food is time marked and voluntarily disposed of within 4 hours of leaving temperature control if not served/sold.
+• Written procedures available and complete.
+"
+semantic,q4,1,0.7581526889642208,0.6899208093670051,3326,,20.712,"For this, no specific temperature is required for the consumer’s protection. Reheating for hot holding When food is held, cooled, and reheated in a food facilit","For this, no specific temperature is required for the consumer’s protection.
+Reheating for hot holding When food is held, cooled, and reheated in a food facility, there is an increased risk from contamination caused by personnel, equipment, procedures, or other factors. If food is held at improper temperatures for enough time, pathogens have the opportunity to multiply to dangerous numbers. Proper reheating provides a major degree of assurance that pathogens will be eliminated.
+The potential for growth of pathogenic bacteria is greater in reheated cooked foods than in raw foods. This is because spoilage bacteria, which inhibit the growth of pathogens by competition on raw product, are killed during cooking. Subsequent recontamination will allow pathogens to grow without competition if temperature abuse occurs.
+PROTECT FROM CONTAMINATION
+13. Returned and re-service of food
+Authority: California Retail Food Code, §§ 114079
+This violation category is used to indicate the compliance status with ensuring foods which have been served to a consumer are not returned and reserved to another consumer.
+IN – “IN” shall be marked when consumers are not served food items previously provided to another consumer.
+N/A – “N/A” shall be marked if the facility only handles prepackaged foods.
+N/O – “N/O” shall be marked if the food facility is not serving food at the time of inspection.
+OUT – This violation category shall be marked MINOR; examples include:
+• Re-served tortilla chips, salsa, or unpackaged bread. (VC&D) [§114079]
+
+• Popcorn, nuts, or snack mix left on the bar for communal service. (VC&D) [§114079]
+• Previously served steamed rice used in the preparation of fried rice. (VC&D) [§114079]
+Notes:
+ Containers of non-potentially hazardous foods such as ketchup, steak sauce, hot sauce, etc., can be transferred from one consumer to another if the food is protected from contamination and the container is closed between uses.
+ Schools may provide a sharing table where food service staff, pupils, and faculty may return food items and make those food items available to others during the course of a regular school mealtime.
+ Food in unopened original packages that are in sound condition and checked periodically on a regular basis, such as crackers or sugar, can be re-served.
+Public Health Reason:
+Returned food and reserving of food Food can serve as a means of person-to-person transmission of disease agents such as hepatitis A virus.  Any unpackaged foods, even bakery goods in a breadbasket that are not potentially hazardous and that have been served to a consumer, but not eaten, can become vehicles for transmitting pathogenic microorganisms from the initial consumer to the next if the food is served again.
+14. Food in good condition, safe and unadulterated
+Authority: California Retail Food Code, §§ 113967, 113976, 113980, 113982, 113988, 113990, 114035, 114041, 114254.3, 114355, 114419; Sherman Food, Drug, and Cosmetic Law, §§ 110605, 110610;
+California Code of Regulations, Title 17, Section 13675, California Health & Safety Code § 110611,
+This violation category is used to indicate the compliance status with food kept in good condition, safe, and unadulterated.
+IN – “IN” shall be marked when foods at the food facility are observed to be in good condition, safe, and unadulterated.
+"
+semantic,q4,2,0.710102516306247,0.6760397684307948,4583,,20.712,Do not rely solely upon discussions with managers or cooks to determine compliance or non-compliance. The temperature of cooked potentially hazardous foods duri,"Do not rely solely upon discussions with managers or cooks to determine compliance or non-compliance. The temperature of cooked potentially hazardous foods during the inspection should be taken upon
+
+completion of the cooking process. Food cooking temperatures should be verified by the EHS during each inspection. Every effort should be made to assess the cooking temperatures of a variety of products served in the food facility.
+ Critical limits for cooking PHFs as specified in Sections §114004 and §114010 include specifications that all parts of the food be heated to a certain temperature. For large roasts, temperature measurement should take into account post-cooking heat rise which allows the temperature to reach equilibrium throughout the food. The critical limit of time at the terminal temperature must also be measured during inspections. For example, a roast beef cooked to 130°F is required to be held at this temperature for 112 minutes to ensure destruction of pathogens. Cooking temperatures should be noted on the inspection report.
+ The correct temperature measuring device and technique are essential in accurately determining the temperatures of potentially hazardous foods. The geometric center or thickest parts of a product are the points of measurement of product temperature particularly when measuring critical limits for cooking.
+ EHSs should take internal temperatures of products using a thermocouple or thermistor with a probe suitable for the product thickness. A thin diameter probe should be used for temperature measurements of hamburger patties and fish filets. Alternately, although less desirable, an EHS may use a suitable, calibrated bimetal stem thermometer for checking cooking temperatures of thick foods. Infrared thermometers are inappropriate for measuring internal cooking temperatures.
+Public Health Reason:
+Cooking temperature of raw animal foods Cooking, to be effective in eliminating pathogens, must be adjusted for a number of factors. These include the anticipated level of pathogenic bacteria in the raw product, the initial temperature of the food, and the food's bulk, which affects the time to achieve the needed internal product temperature. Other factors to be considered include post-cooking heat rise and the time the food must be held at a specified internal temperature. Greater numbers and varieties of pathogens generally are found on poultry than on other raw animal foods. Therefore, a higher temperature, in combination with the appropriate time is needed to cook these products. To kill microorganisms, food must be held at a sufficient temperature for the specified time.
+Cooking is a scheduled process in which each of a series of continuous time/temperature combinations can be equally effective. The stated temperature is the minimum that must be achieved and maintained in all parts of each piece of meat for a least the stated time. Cooking requirements are based in part on the biology of pathogens. The thermal destruction of a microorganism is determined by its ability to survive heat. Different species of microorganisms have different susceptibilities to heat.
+Seared Steak Steak is a whole beef muscle. It does not include whole beef muscle that has been pinned, injected, or chopped and formed. It may be cut cross grain, such as sirloin, chuck, or porterhouse; or it may be cut with the grain, such as flank, skirt, or Chateaubriand. Other species, such as poultry, pork and lamb, are not included.
+Due to the low probability of pathogenic organisms being present in or migrating from the external surface to the interior of beef muscle, cuts of intact muscle (steaks) should be safe if the external surfaces are exposed to temperatures sufficient to affect a cooked color change. In addition, the cut (exposed) surfaces must receive additional heat to affect a complete sear across the cut surfaces. Grill or char marks may be applied to the complete surface searing. The meat should be seared on both top and bottom surfaces utilizing a heating environment (e.g., grill or broiling oven) that imparts a temperature at the surface of the intact steak of at least 145°F to achieve a cooked color change on all external surfaces. The searing of all surfaces should be continuous until the desired degree of doneness and appearance are attained. This is considered a ready to eat food. As reflected in the definition of whole-muscle, intact beefsteak, marinating is a food safety concern.
+The concern arises when the fascia (exterior surface) of the steak is broken by scoring or other means. "
+semantic,q4,3,0.6938457375211279,0.7532208051145899,398,,20.712,Proper hot and cold holding temperatures • Food is received at proper temperatures when delivered. • Proper PHF hot (135°F or above) and cold (41°F or below) ho,"Proper hot and cold holding temperatures
+• Food is received at proper temperatures when delivered.
+• Proper PHF hot (135°F or above) and cold (41°F or below) holding temperatures.
+9. Time as a public health control; procedures & records
+• Food is time marked and voluntarily disposed of within 4 hours of leaving temperature control if not served/sold.
+• Written procedures available and complete.
+"
+semantic,q5,1,0.6436488497001711,0.5550858384402868,586,,23.922,6. Hands clean and properly washed; proper glove use Where do the employees wash their hands? How often to employees wash their hands? What is the minimum time ,"6. Hands clean and properly washed; proper glove use Where do the employees wash their hands?
+How often to employees wash their hands?
+What is the minimum time required for an employee to wash their hands?
+Do you use gloves at the facility? If so, what kind of gloves do you use?
+7. Adequate handwashing facilities: supplied and accessible Do you have an employee designated to routinely check for adequate handwashing supplies at the handwashing sink?
+How often are handwashing supplies checked?
+
+Can the facility readily switch to using paper towels when hand drying devices fail?
+8. "
+semantic,q5,2,0.5998450206272952,0.6407122007554824,19312,,23.922,"to assemble ready-to-eat food or to place ready-to-eat food on tableware or in other containers. However, if a food employee’s hands are properly cleaned, they ","to assemble ready-to-eat food or to place ready-to-eat food on tableware or in other containers.
+However, if a food employee’s hands are properly cleaned, they may assemble ready-to-eat foods or place ready-to-eat foods in other containers without the use of utensils when in an approved food preparation area.
+Public Health Reason:
+The hands are particularly important in transmitting foodborne pathogens. Hands are probably the most common vehicle for the transmission of pathogens to foods in a food facility. Hands can become soiled with a variety of contaminants during routine operations. Food employees with dirty hands and/or fingernails may contaminate the food being prepared. Even seemingly healthy employees may transfer pathogenic organisms to food. Staphylococcus aureus, for example, can be found on the skin and in the mouth, throat, and nose of many employees. The hands of employees can be contaminated by touching their nose or other body parts.
+Performing cleaning duties, using the restroom, handling money, and other activities may also contaminate the hands of employees who may later engage in food preparation. Therefore, any activity that may contaminate the hands must be followed by thorough handwashing.
+Handwashing is a critical factor in reducing fecal-oral pathogens that can be transmitted from hands to ready- to-eat food as well as other pathogens that can be transmitted via cross-contamination from raw to ready-to eat foods. Many employees fail to wash their hands as often as necessary and even those who do may use a flawed technique.
+The greatest concentration of microbes exists around and under the fingernails of the hands. The area under the fingernails, known as the “subungual space”, has by far the largest concentration of microbes on the hand and this is also the most difficult area of the hand to decontaminate.
+All aspects of proper handwashing are important in reducing transient microbes on the hands. However, friction
+
+and water have been found to play the most important role. This is why the amount of time spent scrubbing the hands is critical in proper handwashing. It takes more than just the use of soap and running water to remove the transient pathogens that may be present. It is the abrasive action obtained by vigorously rubbing the surfaces being cleaned that loosens the transient microbes on the hands.
+Research has shown a minimum 10-15 second scrub is necessary to remove transient pathogens from the hand. Every stage in handwashing is equally important and has an additive effect in transient microbe reduction. Therefore, effective handwashing must include scrubbing, rinsing, and drying the hands. When done properly, each stage of handwashing further decreases the transient microbial load on the hands.
+Handwashing done properly can result in a removal of 99.9% of bacteria and 99% of viruses and protozoa.
+Use of gloves Gloves used in handling ready-to-eat food are defined as a utensil, however they are not to be used as a replacement to handwashing. The use of latex gloves is prohibited. Natural rubber latex gloves have been reported to cause allergic reactions in some individuals who wear latex gloves during food preparation, and even in individuals eating food prepared by food employees wearing latex gloves.
+Multiuse gloves, especially when used repeatedly and soiled, can become breeding grounds for pathogens that could be transferred to food. Soiled gloves can directly contaminate food if stored with ready-to-eat food or may indirectly contaminate food if stored with articles that will be used in contact with food.
+If nonlatex slash-resistant gloves are not properly cleaned and sanitized, then their use could contaminate food.
+7. Adequate handwashing facilities; supplied and accessible
+Authority: California Retail Food Code, §§ 113953, 113953.1, 113953.2, 114067(f)
+This violation category is used to indicate the compliance status with handwashing facilities that are sufficient in number, accessible, and properly supplied.
+IN – “IN” shall be marked if the food facility’s handwashing facilities are sufficient in number, accessible, and are properly supplied with soap and single-use towels in dispensers.
+N/A – Do Not Mark.
+N/O – Do Not Mark.
+OUT – This violation category shall be marked MINOR; examples include:
+• One (1) handwashing sink is clogged in the food preparation area, but the facility has additional operable handwashing sink(s) in the food preparation area. [§113953(a), §113953.1(b)]
+• A handwashing sink is not separated from a warewashing sink by a six (6) inch high metal splashguard or a twenty-four (24) inch separation in distance. [§113953(b)]
+• A food facility, constructed after January 1, 1996, lacks a sufficient number of handwashing sinks and/or the handwashing sink(s) are not conveniently located in a food preparation area or warewashing area. [§113953(b)]
+• The handwashing sink is not clean. [§113953.1(a)]
+• Non-easily moveable equipment is blocking access to the handwashing sink. [§113953.1(a)]
+• Preventing the use of the handwashing sink by storing items inside the sink basin. [§113953.1(a, b)]
+• Food employee washing their hands in an unapproved sink (e.g., food preparation/janitorial sink).
+[§113953.1(c-d)]
+• The use of bar soap or cloth towels. [§113953.2]
+• Empty/missing/non-functioning soap and/or single-use towel dispenser. [§113953.2]
+• No soap and/or single-use towels are available on the premises by the end of the inspection at a prepackaged food facility. [§113953.2]
+
+• Hand drying device is non-functional. [§113953.2(b)]
+• A satellite food service operation that handles open food items does not have an approved handwashing facility that is either permanently plumbed or self-contained. [§114067(f)]
+Additional Violations:
+o Category #22 (Hot and cold water available – Minor) shall also be marked if the water at a handwashing sink does not reach a minimum temperature of 100°F or if the water temperature at a non-adjustable handwashing sink exceeds 108°F. [§113953(c)]
+o Category #22 (Hot and cold water available – Major) shall also be marked if there is no potable water available throughout the facility. [§114192]
+Notes:
+ Handwashing facilities must be available to make handwashing not only possible, but likely. Therefore, the EHS should ensure that food employees have the necessary supplies available for handwashing.
+ Food facilities constructed or extensively remodeled after January 1,1996, that handle non- prepackaged food, shall provide facilities exclusively for handwashing in food preparation areas and in warewashing areas that are not located within or immediately adjacent to food preparation areas.
+[113953(b)]
+ Except where a determination is made that the nonconforming structural conditions pose a public health hazard, existing facilities shall be deemed in compliance with the law pending replacement or renovation.
+Public Health Reason:
+Handwashing facilities Effective handwashing is essential for minimizing the likelihood of the hands becoming a vehicle of cross contamination. It is important that handwashing be done at a properly equipped handwashing facility in order to help ensure that food employees effectively clean their hands.
+It is inappropriate to wash hands in a food preparation sink since this may result in avoidable contamination of the sink and the food prepared therein. Janitorial sinks may not be used for food employee handwashing since this practice may introduce additional hand contaminants because these sinks may be used for the disposal of mop water, toxic chemicals, and a variety of other liquid wastes. Such wastes may contain pathogens from the floors of food preparation areas and toilet rooms and discharges from ill persons. Because handwashing is such an important factor in the prevention of foodborne illness, sufficient facilities must be available to make handwashing not only possible, but also likely.
+Using a handwashing facility Handwashing facilities must be maintained in a condition that promotes handwashing and are restricted for that use. Convenient accessibility of a handwashing facility encourages timely handwashing, which provides a break in the chain of contamination from the hands of food employees to food or food contact surfaces.
+Facilities, which are blocked by portable equipment or stacked full of soiled utensils and other items, are rendered unavailable for regular employee use. Nothing must block the approach to a handwashing facility thereby discouraging its use. Sinks used for food preparation and warewashing can become sources of contamination if used as handwashing facilities by employees returning from the toilet or from duties that have contaminated their hands.
+Handwashing supplies Hands are probably the most common vehicle for the transmission of pathogens to foods in a food facility.
+Hands can become soiled with a variety of contaminants during routine operations. Some employees are unlikely to wash their hands unless properly equipped handwashing facilities are accessible in the immediate work area. A facility that is kept clean and well stocked with liquid soap and paper towels encourage frequent use.
+Hand sanitizers Hand sanitizers are not an acceptable substitute for proper handwashing. This provision is intended to ensure that an alcohol based antimicrobial product applied to the hands is; 1) used in conjunction with handwashing,
+2) a safe food additive when applied to bare hands that will come into direct contact with food, and 3) safe and
+
+effective when applied to human skin.
+TIME AND TEMPERATURE RELATIONSHIP
+8. Proper hot and cold holding temperatures
+Authority: California Retail Food Code, §§ 113996, 113998, 114004, 114037
+This violation category is used to indicate the compliance status with potentially hazardous food (PHF) being received/stored/held within specified holding temperature parameters.
+IN – “IN” shall be marked if PHFs are being held at 41°F/45°F or below or 135°F or above within approved time allowances.
+N/A – “N/A” shall be marked if the food facility does not hot hold or cold hold PHF.
+N/O – “N/O” shall be marked if the food facility does hold hot or cold PHFs, but no foods are being held hot or cold during the time of inspection.
+OUT – This violation shall be marked either MAJOR or MINOR.
+MAJOR shall be marked if PHFs are held between 50°F – 130°F without any intervention(s). Examples include:
+• Facility does not have any electrical power to maintain proper food temperatures and PHFs are observed out of temperature. (VC&D) PERMIT SUSPENSION [§113996(a)]
+• PHF (including pooled eggs) measuring between 50°F – 130°F and has exceeded 2-hour preparation time. (VC&D) [§113996(a), §113998]
+• Raw shell eggs are holding at an ambient temperature of 50°F or above and have exceed the 2-hour preparation time limit. (See Food Temperature Holding Chart below) [§113996(c)]
+• A roast is cooked as specified in CRFC, §114004(b) which allows holding at 130°F, but is held between 50°F – 126°F. (VC&D) [§113996(b), §114004]
+MINOR shall be marked if PHFs are held between 42°F/46°F – 49°F or 131°F – 134°F without any intervention(s). Examples include:
+• PHF observed between 42°F – 49°F or 131°F – 134°F and has exceed the 2-hour preparation time limit. (See Food Temperature Holding Chart below) [§113996(a), §113998]
+• PHF which has been thawed is observed holding between 42°F – 49°F. (See Food Temperature Holding Chart below) [§113996(a)]
+• Raw shell eggs are holding at an ambient temperature between 46°F – 49°F and have exceed the 2- hour preparation time limit. (See Food Temperature Holding Chart below) [§113996(c)]
+• PHFs at a salad bar or serving line held between 42°F – 45°F for over 12 hours within a 24-hour period.
+Note: Unused portions of PHF held for dispensing at serving lines or salad bars may be held up to 45°F and must be disposed of at or before the end of the allowed 24-hour period. [§113996(d)]
+• PHF is received at between 42°F – 45°F, however, is not cooled to 41°F within four 4-hours. [§114037]
+• A roast is cooked as specified in CRFC, §114004(b) which allows holding at 130°F, but is held between 126°F - 129°F. (See Food Temperature Holding Chart below) [§113996(b), §114004]
+
+CORRECTIVE ACTION:
+For holding violations refer to the Food Temperature Holding Chart below:
+Time in Temp.
+Danger Zone (TDZ)
+FOOD TEMPERATURE HOLDING CHART ** 42°F to 49°F 50°F to 130°F 131°F to 134°F <2 hours Cool to 41°F or below within 2 hours PHF (VC&D)
+Reheat to 165°F within 2 hours 2 - 3 hours Cool to 41°F or below within 1 hours PHF (VC&D)
+3 - 4 hours Immediately cool to 41°F or below >4 hours PHF (VC&D)
+**Exemptions:
+ A roast holding between 126°F - 129°F for less than 2 hours may be reheated as stated in CRFC, §114004. [§114016]
+ A roast holding between 126°F - 129°F for 2 hours or more shall be voluntarily condemned and disposed of by the operator or red tagged/impounded.
+Additional Violations:
+o Category #36 (Equipment/utensils approved; installed; good repair; capacity) shall also be marked if faulty equipment causes PHF to be out of temperature. [§114175]
+o Category #39 (Thermometers provided and accurate) shall also be marked if the facility lacks an accurate metal probe thermometer to take internal food temperatures. [§114159]
+o Category #51 (Impoundment/VC&D/Sampling) shall also be marked if food/equipment has been voluntarily condemned and disposed of or impounded/red tagged. (See VC&D/Red Tag/Impound instructions under Inspection Services) [§114393]
+Notes:
+ Roasts, cooked per CRFC, §114004(b), may be held at 130°F or above.
+ PHF may be received at 45°F if the food is cooled to 41°F within 4 hours.
+ Food may be removed from specified holding temperatures for a cumulative time period of up to two hours to facilitate food preparation.
+ Food temperature measuring devices that are scaled only in Celsius or dually scaled in Celsius and Fahrenheit must be accurate to plus or minus 1°C or 2°F in the intended range of use. In addition, the EHS should not stir a food before taking its temperature since it is important to know the temperature of all parts of the food before it is agitated.
+ The geometric center of a product is the recommended point of measurement when measuring the critical limit for cold holding.
+ Additional measurements may need to be taken at points farthest from the heat source, (e.g., near the product surface for food held on a steam table). Temperatures measured between packages of food, such as cartons of milk or packages of meat, may be limited in accuracy and, if at the wrong temperature, indicate the need for further examination. However, the temperature of a PHF itself, rather than the temperature between packages, is necessary if marking as a violation.
+ Infrared thermometers are a survey tool and must not be used to measure internal temperatures of foods for compliance with CRFC.
+ In large holding units and on steam tables, it is necessary to measure temperatures of foods in various locations to ensure that the equipment is working properly.
+ If deviations are noted in the product temperatures, it is important to take extra steps to determine reasons for the problem such as equipment failure or a breakdown in a process such as cooling or
+
+reheating. There could be other reasons such as foods were moved or just put into holding units.
+ Foods approved for holding up to 45°F include the following: raw shell eggs; un-shucked live molluscan shellfish; pasteurized milk and pasteurized milk products in original sealed containers; PHFs held for dispensing in serving lines and salads bars during periods not to exceed 12 hours in any 24-hour period; or PHF held in vending machines; or PHF held for sampling at a Certified Farmers’ Market.
+ Pasteurized milk in original, sealed containers, pasteurized milk products in original, sealed containers, raw shell eggs, and un-shucked live molluscan shellfish may be received and maintained at an ambient temperature of 45°F or less.
+ Hot and cold holding temperatures, as well as cooling time and temperatures, of PHFs should be thoroughly checked with a thermocouple, thermistor, or other appropriate temperature measuring device during each inspection. This includes the temperature of PHF during transport, (e.g., hot holding carts being used to transport food to buffet tables, satellite kitchens, or off-site catering events).
+ As a rule, every effort should be made to assess every hot and cold holding unit in the food facility during each inspection.
+Public Health Reason:
+Hot and cold holding, potentially hazardous food Bacterial growth and/or toxin production can occur if potentially hazardous food remains in the temperature ""Danger Zone"" (42°F to 134°F) too long. The rate of growth increases with a rise in temperature within this zone. Beyond the ideal temperature range for a particular organism, the rate of growth decreases. Operations requiring heating or cooling of food should be performed as rapidly as possible to avoid the possibility of bacterial growth.
+Cold holding When considering growth rate of microbial pathogens, time and temperature are integral and must be considered together. Increases in storage and/or display temperature will decrease shelf life of refrigerated foods since the higher in temperature, the more permissive conditions are for growth.
+Hot holding The hot holding of food at 135°F or greater is sufficient to prevent the growth of pathogens and is therefore an effective measure in the prevention of foodborne illness.
+Time limits for food preparation For potentially hazardous foods, it is required that the food be returned for refrigeration or hot holding after two hours at room temperature. After two cumulative hours at room temperature some pathogens begin entering the log phase of growth where the multiplication of microbes replicates logarithmically to produce enough toxins or pathogens to cause illness if ingested.
+Receiving temperatures Temperature is one of the prime factors that control the growth of bacteria in food. Many, though not all, types of pathogens and spoilage bacteria are prevented from multiplying to microbiologically significant levels in properly refrigerated foods that are not out of date. Therefore, it is imperative that refrigerated and frozen potentially hazardous foods be received at the temperature specified in Code.
+High temperatures for a long enough time, such as those associated with thorough cooking kill or inactivate many types of microorganisms. However, cooking does not always destroy the toxins produced in foods by certain bacteria (such as the heat stable enterotoxins of Staphylococcus aureus). Cooking or hot holding that follows temperature abuse may not make the food safe. Keeping cooked foods hot as required in the Code prevents significant regrowth of heat-injured microorganisms and prevents recontamination with bacteria that are newly introduced.
+Potentially hazardous foods that have visible signs of thawing, refreezing, or temperature abuse may contain pathogens in significant amounts. Improper thawing provides an opportunity for surviving bacteria to grow to harmful numbers and/or produce toxins. If the food is refrozen, many bacteria and/or the performed toxins are preserved.
+
+"
+semantic,q5,3,0.5486649404779507,0.5468718496306066,1699,,23.922,"Interventions include demonstration of knowledge, employee health controls, controlling hands as a vehicle of contamination, time and temperature parameters for","Interventions include demonstration of knowledge, employee health controls, controlling hands as a vehicle of contamination, time and temperature parameters for controlling pathogens, and consumer advisories.
+Linens means fabric items such as cloth hampers, cloth napkins, tablecloths, wiping cloths, and work garments, including cloth gloves.
+Major Food Allergens means a group of nine major allergenic foods, those include: milk, eggs, fish, crustacean shellfish, tree nuts, wheat, peanuts, soybeans, and sesame seeds; or any food ingredient that contains protein derived from these foods. A highly refined oil (e.g., Peanut oil) derived from one these food items, is not included in the definition of a major food allergen as the refining process removes the allergen particles.
+
+Major Violation means a violation that poses an imminent health hazard that warrants immediate correction and may require the closure of the food facility.
+Meat means the flesh of animals used as food, including the dressed flesh of cattle, swine, sheep, goats, and other edible animals, except fish, poultry, and game animals.
+Minor Violation means a violation that does not pose an imminent health hazard but does warrant correction.
+Notification of Intent to Suspend (NOITS) is a statement documented on the Official Inspection Report which notifies the permit holder of outstanding repeat violations and advises them of their right to request a hearing to show cause as to why their public health permit should not be suspended.
+Open Food means food items that are not prepackaged or prepackaged foods that have had the processor’s seal broken and have otherwise been handled or altered from its original state.
+"
+sentence_window,q1,1,0.6308220184541363,0.5759489348776753,288,2403,164.365,"POSTING REQUIREMENTS An EHS shall verify at the time of an inspection that a Grade Card, Score Card, or Notice of Closure sign (if applicable) is posted as requ","POSTING REQUIREMENTS
+An EHS shall verify at the time of an inspection that a Grade Card, Score Card, or Notice of Closure sign (if applicable) is posted as required at food facilities located in unincorporated areas of Los Angeles County and in cities that have adopted Ordinance 97-007. "
+sentence_window,q1,2,0.6296989248976667,0.6324599545272626,143,962,164.365,Score Grade Description 90 to 100 points A Generally superior in food handling practices and overall food facility maintenance and sanitation. ,"Score Grade Description 90 to 100 points A Generally superior in food handling practices and overall food facility maintenance and sanitation.
+"
+sentence_window,q1,3,0.6226706464801955,0.58797687617153,100,817,164.365,• Received a score letter of “B” or lower (89 or less) on two of the last three graded inspections. ,"• Received a score letter of “B” or lower (89 or less) on two of the last three graded inspections.
+"
+sentence_window,q2,1,0.7394482548886978,0.6538917520307724,578,986,155.42,"ABC RETAIL FOOD INSPECTION GUIDE San Bernardino County Public Health Environmental Health Services 385 N Arrowhead Ave., 2nd floor San Bernardino, CA 92415-0160","ABC RETAIL FOOD INSPECTION GUIDE
+San Bernardino County Public Health Environmental Health Services 385 N Arrowhead Ave., 2nd floor San Bernardino, CA 92415-0160 1-800-442-2283 Fax: 909-387-4323
+Public Health Environmental Health Services http://wp.sbcounty.gov/dph/programs/ehs/
+
+FOREWORD The San Bernardino County Department of Public Health, Environmental Health Services (EHS) is dedicated to ensuring public health and safety and preventing environmental hazards for all residents and visitors through innovation, education, surveillance, enforcement and community service.
+"
+sentence_window,q2,2,0.6964469543096377,0.6368418383802151,312,1288,155.42,5 | Page Center for Disease Control Risk Factors California retail food safety agencies have refocused facility inspection practices based on the Centers for Di,"5 | Page
+Center for Disease Control Risk Factors California retail food safety agencies have refocused facility inspection practices based on the Centers for Disease Control and Prevention foodborne illness risk factors and public health interventions, in accordance with California Retail Food Code (Cal Code).
+"
+sentence_window,q2,3,0.6938756492005211,0.6140145873271177,399,1943,155.42,A copy of this guide and additional information regarding the permitting and inspection of restaurants and retail food stores can be found at our website at: ht,"A copy of this guide and additional information regarding the permitting and inspection of restaurants and retail food stores can be found at our website at:
+http://publichealth.lacounty.gov/eh/business/restaurants-retail-food-stores.htm
+Authority The California Retail Food Code (CRFC), which is part of the California Health and Safety Code, delegates enforcement to the local enforcement agency. "
+sentence_window,q3,1,0.6776474385374526,0.6920978417920798,178,1439,155.917,"Proper cooling methods Authority: California Retail Food Code, §§ 114002, 114002.1 This violation category is used to indicate the compliance status with proper","Proper cooling methods
+Authority: California Retail Food Code, §§ 114002, 114002.1
+This violation category is used to indicate the compliance status with proper cooling methods.
+"
+sentence_window,q3,2,0.6697216801890357,0.5567438429051297,256,1060,155.917,"(§114000(b))  21 | Page 09 Proper cooling methods Applicable Sections: 114002(a),(b),(c),(d), 114002.1(a),(b) All potentially hazardous food shall be rapidly co","(§114000(b))
+
+21 | Page
+09 Proper cooling methods Applicable Sections: 114002(a),(b),(c),(d), 114002.1(a),(b)
+All potentially hazardous food shall be rapidly cooled from 135°F to 70°F, within 2 hours, and then from 70°F to 41°F, within a total of 6 hours. "
+sentence_window,q3,3,0.6469146440351325,0.48275898249407023,242,1050,155.917,"Examples of MAJOR violations include: • After cooking or hot holding, PHF is not cooled rapidly from 135°F to 41°F or below within 6 hours using approved method","Examples of MAJOR violations include:
+• After cooking or hot holding, PHF is not cooled rapidly from 135°F to 41°F or below within 6 hours using approved methods (e.g., a cooked roast found at 60°F cooling for 8 hours in the walk-in cooler).
+"
+sentence_window,q4,1,0.759255796262936,0.7803418468883464,403,1513,161.085, Foods approved for holding up to 45°F include the following: raw shell eggs; un-shucked live molluscan shellfish; pasteurized milk and pasteurized milk produc," Foods approved for holding up to 45°F include the following: raw shell eggs; un-shucked live molluscan shellfish; pasteurized milk and pasteurized milk products in original sealed containers; PHFs held for dispensing in serving lines and salads bars during periods not to exceed 12 hours in any 24-hour period; or PHF held in vending machines; or PHF held for sampling at a Certified Farmers’ Market.
+"
+sentence_window,q4,2,0.7123596232729865,0.7745482306684847,219,1056,161.085,"Public Health Reason: Hot and cold holding, potentially hazardous food Bacterial growth and/or toxin production can occur if potentially hazardous food remains ","Public Health Reason:
+Hot and cold holding, potentially hazardous food Bacterial growth and/or toxin production can occur if potentially hazardous food remains in the temperature ""Danger Zone"" (42°F to 134°F) too long. "
+sentence_window,q4,3,0.7063259997033416,0.6590791533159179,242,1050,161.085,"Examples of MAJOR violations include: • After cooking or hot holding, PHF is not cooled rapidly from 135°F to 41°F or below within 6 hours using approved method","Examples of MAJOR violations include:
+• After cooking or hot holding, PHF is not cooled rapidly from 135°F to 41°F or below within 6 hours using approved methods (e.g., a cooked roast found at 60°F cooling for 8 hours in the walk-in cooler).
+"
+sentence_window,q5,1,0.6608561150696008,0.6675983010218034,385,800,154.808,Hands clean and properly washed; proper glove use • Employees wash their hands with soap and warm water at 100°F for at least 10 seconds: before starting work; ,"Hands clean and properly washed; proper glove use
+• Employees wash their hands with soap and warm water at 100°F for at least 10 seconds: before starting work; immediately after using the restrooms; after handling raw animal products or unwashed produce; when there is hand contact with hair, skin, and clothes; before putting on gloves; any time needed to prevent food contamination.
+"
+sentence_window,q5,2,0.6305648253842729,0.7010037415377299,249,1561,154.808,[§113977] Additional Violations: o Category #6 (Hands clean and properly washed; proper glove use) shall also be marked if an employee handles food/utensils wit,"[§113977]
+Additional Violations:
+o Category #6 (Hands clean and properly washed; proper glove use) shall also be marked if an employee handles food/utensils without properly washing their hands after eating, drinking, and/or using tobacco products. "
+sentence_window,q5,3,0.6244908884906273,0.7798080787081957,220,1007,154.808,"[§113952, §113953.3] • Food workers handling open food are unable to wash their hands due to the lack of soap or paper towels at the facility, and the handwashi","[§113952, §113953.3]
+• Food workers handling open food are unable to wash their hands due to the lack of soap or paper towels at the facility, and the handwashing supplies are NOT available by the end of the inspection.
+"

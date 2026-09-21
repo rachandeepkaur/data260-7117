@@ -1,0 +1,56 @@
+{
+  "homework": "HW3",
+  "SID4": "7117",
+  "commit_hash": "94752a4c7f496013a8720e7c51e5a0e0aa81f8bd",
+  "commit_note": "HW03 self-check",
+  "timestamp": "2026-09-21T10:22:33.712625+00:00",
+  "checks": [
+    {
+      "name": "corpus_files_present",
+      "description": "data/corpus/ has one cleaned .txt per source .pdf",
+      "passed": true,
+      "evidence": "4 pdf(s): ['abc-retail-food-inspection-guide.pdf.pdf', 'print.pdf', 'print1.pdf', 'retail-food-inspection-guide.pdf']; 4 txt(s): ['abc-retail-food-inspection-guide.pdf.txt', 'print.txt', 'print1.txt', 'retail-food-inspection-guide.txt']"
+    },
+    {
+      "name": "corpus_manifest_hashes",
+      "description": "CORPUS_MANIFEST.json's SHA-256 for every file matches the file on disk",
+      "passed": true,
+      "evidence": "8 entries checked, 0 mismatch(es): []"
+    },
+    {
+      "name": "questions_yaml_complete",
+      "description": "questions.yaml has 5 questions, each with an answer_keyword",
+      "passed": true,
+      "evidence": "5 question(s); missing required fields on: []"
+    },
+    {
+      "name": "raw_retrieval_data_shape",
+      "description": "raw/retrieval_runs.csv has all 3 techniques x 5 questions x top-3",
+      "passed": true,
+      "evidence": "techniques=['semantic', 'sentence_window', 'token'], questions_per_technique={'semantic': 5, 'sentence_window': 5, 'token': 5}, rows_per_technique={'semantic': 15, 'sentence_window': 15, 'token': 15}"
+    },
+    {
+      "name": "chunk_stats_present",
+      "description": "raw/chunk_stats.csv has a nonzero chunk count for all three techniques",
+      "passed": true,
+      "evidence": "chunk counts: {'semantic': 243, 'sentence_window': 4749, 'token': 693}"
+    },
+    {
+      "name": "embedding_backend_dimension",
+      "description": "FastEmbedONNXEmbedding produces 384-dim vectors (all-MiniLM-L6-v2)",
+      "passed": true,
+      "evidence": "get_query_embedding('test') returned a 384-dim vector"
+    },
+    {
+      "name": "metrics_table_filled",
+      "description": "METRICS.md's results table has no leftover TODO placeholders",
+      "passed": true,
+      "evidence": "no 'TODO' found in METRICS.md"
+    }
+  ],
+  "summary": {
+    "total_checks": 7,
+    "passed": 7,
+    "failed": 0
+  }
+}

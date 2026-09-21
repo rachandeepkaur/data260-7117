@@ -9,6 +9,7 @@ questions:
     expected_answer: >
       A "B" Letter Grade is issued for a final routine inspection score between 80-89. A score of 69 or below does not get a letter grade at
       all - it gets a "Score Card" instead.
+    answer_keyword: "69 or below"
     grounding_location: "retail-food-inspection-guide.txt, line 162"
     grounding_excerpt: >
       "Placard Type Description "A" Letter Grade Final routine inspection score between 90 - 100 "B" Letter Grade Final routine inspection
@@ -25,6 +26,7 @@ questions:
     expected_answer: >
       The violations must be corrected, and the facility must submit a written request for a re-score inspection within 30 days of the
       date on the OIR to avoid closure. Questions about the OIR, inspector actions, or applicable law/policy go to EHS at (800) 442-2283.
+    answer_keyword: "442-2283"
     grounding_location: "abc-retail-food-inspection-guide.pdf.txt, lines 18-19 and 130-132"
     grounding_excerpt: >
       "If there are questions regarding the OIR, actions by the health inspector or the department, or any applicable law, regulation, or
@@ -43,6 +45,7 @@ questions:
       refrigerator measuring 125F after only 30 minutes. Both violate the rule that potentially hazardous food must be rapidly cooled from
       135F to 70F within the first 2 hours, and from 135F to 41F within a total of 6 hours (Cal Code 114002, 114002.1). Both were corrected on
       site.
+    answer_keyword: "155F"
     grounding_location: "print1.txt"
     grounding_excerpt: >
       "9.COOLING METHODS Observations: Observed 5-gallon buckets of both cooling at room temperature, measuring 155F. Provided education on
@@ -63,6 +66,7 @@ questions:
       (e.g. raw shell eggs, unshucked live molluscan shellfish, pasteurized milk/milk products in sealed containers, PHF held for dispensing on
       serving lines/salad bars, PHF in transport or vending machines) may be held between 41F and 45F, and PHF received between 41-45F must be
       cooled to 41F within 4 hours.
+    answer_keyword: "135°F"
     grounding_location: "retail-food-inspection-guide.txt line 462; abc-retail-food-inspection-guide.pdf.txt line 274"
     grounding_excerpt: >
       LA: "IN" shall be marked if PHFs are being held at 41F/45F or below or 135F or above within approved time allowances." / San Bernardino:
@@ -82,6 +86,7 @@ questions:
       toilet room, or any time contamination may occur; hands/arms not clean, or not washed when necessary, are MAJOR violations. The LA
       County guide separately lists "Inability of employees to wash their hands" as one of the imminent health hazards that can get a
       facility's permit suspended and the facility closed immediately.
+    answer_keyword: "Inability of employees to wash their hands"
     grounding_location: "abc-retail-food-inspection-guide.pdf.txt lines 231-235; retail-food-inspection-guide.txt line 154"
     grounding_excerpt: >
       "Employees are required to wash their hands: before beginning work; before handling food/equipment/utensils; as often as necessary...

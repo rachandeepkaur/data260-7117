@@ -9,6 +9,11 @@
 </head>
 <body>
 
+  <nav id="navbar" class="navbar"></nav>
+
+  <!-- Populated by auth.js with "Welcome, <username>!" once the session is confirmed -->
+  <p id="welcomeMessage" class="welcome-message"></p>
+
   <!-- Heading naming assigned domain entity using <h1> (biggest font size) -->
   <h1>Local Restaurant Inspections</h1>
 
@@ -154,8 +159,21 @@
 
 </body>
 <footer>
+    <!-- The server already redirects logged-out/idle-expired visitors to
+         /login before this page is served (see /dashboard in app.py); this
+         just renders the navbar and greets the user by name. -->
+  <script src="auth.js"></script>
+  <script>
+    (async () => {
+      const session = await renderNavbar("dashboard");
+      const welcome = document.getElementById("welcomeMessage");
+      if (welcome && session.authenticated) {
+        welcome.textContent = `Welcome, ${session.username}!`;
+      }
+    })();
+  </script>
     <!-- Script tag linking JavaScript file at the end of the HTML file -->
   <script src="script.js"></script>
-  
+
 </footer>
 </html>

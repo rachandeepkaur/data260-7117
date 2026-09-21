@@ -124,3 +124,6 @@ AWSCLIV2.pkg
 
 
 .DS_Store
+
+code/web_application/cert.pem
+code/web_application/key.pem
