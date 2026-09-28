@@ -1,0 +1,32 @@
+Source: Wikipedia, "Danger zone (food safety)" (revision 1374631635), https://en.wikipedia.org/wiki/Danger_zone_(food_safety), CC BY-SA 4.0, accessed 2026-09-28
+
+The danger zone is the temperature range in which food-borne bacteria can readily grow. Food safety agencies define the danger zone differently, with the high and low temperatures of the range being 4 to 63 °C (39 to 145 °F). Potentially hazardous food should not be stored at temperatures in this range in order to prevent foodborne illness. According to the United States' Food Safety and Inspection Service (FSIS), food that remains in the danger zone for more than two hours should not be consumed. Foods at risk include meat, dairy products, and produce.
+Food-borne bacteria, in large enough numbers, may cause food poisoning, symptoms similar to gastroenteritis, including stomach cramps, nausea, vomiting, diarrhea, and fever. Food-borne illness becomes more dangerous in certain populations, such as people with weakened immune systems, young children, the elderly, and pregnant women. Symptoms can begin as early as shortly after and as late as weeks after consumption of the contaminated food.
+A logarithmic relationship exists between microbial cell death and temperature, so a small decrease of cooking temperature can result in considerable numbers of cells surviving the process. Time and temperature control safety (TCS) plays a critical role in food handling; safe handling minimizes the amount of time food spends in the danger zone. Foods should also be moved through the danger zone as few times as possible when reheating or cooling.
+
+
+== Description ==
+In regards to food safety, the terms danger zone or temperature danger zone refer to temperature range in which food-borne bacteria can grow. Food safety agencies, such as the United States' Food Safety and Inspection Service (FSIS), define the danger zone as roughly 4 to 60 °C (40 to 140 °F). In the UK and NI, the "Danger Zone" is defined as 8 to 63 °C (46 to 145 °F).
+The FSIS stipulates that potentially hazardous food should not be stored at temperatures in this range in order to prevent foodborne illness and that food that remains in this zone for more than two hours should not be consumed. Foodborne microorganisms grow much faster in the middle of the zone, at temperatures between 21 and 47 °C (70 and 117 °F).
+In 2004 article in Food Safety Magazine, Dr. Frank L. Bryan argued that a more complex, but more comprehensive picture of food safety hazards can be given by full consideration of the many factors involved. He advocates seeing the danger zone as "a series of ranges that represent different degrees of hazards and risks." He presents the danger zone in a chart of time versus temperature as having a zone of high danger in which foods are at temperatures between 30 and 45 °C (86 and 113 °F) for several hours, surrounded by two zones of lesser danger involving exposure at lower temperatures for longer periods of time.
+
+
+== Foods at risk ==
+Foods that are potentially hazardous inside the danger zone include:
+
+Meat: beef, poultry, pork, seafood
+Eggs and other protein-rich foods
+Dairy products
+Cut or peeled fresh produce
+Cooked vegetables, beans, rice, pasta
+Sauces, such as gravy
+Sprouts
+Any foods containing the above (e.g., casseroles, salads, quiches)
+
+
+== Effect ==
+Food-borne bacteria, in large enough numbers, may cause food poisoning, symptoms similar to gastroenteritis. Some of the symptoms include stomach cramps, nausea, vomiting, diarrhea, and fever. Food-borne illness becomes more dangerous in certain populations, such as people with weakened immune systems, young children, the elderly, and pregnant women. In Canada, there are approximately 4 million cases of food-borne disease per year. These symptoms can begin as early as shortly after and as late as weeks after consumption of the contaminated food.
+
+
+== Time and temperature control safety ==
+A logarithmic relationship exists between microbial cell death and temperature (i.e., a small decrease of cooking temperature can result in considerable numbers of cells surviving the process). Time and temperature control safety (TCS) plays a critical role in food handling. To prevent time-temperature abuse, the amount of time food spends in the danger zone must be minimized.  In addition to reducing the time spent in the danger zone, foods should be moved through the danger zone as few times as possible when reheating or cooling.

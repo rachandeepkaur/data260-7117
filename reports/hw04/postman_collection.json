@@ -1,0 +1,403 @@
+{
+  "info": {
+    "name": "HW4 s7117 Restaurant Inspections",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Auth",
+      "item": [
+        {
+          "name": "Register",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "http://127.0.0.1:8817/api/auth/register",
+              "protocol": "http",
+              "host": [
+                "127.0.0.1"
+              ],
+              "port": "8817",
+              "path": [
+                "api",
+                "auth",
+                "register"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Test Inspector\",\n  \"email\": \"inspector@s7117.dev\",\n  \"password\": \"Inspect!7117\"\n}"
+            }
+          }
+        },
+        {
+          "name": "Login (sets HttpOnly cookie)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "http://127.0.0.1:8817/api/auth/login",
+              "protocol": "http",
+              "host": [
+                "127.0.0.1"
+              ],
+              "port": "8817",
+              "path": [
+                "api",
+                "auth",
+                "login"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"demo@s7117.dev\",\n  \"password\": \"Inspect!7117\"\n}"
+            }
+          }
+        },
+        {
+          "name": "Me",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://127.0.0.1:8817/api/auth/me",
+              "protocol": "http",
+              "host": [
+                "127.0.0.1"
+              ],
+              "port": "8817",
+              "path": [
+                "api",
+                "auth",
+                "me"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Logout",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "http://127.0.0.1:8817/api/auth/logout",
+              "protocol": "http",
+              "host": [
+                "127.0.0.1"
+              ],
+              "port": "8817",
+              "path": [
+                "api",
+                "auth",
+                "logout"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Records CRUD",
+      "item": [
+        {
+          "name": "Add record",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "http://127.0.0.1:8817/api/records",
+              "protocol": "http",
+              "host": [
+                "127.0.0.1"
+              ],
+              "port": "8817",
+              "path": [
+                "api",
+                "records"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"facility_name\": \"FA0206933 - YUMMY KITCHEN\",\n  \"site_address\": \"1711 BRANHAM LN A9, SAN JOSE, CA 95118\"\n}"
+            }
+          }
+        },
+        {
+          "name": "View all records",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://127.0.0.1:8817/api/records?limit=20&offset=0",
+              "protocol": "http",
+              "host": [
+                "127.0.0.1"
+              ],
+              "port": "8817",
+              "path": [
+                "api",
+                "records"
+              ],
+              "query": [
+                {
+                  "key": "limit",
+                  "value": "20"
+                },
+                {
+                  "key": "offset",
+                  "value": "0"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "View record by id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://127.0.0.1:8817/api/records/5001",
+              "protocol": "http",
+              "host": [
+                "127.0.0.1"
+              ],
+              "port": "8817",
+              "path": [
+                "api",
+                "records",
+                "5001"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Update record",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "http://127.0.0.1:8817/api/records/5001",
+              "protocol": "http",
+              "host": [
+                "127.0.0.1"
+              ],
+              "port": "8817",
+              "path": [
+                "api",
+                "records",
+                "5001"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"facility_name\": \"FA0206933 - YUMMY KITCHEN (RENAMED)\",\n  \"site_address\": \"1711 BRANHAM LN A10, SAN JOSE, CA 95118\"\n}"
+            }
+          }
+        },
+        {
+          "name": "Delete record",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://127.0.0.1:8817/api/records/5001",
+              "protocol": "http",
+              "host": [
+                "127.0.0.1"
+              ],
+              "port": "8817",
+              "path": [
+                "api",
+                "records",
+                "5001"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "N+1",
+      "item": [
+        {
+          "name": "naive page_size=10",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://127.0.0.1:8817/api/nplus1/naive?page_size=10",
+              "protocol": "http",
+              "host": [
+                "127.0.0.1"
+              ],
+              "port": "8817",
+              "path": [
+                "api",
+                "nplus1",
+                "naive"
+              ],
+              "query": [
+                {
+                  "key": "page_size",
+                  "value": "10"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "fixed page_size=10",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://127.0.0.1:8817/api/nplus1/fixed?page_size=10",
+              "protocol": "http",
+              "host": [
+                "127.0.0.1"
+              ],
+              "port": "8817",
+              "path": [
+                "api",
+                "nplus1",
+                "fixed"
+              ],
+              "query": [
+                {
+                  "key": "page_size",
+                  "value": "10"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "naive page_size=50",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://127.0.0.1:8817/api/nplus1/naive?page_size=50",
+              "protocol": "http",
+              "host": [
+                "127.0.0.1"
+              ],
+              "port": "8817",
+              "path": [
+                "api",
+                "nplus1",
+                "naive"
+              ],
+              "query": [
+                {
+                  "key": "page_size",
+                  "value": "50"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "fixed page_size=50",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://127.0.0.1:8817/api/nplus1/fixed?page_size=50",
+              "protocol": "http",
+              "host": [
+                "127.0.0.1"
+              ],
+              "port": "8817",
+              "path": [
+                "api",
+                "nplus1",
+                "fixed"
+              ],
+              "query": [
+                {
+                  "key": "page_size",
+                  "value": "50"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "naive page_size=200",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://127.0.0.1:8817/api/nplus1/naive?page_size=200",
+              "protocol": "http",
+              "host": [
+                "127.0.0.1"
+              ],
+              "port": "8817",
+              "path": [
+                "api",
+                "nplus1",
+                "naive"
+              ],
+              "query": [
+                {
+                  "key": "page_size",
+                  "value": "200"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "fixed page_size=200",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://127.0.0.1:8817/api/nplus1/fixed?page_size=200",
+              "protocol": "http",
+              "host": [
+                "127.0.0.1"
+              ],
+              "port": "8817",
+              "path": [
+                "api",
+                "nplus1",
+                "fixed"
+              ],
+              "query": [
+                {
+                  "key": "page_size",
+                  "value": "200"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

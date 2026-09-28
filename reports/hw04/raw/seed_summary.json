@@ -1,0 +1,58 @@
+{
+  "seed": 7117,
+  "inspections": 5000,
+  "violations": 200,
+  "inspections_with_violations": 136,
+  "violations_in_first_page": {
+    "10": 9,
+    "50": 45,
+    "200": 162
+  },
+  "generated_data_sha256": "392e4dd10634ccee2b464ec0c5115d098adbc0cbfcdbcae796b43ff7fc3a6944",
+  "sample_inspections": [
+    {
+      "id": 1,
+      "facility_name": "FA0183034 - GOLDEN DINER",
+      "site_address": "8083 ALMADEN EXPY, SAN JOSE, CA 95112"
+    },
+    {
+      "id": 2,
+      "facility_name": "FA0958065 - VALLEY BURGERS",
+      "site_address": "455 SENTER RD, SAN JOSE, CA 95124"
+    },
+    {
+      "id": 3,
+      "facility_name": "FA0956037 - ROYAL RAMEN",
+      "site_address": "2085 CAPITOL EXPY, SAN JOSE, CA 95127"
+    }
+  ],
+  "sample_violations": [
+    {
+      "id": 1,
+      "inspection_id": 9,
+      "violation_code": "9",
+      "description": "Improper cooling methods",
+      "severity": "MAJOR",
+      "points_deducted": 4,
+      "observed_on": "2026-04-17"
+    },
+    {
+      "id": 2,
+      "inspection_id": 134,
+      "violation_code": "7",
+      "description": "Improper hot holding temperature (below 135F)",
+      "severity": "MAJOR",
+      "points_deducted": 4,
+      "observed_on": "2025-11-10"
+    },
+    {
+      "id": 3,
+      "inspection_id": 230,
+      "violation_code": "1b",
+      "description": "Food safety certificate expired",
+      "severity": "MINOR",
+      "points_deducted": 2,
+      "observed_on": "2026-07-23"
+    }
+  ]
+}

@@ -1,0 +1,606 @@
+HW4 RUN_LOG - SID4 7117 - host: Intel(R) Core(TM) i9-9880H CPU @ 2.30GHz, 32 GB RAM, macOS 26.6.2
+MySQL: docker container s7117-mysql (mysql:8.4, 8.4.11); Python 3.13.5; Ollama model qwen3:8b
+
+===== [2026-09-28T08:20:08Z] $ .venv/bin/python code/hw04/setup_db.py
+Connected to MySQL 8.4.11
+s7117_rel tables: ['inspection_violations', 'inspections', 'sessions', 'users']
+----- exit=0 [2026-09-28T08:20:09Z]
+
+===== [2026-09-28T08:20:09Z] $ .venv/bin/python code/hw04/seed_data.py
+{
+  "seed": 7117,
+  "inspections": 5000,
+  "violations": 200,
+  "inspections_with_violations": 136,
+  "violations_in_first_page": {
+    "10": 9,
+    "50": 45,
+    "200": 162
+  },
+  "generated_data_sha256": "392e4dd10634ccee2b464ec0c5115d098adbc0cbfcdbcae796b43ff7fc3a6944",
+  "sample_inspections": [
+    {
+      "id": 1,
+      "facility_name": "FA0183034 - GOLDEN DINER",
+      "site_address": "8083 ALMADEN EXPY, SAN JOSE, CA 95112"
+    },
+    {
+      "id": 2,
+      "facility_name": "FA0958065 - VALLEY BURGERS",
+      "site_address": "455 SENTER RD, SAN JOSE, CA 95124"
+    },
+    {
+      "id": 3,
+      "facility_name": "FA0956037 - ROYAL RAMEN",
+      "site_address": "2085 CAPITOL EXPY, SAN JOSE, CA 95127"
+    }
+  ],
+  "sample_violations": [
+    {
+      "id": 1,
+      "inspection_id": 9,
+      "violation_code": "9",
+      "description": "Improper cooling methods",
+      "severity": "MAJOR",
+      "points_deducted": 4,
+      "observed_on": "2026-04-17"
+    },
+    {
+      "id": 2,
+      "inspection_id": 134,
+      "violation_code": "7",
+      "description": "Improper hot holding temperature (below 135F)",
+      "severity": "MAJOR",
+      "points_deducted": 4,
+      "observed_on": "2025-11-10"
+    },
+    {
+      "id": 3,
+      "inspection_id": 230,
+      "violation_code": "1b",
+      "description": "Food safety certificate expired",
+      "severity": "MINOR",
+      "points_deducted": 2,
+      "observed_on": "2026-07-23"
+    }
+  ]
+}
+----- exit=0 [2026-09-28T08:20:12Z]
+
+===== [2026-09-28T08:20:12Z] $ docker exec s7117-mysql mysql -uroot s7117_rel -e SHOW INDEX FROM inspection_violations; SELECT COUNT(*) AS inspections FROM inspections; SELECT COUNT(*) AS violations FROM inspection_violations;
+Table	Non_unique	Key_name	Seq_in_index	Column_name	Collation	Cardinality	Sub_part	Packed	Null	Index_type	Comment	Index_comment	Visible	Expression
+inspection_violations	0	PRIMARY	1	id	A	1	NULL	NULL		BTREE			YES	NULL
+inspections
+5000
+violations
+200
+----- exit=0 [2026-09-28T08:20:12Z]
+
+===== [2026-09-28T08:20:12Z] $ .venv/bin/python code/hw04/benchmark_nplus1.py
+[2026-09-28T08:20:14.876498+00:00] logged in as demo@s7117.dev; base=http://127.0.0.1:8817; seed=7117
+[2026-09-28T08:20:17.713727+00:00] page_size=10: 30 naive + 30 fixed requests done
+[2026-09-28T08:20:22.262332+00:00] page_size=50: 30 naive + 30 fixed requests done
+[2026-09-28T08:20:38.625387+00:00] page_size=200: 30 naive + 30 fixed requests done
+
+ page version  sql/req       p50       p95       p99   srv p50  speedup same_data
+   10 naive        11     40.98     83.14    104.87     24.10    1.75x True
+   10 fixed         2     23.46     46.82     51.83      8.78    1.75x True
+   50 naive        51    109.70    134.98    145.61     96.48    6.39x True
+   50 fixed         2     17.17     29.62     34.64      6.63    6.39x True
+  200 naive       201    439.71    582.49    653.19    428.30   14.29x True
+  200 fixed         2     30.78     52.84     61.17     16.98   14.29x True
+
+Wrote 180 measured requests to reports/hw04/raw/nplus1_requests.csv
+----- exit=0 [2026-09-28T08:20:38Z]
+
+===== [2026-09-28T08:20:52Z] $ .venv/bin/python code/hw04/explain_index.py
+# EXPLAIN before/after - generated 2026-09-28T08:20:53.657850+00:00
+# MySQL 8.4.11, database s7117_rel
+# applied: CREATE INDEX ix_violations_inspection_id ON inspection_violations (inspection_id)
+
+====================================================================================================
+BEFORE - indexes on inspection_violations: [('PRIMARY', 'id')]
+
+-- naive_per_record_lookup: EXPLAIN SELECT id, inspection_id, violation_code, description, severity, points_deducted, observed_on FROM inspection_...
++----+-------------+-----------------------+-------+---------------+---------+---------+------+------+----------+-------------+
+| id | select_type | table                 | type  | possible_keys | key     | key_len | ref  | rows | filtered | Extra       |
++----+-------------+-----------------------+-------+---------------+---------+---------+------+------+----------+-------------+
+| 1  | SIMPLE      | inspection_violations | index | None          | PRIMARY | 4       | None | 200  | 10.0     | Using where |
++----+-------------+-----------------------+-------+---------------+---------+---------+------+------+----------+-------------+
+EXPLAIN ANALYZE:
+-> Filter: (inspection_violations.inspection_id = 42)  (cost=20.8 rows=20) (actual time=0.293..0.319 rows=1 loops=1)
+    -> Index scan on inspection_violations using PRIMARY  (cost=20.8 rows=200) (actual time=0.0205..0.29 rows=200 loops=1)
+
+-- fixed_selectin_lookup_page200: EXPLAIN SELECT id, inspection_id, violation_code, description, severity, points_deducted, observed_on FROM inspection_...
++----+-------------+-----------------------+-------+---------------+---------+---------+------+------+----------+-------------+
+| id | select_type | table                 | type  | possible_keys | key     | key_len | ref  | rows | filtered | Extra       |
++----+-------------+-----------------------+-------+---------------+---------+---------+------+------+----------+-------------+
+| 1  | SIMPLE      | inspection_violations | index | None          | PRIMARY | 4       | None | 200  | 50.0     | Using where |
++----+-------------+-----------------------+-------+---------------+---------+---------+------+------+----------+-------------+
+EXPLAIN ANALYZE:
+-> Filter: (inspection_violations.inspection_id in (1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,136,137,138,139,140,141,142,143,144,145,146,147,148,149,150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200))  (cost=20.8 rows=100) (actual time=0.022..0.134 rows=162 loops=1)
+    -> Index scan on inspection_violations using PRIMARY  (cost=20.8 rows=200) (actual time=0.0204..0.104 rows=200 loops=1)
+
+====================================================================================================
+AFTER - indexes on inspection_violations: [('PRIMARY', 'id'), ('ix_violations_inspection_id', 'inspection_id')]
+
+-- naive_per_record_lookup: EXPLAIN SELECT id, inspection_id, violation_code, description, severity, points_deducted, observed_on FROM inspection_...
++----+-------------+-----------------------+------+-----------------------------+-----------------------------+---------+-------+------+----------+-------+
+| id | select_type | table                 | type | possible_keys               | key                         | key_len | ref   | rows | filtered | Extra |
++----+-------------+-----------------------+------+-----------------------------+-----------------------------+---------+-------+------+----------+-------+
+| 1  | SIMPLE      | inspection_violations | ref  | ix_violations_inspection_id | ix_violations_inspection_id | 4       | const | 1    | 100.0    | None  |
++----+-------------+-----------------------+------+-----------------------------+-----------------------------+---------+-------+------+----------+-------+
+EXPLAIN ANALYZE:
+-> Index lookup on inspection_violations using ix_violations_inspection_id (inspection_id=42)  (cost=0.35 rows=1) (actual time=0.0207..0.0217 rows=1 loops=1)
+
+-- fixed_selectin_lookup_page200: EXPLAIN SELECT id, inspection_id, violation_code, description, severity, points_deducted, observed_on FROM inspection_...
++----+-------------+-----------------------+-------+-----------------------------+---------+---------+------+------+----------+-------------+
+| id | select_type | table                 | type  | possible_keys               | key     | key_len | ref  | rows | filtered | Extra       |
++----+-------------+-----------------------+-------+-----------------------------+---------+---------+------+------+----------+-------------+
+| 1  | SIMPLE      | inspection_violations | index | ix_violations_inspection_id | PRIMARY | 4       | None | 200  | 100.0    | Using where |
++----+-------------+-----------------------+-------+-----------------------------+---------+---------+------+------+----------+-------------+
+EXPLAIN ANALYZE:
+-> Filter: (inspection_violations.inspection_id in (1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,136,137,138,139,140,141,142,143,144,145,146,147,148,149,150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200))  (cost=20.8 rows=200) (actual time=0.0188..0.131 rows=162 loops=1)
+    -> Index scan on inspection_violations using PRIMARY  (cost=20.8 rows=200) (actual time=0.0171..0.1 rows=200 loops=1)
+
+----- exit=0 [2026-09-28T08:20:53Z]
+
+===== [2026-09-28T08:20:53Z] $ .venv/bin/python code/hw04/benchmark_nplus1.py --tag with_index
+[2026-09-28T08:20:54.576232+00:00] logged in as demo@s7117.dev; base=http://127.0.0.1:8817; seed=7117
+[2026-09-28T08:20:55.787379+00:00] page_size=10: 30 naive + 30 fixed requests done
+[2026-09-28T08:20:59.084824+00:00] page_size=50: 30 naive + 30 fixed requests done
+[2026-09-28T08:21:17.580148+00:00] page_size=200: 30 naive + 30 fixed requests done
+
+ page version  sql/req       p50       p95       p99   srv p50  speedup same_data
+   10 naive        11     22.80     30.54     32.46     14.64    1.91x True
+   10 fixed         2     11.96     15.84     17.23      3.95    1.91x True
+   50 naive        51     79.02     93.50    105.38     70.46    5.26x True
+   50 fixed         2     15.03     18.27     18.90      6.28    5.26x True
+  200 naive       201    634.68    788.94   1019.02    616.31   15.66x True
+  200 fixed         2     40.54     56.91     61.05     22.37   15.66x True
+
+Wrote 180 measured requests to reports/hw04/raw/nplus1_requests_with_index.csv
+----- exit=0 [2026-09-28T08:21:17Z]
+
+===== [2026-09-28T07:18:00Z] $ .venv/bin/python code/hw04/rag.py   (console output below; started 07:18Z, ran alongside a MySQL source build, which slowed the LLM calls)
+[2026-09-28T07:18:00.890907+00:00] HW4 RAG run; model=qwen3:8b, embed=BAAI/bge-small-en-v1.5, chunk_size=500, chunk_overlap=50, top_k=3, seed=7117
+Corpus: 6 documents -> 308 chunks
+  abc-retail-food-inspection-guide.pdf.txt       145,155 chars    78 chunks
+  print.txt                                        3,316 chars     2 chunks
+  print1.txt                                       6,184 chars     4 chunks
+  retail-food-inspection-guide.txt               439,563 chars   218 chunks
+  wikipedia-danger-zone-food-safety.txt            4,469 chars     3 chunks
+  wikipedia-restaurant-rating.txt                  6,380 chars     3 chunks
+
+====================================================================================================
+[Q1] top-3 retrieval for: According to the Los Angeles County Retail Food Inspection Guide, what final routine inspection score range earns a food facility a "B" letter grade?
+  #1  score=0.8173  source=wikipedia-restaurant-rating.txt  chunk_id=wikipedia-restaurant-rating#002
+      As a result of this report, in December 1997 the Board of Supervisors of Los Angeles County introduced a letter grading system already in use for some years in two other nearby counties, San Diego County and Riverside County. Instead of merely listing violatio...
+  #2  score=0.8167  source=retail-food-inspection-guide.txt  chunk_id=retail-food-inspection-guide#014
+      The current Letter Grade/Score Cards have been combined with the public notification requirements. A food facility will be issued one of the following by the EHS at the time of inspection: Placard Type Description “A” Letter Grade Final routine inspection scor...
+  #3  score=0.7840  source=abc-retail-food-inspection-guide.pdf.txt  chunk_id=abc-retail-food-inspection-guide.pdf#009
+      Point values are totaled and subtracted from a value of 100 points. The resulting score is used in determining a facility’s letter grade and reflects the status of the food facility at the time of the inspection. Beginning of the Inspection: 100 points Total P...
+  config C keeps ['wikipedia-restaurant-rating#002', 'retail-food-inspection-guide#014', 'abc-retail-food-inspection-guide.pdf#009']; drops []
+
+====================================================================================================
+[Q2] top-1 retrieval for: In the Dat Thanh Restaurant inspection report, what temperature did the 5-gallon buckets measure while cooling at room temperature, and according to the FSIS guidance described in the danger zone article, after how long in the danger zone should food no longer be consumed?
+  #1  score=0.7789  source=wikipedia-danger-zone-food-safety.txt  chunk_id=wikipedia-danger-zone-food-safety#001
+      == Description == In regards to food safety, the terms danger zone or temperature danger zone refer to temperature range in which food-borne bacteria can grow. Food safety agencies, such as the United States' Food Safety and Inspection Service (FSIS), define t...
+
+====================================================================================================
+[Q2] top-3 retrieval for: In the Dat Thanh Restaurant inspection report, what temperature did the 5-gallon buckets measure while cooling at room temperature, and according to the FSIS guidance described in the danger zone article, after how long in the danger zone should food no longer be consumed?
+  #1  score=0.7789  source=wikipedia-danger-zone-food-safety.txt  chunk_id=wikipedia-danger-zone-food-safety#001
+      == Description == In regards to food safety, the terms danger zone or temperature danger zone refer to temperature range in which food-borne bacteria can grow. Food safety agencies, such as the United States' Food Safety and Inspection Service (FSIS), define t...
+  #2  score=0.7699  source=retail-food-inspection-guide.txt  chunk_id=retail-food-inspection-guide#196
+      Does equipment play a role in the violation? What are the ingredients in the food and how was it made? How long before the food will be served? Will the food be saved as leftovers? 9. Time as a public health control; procedures & records How do employees effec...
+  #3  score=0.7671  source=print1.txt  chunk_id=print1#000
+      Pag1 Iteration Violation1b.FOOD SAFETY CERTIFICATION Observations: Food safety certificate observed to be expired. Obtain within 30 days. Code Description: Food facilities that prepare, handle, or serve non-prepackaged potentially hazardous food, shall have an...
+  config C keeps ['wikipedia-danger-zone-food-safety#001', 'retail-food-inspection-guide#196', 'print1#000']; drops []
+
+====================================================================================================
+[Q2] top-5 retrieval for: In the Dat Thanh Restaurant inspection report, what temperature did the 5-gallon buckets measure while cooling at room temperature, and according to the FSIS guidance described in the danger zone article, after how long in the danger zone should food no longer be consumed?
+  #1  score=0.7789  source=wikipedia-danger-zone-food-safety.txt  chunk_id=wikipedia-danger-zone-food-safety#001
+      == Description == In regards to food safety, the terms danger zone or temperature danger zone refer to temperature range in which food-borne bacteria can grow. Food safety agencies, such as the United States' Food Safety and Inspection Service (FSIS), define t...
+  #2  score=0.7699  source=retail-food-inspection-guide.txt  chunk_id=retail-food-inspection-guide#196
+      Does equipment play a role in the violation? What are the ingredients in the food and how was it made? How long before the food will be served? Will the food be saved as leftovers? 9. Time as a public health control; procedures & records How do employees effec...
+  #3  score=0.7671  source=print1.txt  chunk_id=print1#000
+      Pag1 Iteration Violation1b.FOOD SAFETY CERTIFICATION Observations: Food safety certificate observed to be expired. Obtain within 30 days. Code Description: Food facilities that prepare, handle, or serve non-prepackaged potentially hazardous food, shall have an...
+  #4  score=0.7653  source=wikipedia-danger-zone-food-safety.txt  chunk_id=wikipedia-danger-zone-food-safety#000
+      Source: Wikipedia, "Danger zone (food safety)" (revision 1374631635), https://en.wikipedia.org/wiki/Danger_zone_(food_safety), CC BY-SA 4.0, accessed 2026-09-28 The danger zone is the temperature range in which food-borne bacteria can readily grow. Food safety...
+  #5  score=0.7650  source=abc-retail-food-inspection-guide.pdf.txt  chunk_id=abc-retail-food-inspection-guide.pdf#022
+      Cooling shall be by one or more of the following methods: in shallow containers, separating food into smaller portions, adding ice as an ingredient, using an ice bath, stirring frequently, using rapid cooling equipment, or using containers that facilitate heat...
+
+====================================================================================================
+[Q3] top-1 retrieval for: At or below what temperature must potentially hazardous food be held when it is cold-held?
+  #1  score=0.8098  source=retail-food-inspection-guide.txt  chunk_id=retail-food-inspection-guide#039
+       Pasteurized milk in original, sealed containers, pasteurized milk products in original, sealed containers, raw shell eggs, and un-shucked live molluscan shellfish may be received and maintained at an ambient temperature of 45°F or less.  Hot and cold holdin...
+
+====================================================================================================
+[Q3] top-3 retrieval for: At or below what temperature must potentially hazardous food be held when it is cold-held?
+  #1  score=0.8098  source=retail-food-inspection-guide.txt  chunk_id=retail-food-inspection-guide#039
+       Pasteurized milk in original, sealed containers, pasteurized milk products in original, sealed containers, raw shell eggs, and un-shucked live molluscan shellfish may be received and maintained at an ambient temperature of 45°F or less.  Hot and cold holdin...
+  #2  score=0.8074  source=retail-food-inspection-guide.txt  chunk_id=retail-food-inspection-guide#038
+       Food may be removed from specified holding temperatures for a cumulative time period of up to two hours to facilitate food preparation.  Food temperature measuring devices that are scaled only in Celsius or dually scaled in Celsius and Fahrenheit must be ac...
+  #3  score=0.7976  source=abc-retail-food-inspection-guide.pdf.txt  chunk_id=abc-retail-food-inspection-guide.pdf#022
+      Cooling shall be by one or more of the following methods: in shallow containers, separating food into smaller portions, adding ice as an ingredient, using an ice bath, stirring frequently, using rapid cooling equipment, or using containers that facilitate heat...
+  config C keeps ['retail-food-inspection-guide#039', 'retail-food-inspection-guide#038', 'abc-retail-food-inspection-guide.pdf#022']; drops []
+
+====================================================================================================
+[Q3] top-5 retrieval for: At or below what temperature must potentially hazardous food be held when it is cold-held?
+  #1  score=0.8098  source=retail-food-inspection-guide.txt  chunk_id=retail-food-inspection-guide#039
+       Pasteurized milk in original, sealed containers, pasteurized milk products in original, sealed containers, raw shell eggs, and un-shucked live molluscan shellfish may be received and maintained at an ambient temperature of 45°F or less.  Hot and cold holdin...
+  #2  score=0.8074  source=retail-food-inspection-guide.txt  chunk_id=retail-food-inspection-guide#038
+       Food may be removed from specified holding temperatures for a cumulative time period of up to two hours to facilitate food preparation.  Food temperature measuring devices that are scaled only in Celsius or dually scaled in Celsius and Fahrenheit must be ac...
+  #3  score=0.7976  source=abc-retail-food-inspection-guide.pdf.txt  chunk_id=abc-retail-food-inspection-guide.pdf#022
+      Cooling shall be by one or more of the following methods: in shallow containers, separating food into smaller portions, adding ice as an ingredient, using an ice bath, stirring frequently, using rapid cooling equipment, or using containers that facilitate heat...
+  #4  score=0.7945  source=retail-food-inspection-guide.txt  chunk_id=retail-food-inspection-guide#042
+      The conservative nature of the 4-hour limit for keeping foods without temperature control allows for a needed margin of safety if the temperature of the environment is higher than 75°F. It is important to note that time/temperature control for foods held witho...
+  #5  score=0.7939  source=wikipedia-danger-zone-food-safety.txt  chunk_id=wikipedia-danger-zone-food-safety#001
+      == Description == In regards to food safety, the terms danger zone or temperature danger zone refer to temperature range in which food-borne bacteria can grow. Food safety agencies, such as the United States' Food Safety and Inspection Service (FSIS), define t...
+
+====================================================================================================
+[Q4] top-3 retrieval for: What happens if a restaurant gets a C?
+  #1  score=0.7072  source=retail-food-inspection-guide.txt  chunk_id=retail-food-inspection-guide#099
+      OUT – “OUT” shall be marked if a PIC is not present to perform their duties during hours of operation. Examples of violations include: • A PIC is not present during operational hours. [§113945(a)] • PIC allows people unnecessary to the food facility operation ...
+  #2  score=0.7022  source=wikipedia-restaurant-rating.txt  chunk_id=wikipedia-restaurant-rating#002
+      As a result of this report, in December 1997 the Board of Supervisors of Los Angeles County introduced a letter grading system already in use for some years in two other nearby counties, San Diego County and Riverside County. Instead of merely listing violatio...
+  #3  score=0.6971  source=retail-food-inspection-guide.txt  chunk_id=retail-food-inspection-guide#025
+      N/A – “N/A” shall be marked if a food facility only handles prepackaged food items. N/O – “N/O” shall be marked in the RARE case when there are no food employees present at the time of inspection. OUT – This violation category shall be marked MAJOR; example in...
+  config C keeps ['retail-food-inspection-guide#099', 'wikipedia-restaurant-rating#002', 'retail-food-inspection-guide#025']; drops []
+
+====================================================================================================
+[Q5] top-3 retrieval for: What score did YUMMY KITCHEN (FA0206933) at 1711 Branham Ln in San Jose receive on its most recent health inspection?
+  #1  score=0.6366  source=retail-food-inspection-guide.txt  chunk_id=retail-food-inspection-guide#002
+      Purpose This guide is designed to support EHS during retail food inspections and to help food facility operators understand essential food safety practices, principles, and procedures. Its primary aim is to ensure facilities comply with the California Retail F...
+  #2  score=0.6304  source=retail-food-inspection-guide.txt  chunk_id=retail-food-inspection-guide#001
+      The food industry and the Los Angeles County Department of Public Health's Environmental Health Division share the crucial responsibility of ensuring that food provided to consumers is safe and free from contaminants that could lead to foodborne illness outbre...
+  #3  score=0.6192  source=retail-food-inspection-guide.txt  chunk_id=retail-food-inspection-guide#014
+      The current Letter Grade/Score Cards have been combined with the public notification requirements. A food facility will be issued one of the following by the EHS at the time of inspection: Placard Type Description “A” Letter Grade Final routine inspection scor...
+  config C keeps ['retail-food-inspection-guide#002', 'retail-food-inspection-guide#001', 'retail-food-inspection-guide#014']; drops []
+
+====================================================================================================
+[Q6] top-3 retrieval for: What is the capital city of Australia?
+  #1  score=0.4568  source=retail-food-inspection-guide.txt  chunk_id=retail-food-inspection-guide#183
+      Los Angeles, CA 90010-2313 (213) 351-7352 Fax: (213) 351-2789 West Valley 14500 Roscoe Blvd., 5th Fl. Panorama City, CA 91401 (818) 672-2293 Fax: (818) 672-2101 West Office 6101 W. Centinela Ave., Ste. 300, Culver City, CA 90230 (310) 410-3448 Fax: (310) 348-0...
+  #2  score=0.4541  source=retail-food-inspection-guide.txt  chunk_id=retail-food-inspection-guide#182
+      Room Panorama City, CA 91402 (818) 672-2258 Fax: (818) 672-2102 Whittier Office 12440 E. Imperial Hwy., Room 515 Norwalk, CA 90650 (562) 345-3451 Fax: (562) 409-5074 Norwalk Office 12440 E. Imperial Hwy., Room 519 Norwalk, CA 90650 (562) 345-3441 Fax: (562) 40...
+  #3  score=0.4315  source=retail-food-inspection-guide.txt  chunk_id=retail-food-inspection-guide#184
+      # 145, Santa Clarita, CA 91350 (661) 287-7000 Fax: Fax: (626) 813-3017 ENVIRONMENTAL HEALTH COMMUNITY PROTECTION BRANCH OUTBREAK INVESTIGATION & EVALUATION UNIT Conducts foodborne illness outbreak investigations Baldwin Park 5050 Commerce Drive Baldwin Park, C...
+  config C keeps []; drops [('retail-food-inspection-guide#183', 'irrelevant (score 0.457 < floor 0.6)'), ('retail-food-inspection-guide#182', 'irrelevant (score 0.454 < floor 0.6)'), ('retail-food-inspection-guide#184', 'irrelevant (score 0.431 < floor 0.6)')]
+
+====================================================================================================
+[Q1] top-3 retrieval for: According to the Los Angeles County Retail Food Inspection Guide, what final routine inspection score range earns a food facility a "B" letter grade?
+  #1  score=0.8173  source=wikipedia-restaurant-rating.txt  chunk_id=wikipedia-restaurant-rating#002
+      As a result of this report, in December 1997 the Board of Supervisors of Los Angeles County introduced a letter grading system already in use for some years in two other nearby counties, San Diego County and Riverside County. Instead of merely listing violatio...
+  #2  score=0.8167  source=retail-food-inspection-guide.txt  chunk_id=retail-food-inspection-guide#014
+      The current Letter Grade/Score Cards have been combined with the public notification requirements. A food facility will be issued one of the following by the EHS at the time of inspection: Placard Type Description “A” Letter Grade Final routine inspection scor...
+  #3  score=0.7840  source=abc-retail-food-inspection-guide.pdf.txt  chunk_id=abc-retail-food-inspection-guide.pdf#009
+      Point values are totaled and subtracted from a value of 100 points. The resulting score is used in determining a facility’s letter grade and reflects the status of the food facility at the time of the inspection. Beginning of the Inspection: 100 points Total P...
+
+--- Q1 config A (467.75s, context 0 tokens) ---
+According to the **Los Angeles County Retail Food Inspection Guide**, a food facility earns a **"B" letter grade** if it receives a **final routine inspection score of 90 to 99 points** (out of a possible 100 points). 
+
+This score range indicates that the facility is in **compliance with most food safety regulations**, but may have **minor violations** that require correction. Facilities with a "B" grade are generally considered to be in **good standing**, though they may need to address some issues to improve to an "A" grade.
+    -> correct_retrieval=None correct_answer=False grounded=None refused=False format=False
+
+--- Q1 config B (339.73s, context 1310 tokens) ---
+According to the Los Angeles County Retail Food Inspection Guide, a food facility earns a "B" letter grade with a final routine inspection score between **80 – 89 points**.
+    -> correct_retrieval=True correct_answer=True grounded=True refused=False format=False
+
+--- Q1 config C (213.35s, context 1310 tokens) ---
+    kept=['wikipedia-restaurant-rating#002', 'retail-food-inspection-guide#014', 'abc-retail-food-inspection-guide.pdf#009'] dropped=[]
+According to the Los Angeles County Retail Food Inspection Guide, a food facility earns a "B" letter grade with a final routine inspection score between 80 – 89 points [Source 2].
+    -> correct_retrieval=True correct_answer=True grounded=True refused=False format=True
+
+====================================================================================================
+[Q2] top-3 retrieval for: In the Dat Thanh Restaurant inspection report, what temperature did the 5-gallon buckets measure while cooling at room temperature, and according to the FSIS guidance described in the danger zone article, after how long in the danger zone should food no longer be consumed?
+  #1  score=0.7789  source=wikipedia-danger-zone-food-safety.txt  chunk_id=wikipedia-danger-zone-food-safety#001
+      == Description == In regards to food safety, the terms danger zone or temperature danger zone refer to temperature range in which food-borne bacteria can grow. Food safety agencies, such as the United States' Food Safety and Inspection Service (FSIS), define t...
+  #2  score=0.7699  source=retail-food-inspection-guide.txt  chunk_id=retail-food-inspection-guide#196
+      Does equipment play a role in the violation? What are the ingredients in the food and how was it made? How long before the food will be served? Will the food be saved as leftovers? 9. Time as a public health control; procedures & records How do employees effec...
+  #3  score=0.7671  source=print1.txt  chunk_id=print1#000
+      Pag1 Iteration Violation1b.FOOD SAFETY CERTIFICATION Observations: Food safety certificate observed to be expired. Obtain within 30 days. Code Description: Food facilities that prepare, handle, or serve non-prepackaged potentially hazardous food, shall have an...
+
+--- Q2 config A (563.67s, context 0 tokens) ---
+To answer your question accurately, we would need to refer to the specific **Dat Thanh Restaurant inspection report** and the **FSIS (Food Safety and Inspection Service) guidance** related to the **danger zone** for food safety.
+
+However, since I don't have access to the actual inspection report or specific data from it, I can provide general information based on standard food safety guidelines:
+
+### 1. **Temperature of 5-gallon buckets during cooling at room temperature:**
+- The temperature of food in 5-gallon buckets cooling at room temperature would typically be **above 40°F (4°C)**, which is the **danger zone** for bacterial growth.
+- If the food was not cooled properly, the temperature could be **well above 40°F**, potentially reaching **70°F (21°C)** or higher, depending on the environment and how long it was left unrefrigerated.
+
+### 2. **FSIS Guidance on Time in the Danger Zone:**
+- According to the **FSIS (Food Safety and Inspection Service)** and **FDA guidelines**, food should **not be consumed** if it has spent **more than 4 hours** in the **danger zone** (between **40°F and 140°F**).
+- This is because bacteria can multiply rapidly in this temperature range, increasing the risk of foodborne illness.
+
+### Summary:
+- **Temperature of 5-gallon buckets cooling at room temperature:** Likely **above 40°F**, possibly up to **70°F or higher**, depending on the environment.
+- **Time in the danger zone before food should no longer be consumed:** **More than 4 hours**.
+
+If you have access to the specific inspection report, you can look for the recorded temperatures and time in the danger zone for the 5-gallon buckets. Let me know if you'd like help interpreting that data.
+    -> correct_retrieval=None correct_answer=False grounded=True refused=True format=False
+
+--- Q2 config B (278.05s, context 1311 tokens) ---
+The 5-gallon buckets measured 155°F while cooling at room temperature. According to the FSIS guidance, food should not be consumed if it remains in the danger zone for more than two hours.
+    -> correct_retrieval=True correct_answer=True grounded=True refused=False format=False
+
+--- Q2 config C (139.93s, context 1311 tokens) ---
+    kept=['wikipedia-danger-zone-food-safety#001', 'retail-food-inspection-guide#196', 'print1#000'] dropped=[]
+The 5-gallon buckets measured 155°F while cooling at room temperature [Source 3]. According to the FSIS guidance, food should not be consumed if it remains in the danger zone for more than two hours [Source 1].
+    -> correct_retrieval=True correct_answer=True grounded=True refused=False format=True
+
+====================================================================================================
+[Q3] top-3 retrieval for: At or below what temperature must potentially hazardous food be held when it is cold-held?
+  #1  score=0.8098  source=retail-food-inspection-guide.txt  chunk_id=retail-food-inspection-guide#039
+       Pasteurized milk in original, sealed containers, pasteurized milk products in original, sealed containers, raw shell eggs, and un-shucked live molluscan shellfish may be received and maintained at an ambient temperature of 45°F or less.  Hot and cold holdin...
+  #2  score=0.8074  source=retail-food-inspection-guide.txt  chunk_id=retail-food-inspection-guide#038
+       Food may be removed from specified holding temperatures for a cumulative time period of up to two hours to facilitate food preparation.  Food temperature measuring devices that are scaled only in Celsius or dually scaled in Celsius and Fahrenheit must be ac...
+  #3  score=0.7976  source=abc-retail-food-inspection-guide.pdf.txt  chunk_id=abc-retail-food-inspection-guide.pdf#022
+      Cooling shall be by one or more of the following methods: in shallow containers, separating food into smaller portions, adding ice as an ingredient, using an ice bath, stirring frequently, using rapid cooling equipment, or using containers that facilitate heat...
+
+--- Q3 config A (19.61s, context 0 tokens) ---
+Potentially hazardous food must be held at **or below 41°F (5°C)** when it is cold-held. This temperature is critical to prevent the growth of harmful bacteria that can cause foodborne illness. 
+
+This requirement is part of standard food safety guidelines, such as those outlined in the **Hazard Analysis and Critical Control Points (HACCP)** system and **FDA Food Code**.
+    -> correct_retrieval=None correct_answer=True grounded=None refused=False format=False
+
+--- Q3 config B (60.77s, context 1374 tokens) ---
+The temperature at or below which potentially hazardous food must be held when it is cold-held is **41°F**.
+    -> correct_retrieval=True correct_answer=True grounded=True refused=False format=False
+
+--- Q3 config C (65.87s, context 1374 tokens) ---
+    kept=['retail-food-inspection-guide#039', 'retail-food-inspection-guide#038', 'abc-retail-food-inspection-guide.pdf#022'] dropped=[]
+Potentially hazardous food must be held at or below 45°F when cold-held [Source 1].
+    -> correct_retrieval=True correct_answer=False grounded=True refused=False format=True
+
+====================================================================================================
+[Q4] top-3 retrieval for: What happens if a restaurant gets a C?
+  #1  score=0.7072  source=retail-food-inspection-guide.txt  chunk_id=retail-food-inspection-guide#099
+      OUT – “OUT” shall be marked if a PIC is not present to perform their duties during hours of operation. Examples of violations include: • A PIC is not present during operational hours. [§113945(a)] • PIC allows people unnecessary to the food facility operation ...
+  #2  score=0.7022  source=wikipedia-restaurant-rating.txt  chunk_id=wikipedia-restaurant-rating#002
+      As a result of this report, in December 1997 the Board of Supervisors of Los Angeles County introduced a letter grading system already in use for some years in two other nearby counties, San Diego County and Riverside County. Instead of merely listing violatio...
+  #3  score=0.6971  source=retail-food-inspection-guide.txt  chunk_id=retail-food-inspection-guide#025
+      N/A – “N/A” shall be marked if a food facility only handles prepackaged food items. N/O – “N/O” shall be marked in the RARE case when there are no food employees present at the time of inspection. OUT – This violation category shall be marked MAJOR; example in...
+
+--- Q4 config A (79.21s, context 0 tokens) ---
+If a restaurant receives a **C grade** in a health inspection, it means that the restaurant did **not meet the minimum health and safety standards** set by the local health department. Here's what typically happens:
+
+### 1. **Immediate Consequences:**
+- **Notice of Violations:** The restaurant will receive a notice listing the specific violations (e.g., unsanitary conditions, improper food storage, lack of handwashing facilities, etc.).
+- **Warning or Citation:** The health department may issue a **citation** or **warning**, depending on the severity of the violations.
+- **Possible Closure:** In some cases, especially if the violations are serious or repeated, the restaurant may be **temporarily closed** until the issues are corrected.
+
+### 2. **Impact on the Restaurant:**
+- **Loss of Customers:** A "C" grade is often **publicly posted**, which can deter customers from dining there due to concerns about food safety.
+- **Reputation Damage:** A poor inspection grade can harm the restaurant's **reputation**, making it harder to attract new customers.
+- **Insurance and Liability:** Some insurance companies may **increase premiums** or **deny coverage** if a restaurant has a history of poor health inspections.
+
+### 3. **Corrective Actions:**
+- The restaurant is typically given a **set period** (e.g., 10–30 days) to correct the violations.
+- They may need to **hire a health inspector** or **consultant** to ensure compliance with local health codes.
+- The restaurant may also need to **retrain staff**, improve **sanitation practices**, and **update equipment or facilities**.
+
+### 4. **Follow-Up Inspections:**
+- After the corrective actions are taken, the health department will conduct a **follow-up inspection** to ensure the restaurant is now in compliance.
+- If the restaurant passes the follow-up inspection, the grade may be upgraded (e.g., from C
+    -> correct_retrieval=None correct_answer=False grounded=None refused=False format=False
+
+--- Q4 config B (72.97s, context 1300 tokens) ---
+If a restaurant gets a **C**, it means the restaurant did not meet the minimum hygiene and food safety standards set by the Los Angeles County restaurant grading program. A **C** grade indicates that the restaurant has **serious violations** and needs to make significant improvements to ensure the safety and quality of its food. This grade is typically associated with a **low score** on the inspection point system, which reflects poor compliance with food safety regulations. As a result, the restaurant may face increased scrutiny, potential fines, or be required to take corrective actions to improve its rating. Additionally, customers may be less likely to choose a restaurant with a **C** grade due to concerns about food safety.
+    -> correct_retrieval=False correct_answer=False grounded=True refused=False format=False
+
+--- Q4 config C (80.19s, context 1300 tokens) ---
+    kept=['retail-food-inspection-guide#099', 'wikipedia-restaurant-rating#002', 'retail-food-inspection-guide#025'] dropped=[]
+If a restaurant gets a C, it indicates that the restaurant has a moderate number of violations and needs to improve its food safety practices. The grade is based on a point system where each restaurant starts with a perfect score of 100 points, and points are subtracted for each violation found during inspection [Source 2]. The letter grade is then assigned based on the remaining points and must be prominently posted at the establishment.
+    -> correct_retrieval=False correct_answer=False grounded=True refused=False format=True
+
+====================================================================================================
+[Q5] top-3 retrieval for: What score did YUMMY KITCHEN (FA0206933) at 1711 Branham Ln in San Jose receive on its most recent health inspection?
+  #1  score=0.6366  source=retail-food-inspection-guide.txt  chunk_id=retail-food-inspection-guide#002
+      Purpose This guide is designed to support EHS during retail food inspections and to help food facility operators understand essential food safety practices, principles, and procedures. Its primary aim is to ensure facilities comply with the California Retail F...
+  #2  score=0.6304  source=retail-food-inspection-guide.txt  chunk_id=retail-food-inspection-guide#001
+      The food industry and the Los Angeles County Department of Public Health's Environmental Health Division share the crucial responsibility of ensuring that food provided to consumers is safe and free from contaminants that could lead to foodborne illness outbre...
+  #3  score=0.6192  source=retail-food-inspection-guide.txt  chunk_id=retail-food-inspection-guide#014
+      The current Letter Grade/Score Cards have been combined with the public notification requirements. A food facility will be issued one of the following by the EHS at the time of inspection: Placard Type Description “A” Letter Grade Final routine inspection scor...
+
+--- Q5 config A (29.18s, context 0 tokens) ---
+As of my last update in July 2024, I don't have access to real-time or the most recent health inspection scores for YUMMY KITCHEN (FA0206933) at 1711 Branham Ln in San Jose. To find the most recent health inspection score, you can:
+
+1. Visit the **Santa Clara County Health Department** website.
+2. Use their **Food Facility Search Tool** to look up the facility by name or address.
+3. Check the most recent inspection report, which will include the score and any violations.
+
+Let me know if you'd like help finding the link or guidance on how to look it up!
+    -> correct_retrieval=None correct_answer=True grounded=True refused=True format=False
+
+--- Q5 config B (88.21s, context 1439 tokens) ---
+The provided context does not include specific information about the health inspection score for YUMMY KITCHEN (FA0206933) at 1711 Branham Ln in San Jose. Therefore, it is not possible to determine the score based on the given information. To find the score, you would need to consult the official Retail Food Official Inspection Report (FOIR) for that specific facility.
+    -> correct_retrieval=None correct_answer=True grounded=True refused=True format=False
+
+--- Q5 config C (119.48s, context 1439 tokens) ---
+    kept=['retail-food-inspection-guide#002', 'retail-food-inspection-guide#001', 'retail-food-inspection-guide#014'] dropped=[]
+I cannot answer this question from the provided documents.
+    -> correct_retrieval=None correct_answer=True grounded=True refused=True format=True
+
+====================================================================================================
+[Q6] top-3 retrieval for: What is the capital city of Australia?
+  #1  score=0.4568  source=retail-food-inspection-guide.txt  chunk_id=retail-food-inspection-guide#183
+      Los Angeles, CA 90010-2313 (213) 351-7352 Fax: (213) 351-2789 West Valley 14500 Roscoe Blvd., 5th Fl. Panorama City, CA 91401 (818) 672-2293 Fax: (818) 672-2101 West Office 6101 W. Centinela Ave., Ste. 300, Culver City, CA 90230 (310) 410-3448 Fax: (310) 348-0...
+  #2  score=0.4541  source=retail-food-inspection-guide.txt  chunk_id=retail-food-inspection-guide#182
+      Room Panorama City, CA 91402 (818) 672-2258 Fax: (818) 672-2102 Whittier Office 12440 E. Imperial Hwy., Room 515 Norwalk, CA 90650 (562) 345-3451 Fax: (562) 409-5074 Norwalk Office 12440 E. Imperial Hwy., Room 519 Norwalk, CA 90650 (562) 345-3441 Fax: (562) 40...
+  #3  score=0.4315  source=retail-food-inspection-guide.txt  chunk_id=retail-food-inspection-guide#184
+      # 145, Santa Clarita, CA 91350 (661) 287-7000 Fax: Fax: (626) 813-3017 ENVIRONMENTAL HEALTH COMMUNITY PROTECTION BRANCH OUTBREAK INVESTIGATION & EVALUATION UNIT Conducts foodborne illness outbreak investigations Baldwin Park 5050 Commerce Drive Baldwin Park, C...
+
+--- Q6 config A (3.47s, context 0 tokens) ---
+The capital city of Australia is **Canberra**.
+    -> correct_retrieval=None correct_answer=False grounded=False refused=False format=False
+
+--- Q6 config B (89.88s, context 1400 tokens) ---
+The capital city of Australia is Canberra.
+    -> correct_retrieval=None correct_answer=False grounded=False refused=False format=False
+
+--- Q6 config C (0.0s, context 0 tokens) ---
+    kept=[] dropped=[('retail-food-inspection-guide#183', 'irrelevant (score 0.457 < floor 0.6)'), ('retail-food-inspection-guide#182', 'irrelevant (score 0.454 < floor 0.6)'), ('retail-food-inspection-guide#184', 'irrelevant (score 0.431 < floor 0.6)')]
+I cannot answer this question from the provided documents.
+    -> correct_retrieval=None correct_answer=True grounded=True refused=True format=True
+
+--- k-sweep Q2 k=1 config B ---
+The inspection report does not provide specific temperature measurements for the 5-gallon buckets cooling at room temperature. According to the FSIS guidance described in the danger zone article, food should no longer be consumed if it remains in the danger zone for more than two hours.
+
+--- k-sweep Q2 k=1 config C ---
+The sources do not mention the temperature measured by the 5-gallon buckets at Dat Thanh Restaurant [Source 1]. According to the FSIS guidance, food should not be consumed if it remains in the danger zone for more than two hours [Source 1].
+
+--- k-sweep Q2 k=5 config B ---
+In the Dat Thanh Restaurant inspection report, the 5-gallon buckets measured **155°F** while cooling at room temperature. According to the FSIS guidance described in the danger zone article, food should **not be consumed** if it has remained in the danger zone for **more than two hours**.
+
+--- k-sweep Q2 k=5 config C ---
+The 5-gallon buckets measured 155°F while cooling at room temperature [Source 3]. According to the FSIS guidance, food should not be consumed if it has remained in the danger zone for more than two hours [Source 1].
+
+--- k-sweep Q3 k=1 config B ---
+The temperature at or below which potentially hazardous food must be held when it is cold-held is **45°F**.
+
+--- k-sweep Q3 k=1 config C ---
+Potentially hazardous food must be held at or below 45°F when it is cold-held [Source 1].
+
+--- k-sweep Q3 k=5 config B ---
+The temperature at or below which potentially hazardous food must be held when it is cold-held is **45°F**.
+
+--- k-sweep Q3 k=5 config C ---
+Potentially hazardous food must be cold-held at or below 45°F [Source 1].
+
+====================================================================================================
+EVALUATION SUMMARY
+{"config": "A - No RAG", "retrieval_correct": "n/a", "accuracy (correct answer)": "2/6 (33%)", "faithfulness (grounded)": "2/3 (67%)", "format compliance": "0/6 (0%)", "robustness (Q4 flagged + Q5/Q6 refused)": "1/3 (33%)", "refused when needed (Q5/Q6)": "1/2 (50%)", "false refusals (Q1-Q4)": 1, "mean context tokens": 0.0, "mean LLM seconds": 193.8}
+{"config": "B - Basic RAG", "retrieval_correct": "3/4 (75%)", "accuracy (correct answer)": "4/6 (67%)", "faithfulness (grounded)": "5/6 (83%)", "format compliance": "0/6 (0%)", "robustness (Q4 flagged + Q5/Q6 refused)": "1/3 (33%)", "refused when needed (Q5/Q6)": "1/2 (50%)", "false refusals (Q1-Q4)": 0, "mean context tokens": 1355.7, "mean LLM seconds": 154.9}
+{"config": "C - Context-engineered RAG", "retrieval_correct": "3/4 (75%)", "accuracy (correct answer)": "4/6 (67%)", "faithfulness (grounded)": "6/6 (100%)", "format compliance": "6/6 (100%)", "robustness (Q4 flagged + Q5/Q6 refused)": "2/3 (67%)", "refused when needed (Q5/Q6)": "2/2 (100%)", "false refusals (Q1-Q4)": 0, "mean context tokens": 1122.3, "mean LLM seconds": 103.1}
+[2026-09-28T08:19:22.965893+00:00] done
+----- exit=0
+
+===== [2026-09-28T08:23:06Z] $ .venv/bin/python code/hw04/compute_metrics.py
+# HW4 Metrics
+
+Generated by `python code/hw04/compute_metrics.py` from the files in `reports/hw04/raw/`.
+
+## Part 3 - N+1 measurement (180 measured requests)
+
+Data: 5000 inspections, 200 violations (SEED=7117, sha256 392e4dd10634ccee...). Requests hit offset 0; latency is client round-trip (`time.perf_counter` around the HTTP call, localhost), 30 measured requests per row after 3 warm-ups, naive/fixed interleaved. SQL stmts/req counts every statement the endpoint sent to MySQL (SQLAlchemy `before_cursor_execute`), excluding the session-cookie lookup. p99 of 30 samples is interpolated between the two slowest requests. Measured before the index was added.
+
+Raw data: `raw/nplus1_requests.csv` / `.json`; summary: `raw/nplus1_summary.csv`.
+
+| Page size | Version | SQL stmts/req | p50 (ms) | p95 (ms) | p99 (ms) | server p50 (ms) | records / violations returned |
+|---|---|---|---|---|---|---|---|
+| 10 | naive | 11 | 40.98 | 83.14 | 104.87 | 24.1 | 10 / 9 |
+| 10 | fixed | 2 | 23.46 | 46.82 | 51.83 | 8.78 | 10 / 9 |
+| 50 | naive | 51 | 109.7 | 134.98 | 145.61 | 96.48 | 50 / 45 |
+| 50 | fixed | 2 | 17.17 | 29.62 | 34.64 | 6.63 | 50 / 45 |
+| 200 | naive | 201 | 439.71 | 582.49 | 653.19 | 428.3 | 200 / 162 |
+| 200 | fixed | 2 | 30.78 | 52.84 | 61.17 | 16.98 | 200 / 162 |
+
+| Page size | naive p50 (ms) | fixed p50 (ms) | Speed-up (naive p50 / fixed p50) | Queries saved/req | Identical data |
+|---|---|---|---|---|---|
+| 10 | 40.98 | 23.46 | 1.75x | 9 | True |
+| 50 | 109.7 | 17.17 | 6.39x | 49 | True |
+| 200 | 439.71 | 30.78 | 14.29x | 199 | True |
+
+### Supplementary: same benchmark after adding the index
+
+Raw data: `raw/nplus1_requests_with_index.csv`.
+
+| Page size | Version | SQL stmts/req | p50 (ms) | p95 (ms) | p99 (ms) | server p50 (ms) | records / violations returned |
+|---|---|---|---|---|---|---|---|
+| 10 | naive | 11 | 22.8 | 30.54 | 32.46 | 14.64 | 10 / 9 |
+| 10 | fixed | 2 | 11.96 | 15.84 | 17.23 | 3.95 | 10 / 9 |
+| 50 | naive | 51 | 79.02 | 93.5 | 105.38 | 70.46 | 50 / 45 |
+| 50 | fixed | 2 | 15.03 | 18.27 | 18.9 | 6.28 | 50 / 45 |
+| 200 | naive | 201 | 634.68 | 788.94 | 1019.02 | 616.31 | 200 / 162 |
+| 200 | fixed | 2 | 40.54 | 56.91 | 61.05 | 22.37 | 200 / 162 |
+
+| Page size | naive p50 (ms) | fixed p50 (ms) | Speed-up (naive p50 / fixed p50) | Queries saved/req | Identical data |
+|---|---|---|---|---|---|
+| 10 | 22.8 | 11.96 | 1.91x | 9 | True |
+| 50 | 79.02 | 15.03 | 5.26x | 49 | True |
+| 200 | 634.68 | 40.54 | 15.66x | 199 | True |
+
+## Part 3.8 - EXPLAIN before/after `ix_violations_inspection_id`
+
+Full output (including EXPLAIN ANALYZE): `raw/explain_before_after.txt`.
+
+| Query | State | type | possible_keys | key | rows (est.) | Extra |
+|---|---|---|---|---|---|---|
+| naive_per_record_lookup | before | index | None | PRIMARY | 200 | Using where |
+| naive_per_record_lookup | after | ref | ix_violations_inspection_id | ix_violations_inspection_id | 1 | None |
+| fixed_selectin_lookup_page200 | before | index | None | PRIMARY | 200 | Using where |
+| fixed_selectin_lookup_page200 | after | index | ix_violations_inspection_id | PRIMARY | 200 | Using where |
+
+## Part 4 - RAG evaluation
+
+Model `qwen3:8b` (Ollama, temperature 0, seed 7117); embeddings `BAAI/bge-small-en-v1.5`; chunk_size 500 / overlap 50; top_k 3 unless noted. Scoring rules are automatic and documented in `evaluate()` in `code/hw04/rag.py`.
+
+| config | retrieval_correct | accuracy (correct answer) | faithfulness (grounded) | format compliance | robustness (Q4 flagged + Q5/Q6 refused) | refused when needed (Q5/Q6) | false refusals (Q1-Q4) | mean context tokens | mean LLM seconds |
+|---|---|---|---|---|---|---|---|---|---|
+| A - No RAG | n/a | 2/6 (33%) | 2/3 (67%) | 0/6 (0%) | 1/3 (33%) | 1/2 (50%) | 1 | 0.0 | 193.8 |
+| B - Basic RAG | 3/4 (75%) | 4/6 (67%) | 5/6 (83%) | 0/6 (0%) | 1/3 (33%) | 1/2 (50%) | 0 | 1355.7 | 154.9 |
+| C - Context-engineered RAG | 3/4 (75%) | 4/6 (67%) | 6/6 (100%) | 6/6 (100%) | 2/3 (67%) | 2/2 (100%) | 0 | 1122.3 | 103.1 |
+
+Per question and configuration:
+
+| question_id | question_type | config | correct_retrieval | correct_answer | grounded | refused_when_needed | format_compliant | ambiguity_flagged |
+|---|---|---|---|---|---|---|---|---|
+| Q1 | answer in one chunk | A | n/a | False | n/a | True | False | n/a |
+| Q1 | answer in one chunk | B | True | True | True | True | False | n/a |
+| Q1 | answer in one chunk | C | True | True | True | True | True | n/a |
+| Q2 | answer needs two chunks | A | n/a | False | True | False | False | n/a |
+| Q2 | answer needs two chunks | B | True | True | True | True | False | n/a |
+| Q2 | answer needs two chunks | C | True | True | True | True | True | n/a |
+| Q3 | similar information across documents | A | n/a | True | n/a | True | False | n/a |
+| Q3 | similar information across documents | B | True | True | True | True | False | n/a |
+| Q3 | similar information across documents | C | True | False | True | True | True | n/a |
+| Q4 | ambiguous | A | n/a | False | n/a | True | False | True |
+| Q4 | ambiguous | B | False | False | True | True | False | False |
+| Q4 | ambiguous | C | False | False | True | True | True | False |
+| Q5 | answer not in the documents | A | n/a | True | True | True | False | n/a |
+| Q5 | answer not in the documents | B | n/a | True | True | True | False | n/a |
+| Q5 | answer not in the documents | C | n/a | True | True | True | True | n/a |
+| Q6 | unrelated | A | n/a | False | False | False | False | n/a |
+| Q6 | unrelated | B | n/a | False | False | False | False | n/a |
+| Q6 | unrelated | C | n/a | True | True | True | True | n/a |
+
+k-sweep (configs B and C):
+
+| Question | k | Config | Retrieved chunk_ids | Relevant / irrelevant retrieved | Kept in prompt | Context tokens | Correct answer | Grounded |
+|---|---|---|---|---|---|---|---|---|
+| Q2 | 1 | B | wikipedia-danger-zone-food-safety#001 | 1 / 0 | wikipedia-danger-zone-food-safety#001 | 387 | False | True |
+| Q2 | 1 | C | wikipedia-danger-zone-food-safety#001 | 1 / 0 | wikipedia-danger-zone-food-safety#001 | 387 | False | True |
+| Q2 | 3 | B | wikipedia-danger-zone-food-safety#001; retail-food-inspection-guide#196; print1#000 | 2 / 1 | wikipedia-danger-zone-food-safety#001; retail-food-inspection-guide#196; print1#000 | 1311 | True | True |
+| Q2 | 3 | C | wikipedia-danger-zone-food-safety#001; retail-food-inspection-guide#196; print1#000 | 2 / 1 | wikipedia-danger-zone-food-safety#001; retail-food-inspection-guide#196; print1#000 | 1311 | True | True |
+| Q2 | 5 | B | wikipedia-danger-zone-food-safety#001; retail-food-inspection-guide#196; print1#000; wikipedia-danger-zone-food-safety#000; abc-retail-food-inspection-guide.pdf#022 | 3 / 2 | wikipedia-danger-zone-food-safety#001; retail-food-inspection-guide#196; print1#000; wikipedia-danger-zone-food-safety#000; abc-retail-food-inspection-guide.pdf#022 | 2113 | True | True |
+| Q2 | 5 | C | wikipedia-danger-zone-food-safety#001; retail-food-inspection-guide#196; print1#000; wikipedia-danger-zone-food-safety#000; abc-retail-food-inspection-guide.pdf#022 | 3 / 2 | wikipedia-danger-zone-food-safety#001; retail-food-inspection-guide#196; print1#000; wikipedia-danger-zone-food-safety#000; abc-retail-food-inspection-guide.pdf#022 | 2113 | True | True |
+| Q3 | 1 | B | retail-food-inspection-guide#039 | 0 / 1 | retail-food-inspection-guide#039 | 465 | False | True |
+| Q3 | 1 | C | retail-food-inspection-guide#039 | 0 / 1 | retail-food-inspection-guide#039 | 465 | False | True |
+| Q3 | 3 | B | retail-food-inspection-guide#039; retail-food-inspection-guide#038; abc-retail-food-inspection-guide.pdf#022 | 1 / 2 | retail-food-inspection-guide#039; retail-food-inspection-guide#038; abc-retail-food-inspection-guide.pdf#022 | 1374 | True | True |
+| Q3 | 3 | C | retail-food-inspection-guide#039; retail-food-inspection-guide#038; abc-retail-food-inspection-guide.pdf#022 | 1 / 2 | retail-food-inspection-guide#039; retail-food-inspection-guide#038; abc-retail-food-inspection-guide.pdf#022 | 1374 | False | True |
+| Q3 | 5 | B | retail-food-inspection-guide#039; retail-food-inspection-guide#038; abc-retail-food-inspection-guide.pdf#022; retail-food-inspection-guide#042; wikipedia-danger-zone-food-safety#001 | 1 / 4 | retail-food-inspection-guide#039; retail-food-inspection-guide#038; abc-retail-food-inspection-guide.pdf#022; retail-food-inspection-guide#042; wikipedia-danger-zone-food-safety#001 | 2146 | False | True |
+| Q3 | 5 | C | retail-food-inspection-guide#039; retail-food-inspection-guide#038; abc-retail-food-inspection-guide.pdf#022; retail-food-inspection-guide#042; wikipedia-danger-zone-food-safety#001 | 1 / 4 | retail-food-inspection-guide#039; retail-food-inspection-guide#038; abc-retail-food-inspection-guide.pdf#022; retail-food-inspection-guide#042; wikipedia-danger-zone-food-safety#001 | 2146 | False | True |
+
+----- exit=0 [2026-09-28T08:23:06Z]
+
+===== [2026-09-28T08:23:06Z] $ make verify-hw04
+.venv/bin/python code/hw04/verify.py
+[PASS] config_values: PORT_BASE=8817 PREFIX=s7117 SEED=7117 VERIFY_SEED=267117 DOMAIN_ID=5
+[PASS] mysql_schema: MySQL 8.4.11, database=s7117_rel, tables=['inspection_violations', 'inspections', 'sessions', 'users']
+[PASS] seeded_rows: inspections(id<=5000)=5000, violations=200, orphan violations=0
+[PASS] index_present: 1 matching index row(s)
+[PASS] backend_on_port_base: GET /openapi.json -> 200; started_by_verify=False; required paths present=True
+[PASS] unauthenticated_blocked: status codes=[401, 401, 401]
+[PASS] login_sets_httponly_session_cookie: login=200, HttpOnly=True, opaque=True, token_len=43, row_in_sessions=1, wrong_password=401
+[PASS] crud_roundtrip: id=5001, steps=[('POST', 201), ('GET id', 200), ('PUT', 200), ('GET all', 200), ('DELETE', 200), ('GET after delete', 404)], update_applied=True, new_record_listed=True
+[PASS] verify_seed_spot_check: ids=[80, 2533, 2007, 2583, 2326], status=[200, 200, 200, 200, 200]
+[PASS] nplus1_naive_and_fixed: size=10: naive_sql=11 fixed_sql=2 records=10 violations=9 same_items=True; size=50: naive_sql=51 fixed_sql=2 records=50 violations=45 same_items=True; size=200: naive_sql=201 fixed_sql=2 records=200 violations=162 same_items=True
+[PASS] logout_revokes_session: logout=204, replayed old cookie on /api/auth/me -> 401
+[PASS] raw_nplus1_180_requests: 180 rows, per combo={'10/fixed': 30, '10/naive': 30, '200/fixed': 30, '200/naive': 30, '50/fixed': 30, '50/naive': 30}
+[PASS] rag_outputs_and_refusals: corpus_docs=6, C refused={'Q5': True, 'Q6': True}, C answered={'Q1': True, 'Q2': True, 'Q3': True}
+[PASS] react_client_components: components={'Login': True, 'Home': True, 'CreateRecord': True, 'UpdateRecord': True, 'DeleteRecord': True}, routes={'/': True, '/login': True, '/create': True, '/update': True, '/delete': True}
+[PASS] app_code_unmodified: git status of code/ identical before and after
+{"total_checks": 15, "passed": 15, "failed": 0}
+----- exit=0 [2026-09-28T08:23:09Z]

@@ -1,0 +1,121 @@
+{
+  "homework": "HW4",
+  "SID4": "7117",
+  "commit_hash": "5353067a479ef0616ff27ddfe914206e56a45fcc",
+  "tag_hw4_commit": null,
+  "head_is_tag_hw4": false,
+  "working_tree_dirty": true,
+  "timestamp": "2026-09-28T08:23:26.605645+00:00",
+  "configuration": {
+    "PORT_BASE": 8817,
+    "PREFIX": "s7117",
+    "DOMAIN_ID": 5,
+    "database": "s7117_rel",
+    "local_model": "qwen3:8b",
+    "embedding_model": "BAAI/bge-small-en-v1.5",
+    "rag": {
+      "chunk_size": 500,
+      "chunk_overlap": 50,
+      "top_k": 3
+    }
+  },
+  "SEED": 7117,
+  "VERIFY_SEED": 267117,
+  "checks": [
+    {
+      "name": "config_values",
+      "description": "Section 0 values derive from SID4 = 7117",
+      "passed": true,
+      "evidence": "PORT_BASE=8817 PREFIX=s7117 SEED=7117 VERIFY_SEED=267117 DOMAIN_ID=5"
+    },
+    {
+      "name": "mysql_schema",
+      "description": "MySQL database s7117_rel has inspections, inspection_violations, users, sessions",
+      "passed": true,
+      "evidence": "MySQL 8.4.11, database=s7117_rel, tables=['inspection_violations', 'inspections', 'sessions', 'users']"
+    },
+    {
+      "name": "seeded_rows",
+      "description": "At least 5,000 inspections and exactly 200 related violations are seeded",
+      "passed": true,
+      "evidence": "inspections(id<=5000)=5000, violations=200, orphan violations=0"
+    },
+    {
+      "name": "index_present",
+      "description": "ix_violations_inspection_id exists on inspection_violations(inspection_id)",
+      "passed": true,
+      "evidence": "1 matching index row(s)"
+    },
+    {
+      "name": "backend_on_port_base",
+      "description": "FastAPI backend responds on PORT_BASE 8817",
+      "passed": true,
+      "evidence": "GET /openapi.json -> 200; started_by_verify=True; required paths present=True"
+    },
+    {
+      "name": "unauthenticated_blocked",
+      "description": "Record list and N+1 endpoints return 401 without a session cookie",
+      "passed": true,
+      "evidence": "status codes=[401, 401, 401]"
+    },
+    {
+      "name": "login_sets_httponly_session_cookie",
+      "description": "Login sets an HttpOnly cookie whose value is an opaque token stored in the sessions table",
+      "passed": true,
+      "evidence": "login=200, HttpOnly=True, opaque=True, token_len=43, row_in_sessions=1, wrong_password=401"
+    },
+    {
+      "name": "crud_roundtrip",
+      "description": "POST -> GET by id -> PUT -> GET all -> DELETE -> GET 404 on /api/records",
+      "passed": true,
+      "evidence": "id=5002, steps=[('POST', 201), ('GET id', 200), ('PUT', 200), ('GET all', 200), ('DELETE', 200), ('GET after delete', 404)], update_applied=True, new_record_listed=True"
+    },
+    {
+      "name": "verify_seed_spot_check",
+      "description": "5 record ids drawn with VERIFY_SEED are readable via GET /api/records/{id}",
+      "passed": true,
+      "evidence": "ids=[80, 2533, 2007, 2583, 2326], status=[200, 200, 200, 200, 200]"
+    },
+    {
+      "name": "nplus1_naive_and_fixed",
+      "description": "Both list versions return the same data; naive issues N+1 statements, fixed issues 2",
+      "passed": true,
+      "evidence": "size=10: naive_sql=11 fixed_sql=2 records=10 violations=9 same_items=True; size=50: naive_sql=51 fixed_sql=2 records=50 violations=45 same_items=True; size=200: naive_sql=201 fixed_sql=2 records=200 violations=162 same_items=True"
+    },
+    {
+      "name": "logout_revokes_session",
+      "description": "After logout the old cookie value is rejected (session row deleted)",
+      "passed": true,
+      "evidence": "logout=204, replayed old cookie on /api/auth/me -> 401"
+    },
+    {
+      "name": "raw_nplus1_180_requests",
+      "description": "raw/nplus1_requests.csv holds 180 requests: 3 page sizes x 2 versions x 30",
+      "passed": true,
+      "evidence": "180 rows, per combo={'10/fixed': 30, '10/naive': 30, '200/fixed': 30, '200/naive': 30, '50/fixed': 30, '50/naive': 30}"
+    },
+    {
+      "name": "rag_outputs_and_refusals",
+      "description": "RAG raw outputs exist; config C refuses Q5 and Q6 and answers Q1-Q3",
+      "passed": true,
+      "evidence": "corpus_docs=6, C refused={'Q5': True, 'Q6': True}, C answered={'Q1': True, 'Q2': True, 'Q3': True}"
+    },
+    {
+      "name": "react_client_components",
+      "description": "React client has Login/Home/Create/Update/Delete components and routes",
+      "passed": true,
+      "evidence": "components={'Login': True, 'Home': True, 'CreateRecord': True, 'UpdateRecord': True, 'DeleteRecord': True}, routes={'/': True, '/login': True, '/create': True, '/update': True, '/delete': True}"
+    },
+    {
+      "name": "app_code_unmodified",
+      "description": "Running verify did not modify tracked or untracked files under code/",
+      "passed": true,
+      "evidence": "git status of code/ identical before and after"
+    }
+  ],
+  "summary": {
+    "total_checks": 15,
+    "passed": 15,
+    "failed": 0
+  }
+}

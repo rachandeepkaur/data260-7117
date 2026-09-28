@@ -1,0 +1,19 @@
+question_id,question_type,config,correct_retrieval,correct_answer,grounded,refused_when_needed,format_compliant,ambiguity_flagged
+Q1,answer in one chunk,A,,False,,True,False,
+Q1,answer in one chunk,B,True,True,True,True,False,
+Q1,answer in one chunk,C,True,True,True,True,True,
+Q2,answer needs two chunks,A,,False,True,False,False,
+Q2,answer needs two chunks,B,True,True,True,True,False,
+Q2,answer needs two chunks,C,True,True,True,True,True,
+Q3,similar information across documents,A,,True,,True,False,
+Q3,similar information across documents,B,True,True,True,True,False,
+Q3,similar information across documents,C,True,False,True,True,True,
+Q4,ambiguous,A,,False,,True,False,True
+Q4,ambiguous,B,False,False,True,True,False,False
+Q4,ambiguous,C,False,False,True,True,True,False
+Q5,answer not in the documents,A,,True,True,True,False,
+Q5,answer not in the documents,B,,True,True,True,False,
+Q5,answer not in the documents,C,,True,True,True,True,
+Q6,unrelated,A,,False,False,False,False,
+Q6,unrelated,B,,False,False,False,False,
+Q6,unrelated,C,,True,True,True,True,

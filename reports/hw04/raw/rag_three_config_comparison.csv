@@ -1,0 +1,64 @@
+question_id,question_type,config,top_k,retrieved_chunk_ids,retrieved_scores,context_chunk_ids,dropped,context_tokens,correct_retrieval,correct_answer,grounded,refused,refused_when_needed,format_compliant,ambiguity_flagged,refused_by_filter,llm_seconds,answer
+Q1,answer in one chunk,A,3,,,,,0,,False,,False,True,False,,False,467.75,"According to the **Los Angeles County Retail Food Inspection Guide**, a food facility earns a **""B"" letter grade** if it receives a **final routine inspection score of 90 to 99 points** (out of a possible 100 points). 
+
+This score range indicates that the facility is in **compliance with most food safety regulations**, but may have **minor violations** that require correction. Facilities with a ""B"" grade are generally considered to be in **good standing**, though they may need to address some issues to improve to an ""A"" grade."
+Q1,answer in one chunk,B,3,wikipedia-restaurant-rating#002;retail-food-inspection-guide#014;abc-retail-food-inspection-guide.pdf#009,0.8173;0.8167;0.7840,wikipedia-restaurant-rating#002;retail-food-inspection-guide#014;abc-retail-food-inspection-guide.pdf#009,,1310,True,True,True,False,True,False,,False,339.73,"According to the Los Angeles County Retail Food Inspection Guide, a food facility earns a ""B"" letter grade with a final routine inspection score between **80 – 89 points**."
+Q1,answer in one chunk,C,3,wikipedia-restaurant-rating#002;retail-food-inspection-guide#014;abc-retail-food-inspection-guide.pdf#009,0.8173;0.8167;0.7840,wikipedia-restaurant-rating#002;retail-food-inspection-guide#014;abc-retail-food-inspection-guide.pdf#009,,1310,True,True,True,False,True,True,,False,213.35,"According to the Los Angeles County Retail Food Inspection Guide, a food facility earns a ""B"" letter grade with a final routine inspection score between 80 – 89 points [Source 2]."
+Q2,answer needs two chunks,A,3,,,,,0,,False,True,True,False,False,,False,563.67,"To answer your question accurately, we would need to refer to the specific **Dat Thanh Restaurant inspection report** and the **FSIS (Food Safety and Inspection Service) guidance** related to the **danger zone** for food safety.
+
+However, since I don't have access to the actual inspection report or specific data from it, I can provide general information based on standard food safety guidelines:
+
+### 1. **Temperature of 5-gallon buckets during cooling at room temperature:**
+- The temperature of food in 5-gallon buckets cooling at room temperature would typically be **above 40°F (4°C)**, which is the **danger zone** for bacterial growth.
+- If the food was not cooled properly, the temperature could be **well above 40°F**, potentially reaching **70°F (21°C)** or higher, depending on the environment and how long it was left unrefrigerated.
+
+### 2. **FSIS Guidance on Time in the Danger Zone:**
+- According to the **FSIS (Food Safety and Inspection Service)** and **FDA guidelines**, food should **not be consumed** if it has spent **more than 4 hours** in the **danger zone** (between **40°F and 140°F**).
+- This is because bacteria can multiply rapidly in this temperature range, increasing the risk of foodborne illness.
+
+### Summary:
+- **Temperature of 5-gallon buckets cooling at room temperature:** Likely **above 40°F**, possibly up to **70°F or higher**, depending on the environment.
+- **Time in the danger zone before food should no longer be consumed:** **More than 4 hours**.
+
+If you have access to the specific inspection report, you can look for the recorded temperatures and time in the danger zone for the 5-gallon buckets. Let me know if you'd like help interpreting that data."
+Q2,answer needs two chunks,B,3,wikipedia-danger-zone-food-safety#001;retail-food-inspection-guide#196;print1#000,0.7789;0.7699;0.7671,wikipedia-danger-zone-food-safety#001;retail-food-inspection-guide#196;print1#000,,1311,True,True,True,False,True,False,,False,278.05,"The 5-gallon buckets measured 155°F while cooling at room temperature. According to the FSIS guidance, food should not be consumed if it remains in the danger zone for more than two hours."
+Q2,answer needs two chunks,C,3,wikipedia-danger-zone-food-safety#001;retail-food-inspection-guide#196;print1#000,0.7789;0.7699;0.7671,wikipedia-danger-zone-food-safety#001;retail-food-inspection-guide#196;print1#000,,1311,True,True,True,False,True,True,,False,139.93,"The 5-gallon buckets measured 155°F while cooling at room temperature [Source 3]. According to the FSIS guidance, food should not be consumed if it remains in the danger zone for more than two hours [Source 1]."
+Q3,similar information across documents,A,3,,,,,0,,True,,False,True,False,,False,19.61,"Potentially hazardous food must be held at **or below 41°F (5°C)** when it is cold-held. This temperature is critical to prevent the growth of harmful bacteria that can cause foodborne illness. 
+
+This requirement is part of standard food safety guidelines, such as those outlined in the **Hazard Analysis and Critical Control Points (HACCP)** system and **FDA Food Code**."
+Q3,similar information across documents,B,3,retail-food-inspection-guide#039;retail-food-inspection-guide#038;abc-retail-food-inspection-guide.pdf#022,0.8098;0.8074;0.7976,retail-food-inspection-guide#039;retail-food-inspection-guide#038;abc-retail-food-inspection-guide.pdf#022,,1374,True,True,True,False,True,False,,False,60.77,The temperature at or below which potentially hazardous food must be held when it is cold-held is **41°F**.
+Q3,similar information across documents,C,3,retail-food-inspection-guide#039;retail-food-inspection-guide#038;abc-retail-food-inspection-guide.pdf#022,0.8098;0.8074;0.7976,retail-food-inspection-guide#039;retail-food-inspection-guide#038;abc-retail-food-inspection-guide.pdf#022,,1374,True,False,True,False,True,True,,False,65.87,Potentially hazardous food must be held at or below 45°F when cold-held [Source 1].
+Q4,ambiguous,A,3,,,,,0,,False,,False,True,False,True,False,79.21,"If a restaurant receives a **C grade** in a health inspection, it means that the restaurant did **not meet the minimum health and safety standards** set by the local health department. Here's what typically happens:
+
+### 1. **Immediate Consequences:**
+- **Notice of Violations:** The restaurant will receive a notice listing the specific violations (e.g., unsanitary conditions, improper food storage, lack of handwashing facilities, etc.).
+- **Warning or Citation:** The health department may issue a **citation** or **warning**, depending on the severity of the violations.
+- **Possible Closure:** In some cases, especially if the violations are serious or repeated, the restaurant may be **temporarily closed** until the issues are corrected.
+
+### 2. **Impact on the Restaurant:**
+- **Loss of Customers:** A ""C"" grade is often **publicly posted**, which can deter customers from dining there due to concerns about food safety.
+- **Reputation Damage:** A poor inspection grade can harm the restaurant's **reputation**, making it harder to attract new customers.
+- **Insurance and Liability:** Some insurance companies may **increase premiums** or **deny coverage** if a restaurant has a history of poor health inspections.
+
+### 3. **Corrective Actions:**
+- The restaurant is typically given a **set period** (e.g., 10–30 days) to correct the violations.
+- They may need to **hire a health inspector** or **consultant** to ensure compliance with local health codes.
+- The restaurant may also need to **retrain staff**, improve **sanitation practices**, and **update equipment or facilities**.
+
+### 4. **Follow-Up Inspections:**
+- After the corrective actions are taken, the health department will conduct a **follow-up inspection** to ensure the restaurant is now in compliance.
+- If the restaurant passes the follow-up inspection, the grade may be upgraded (e.g., from C"
+Q4,ambiguous,B,3,retail-food-inspection-guide#099;wikipedia-restaurant-rating#002;retail-food-inspection-guide#025,0.7072;0.7022;0.6971,retail-food-inspection-guide#099;wikipedia-restaurant-rating#002;retail-food-inspection-guide#025,,1300,False,False,True,False,True,False,False,False,72.97,"If a restaurant gets a **C**, it means the restaurant did not meet the minimum hygiene and food safety standards set by the Los Angeles County restaurant grading program. A **C** grade indicates that the restaurant has **serious violations** and needs to make significant improvements to ensure the safety and quality of its food. This grade is typically associated with a **low score** on the inspection point system, which reflects poor compliance with food safety regulations. As a result, the restaurant may face increased scrutiny, potential fines, or be required to take corrective actions to improve its rating. Additionally, customers may be less likely to choose a restaurant with a **C** grade due to concerns about food safety."
+Q4,ambiguous,C,3,retail-food-inspection-guide#099;wikipedia-restaurant-rating#002;retail-food-inspection-guide#025,0.7072;0.7022;0.6971,retail-food-inspection-guide#099;wikipedia-restaurant-rating#002;retail-food-inspection-guide#025,,1300,False,False,True,False,True,True,False,False,80.19,"If a restaurant gets a C, it indicates that the restaurant has a moderate number of violations and needs to improve its food safety practices. The grade is based on a point system where each restaurant starts with a perfect score of 100 points, and points are subtracted for each violation found during inspection [Source 2]. The letter grade is then assigned based on the remaining points and must be prominently posted at the establishment."
+Q5,answer not in the documents,A,3,,,,,0,,True,True,True,True,False,,False,29.18,"As of my last update in July 2024, I don't have access to real-time or the most recent health inspection scores for YUMMY KITCHEN (FA0206933) at 1711 Branham Ln in San Jose. To find the most recent health inspection score, you can:
+
+1. Visit the **Santa Clara County Health Department** website.
+2. Use their **Food Facility Search Tool** to look up the facility by name or address.
+3. Check the most recent inspection report, which will include the score and any violations.
+
+Let me know if you'd like help finding the link or guidance on how to look it up!"
+Q5,answer not in the documents,B,3,retail-food-inspection-guide#002;retail-food-inspection-guide#001;retail-food-inspection-guide#014,0.6366;0.6304;0.6192,retail-food-inspection-guide#002;retail-food-inspection-guide#001;retail-food-inspection-guide#014,,1439,,True,True,True,True,False,,False,88.21,"The provided context does not include specific information about the health inspection score for YUMMY KITCHEN (FA0206933) at 1711 Branham Ln in San Jose. Therefore, it is not possible to determine the score based on the given information. To find the score, you would need to consult the official Retail Food Official Inspection Report (FOIR) for that specific facility."
+Q5,answer not in the documents,C,3,retail-food-inspection-guide#002;retail-food-inspection-guide#001;retail-food-inspection-guide#014,0.6366;0.6304;0.6192,retail-food-inspection-guide#002;retail-food-inspection-guide#001;retail-food-inspection-guide#014,,1439,,True,True,True,True,True,,False,119.48,I cannot answer this question from the provided documents.
+Q6,unrelated,A,3,,,,,0,,False,False,False,False,False,,False,3.47,The capital city of Australia is **Canberra**.
+Q6,unrelated,B,3,retail-food-inspection-guide#183;retail-food-inspection-guide#182;retail-food-inspection-guide#184,0.4568;0.4541;0.4315,retail-food-inspection-guide#183;retail-food-inspection-guide#182;retail-food-inspection-guide#184,,1400,,False,False,False,False,False,,False,89.88,The capital city of Australia is Canberra.
+Q6,unrelated,C,3,retail-food-inspection-guide#183;retail-food-inspection-guide#182;retail-food-inspection-guide#184,0.4568;0.4541;0.4315,,retail-food-inspection-guide#183: irrelevant (score 0.457 < floor 0.6) | retail-food-inspection-guide#182: irrelevant (score 0.454 < floor 0.6) | retail-food-inspection-guide#184: irrelevant (score 0.431 < floor 0.6),0,,True,True,True,True,True,,True,0.0,I cannot answer this question from the provided documents.

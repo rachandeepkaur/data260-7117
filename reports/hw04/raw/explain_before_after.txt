@@ -1,0 +1,48 @@
+# EXPLAIN before/after - generated 2026-09-28T08:20:53.657850+00:00
+# MySQL 8.4.11, database s7117_rel
+# applied: CREATE INDEX ix_violations_inspection_id ON inspection_violations (inspection_id)
+
+====================================================================================================
+BEFORE - indexes on inspection_violations: [('PRIMARY', 'id')]
+
+-- naive_per_record_lookup: EXPLAIN SELECT id, inspection_id, violation_code, description, severity, points_deducted, observed_on FROM inspection_...
++----+-------------+-----------------------+-------+---------------+---------+---------+------+------+----------+-------------+
+| id | select_type | table                 | type  | possible_keys | key     | key_len | ref  | rows | filtered | Extra       |
++----+-------------+-----------------------+-------+---------------+---------+---------+------+------+----------+-------------+
+| 1  | SIMPLE      | inspection_violations | index | None          | PRIMARY | 4       | None | 200  | 10.0     | Using where |
++----+-------------+-----------------------+-------+---------------+---------+---------+------+------+----------+-------------+
+EXPLAIN ANALYZE:
+-> Filter: (inspection_violations.inspection_id = 42)  (cost=20.8 rows=20) (actual time=0.293..0.319 rows=1 loops=1)
+    -> Index scan on inspection_violations using PRIMARY  (cost=20.8 rows=200) (actual time=0.0205..0.29 rows=200 loops=1)
+
+-- fixed_selectin_lookup_page200: EXPLAIN SELECT id, inspection_id, violation_code, description, severity, points_deducted, observed_on FROM inspection_...
++----+-------------+-----------------------+-------+---------------+---------+---------+------+------+----------+-------------+
+| id | select_type | table                 | type  | possible_keys | key     | key_len | ref  | rows | filtered | Extra       |
++----+-------------+-----------------------+-------+---------------+---------+---------+------+------+----------+-------------+
+| 1  | SIMPLE      | inspection_violations | index | None          | PRIMARY | 4       | None | 200  | 50.0     | Using where |
++----+-------------+-----------------------+-------+---------------+---------+---------+------+------+----------+-------------+
+EXPLAIN ANALYZE:
+-> Filter: (inspection_violations.inspection_id in (1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,136,137,138,139,140,141,142,143,144,145,146,147,148,149,150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200))  (cost=20.8 rows=100) (actual time=0.022..0.134 rows=162 loops=1)
+    -> Index scan on inspection_violations using PRIMARY  (cost=20.8 rows=200) (actual time=0.0204..0.104 rows=200 loops=1)
+
+====================================================================================================
+AFTER - indexes on inspection_violations: [('PRIMARY', 'id'), ('ix_violations_inspection_id', 'inspection_id')]
+
+-- naive_per_record_lookup: EXPLAIN SELECT id, inspection_id, violation_code, description, severity, points_deducted, observed_on FROM inspection_...
++----+-------------+-----------------------+------+-----------------------------+-----------------------------+---------+-------+------+----------+-------+
+| id | select_type | table                 | type | possible_keys               | key                         | key_len | ref   | rows | filtered | Extra |
++----+-------------+-----------------------+------+-----------------------------+-----------------------------+---------+-------+------+----------+-------+
+| 1  | SIMPLE      | inspection_violations | ref  | ix_violations_inspection_id | ix_violations_inspection_id | 4       | const | 1    | 100.0    | None  |
++----+-------------+-----------------------+------+-----------------------------+-----------------------------+---------+-------+------+----------+-------+
+EXPLAIN ANALYZE:
+-> Index lookup on inspection_violations using ix_violations_inspection_id (inspection_id=42)  (cost=0.35 rows=1) (actual time=0.0207..0.0217 rows=1 loops=1)
+
+-- fixed_selectin_lookup_page200: EXPLAIN SELECT id, inspection_id, violation_code, description, severity, points_deducted, observed_on FROM inspection_...
++----+-------------+-----------------------+-------+-----------------------------+---------+---------+------+------+----------+-------------+
+| id | select_type | table                 | type  | possible_keys               | key     | key_len | ref  | rows | filtered | Extra       |
++----+-------------+-----------------------+-------+-----------------------------+---------+---------+------+------+----------+-------------+
+| 1  | SIMPLE      | inspection_violations | index | ix_violations_inspection_id | PRIMARY | 4       | None | 200  | 100.0    | Using where |
++----+-------------+-----------------------+-------+-----------------------------+---------+---------+------+------+----------+-------------+
+EXPLAIN ANALYZE:
+-> Filter: (inspection_violations.inspection_id in (1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,136,137,138,139,140,141,142,143,144,145,146,147,148,149,150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200))  (cost=20.8 rows=200) (actual time=0.0188..0.131 rows=162 loops=1)
+    -> Index scan on inspection_violations using PRIMARY  (cost=20.8 rows=200) (actual time=0.0171..0.1 rows=200 loops=1)

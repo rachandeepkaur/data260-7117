@@ -5,21 +5,26 @@ Page routes are Jinja2-templated and split across two routers:
 - routers/auth.py: "/login" (GET+POST), "/dashboard", "/logout", plus the
   session state (Starlette's SessionMiddleware, a signed HttpOnly,
   SameSite=Lax, Secure cookie) they all read/write.
-This file only wires up the middleware/routers and serves the JSON API for
-the records CRUD and the agent pipeline.
+- routers/api_auth.py: JSON login/logout for the React client (HW4) - email +
+  password checked against the MySQL `users` table, session stored in the
+  `sessions` table, opaque token in an HttpOnly cookie.
+- routers/records.py: MySQL-backed records CRUD (HW4; replaced the HW2
+  in-memory list).
+- routers/nplus1.py: naive vs. fixed list endpoints for the N+1 experiment.
+This file only wires up the middleware/routers and serves the agent pipeline.
+
+Runs on PORT_BASE = 8000 + (7117 mod 900) = 8817.
 """
 from __future__ import annotations
 
 import os
 import sys
 from pathlib import Path
-from typing import Optional
 
 import uvicorn
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
-from pydantic import BaseModel
 from starlette.middleware.sessions import SessionMiddleware
 
 THIS_DIR = Path(__file__).resolve().parent
@@ -34,18 +39,29 @@ from agents_demo import (
     PublishOutput,
     run_pipeline,
 )
+from routers.api_auth import router as api_auth_router
 from routers.auth import router as auth_router
 from routers.home import router as home_router
+from routers.nplus1 import router as nplus1_router
+from routers.records import router as records_router
+
+PORT_BASE = 8000 + (7117 % 900)  # 8817
 
 # Create FastAPI app
 app = FastAPI(title="Restaurant Inspection Records API")
 
-# Local dev only - the frontend and API run on different origins/ports here.
+# Local dev only - the React dev server (Vite, :5173) calls this API. The
+# session cookie needs allow_credentials, which can't be combined with a "*"
+# origin, so the allowed origins are listed explicitly.
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=os.getenv(
+        "CORS_ORIGINS", "http://localhost:5173,http://127.0.0.1:5173"
+    ).split(","),
+    allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
+    expose_headers=["X-Total-Count", "X-SQL-Query-Count", "X-Server-Time-Ms"],
 )
 
 # Secret key for session signing - set a real one via env in any deployment; this default is only for local dev, since it can't sign anything securely
@@ -64,61 +80,11 @@ app.add_middleware(
 # Register routes
 app.include_router(home_router)
 app.include_router(auth_router)
+app.include_router(api_auth_router)
+app.include_router(nplus1_router)
+app.include_router(records_router)
 
 _client = ModelClient()
-
-
-# --- In-memory record store (facility_name = primary field, site_address = secondary field) ---
-_records: list[dict] = [
-    {"id": 1, "facility_name": "FA0206933 - YUMMY KITCHEN", "site_address": "1711 BRANHAM LN A9, SAN JOSE, CA 95118"},
-    {"id": 2, "facility_name": "FA0198212 - GOLDEN WOK", "site_address": "455 E SANTA CLARA ST, SAN JOSE, CA 95112"},
-]
-_next_id = 3
-
-
-class RecordIn(BaseModel):
-    facility_name: str
-    site_address: str
-
-
-class RecordOut(RecordIn):
-    id: int
-
-
-class RecordUpdate(BaseModel):
-    facility_name: str
-
-
-@app.get("/api/records", response_model=list[RecordOut])
-def list_records() -> list[dict]:
-    return _records
-
-
-@app.post("/api/records", response_model=RecordOut, status_code=201)
-def create_record(payload: RecordIn) -> dict:
-    global _next_id
-    record = {"id": _next_id, **payload.model_dump()}
-    _records.append(record)
-    _next_id += 1
-    return record
-
-
-@app.put("/api/records/{record_id}", response_model=RecordOut)
-def update_record(record_id: int, payload: RecordUpdate) -> dict:
-    for record in _records:
-        if record["id"] == record_id:
-            record["facility_name"] = payload.facility_name
-            return record
-    raise HTTPException(status_code=404, detail=f"Record with id {record_id} not found")
-
-
-@app.delete("/api/records/highest", response_model=Optional[RecordOut])
-def delete_highest_record() -> Optional[dict]:
-    if not _records:
-        return None
-    highest = max(_records, key=lambda r: r["id"])
-    _records.remove(highest)
-    return highest
 
 
 # Post Api which gets the user input and send the analysis results back to the user
@@ -139,4 +105,4 @@ app.mount("/", StaticFiles(directory=THIS_DIR), name="static")
 
 
 if __name__ == "__main__":
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    uvicorn.run(app, host="0.0.0.0", port=PORT_BASE)

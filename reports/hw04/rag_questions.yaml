@@ -1,0 +1,91 @@
+# HW4 Part 4 test set. Written before any RAG run.
+#
+# retrieval_groups: every group must be matched (regex, case-insensitive) by
+#   at least one chunk placed in the prompt for "correct retrieval".
+# answer_groups: every group must be matched in the model's answer for
+#   "correct answer".
+# must_refuse: the question must be refused (Q5, Q6).
+questions:
+  - id: Q1
+    type: answer in one chunk
+    text: >-
+      According to the Los Angeles County Retail Food Inspection Guide, what final routine inspection
+      score range earns a food facility a "B" letter grade?
+    expected_answer: A "B" letter grade is a final routine inspection score between 80 and 89.
+    expected_sources: [retail-food-inspection-guide.txt]
+    retrieval_groups:
+      - '80\s*[-–]\s*89'
+    answer_groups:
+      - '80\s*(?:[-–]|to|and)\s*89'
+    must_refuse: false
+
+  - id: Q2
+    type: answer needs two chunks
+    text: >-
+      In the Dat Thanh Restaurant inspection report, what temperature did the 5-gallon buckets measure
+      while cooling at room temperature, and according to the FSIS guidance described in the danger zone
+      article, after how long in the danger zone should food no longer be consumed?
+    expected_answer: >-
+      The buckets measured 155F (print1.txt, cooling methods violation); FSIS says food that remains in
+      the danger zone for more than two hours should not be consumed (Wikipedia danger zone article).
+    expected_sources: [print1.txt, wikipedia-danger-zone-food-safety.txt]
+    retrieval_groups:
+      - '155\s*°?\s*F'
+      - 'more than two hours'
+    answer_groups:
+      - '155'
+      - '(two|2)\s*hours'
+    must_refuse: false
+
+  - id: Q3
+    type: similar information across documents
+    text: >-
+      At or below what temperature must potentially hazardous food be held when it is cold-held?
+    expected_answer: >-
+      41°F or below (both county guides; the inspection reports also log 41F). The Wikipedia danger-zone
+      article gives a similar but different figure (FSIS danger zone starting at 40°F), which should not
+      replace the California 41°F rule.
+    expected_sources: [abc-retail-food-inspection-guide.pdf.txt, retail-food-inspection-guide.txt]
+    retrieval_groups:
+      - '(at or )?below 41\s*°?\s*F|41\s*°?\s*F or below'
+    answer_groups:
+      - '41'
+    must_refuse: false
+
+  - id: Q4
+    type: ambiguous
+    text: >-
+      What happens if a restaurant gets a C?
+    expected_answer: >-
+      Ambiguous - it depends on the jurisdiction/document. In San Bernardino County a "C" means the
+      violations must be corrected and the facility must submit a written request for a re-score
+      inspection within 30 days to avoid closure; in LA County a "C" is a score of 70-79 posted as a
+      letter grade. A good answer flags the ambiguity or answers per county, with sources.
+    expected_sources: [abc-retail-food-inspection-guide.pdf.txt, retail-food-inspection-guide.txt]
+    retrieval_groups:
+      - 're-score|70\s*[-–]\s*79'
+    answer_groups:
+      - 're-?score|70\s*(?:[-–]|to|and)\s*79'
+    ambiguity_markers: 'San Bernardino.*(Los Angeles|LA County)|(Los Angeles|LA County).*San Bernardino|depend|ambiguous|varies|which (county|jurisdiction)'
+    must_refuse: false
+
+  - id: Q5
+    type: answer not in the documents
+    text: >-
+      What score did YUMMY KITCHEN (FA0206933) at 1711 Branham Ln in San Jose receive on its most recent
+      health inspection?
+    expected_answer: Not in the corpus (no document mentions this facility) - must refuse.
+    expected_sources: []
+    retrieval_groups: []
+    answer_groups: []
+    must_refuse: true
+
+  - id: Q6
+    type: unrelated
+    text: >-
+      What is the capital city of Australia?
+    expected_answer: Unrelated to the corpus - must refuse.
+    expected_sources: []
+    retrieval_groups: []
+    answer_groups: []
+    must_refuse: true

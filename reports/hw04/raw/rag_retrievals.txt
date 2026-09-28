@@ -1,0 +1,104 @@
+[2026-09-28T20:36:38.784402+00:00] HW4 RAG run; model=qwen3:8b, embed=BAAI/bge-small-en-v1.5, chunk_size=500, chunk_overlap=50, top_k=3, seed=7117
+Corpus: 6 documents -> 308 chunks
+  abc-retail-food-inspection-guide.pdf.txt       145,155 chars    78 chunks
+  print.txt                                        3,316 chars     2 chunks
+  print1.txt                                       6,184 chars     4 chunks
+  retail-food-inspection-guide.txt               439,563 chars   218 chunks
+  wikipedia-danger-zone-food-safety.txt            4,469 chars     3 chunks
+  wikipedia-restaurant-rating.txt                  6,380 chars     3 chunks
+
+====================================================================================================
+[Q1] top-3 retrieval for: According to the Los Angeles County Retail Food Inspection Guide, what final routine inspection score range earns a food facility a "B" letter grade?
+  #1  score=0.8173  source=wikipedia-restaurant-rating.txt  chunk_id=wikipedia-restaurant-rating#002
+      As a result of this report, in December 1997 the Board of Supervisors of Los Angeles County introduced a letter grading system already in use for some years in two other nearby counties, San Diego County and Riverside County. Instead of merely listing violatio...
+  #2  score=0.8167  source=retail-food-inspection-guide.txt  chunk_id=retail-food-inspection-guide#014
+      The current Letter Grade/Score Cards have been combined with the public notification requirements. A food facility will be issued one of the following by the EHS at the time of inspection: Placard Type Description “A” Letter Grade Final routine inspection scor...
+  #3  score=0.7840  source=abc-retail-food-inspection-guide.pdf.txt  chunk_id=abc-retail-food-inspection-guide.pdf#009
+      Point values are totaled and subtracted from a value of 100 points. The resulting score is used in determining a facility’s letter grade and reflects the status of the food facility at the time of the inspection. Beginning of the Inspection: 100 points Total P...
+  config C keeps ['wikipedia-restaurant-rating#002', 'retail-food-inspection-guide#014', 'abc-retail-food-inspection-guide.pdf#009']; drops []
+
+====================================================================================================
+[Q2] top-1 retrieval for: In the Dat Thanh Restaurant inspection report, what temperature did the 5-gallon buckets measure while cooling at room temperature, and according to the FSIS guidance described in the danger zone article, after how long in the danger zone should food no longer be consumed?
+  #1  score=0.7789  source=wikipedia-danger-zone-food-safety.txt  chunk_id=wikipedia-danger-zone-food-safety#001
+      == Description == In regards to food safety, the terms danger zone or temperature danger zone refer to temperature range in which food-borne bacteria can grow. Food safety agencies, such as the United States' Food Safety and Inspection Service (FSIS), define t...
+
+====================================================================================================
+[Q2] top-3 retrieval for: In the Dat Thanh Restaurant inspection report, what temperature did the 5-gallon buckets measure while cooling at room temperature, and according to the FSIS guidance described in the danger zone article, after how long in the danger zone should food no longer be consumed?
+  #1  score=0.7789  source=wikipedia-danger-zone-food-safety.txt  chunk_id=wikipedia-danger-zone-food-safety#001
+      == Description == In regards to food safety, the terms danger zone or temperature danger zone refer to temperature range in which food-borne bacteria can grow. Food safety agencies, such as the United States' Food Safety and Inspection Service (FSIS), define t...
+  #2  score=0.7699  source=retail-food-inspection-guide.txt  chunk_id=retail-food-inspection-guide#196
+      Does equipment play a role in the violation? What are the ingredients in the food and how was it made? How long before the food will be served? Will the food be saved as leftovers? 9. Time as a public health control; procedures & records How do employees effec...
+  #3  score=0.7671  source=print1.txt  chunk_id=print1#000
+      Pag1 Iteration Violation1b.FOOD SAFETY CERTIFICATION Observations: Food safety certificate observed to be expired. Obtain within 30 days. Code Description: Food facilities that prepare, handle, or serve non-prepackaged potentially hazardous food, shall have an...
+  config C keeps ['wikipedia-danger-zone-food-safety#001', 'retail-food-inspection-guide#196', 'print1#000']; drops []
+
+====================================================================================================
+[Q2] top-5 retrieval for: In the Dat Thanh Restaurant inspection report, what temperature did the 5-gallon buckets measure while cooling at room temperature, and according to the FSIS guidance described in the danger zone article, after how long in the danger zone should food no longer be consumed?
+  #1  score=0.7789  source=wikipedia-danger-zone-food-safety.txt  chunk_id=wikipedia-danger-zone-food-safety#001
+      == Description == In regards to food safety, the terms danger zone or temperature danger zone refer to temperature range in which food-borne bacteria can grow. Food safety agencies, such as the United States' Food Safety and Inspection Service (FSIS), define t...
+  #2  score=0.7699  source=retail-food-inspection-guide.txt  chunk_id=retail-food-inspection-guide#196
+      Does equipment play a role in the violation? What are the ingredients in the food and how was it made? How long before the food will be served? Will the food be saved as leftovers? 9. Time as a public health control; procedures & records How do employees effec...
+  #3  score=0.7671  source=print1.txt  chunk_id=print1#000
+      Pag1 Iteration Violation1b.FOOD SAFETY CERTIFICATION Observations: Food safety certificate observed to be expired. Obtain within 30 days. Code Description: Food facilities that prepare, handle, or serve non-prepackaged potentially hazardous food, shall have an...
+  #4  score=0.7653  source=wikipedia-danger-zone-food-safety.txt  chunk_id=wikipedia-danger-zone-food-safety#000
+      Source: Wikipedia, "Danger zone (food safety)" (revision 1374631635), https://en.wikipedia.org/wiki/Danger_zone_(food_safety), CC BY-SA 4.0, accessed 2026-09-28 The danger zone is the temperature range in which food-borne bacteria can readily grow. Food safety...
+  #5  score=0.7650  source=abc-retail-food-inspection-guide.pdf.txt  chunk_id=abc-retail-food-inspection-guide.pdf#022
+      Cooling shall be by one or more of the following methods: in shallow containers, separating food into smaller portions, adding ice as an ingredient, using an ice bath, stirring frequently, using rapid cooling equipment, or using containers that facilitate heat...
+
+====================================================================================================
+[Q3] top-1 retrieval for: At or below what temperature must potentially hazardous food be held when it is cold-held?
+  #1  score=0.8098  source=retail-food-inspection-guide.txt  chunk_id=retail-food-inspection-guide#039
+       Pasteurized milk in original, sealed containers, pasteurized milk products in original, sealed containers, raw shell eggs, and un-shucked live molluscan shellfish may be received and maintained at an ambient temperature of 45°F or less.  Hot and cold holdin...
+
+====================================================================================================
+[Q3] top-3 retrieval for: At or below what temperature must potentially hazardous food be held when it is cold-held?
+  #1  score=0.8098  source=retail-food-inspection-guide.txt  chunk_id=retail-food-inspection-guide#039
+       Pasteurized milk in original, sealed containers, pasteurized milk products in original, sealed containers, raw shell eggs, and un-shucked live molluscan shellfish may be received and maintained at an ambient temperature of 45°F or less.  Hot and cold holdin...
+  #2  score=0.8074  source=retail-food-inspection-guide.txt  chunk_id=retail-food-inspection-guide#038
+       Food may be removed from specified holding temperatures for a cumulative time period of up to two hours to facilitate food preparation.  Food temperature measuring devices that are scaled only in Celsius or dually scaled in Celsius and Fahrenheit must be ac...
+  #3  score=0.7976  source=abc-retail-food-inspection-guide.pdf.txt  chunk_id=abc-retail-food-inspection-guide.pdf#022
+      Cooling shall be by one or more of the following methods: in shallow containers, separating food into smaller portions, adding ice as an ingredient, using an ice bath, stirring frequently, using rapid cooling equipment, or using containers that facilitate heat...
+  config C keeps ['retail-food-inspection-guide#039', 'retail-food-inspection-guide#038', 'abc-retail-food-inspection-guide.pdf#022']; drops []
+
+====================================================================================================
+[Q3] top-5 retrieval for: At or below what temperature must potentially hazardous food be held when it is cold-held?
+  #1  score=0.8098  source=retail-food-inspection-guide.txt  chunk_id=retail-food-inspection-guide#039
+       Pasteurized milk in original, sealed containers, pasteurized milk products in original, sealed containers, raw shell eggs, and un-shucked live molluscan shellfish may be received and maintained at an ambient temperature of 45°F or less.  Hot and cold holdin...
+  #2  score=0.8074  source=retail-food-inspection-guide.txt  chunk_id=retail-food-inspection-guide#038
+       Food may be removed from specified holding temperatures for a cumulative time period of up to two hours to facilitate food preparation.  Food temperature measuring devices that are scaled only in Celsius or dually scaled in Celsius and Fahrenheit must be ac...
+  #3  score=0.7976  source=abc-retail-food-inspection-guide.pdf.txt  chunk_id=abc-retail-food-inspection-guide.pdf#022
+      Cooling shall be by one or more of the following methods: in shallow containers, separating food into smaller portions, adding ice as an ingredient, using an ice bath, stirring frequently, using rapid cooling equipment, or using containers that facilitate heat...
+  #4  score=0.7945  source=retail-food-inspection-guide.txt  chunk_id=retail-food-inspection-guide#042
+      The conservative nature of the 4-hour limit for keeping foods without temperature control allows for a needed margin of safety if the temperature of the environment is higher than 75°F. It is important to note that time/temperature control for foods held witho...
+  #5  score=0.7939  source=wikipedia-danger-zone-food-safety.txt  chunk_id=wikipedia-danger-zone-food-safety#001
+      == Description == In regards to food safety, the terms danger zone or temperature danger zone refer to temperature range in which food-borne bacteria can grow. Food safety agencies, such as the United States' Food Safety and Inspection Service (FSIS), define t...
+
+====================================================================================================
+[Q4] top-3 retrieval for: What happens if a restaurant gets a C?
+  #1  score=0.7072  source=retail-food-inspection-guide.txt  chunk_id=retail-food-inspection-guide#099
+      OUT – “OUT” shall be marked if a PIC is not present to perform their duties during hours of operation. Examples of violations include: • A PIC is not present during operational hours. [§113945(a)] • PIC allows people unnecessary to the food facility operation ...
+  #2  score=0.7022  source=wikipedia-restaurant-rating.txt  chunk_id=wikipedia-restaurant-rating#002
+      As a result of this report, in December 1997 the Board of Supervisors of Los Angeles County introduced a letter grading system already in use for some years in two other nearby counties, San Diego County and Riverside County. Instead of merely listing violatio...
+  #3  score=0.6971  source=retail-food-inspection-guide.txt  chunk_id=retail-food-inspection-guide#025
+      N/A – “N/A” shall be marked if a food facility only handles prepackaged food items. N/O – “N/O” shall be marked in the RARE case when there are no food employees present at the time of inspection. OUT – This violation category shall be marked MAJOR; example in...
+  config C keeps ['retail-food-inspection-guide#099', 'wikipedia-restaurant-rating#002', 'retail-food-inspection-guide#025']; drops []
+
+====================================================================================================
+[Q5] top-3 retrieval for: What score did YUMMY KITCHEN (FA0206933) at 1711 Branham Ln in San Jose receive on its most recent health inspection?
+  #1  score=0.6366  source=retail-food-inspection-guide.txt  chunk_id=retail-food-inspection-guide#002
+      Purpose This guide is designed to support EHS during retail food inspections and to help food facility operators understand essential food safety practices, principles, and procedures. Its primary aim is to ensure facilities comply with the California Retail F...
+  #2  score=0.6304  source=retail-food-inspection-guide.txt  chunk_id=retail-food-inspection-guide#001
+      The food industry and the Los Angeles County Department of Public Health's Environmental Health Division share the crucial responsibility of ensuring that food provided to consumers is safe and free from contaminants that could lead to foodborne illness outbre...
+  #3  score=0.6192  source=retail-food-inspection-guide.txt  chunk_id=retail-food-inspection-guide#014
+      The current Letter Grade/Score Cards have been combined with the public notification requirements. A food facility will be issued one of the following by the EHS at the time of inspection: Placard Type Description “A” Letter Grade Final routine inspection scor...
+  config C keeps ['retail-food-inspection-guide#002', 'retail-food-inspection-guide#001', 'retail-food-inspection-guide#014']; drops []
+
+====================================================================================================
+[Q6] top-3 retrieval for: What is the capital city of Australia?
+  #1  score=0.4568  source=retail-food-inspection-guide.txt  chunk_id=retail-food-inspection-guide#183
+      Los Angeles, CA 90010-2313 (213) 351-7352 Fax: (213) 351-2789 West Valley 14500 Roscoe Blvd., 5th Fl. Panorama City, CA 91401 (818) 672-2293 Fax: (818) 672-2101 West Office 6101 W. Centinela Ave., Ste. 300, Culver City, CA 90230 (310) 410-3448 Fax: (310) 348-0...
+  #2  score=0.4541  source=retail-food-inspection-guide.txt  chunk_id=retail-food-inspection-guide#182
+      Room Panorama City, CA 91402 (818) 672-2258 Fax: (818) 672-2102 Whittier Office 12440 E. Imperial Hwy., Room 515 Norwalk, CA 90650 (562) 345-3451 Fax: (562) 409-5074 Norwalk Office 12440 E. Imperial Hwy., Room 519 Norwalk, CA 90650 (562) 345-3441 Fax: (562) 40...
+  #3  score=0.4315  source=retail-food-inspection-guide.txt  chunk_id=retail-food-inspection-guide#184
+      # 145, Santa Clarita, CA 91350 (661) 287-7000 Fax: Fax: (626) 813-3017 ENVIRONMENTAL HEALTH COMMUNITY PROTECTION BRANCH OUTBREAK INVESTIGATION & EVALUATION UNIT Conducts foodborne illness outbreak investigations Baldwin Park 5050 Commerce Drive Baldwin Park, C...
+  config C keeps []; drops [('retail-food-inspection-guide#183', 'irrelevant (score 0.457 < floor 0.6)'), ('retail-food-inspection-guide#182', 'irrelevant (score 0.454 < floor 0.6)'), ('retail-food-inspection-guide#184', 'irrelevant (score 0.431 < floor 0.6)')]
