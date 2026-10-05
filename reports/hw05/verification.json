@@ -1,9 +1,9 @@
 {
   "homework": 5,
   "sid4": 7117,
-  "commit": "c07b5b37bef8d0e6b47ec91550472da802d6b4df",
-  "tag_hw5": null,
-  "generated_at": "2026-10-05T08:17:21.375808+00:00",
+  "commit": "f63e514d8328c810266d1e860b632eb1bd80110b",
+  "tag_hw5": "f63e514d8328c810266d1e860b632eb1bd80110b",
+  "generated_at": "2026-10-05T21:05:48.850854+00:00",
   "configuration": {
     "PORT_BASE": 8817,
     "PREFIX": "s7117",
@@ -55,7 +55,7 @@
       "name": "mysql_schema",
       "description": "s7117_rel: inspectors exists; inspections has unique code + FK ON DELETE RESTRICT",
       "passed": true,
-      "evidence": "inspectors=20 delete_rule=RESTRICT unique_code_index=True"
+      "evidence": "inspectors=21 delete_rule=RESTRICT unique_code_index=True"
     },
     {
       "name": "backend_on_port_base",
