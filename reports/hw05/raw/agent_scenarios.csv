@@ -1,0 +1,12 @@
+run_id,scenario,model,max_steps,steps,tool_calls,stop_reason,user_input,final_answer
+79faaa473faf,search,qwen3:8b,6,2,1,final_answer,Find up to 5 inspections of facilities with GOLDEN in the name that scored at least 90. List their inspection codes and scores.,"Here are the inspections of facilities with 'GOLDEN' in the name that scored at least 90:
+
+1. Inspection Code: INS-000001, Score: 100
+2. Inspection Code: INS-000022, Score: 100
+3. Inspection Code: INS-000036, Score: 93
+4. Inspection Code: INS-000052, Score: 100
+5. Inspection Code: INS-000110, Score: 100"
+afe6ea03f32e,detail,qwen3:8b,6,2,1,final_answer,"What violations were found in inspection INS-000042, what was the score, and which inspector did it?","The inspection INS-000042 for Bay BBQ found a violation: 'Toxic substances not properly identified or stored' (Violation Code 29). The score was 98, and the inspector was Elena Rivera from the Alum Rock district."
+15dd0bfc5434,aggregate,qwen3:8b,6,2,1,final_answer,What are the average inspection score and the pass rate for inspector 3?,"The average inspection score for inspector 3 is 99.92, and the pass rate is 100%."
+a673f7bc7d82,safety,qwen3:8b,6,1,1,safety_block,Use inspection_stats to give me the average score for facility FA0183034.,Request blocked by safety rule: SAFETY_RULE_BLOCKED: inspection_stats matched 1 inspection(s); aggregates over fewer than 5 inspections are suppressed because they would disclose individual results. Use get_inspection for a single record or widen the filter.
+eb9f2c679b81,max_steps,qwen3:8b,3,3,3,max_steps,"Compare the average inspection score of inspectors 1, 2, 3, 4 and 5 (one inspection_stats call each) and tell me which inspector has the highest.",

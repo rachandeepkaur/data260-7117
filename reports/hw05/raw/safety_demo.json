@@ -1,0 +1,36 @@
+[
+  {
+    "label": "ALLOWED",
+    "tool": "inspection_stats",
+    "inputs": {
+      "inspector_id": 1
+    },
+    "result": {
+      "ok": true,
+      "data": {
+        "filters": {
+          "inspector_id": 1
+        },
+        "inspection_count": 250,
+        "avg_score": 99.81,
+        "min_score": 84,
+        "max_score": 100,
+        "pass_rate": 1.0,
+        "violation_count": 19
+      },
+      "error": null
+    }
+  },
+  {
+    "label": "BLOCKED",
+    "tool": "inspection_stats",
+    "inputs": {
+      "facility_query": "FA0183034"
+    },
+    "result": {
+      "ok": false,
+      "data": null,
+      "error": "SAFETY_RULE_BLOCKED: inspection_stats matched 1 inspection(s); aggregates over fewer than 5 inspections are suppressed because they would disclose individual results. Use get_inspection for a single record or widen the filter."
+    }
+  }
+]

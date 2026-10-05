@@ -1,0 +1,678 @@
+{
+  "info": {
+    "name": "HW5 s7117 Inspections + Inspectors",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": "Run the requests in numbered order (or use Run collection). 01 Login stores the HttpOnly session cookie; 02/06 save the new ids in {{inspector_id}} / {{record_id}} for the later requests."
+  },
+  "item": [
+    {
+      "name": "01 Login",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://127.0.0.1:8817/api/auth/login",
+          "protocol": "http",
+          "host": [
+            "127.0.0.1"
+          ],
+          "port": "8817",
+          "path": [
+            "api",
+            "auth",
+            "login"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"email\": \"demo@s7117.dev\",\n  \"password\": \"Inspect!7117\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "02 Create inspector",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://127.0.0.1:8817/api/inspectors",
+          "protocol": "http",
+          "host": [
+            "127.0.0.1"
+          ],
+          "port": "8817",
+          "path": [
+            "api",
+            "inspectors"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"full_name\": \"Rachandeep Kaur\",\n  \"district\": \"Downtown San Jose\",\n  \"email\": \"rachandeep.kaur@sccgov-eh.org\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.collectionVariables.set(\"inspector_id\", pm.response.json().id);"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "03 List inspectors (paginated)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8817/api/inspectors?page=1&page_size=5",
+          "protocol": "http",
+          "host": [
+            "127.0.0.1"
+          ],
+          "port": "8817",
+          "path": [
+            "api",
+            "inspectors"
+          ],
+          "query": [
+            {
+              "key": "page",
+              "value": "1"
+            },
+            {
+              "key": "page_size",
+              "value": "5"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "04 Get inspector",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8817/api/inspectors/{{inspector_id}}",
+          "protocol": "http",
+          "host": [
+            "127.0.0.1"
+          ],
+          "port": "8817",
+          "path": [
+            "api",
+            "inspectors",
+            "{{inspector_id}}"
+          ]
+        }
+      }
+    },
+    {
+      "name": "05 Update inspector",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://127.0.0.1:8817/api/inspectors/{{inspector_id}}",
+          "protocol": "http",
+          "host": [
+            "127.0.0.1"
+          ],
+          "port": "8817",
+          "path": [
+            "api",
+            "inspectors",
+            "{{inspector_id}}"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"district\": \"Willow Glen\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "06 Create inspection (linked to new inspector)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://127.0.0.1:8817/api/records",
+          "protocol": "http",
+          "host": [
+            "127.0.0.1"
+          ],
+          "port": "8817",
+          "path": [
+            "api",
+            "records"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"inspection_code\": \"INS-005001\",\n  \"facility_name\": \"FA0206933 - YUMMY KITCHEN\",\n  \"site_address\": \"1711 BRANHAM LN A9, SAN JOSE, CA 95118\",\n  \"score\": 94,\n  \"inspector_id\": {{inspector_id}}\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.collectionVariables.set(\"record_id\", pm.response.json().id);"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "07 List inspections",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8817/api/records?limit=10&offset=0",
+          "protocol": "http",
+          "host": [
+            "127.0.0.1"
+          ],
+          "port": "8817",
+          "path": [
+            "api",
+            "records"
+          ],
+          "query": [
+            {
+              "key": "limit",
+              "value": "10"
+            },
+            {
+              "key": "offset",
+              "value": "0"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "08 Get inspection",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8817/api/records/{{record_id}}",
+          "protocol": "http",
+          "host": [
+            "127.0.0.1"
+          ],
+          "port": "8817",
+          "path": [
+            "api",
+            "records",
+            "{{record_id}}"
+          ]
+        }
+      }
+    },
+    {
+      "name": "09 Update inspection",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://127.0.0.1:8817/api/records/{{record_id}}",
+          "protocol": "http",
+          "host": [
+            "127.0.0.1"
+          ],
+          "port": "8817",
+          "path": [
+            "api",
+            "records",
+            "{{record_id}}"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"score\": 88\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "10 Relationship: inspections of new inspector",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8817/api/inspectors/{{inspector_id}}/inspections",
+          "protocol": "http",
+          "host": [
+            "127.0.0.1"
+          ],
+          "port": "8817",
+          "path": [
+            "api",
+            "inspectors",
+            "{{inspector_id}}",
+            "inspections"
+          ]
+        }
+      }
+    },
+    {
+      "name": "11 Relationship: inspections of inspector 1",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8817/api/inspectors/1/inspections?limit=10&offset=0",
+          "protocol": "http",
+          "host": [
+            "127.0.0.1"
+          ],
+          "port": "8817",
+          "path": [
+            "api",
+            "inspectors",
+            "1",
+            "inspections"
+          ],
+          "query": [
+            {
+              "key": "limit",
+              "value": "10"
+            },
+            {
+              "key": "offset",
+              "value": "0"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "12 ERR delete inspector that still has inspections -> 409",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8817/api/inspectors/{{inspector_id}}",
+          "protocol": "http",
+          "host": [
+            "127.0.0.1"
+          ],
+          "port": "8817",
+          "path": [
+            "api",
+            "inspectors",
+            "{{inspector_id}}"
+          ]
+        }
+      }
+    },
+    {
+      "name": "13 ERR invalid email -> 422",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://127.0.0.1:8817/api/inspectors",
+          "protocol": "http",
+          "host": [
+            "127.0.0.1"
+          ],
+          "port": "8817",
+          "path": [
+            "api",
+            "inspectors"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"full_name\": \"Bad Email\",\n  \"district\": \"Evergreen\",\n  \"email\": \"not-an-email\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "14 ERR duplicate email -> 409",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://127.0.0.1:8817/api/inspectors",
+          "protocol": "http",
+          "host": [
+            "127.0.0.1"
+          ],
+          "port": "8817",
+          "path": [
+            "api",
+            "inspectors"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"full_name\": \"Duplicate\",\n  \"district\": \"Evergreen\",\n  \"email\": \"rachandeep.kaur@sccgov-eh.org\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "15 ERR inspector not found -> 404",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8817/api/inspectors/999999",
+          "protocol": "http",
+          "host": [
+            "127.0.0.1"
+          ],
+          "port": "8817",
+          "path": [
+            "api",
+            "inspectors",
+            "999999"
+          ]
+        }
+      }
+    },
+    {
+      "name": "16 ERR bad inspection_code format -> 422",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://127.0.0.1:8817/api/records",
+          "protocol": "http",
+          "host": [
+            "127.0.0.1"
+          ],
+          "port": "8817",
+          "path": [
+            "api",
+            "records"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"inspection_code\": \"12345\",\n  \"facility_name\": \"X\",\n  \"site_address\": \"Y\",\n  \"inspector_id\": 1\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "17 ERR duplicate inspection_code -> 409",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://127.0.0.1:8817/api/records",
+          "protocol": "http",
+          "host": [
+            "127.0.0.1"
+          ],
+          "port": "8817",
+          "path": [
+            "api",
+            "records"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"inspection_code\": \"INS-000001\",\n  \"facility_name\": \"X\",\n  \"site_address\": \"Y\",\n  \"inspector_id\": 1\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "18 ERR unknown inspector_id -> 422",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://127.0.0.1:8817/api/records",
+          "protocol": "http",
+          "host": [
+            "127.0.0.1"
+          ],
+          "port": "8817",
+          "path": [
+            "api",
+            "records"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"inspection_code\": \"INS-005002\",\n  \"facility_name\": \"X\",\n  \"site_address\": \"Y\",\n  \"inspector_id\": 999\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "19 ERR score out of range -> 422",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://127.0.0.1:8817/api/records/{{record_id}}",
+          "protocol": "http",
+          "host": [
+            "127.0.0.1"
+          ],
+          "port": "8817",
+          "path": [
+            "api",
+            "records",
+            "{{record_id}}"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"score\": 150\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "20 ERR inspection not found -> 404",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8817/api/records/999999",
+          "protocol": "http",
+          "host": [
+            "127.0.0.1"
+          ],
+          "port": "8817",
+          "path": [
+            "api",
+            "records",
+            "999999"
+          ]
+        }
+      }
+    },
+    {
+      "name": "21 Delete inspection",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8817/api/records/{{record_id}}",
+          "protocol": "http",
+          "host": [
+            "127.0.0.1"
+          ],
+          "port": "8817",
+          "path": [
+            "api",
+            "records",
+            "{{record_id}}"
+          ]
+        }
+      }
+    },
+    {
+      "name": "22 Delete inspector (now unreferenced)",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8817/api/inspectors/{{inspector_id}}",
+          "protocol": "http",
+          "host": [
+            "127.0.0.1"
+          ],
+          "port": "8817",
+          "path": [
+            "api",
+            "inspectors",
+            "{{inspector_id}}"
+          ]
+        }
+      }
+    },
+    {
+      "name": "23 ERR deleted inspector -> 404",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8817/api/inspectors/{{inspector_id}}",
+          "protocol": "http",
+          "host": [
+            "127.0.0.1"
+          ],
+          "port": "8817",
+          "path": [
+            "api",
+            "inspectors",
+            "{{inspector_id}}"
+          ]
+        }
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "inspector_id",
+      "value": ""
+    },
+    {
+      "key": "record_id",
+      "value": ""
+    }
+  ]
+}

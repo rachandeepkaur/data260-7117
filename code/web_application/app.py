@@ -9,7 +9,9 @@ Page routes are Jinja2-templated and split across two routers:
   password checked against the MySQL `users` table, session stored in the
   `sessions` table, opaque token in an HttpOnly cookie.
 - routers/records.py: MySQL-backed records CRUD (HW4; replaced the HW2
-  in-memory list).
+  in-memory list; HW5 adds inspection_code, score, inspector_id).
+- routers/inspectors.py: inspectors CRUD + /{id}/inspections relationship
+  query (HW5, the related entity).
 - routers/nplus1.py: naive vs. fixed list endpoints for the N+1 experiment.
 This file only wires up the middleware/routers and serves the agent pipeline.
 
@@ -42,6 +44,7 @@ from agents_demo import (
 from routers.api_auth import router as api_auth_router
 from routers.auth import router as auth_router
 from routers.home import router as home_router
+from routers.inspectors import router as inspectors_router
 from routers.nplus1 import router as nplus1_router
 from routers.records import router as records_router
 
@@ -83,6 +86,7 @@ app.include_router(auth_router)
 app.include_router(api_auth_router)
 app.include_router(nplus1_router)
 app.include_router(records_router)
+app.include_router(inspectors_router)
 
 _client = ModelClient()
 

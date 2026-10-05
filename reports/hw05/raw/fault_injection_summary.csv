@@ -1,0 +1,4 @@
+failure_rate,calls,successes,success_rate,mean_latency_ms,p99_latency_ms,total_attempts,injected_failures,reproducible
+0%,50,50,1.0,12.07,237.63,50,0,True
+20%,50,50,1.0,13.19,211.81,54,4,True
+50%,50,47,0.94,83.61,312.94,80,33,True

@@ -1,0 +1,495 @@
+
+===== [2026-10-04 21:44:46 PDT] make migrate-hw05 (user: rachandeep Kaur) =====
+inspectors table: ok
+seeded 20 inspectors (SEED=7117)
+inspections: added inspection_code, score, inspector_id, created_at, updated_at
+backfilled 5000 inspections
+inspections: NOT NULL + UNIQUE(inspection_code) + CHECK(score) + FK -> inspectors (ON DELETE RESTRICT)
+CREATE TABLE `inspectors` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `full_name` varchar(120) NOT NULL,
+  `district` varchar(120) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `created_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `updated_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uq_inspectors_email` (`email`)
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+CREATE TABLE `inspections` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `inspection_code` varchar(16) NOT NULL,
+  `facility_name` varchar(255) NOT NULL,
+  `site_address` varchar(255) NOT NULL,
+  `score` int NOT NULL DEFAULT '100',
+  `inspector_id` int NOT NULL,
+  `created_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `updated_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uq_inspections_code` (`inspection_code`),
+  KEY `fk_inspections_inspector` (`inspector_id`),
+  CONSTRAINT `fk_inspections_inspector` FOREIGN KEY (`inspector_id`) REFERENCES `inspectors` (`id`) ON DELETE RESTRICT ON UPDATE CASCADE,
+  CONSTRAINT `ck_inspections_score` CHECK ((`score` between 0 and 100))
+) ENGINE=InnoDB AUTO_INCREMENT=5001 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+row counts: inspectors=20 inspections=5000
+
+===== [2026-10-04 21:56:00 PDT] make migrate-hw05 (user: rachandeep Kaur) =====
+inspectors table: ok
+inspectors already seeded - skipped
+inspections columns already present - skipped
+backfilled 0 inspections
+constraints already present - skipped
+CREATE TABLE `inspectors` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `full_name` varchar(120) NOT NULL,
+  `district` varchar(120) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `created_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `updated_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uq_inspectors_email` (`email`)
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+CREATE TABLE `inspections` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `inspection_code` varchar(16) NOT NULL,
+  `facility_name` varchar(255) NOT NULL,
+  `site_address` varchar(255) NOT NULL,
+  `score` int NOT NULL DEFAULT '100',
+  `inspector_id` int NOT NULL,
+  `created_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `updated_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uq_inspections_code` (`inspection_code`),
+  KEY `fk_inspections_inspector` (`inspector_id`),
+  CONSTRAINT `fk_inspections_inspector` FOREIGN KEY (`inspector_id`) REFERENCES `inspectors` (`id`) ON DELETE RESTRICT ON UPDATE CASCADE,
+  CONSTRAINT `ck_inspections_score` CHECK ((`score` between 0 and 100))
+) ENGINE=InnoDB AUTO_INCREMENT=5001 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+row counts: inspectors=20 inspections=5000
+
+===== [2026-10-04 21:56:50 PDT] make api-demo-hw05 (user: rachandeep Kaur) =====
+[PASS] login: POST /api/auth/login -> 200
+       {"id": 1, "name": "Rachandeep Kaur", "email": "demo@s7117.dev"}
+
+-- Inspectors (related entity)
+[PASS] create inspector: POST /api/inspectors -> 201
+       {"id": 21, "full_name": "Rachandeep Kaur", "district": "Downtown San Jose", "email": "rachandeep.kaur@sccgov-eh.org", "created_at": "2026-10-05T04:56:51", "updated_at": "2026-10-05T04:56:51"}
+[PASS] list inspectors page 1: GET /api/inspectors?page=1&page_size=5 -> 200 (X-Total-Count 21)
+       [{"id": 1, "full_name": "Linh Nguyen", "district": "Alum Rock", "email": "linh.nguyen@sccgov-eh.org", "created_at": "2026-10-05T04:44:48", "updated_at": "2026-10-05T04:44:48"}, {"id": 2, "full_name": "Daniel Ramos", "district": "Almaden Valley", "email": "dani...
+[PASS] get inspector: GET /api/inspectors/21 -> 200
+       {"id": 21, "full_name": "Rachandeep Kaur", "district": "Downtown San Jose", "email": "rachandeep.kaur@sccgov-eh.org", "created_at": "2026-10-05T04:56:51", "updated_at": "2026-10-05T04:56:51"}
+[PASS] update inspector: PUT /api/inspectors/21 -> 200
+       {"id": 21, "full_name": "Rachandeep Kaur", "district": "Willow Glen", "email": "rachandeep.kaur@sccgov-eh.org", "created_at": "2026-10-05T04:56:51", "updated_at": "2026-10-05T04:56:51"}
+
+-- Inspections (primary entity)
+[PASS] create inspection: POST /api/records -> 201
+       {"id": 5001, "inspection_code": "INS-005001", "facility_name": "FA0206933 - YUMMY KITCHEN", "site_address": "1711 BRANHAM LN A9, SAN JOSE, CA 95118", "score": 94, "inspector_id": 21, "created_at": "2026-10-05T04:56:51", "updated_at": "2026-10-05T04:56:51"}
+[PASS] list inspections: GET /api/records?limit=3&offset=0 -> 200 (X-Total-Count 5001)
+       [{"id": 5001, "inspection_code": "INS-005001", "facility_name": "FA0206933 - YUMMY KITCHEN", "site_address": "1711 BRANHAM LN A9, SAN JOSE, CA 95118", "score": 94, "inspector_id": 21, "created_at": "2026-10-05T04:56:51", "updated_at": "2026-10-05T04:56:51"}, {...
+[PASS] get inspection: GET /api/records/5001 -> 200
+       {"id": 5001, "inspection_code": "INS-005001", "facility_name": "FA0206933 - YUMMY KITCHEN", "site_address": "1711 BRANHAM LN A9, SAN JOSE, CA 95118", "score": 94, "inspector_id": 21, "created_at": "2026-10-05T04:56:51", "updated_at": "2026-10-05T04:56:51"}
+[PASS] update inspection: PUT /api/records/5001 -> 200
+       {"id": 5001, "inspection_code": "INS-005001", "facility_name": "FA0206933 - YUMMY KITCHEN", "site_address": "1711 BRANHAM LN A9, SAN JOSE, CA 95118", "score": 88, "inspector_id": 21, "created_at": "2026-10-05T04:56:51", "updated_at": "2026-10-05T04:56:51"}
+
+-- Relationship query
+[PASS] inspections of new inspector: GET /api/inspectors/21/inspections -> 200 (X-Total-Count 1)
+       [{"id": 5001, "inspection_code": "INS-005001", "facility_name": "FA0206933 - YUMMY KITCHEN", "site_address": "1711 BRANHAM LN A9, SAN JOSE, CA 95118", "score": 88, "inspector_id": 21, "created_at": "2026-10-05T04:56:51", "updated_at": "2026-10-05T04:56:51"}]
+[PASS] inspections of inspector 1: GET /api/inspectors/1/inspections?limit=3 -> 200 (X-Total-Count 250)
+       [{"id": 20, "inspection_code": "INS-000020", "facility_name": "FA0966786 - MISSION TEA HOUSE", "site_address": "1023 S BASCOM AVE, SAN JOSE, CA 95136", "score": 94, "inspector_id": 1, "created_at": "2026-10-05T04:44:48", "updated_at": "2026-10-05T04:44:48"}, {...
+
+-- Error handling
+[PASS] delete inspector that has inspections: DELETE /api/inspectors/21 -> 409
+       {"detail": "Inspector 21 still has 1 inspection(s); reassign or delete them first"}
+[PASS] invalid email: POST /api/inspectors -> 422
+       {"detail": [{"type": "value_error", "loc": ["body", "email"], "msg": "value is not a valid email address: An email address must have an @-sign.", "input": "not-an-email", "ctx": {"reason": "An email address must have an @-sign."}}]}
+[PASS] duplicate email: POST /api/inspectors -> 409
+       {"detail": "email rachandeep.kaur@sccgov-eh.org already exists"}
+[PASS] inspector not found: GET /api/inspectors/999999 -> 404
+       {"detail": "Inspector with id 999999 not found"}
+[PASS] bad inspection_code format: POST /api/records -> 422
+       {"detail": [{"type": "string_pattern_mismatch", "loc": ["body", "inspection_code"], "msg": "String should match pattern '^INS-\\d{6}$'", "input": "12345", "ctx": {"pattern": "^INS-\\d{6}$"}}]}
+[PASS] duplicate inspection_code: POST /api/records -> 409
+       {"detail": "inspection_code INS-000001 already exists"}
+[PASS] unknown inspector_id: POST /api/records -> 422
+       {"detail": "inspector_id 99999 does not exist"}
+[PASS] score out of range: PUT /api/records/5001 -> 422
+       {"detail": [{"type": "less_than_equal", "loc": ["body", "score"], "msg": "Input should be less than or equal to 100", "input": 150, "ctx": {"le": 100}}]}
+[PASS] inspection not found: GET /api/records/999999 -> 404
+       {"detail": "Record with id 999999 not found"}
+
+-- Delete (cleanup)
+[PASS] delete inspection: DELETE /api/records/5001 -> 200
+       {"id": 5001, "inspection_code": "INS-005001", "facility_name": "FA0206933 - YUMMY KITCHEN", "site_address": "1711 BRANHAM LN A9, SAN JOSE, CA 95118", "score": 88, "inspector_id": 21, "created_at": "2026-10-05T04:56:51", "updated_at": "2026-10-05T04:56:51"}
+[PASS] delete inspector (now unreferenced): DELETE /api/inspectors/21 -> 200
+       {"id": 21, "full_name": "Rachandeep Kaur", "district": "Willow Glen", "email": "rachandeep.kaur@sccgov-eh.org", "created_at": "2026-10-05T04:56:51", "updated_at": "2026-10-05T04:56:51"}
+[PASS] inspector gone: GET /api/inspectors/21 -> 404
+       {"detail": "Inspector with id 21 not found"}
+
+23/23 requests returned the expected status -> /Users/pc/Documents/sjsu/Data-260-HW-Git/data260-7117/reports/hw05/raw/part1_api_calls.json
+
+===== [2026-10-05 00:31:23 PDT] make mcp-calls (user: rachandeep Kaur) =====
+2026-10-05 00:31:26,902 INFO meals: starting meals MCP server over STDIO
+2026-10-05 00:31:26,919 INFO meals: Processing request of type ListToolsRequest
+2026-10-05 00:31:26,924 INFO meals: Processing request of type CallToolRequest
+2026-10-05 00:31:26,924 INFO meals: GET https://www.themealdb.com/api/json/v1/1/search.php {'s': 'Arrabiata'}
+2026-10-05 00:31:27,448 INFO meals: HTTP Request: GET https://www.themealdb.com/api/json/v1/1/search.php?s=Arrabiata "HTTP/1.1 200 OK"
+2026-10-05 00:31:27,457 INFO meals: Processing request of type CallToolRequest
+2026-10-05 00:31:27,458 INFO meals: GET https://www.themealdb.com/api/json/v1/1/search.php {'s': 'zzzqqq'}
+2026-10-05 00:31:27,837 INFO meals: HTTP Request: GET https://www.themealdb.com/api/json/v1/1/search.php?s=zzzqqq "HTTP/1.1 200 OK"
+2026-10-05 00:31:27,845 INFO meals: Processing request of type CallToolRequest
+2026-10-05 00:31:27,846 INFO meals: GET https://www.themealdb.com/api/json/v1/1/filter.php {'i': 'chicken'}
+2026-10-05 00:31:28,314 INFO meals: HTTP Request: GET https://www.themealdb.com/api/json/v1/1/filter.php?i=chicken "HTTP/1.1 200 OK"
+2026-10-05 00:31:28,323 INFO meals: Processing request of type CallToolRequest
+2026-10-05 00:31:28,323 INFO meals: GET https://www.themealdb.com/api/json/v1/1/lookup.php {'i': '52771'}
+2026-10-05 00:31:28,702 INFO meals: HTTP Request: GET https://www.themealdb.com/api/json/v1/1/lookup.php?i=52771 "HTTP/1.1 200 OK"
+2026-10-05 00:31:28,713 INFO meals: Processing request of type CallToolRequest
+2026-10-05 00:31:28,713 INFO meals: GET https://www.themealdb.com/api/json/v1/1/random.php {}
+2026-10-05 00:31:28,961 INFO meals: HTTP Request: GET https://www.themealdb.com/api/json/v1/1/random.php "HTTP/1.1 200 OK"
+2026-10-05 00:31:30,574 INFO s7117-inspections: starting s7117-inspections MCP server over STDIO
+2026-10-05 00:31:30,594 INFO s7117-inspections: Processing request of type ListToolsRequest
+2026-10-05 00:31:30,599 INFO s7117-inspections: Processing request of type CallToolRequest
+2026-10-05 00:31:30,599 INFO s7117-inspections: call search_inspections {'query': 'golden', 'limit': 5, 'min_score': 90}
+2026-10-05 00:31:31,107 INFO s7117-inspections: result search_inspections ok=True error=None
+2026-10-05 00:31:31,122 INFO s7117-inspections: Processing request of type CallToolRequest
+2026-10-05 00:31:31,122 INFO s7117-inspections: call search_inspections {'query': 'golden', 'limit': 500}
+2026-10-05 00:31:31,123 INFO s7117-inspections: result search_inspections ok=False error=invalid input for search_inspections: limit: Input should be less than or equal to 25
+2026-10-05 00:31:31,135 INFO s7117-inspections: Processing request of type CallToolRequest
+2026-10-05 00:31:31,135 INFO s7117-inspections: call get_inspection {'inspection_code': 'INS-000038'}
+2026-10-05 00:31:31,147 INFO s7117-inspections: result get_inspection ok=True error=None
+2026-10-05 00:31:31,160 INFO s7117-inspections: Processing request of type CallToolRequest
+2026-10-05 00:31:31,161 INFO s7117-inspections: call get_inspection {'inspection_code': '12345'}
+2026-10-05 00:31:31,161 INFO s7117-inspections: result get_inspection ok=False error=invalid input for get_inspection: inspection_code: String should match pattern '^INS-\d{6}$'
+2026-10-05 00:31:31,173 INFO s7117-inspections: Processing request of type CallToolRequest
+2026-10-05 00:31:31,173 INFO s7117-inspections: call inspection_stats {'inspector_id': 3}
+2026-10-05 00:31:31,185 INFO s7117-inspections: result inspection_stats ok=True error=None
+2026-10-05 00:31:31,201 INFO s7117-inspections: Processing request of type CallToolRequest
+2026-10-05 00:31:31,201 INFO s7117-inspections: call inspection_stats {'zip_code': '95A18'}
+2026-10-05 00:31:31,201 INFO s7117-inspections: result inspection_stats ok=False error=invalid input for inspection_stats: zip_code: String should match pattern '^\d{5}$'
+== server meals: tools ['search_meals_by_name', 'meals_by_ingredient', 'meal_details', 'random_meal']
+           search_meals_by_name({"query": "Arrabiata", "limit": 5}) isError=False
+           -> {"count": 1, "results": [{"id": "52771", "name": "Spicy Arrabiata Penne", "area": "Italian", "category": "Vegetarian", "thumb": "https://www.themealdb.com/images/media/meals/ustsqw1468250014.jpg"}], "message": null}
+           search_meals_by_name({"query": "zzzqqq"}) isError=False
+           -> {"count": 0, "results": [], "message": "no matches for 'zzzqqq'"}
+           meals_by_ingredient({"ingredient": "chicken", "limit": 12}) isError=False
+           -> {"count": 12, "results": [{"id": "52940", "name": "Brown Stew Chicken", "thumb": "https://www.themealdb.com/images/media/meals/sypxpx1515365095.jpg"}, {"id": "53161", "name": "Chicken & chorizo rice pot", "thumb": "https://www.themealdb.com...
+           meal_details({"id": "52771"}) isError=False
+           -> {"id": "52771", "name": "Spicy Arrabiata Penne", "category": "Vegetarian", "area": "Italian", "instructions": "Bring a large pot of water to a boil. Add kosher salt to the boiling water, then add the pasta. Cook according to the package ins...
+           random_meal({}) isError=False
+           -> {"id": "52791", "name": "Eton Mess", "category": "Dessert", "area": "British", "instructions": "Pur\u00e9e half the strawberries in a blender. Chop the remaining strawberries, reserving four for decoration.\r\nWhip the double cream until st...
+== server s7117-inspections: tools ['search_inspections', 'get_inspection', 'inspection_stats']
+   valid   search_inspections({"query": "golden", "limit": 5, "min_score": 90}) isError=False
+           -> {"ok": true, "data": {"count": 5, "results": [{"id": 1, "inspection_code": "INS-000001", "facility_name": "FA0183034 - GOLDEN DINER", "site_address": "8083 ALMADEN EXPY, SAN JOSE, CA 95112", "score": 100, "inspector_id": 18}, {"id": 22, "in...
+   invalid search_inspections({"query": "golden", "limit": 500}) isError=False
+           -> {"ok": false, "data": null, "error": "invalid input for search_inspections: limit: Input should be less than or equal to 25"}
+   valid   get_inspection({"inspection_code": "INS-000038"}) isError=False
+           -> {"ok": true, "data": {"id": 38, "inspection_code": "INS-000038", "facility_name": "FA0649056 - EL NOODLE HOUSE", "site_address": "1467 ALMADEN EXPY, SAN JOSE, CA 95127", "score": 87, "created_at": "2026-10-05 04:44:48", "updated_at": "2026-...
+   invalid get_inspection({"inspection_code": "12345"}) isError=False
+           -> {"ok": false, "data": null, "error": "invalid input for get_inspection: inspection_code: String should match pattern '^INS-\\d{6}$'"}
+   valid   inspection_stats({"inspector_id": 3}) isError=False
+           -> {"ok": true, "data": {"filters": {"inspector_id": 3}, "inspection_count": 250, "avg_score": 99.92, "min_score": 88, "max_score": 100, "pass_rate": 1.0, "violation_count": 8}, "error": null}
+   invalid inspection_stats({"zip_code": "95A18"}) isError=False
+           -> {"ok": false, "data": null, "error": "invalid input for inspection_stats: zip_code: String should match pattern '^\\d{5}$'"}
+
+wrote /Users/pc/Documents/sjsu/Data-260-HW-Git/data260-7117/reports/hw05/raw/mcp_inspector_outputs.json
+
+===== [2026-10-05 00:45:11 PDT] make mcp-calls (user: rachandeep Kaur) =====
+2026-10-05 00:45:14,541 INFO meals: starting meals MCP server over STDIO
+2026-10-05 00:45:14,562 INFO meals: Processing request of type ListToolsRequest
+2026-10-05 00:45:14,567 INFO meals: Processing request of type CallToolRequest
+2026-10-05 00:45:14,567 INFO meals: GET https://www.themealdb.com/api/json/v1/1/search.php {'s': 'Arrabiata'}
+2026-10-05 00:45:15,028 INFO meals: HTTP Request: GET https://www.themealdb.com/api/json/v1/1/search.php?s=Arrabiata "HTTP/1.1 200 OK"
+2026-10-05 00:45:15,038 INFO meals: Processing request of type CallToolRequest
+2026-10-05 00:45:15,039 INFO meals: GET https://www.themealdb.com/api/json/v1/1/search.php {'s': 'zzzqqq'}
+2026-10-05 00:45:15,287 INFO meals: HTTP Request: GET https://www.themealdb.com/api/json/v1/1/search.php?s=zzzqqq "HTTP/1.1 200 OK"
+2026-10-05 00:45:15,299 INFO meals: Processing request of type CallToolRequest
+2026-10-05 00:45:15,299 INFO meals: GET https://www.themealdb.com/api/json/v1/1/filter.php {'i': 'chicken'}
+2026-10-05 00:45:15,690 INFO meals: HTTP Request: GET https://www.themealdb.com/api/json/v1/1/filter.php?i=chicken "HTTP/1.1 200 OK"
+2026-10-05 00:45:15,703 INFO meals: Processing request of type CallToolRequest
+2026-10-05 00:45:15,704 INFO meals: GET https://www.themealdb.com/api/json/v1/1/lookup.php {'i': '52771'}
+2026-10-05 00:45:16,104 INFO meals: HTTP Request: GET https://www.themealdb.com/api/json/v1/1/lookup.php?i=52771 "HTTP/1.1 200 OK"
+2026-10-05 00:45:16,115 INFO meals: Processing request of type CallToolRequest
+2026-10-05 00:45:16,116 INFO meals: GET https://www.themealdb.com/api/json/v1/1/random.php {}
+2026-10-05 00:45:16,361 INFO meals: HTTP Request: GET https://www.themealdb.com/api/json/v1/1/random.php "HTTP/1.1 200 OK"
+2026-10-05 00:45:18,264 INFO s7117-inspections: starting s7117-inspections MCP server over STDIO
+2026-10-05 00:45:18,282 INFO s7117-inspections: Processing request of type ListToolsRequest
+2026-10-05 00:45:18,286 INFO s7117-inspections: Processing request of type CallToolRequest
+2026-10-05 00:45:18,287 INFO s7117-inspections: call search_inspections {'query': 'golden', 'limit': 5, 'min_score': 90}
+2026-10-05 00:45:18,785 INFO s7117-inspections: result search_inspections ok=True error=None
+2026-10-05 00:45:18,808 INFO s7117-inspections: Processing request of type CallToolRequest
+2026-10-05 00:45:18,809 INFO s7117-inspections: call search_inspections {'query': 'golden', 'limit': 500}
+2026-10-05 00:45:18,809 INFO s7117-inspections: result search_inspections ok=False error=invalid input for search_inspections: limit: Input should be less than or equal to 25
+2026-10-05 00:45:18,828 INFO s7117-inspections: Processing request of type CallToolRequest
+2026-10-05 00:45:18,828 INFO s7117-inspections: call get_inspection {'inspection_code': 'INS-000038'}
+2026-10-05 00:45:18,834 INFO s7117-inspections: result get_inspection ok=True error=None
+2026-10-05 00:45:18,853 INFO s7117-inspections: Processing request of type CallToolRequest
+2026-10-05 00:45:18,853 INFO s7117-inspections: call get_inspection {'inspection_code': '12345'}
+2026-10-05 00:45:18,853 INFO s7117-inspections: result get_inspection ok=False error=invalid input for get_inspection: inspection_code: String should match pattern '^INS-\d{6}$'
+2026-10-05 00:45:18,871 INFO s7117-inspections: Processing request of type CallToolRequest
+2026-10-05 00:45:18,871 INFO s7117-inspections: call inspection_stats {'inspector_id': 3}
+2026-10-05 00:45:18,883 INFO s7117-inspections: result inspection_stats ok=True error=None
+2026-10-05 00:45:18,902 INFO s7117-inspections: Processing request of type CallToolRequest
+2026-10-05 00:45:18,902 INFO s7117-inspections: call inspection_stats {'zip_code': '95A18'}
+2026-10-05 00:45:18,902 INFO s7117-inspections: result inspection_stats ok=False error=invalid input for inspection_stats: zip_code: String should match pattern '^\d{5}$'
+== server meals: tools ['search_meals_by_name', 'meals_by_ingredient', 'meal_details', 'random_meal']
+           search_meals_by_name({"query": "Arrabiata", "limit": 5}) isError=False
+           -> {"count": 1, "results": [{"id": "52771", "name": "Spicy Arrabiata Penne", "area": "Italian", "category": "Vegetarian", "thumb": "https://www.themealdb.com/images/media/meals/ustsqw1468250014.jpg"}], "message": null}
+           search_meals_by_name({"query": "zzzqqq"}) isError=False
+           -> {"count": 0, "results": [], "message": "no matches for 'zzzqqq'"}
+           meals_by_ingredient({"ingredient": "chicken", "limit": 12}) isError=False
+           -> {"count": 12, "results": [{"id": "52940", "name": "Brown Stew Chicken", "thumb": "https://www.themealdb.com/images/media/meals/sypxpx1515365095.jpg"}, {"id": "53161", "name": "Chicken & chorizo rice pot", "thumb": "https://www.themealdb.com...
+           meal_details({"id": "52771"}) isError=False
+           -> {"id": "52771", "name": "Spicy Arrabiata Penne", "category": "Vegetarian", "area": "Italian", "instructions": "Bring a large pot of water to a boil. Add kosher salt to the boiling water, then add the pasta. Cook according to the package ins...
+           random_meal({}) isError=False
+           -> {"id": "53225", "name": "Yemeni Lahsa (Elite Shakshuka)", "category": "Breakfast", "area": "Saudi Arabian", "instructions": "1\r\nFirst, On medium heat, heat the olive oil and add the diced onion until it wethers. Next, add the tomatoes and...
+== server s7117-inspections: tools ['search_inspections', 'get_inspection', 'inspection_stats']
+   valid   search_inspections({"query": "golden", "limit": 5, "min_score": 90}) isError=False
+           -> {"ok": true, "data": {"count": 5, "results": [{"id": 1, "inspection_code": "INS-000001", "facility_name": "FA0183034 - GOLDEN DINER", "site_address": "8083 ALMADEN EXPY, SAN JOSE, CA 95112", "score": 100, "inspector_id": 18}, {"id": 22, "in...
+   invalid search_inspections({"query": "golden", "limit": 500}) isError=False
+           -> {"ok": false, "data": null, "error": "invalid input for search_inspections: limit: Input should be less than or equal to 25"}
+   valid   get_inspection({"inspection_code": "INS-000038"}) isError=False
+           -> {"ok": true, "data": {"id": 38, "inspection_code": "INS-000038", "facility_name": "FA0649056 - EL NOODLE HOUSE", "site_address": "1467 ALMADEN EXPY, SAN JOSE, CA 95127", "score": 87, "created_at": "2026-10-05 04:44:48", "updated_at": "2026-...
+   invalid get_inspection({"inspection_code": "12345"}) isError=False
+           -> {"ok": false, "data": null, "error": "invalid input for get_inspection: inspection_code: String should match pattern '^INS-\\d{6}$'"}
+   valid   inspection_stats({"inspector_id": 3}) isError=False
+           -> {"ok": true, "data": {"filters": {"inspector_id": 3}, "inspection_count": 250, "avg_score": 99.92, "min_score": 88, "max_score": 100, "pass_rate": 1.0, "violation_count": 8}, "error": null}
+   invalid inspection_stats({"zip_code": "95A18"}) isError=False
+           -> {"ok": false, "data": null, "error": "invalid input for inspection_stats: zip_code: String should match pattern '^\\d{5}$'"}
+
+wrote /Users/pc/Documents/sjsu/Data-260-HW-Git/data260-7117/reports/hw05/raw/mcp_inspector_outputs.json
+
+===== [2026-10-05 01:09:39 PDT] make retry-demo (user: rachandeep Kaur) =====
+Retry policy: max_attempts=3, timeout=2.0s per attempt, backoff=0.1s x2 (cap 1.0s)
+Backend: MySQL s7117_rel
+
+== 1. success on first attempt
+   attempt 1: success [561.7 ms]
+   result after 1 attempt(s), 561.7 ms: {"ok": true, "data": "<3 results>", "error": null}
+
+== 2. timeout on attempt 1, success after retry
+   attempt 1: transient_error (ToolTimeout: timed out after 2s) [2003.2 ms] -> backoff 0.1s
+   attempt 2: success [8.7 ms]
+   result after 2 attempt(s), 2115.2 ms: {"ok": true, "data": "<3 results>", "error": null}
+
+== 3. failure after all allowed retries
+   attempt 1: transient_error (TransientError: injected fault: connection reset by peer) [0.1 ms] -> backoff 0.1s
+   attempt 2: transient_error (TransientError: injected fault: connection reset by peer) [0.2 ms] -> backoff 0.2s
+   attempt 3: transient_error (TransientError: injected fault: connection reset by peer) [0.2 ms]
+   result after 3 attempt(s), 306.5 ms: {"ok": false, "data": null, "error": "search_inspections failed after 3 attempt(s): TransientError: injected fault: connection reset by peer"}
+
+wrote /Users/pc/Documents/sjsu/Data-260-HW-Git/data260-7117/reports/hw05/raw/retry_demo.json
+
+===== [2026-10-05 01:09:43 PDT] make fault-injection (user: rachandeep Kaur) =====
+VERIFY_SEED=267117  calls/rate=50  backend=MySQL s7117_rel
+policy: max_attempts=3 timeout=2.0s backoff=0.1s x2 cap 1.0s
+
+rate   0%: success 50/50 (100%), mean 11.73 ms, p99 222.8 ms, attempts 50, injected failures 0, reproducible=True
+          per-call outcomes: S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S
+rate  20%: success 50/50 (100%), mean 13.47 ms, p99 211.74 ms, attempts 54, injected failures 4, reproducible=True
+          per-call outcomes: S S S S S S S S S S S S S S S S S S S FFS S S FS S S S S S S S S S S S S S S S S S S S S S S S S S FS S
+rate  50%: success 47/50 (94%), mean 84.05 ms, p99 314.67 ms, attempts 80, injected failures 33, reproducible=True
+          per-call outcomes: FS S S FS FS S S FS FS S FFS FFF S S S FS S S S S S FFS FS FS FS S S S FS S S S FFF FS S FFF FFS S FFS S S S S FFS FS S S FFS S S
+
+wrote 150 call records to /Users/pc/Documents/sjsu/Data-260-HW-Git/data260-7117/reports/hw05/raw/fault_injection_calls.csv/.json and fault_injection_summary.csv
+
+===== [2026-10-05 01:10:02 PDT] make test-hw05 (user: rachandeep Kaur) =====
+HW5 offline tool tests - Rachandeep Kaur (SID4 7117)
+================================================================
+PASS  test_search_valid
+PASS  test_search_rejects_limit_out_of_range
+PASS  test_search_rejects_unknown_field
+PASS  test_detail_valid
+PASS  test_detail_rejects_malformed_code
+PASS  test_detail_not_found_is_clean_error
+PASS  test_stats_valid
+PASS  test_stats_rejects_bad_zip
+PASS  test_unknown_tool_and_non_object_inputs
+PASS  test_retry_recovers_after_transient_failure
+PASS  test_retry_exhausted_returns_clean_error
+PASS  test_safety_rule_blocks_small_group_aggregate
+PASS  test_run_agent_stops_at_max_steps_with_mock_model
+PASS  test_run_agent_normal_completion_with_mock_model
+================================================================
+14/14 tests passed
+
+===== [2026-10-05 01:10:03 PDT] make safety-demo (user: rachandeep Kaur) =====
+Safety rule: inspection_stats must cover >= 5 inspections
+
+[ALLOWED] execute_tool('inspection_stats', {"inspector_id": 1})
+  -> {"ok": true, "data": {"filters": {"inspector_id": 1}, "inspection_count": 250, "avg_score": 99.81, "min_score": 84, "max_score": 100, "pass_rate": 1.0, "violation_count": 19}, "error": null}
+
+[BLOCKED] execute_tool('inspection_stats', {"facility_query": "FA0183034"})
+  -> {"ok": false, "data": null, "error": "SAFETY_RULE_BLOCKED: inspection_stats matched 1 inspection(s); aggregates over fewer than 5 inspections are suppressed because they would disclose individual results. Use get_inspection for a single record or widen the filter."}
+
+
+===== [2026-10-05 01:10:10 PDT] make agent-hw05 (user: rachandeep Kaur) =====
+== scenario search (max_steps=6)
+   user: Find up to 5 inspections of facilities with GOLDEN in the name that scored at least 90. List their inspection codes and scores.
+   step 1: search_inspections({"query": "GOLDEN", "limit": 5, "min_score": 90}) -> ok
+   step 2: final
+   stop_reason=final_answer steps=2 tool_calls=1
+   final: Here are the inspections of facilities with 'GOLDEN' in the name that scored at least 90:
+
+1. Inspection Code: INS-000001, Score: 100
+2. Inspection Code: INS-000022, Score: 100
+3. Inspection Code: INS-000036, Score: 93
+4. Inspection Code: INS-000052, Score: 100
+5. Inspection Code: INS-000110, Score:
+
+== scenario detail (max_steps=6)
+   user: What violations were found in inspection INS-000042, what was the score, and which inspector did it?
+   step 1: get_inspection({"inspection_code": "INS-000042"}) -> ok
+   step 2: final
+   stop_reason=final_answer steps=2 tool_calls=1
+   final: The inspection INS-000042 for Bay BBQ found a violation: 'Toxic substances not properly identified or stored' (Violation Code 29). The score was 98, and the inspector was Elena Rivera from the Alum Rock district.
+
+== scenario aggregate (max_steps=6)
+   user: What are the average inspection score and the pass rate for inspector 3?
+   step 1: inspection_stats({"inspector_id": 3}) -> ok
+   step 2: final
+   stop_reason=final_answer steps=2 tool_calls=1
+   final: The average inspection score for inspector 3 is 99.92, and the pass rate is 100%.
+
+== scenario safety (max_steps=6)
+   user: Use inspection_stats to give me the average score for facility FA0183034.
+   step 1: inspection_stats({"facility_query": "FA0183034"}) -> error: SAFETY_RULE_BLOCKED: inspection_stats matched 1 inspection(s); aggregates over fewer than 5 inspections are suppressed b
+   stop_reason=safety_block steps=1 tool_calls=1
+   final: Request blocked by safety rule: SAFETY_RULE_BLOCKED: inspection_stats matched 1 inspection(s); aggregates over fewer than 5 inspections are suppressed because they would disclose individual results. Use get_inspection for a single record or widen the filter.
+
+== scenario max_steps (max_steps=3)
+   user: Compare the average inspection score of inspectors 1, 2, 3, 4 and 5 (one inspection_stats call each) and tell me which inspector has the highest.
+   step 1: inspection_stats({"inspector_id": 1}) -> ok
+   step 2: inspection_stats({"inspector_id": 2}) -> ok
+   step 3: inspection_stats({"inspector_id": 3}) -> ok
+   stop_reason=max_steps steps=3 tool_calls=3
+   final: 
+
+appended steps to /Users/pc/Documents/sjsu/Data-260-HW-Git/data260-7117/reports/hw05/raw/agent_runs.jsonl; summary in /Users/pc/Documents/sjsu/Data-260-HW-Git/data260-7117/reports/hw05/raw/agent_scenarios.csv
+
+===== [2026-10-05 01:16:19 PDT] make metrics-hw05 (user: rachandeep Kaur) =====
+# HW5 Metrics
+
+SID4 = 7117 · VERIFY_SEED = 267117 · local model = qwen3:8b · generated 2026-10-05 01:16 PDT by `make metrics-hw05` from `raw/`.
+
+## Part 3 — Fault injection (search_inspections, 50 calls per rate)
+
+Retry policy: 3 attempts max, 2 s timeout per attempt, backoff 0.1 s → 0.2 s (×2, cap 1 s). Raw rows: `raw/fault_injection_calls.csv`.
+
+| Injected failure rate | Success rate | Mean latency (ms) | p99 latency (ms) | Attempts | Injected failures | Reproducible |
+|---|---|---|---|---|---|---|
+| 0% | 100% (50/50) | 11.73 | 222.8 | 50 | 0 | True |
+| 20% | 100% (50/50) | 13.47 | 211.74 | 54 | 4 | True |
+| 50% | 94% (47/50) | 84.05 | 314.67 | 80 | 33 | True |
+
+## Part 3 — Retry demonstration
+
+| Case | Attempts | Outcome per attempt | Final ok | Elapsed (ms) |
+|---|---|---|---|---|
+| 1. success on first attempt | 1 | success | True | 561.684 |
+| 2. timeout on attempt 1, success after retry | 2 | transient_error → success | True | 2115.225 |
+| 3. failure after all allowed retries | 3 | transient_error → transient_error → transient_error | False | 306.499 |
+
+## Part 5 — Agent scenarios (qwen3:8b via Ollama)
+
+| Scenario | max_steps | Steps | Tool calls | Stop reason | run_id |
+|---|---|---|---|---|---|
+| search | 6 | 2 | 1 | final_answer | `79faaa473faf` |
+| detail | 6 | 2 | 1 | final_answer | `afe6ea03f32e` |
+| aggregate | 6 | 2 | 1 | final_answer | `15dd0bfc5434` |
+| safety | 6 | 1 | 1 | safety_block | `a673f7bc7d82` |
+| max_steps | 3 | 3 | 3 | max_steps | `eb9f2c679b81` |
+
+Full step-by-step log: `raw/agent_runs.jsonl`.
+
+===== [2026-10-05 01:17:09 PDT] make verify-hw05 (user: rachandeep Kaur) =====
+2026-10-05 01:17:14,942 INFO meals: starting meals MCP server over STDIO
+2026-10-05 01:17:14,964 INFO meals: Processing request of type ListToolsRequest
+2026-10-05 01:17:14,969 INFO meals: Processing request of type CallToolRequest
+2026-10-05 01:17:14,970 INFO meals: GET https://www.themealdb.com/api/json/v1/1/search.php {'s': 'Arrabiata'}
+2026-10-05 01:17:15,460 INFO meals: HTTP Request: GET https://www.themealdb.com/api/json/v1/1/search.php?s=Arrabiata "HTTP/1.1 200 OK"
+2026-10-05 01:17:17,478 INFO s7117-inspections: starting s7117-inspections MCP server over STDIO
+2026-10-05 01:17:17,502 INFO s7117-inspections: Processing request of type ListToolsRequest
+2026-10-05 01:17:17,508 INFO s7117-inspections: Processing request of type CallToolRequest
+2026-10-05 01:17:17,509 INFO s7117-inspections: call search_inspections {'query': 'golden', 'limit': 3}
+2026-10-05 01:17:18,098 INFO s7117-inspections: result search_inspections ok=True error=None
+2026-10-05 01:17:18,120 INFO s7117-inspections: Processing request of type CallToolRequest
+2026-10-05 01:17:18,121 INFO s7117-inspections: call search_inspections {'query': 'golden', 'limit': 500}
+2026-10-05 01:17:18,121 INFO s7117-inspections: result search_inspections ok=False error=invalid input for search_inspections: limit: Input should be less than or equal to 25
+2026-10-05 01:17:18,143 INFO s7117-inspections: Processing request of type CallToolRequest
+2026-10-05 01:17:18,143 INFO s7117-inspections: call inspection_stats {'inspector_id': 1}
+2026-10-05 01:17:18,161 INFO s7117-inspections: result inspection_stats ok=True error=None
+[PASS] config_values: PORT_BASE=8817 PREFIX=s7117 SEED=7117 VERIFY_SEED=267117 DOMAIN_ID=5
+[PASS] offline_test_suite: 14/14 tests passed
+[PASS] fault_injection_reproducible: failures per 150 draws: [0, 22, 63]
+[PASS] safety_rule_blocks: blocked.ok=False allowed.ok=True
+[PASS] meals_mcp_server: tools=['search_meals_by_name', 'meals_by_ingredient', 'meal_details', 'random_meal'] count=1
+[PASS] domain_mcp_server: tools=['search_inspections', 'get_inspection', 'inspection_stats'] ok flags=[True, False, True]
+[PASS] mysql_schema: inspectors=20 delete_rule=RESTRICT unique_code_index=True
+[PASS] backend_on_port_base: GET /openapi.json -> 200, 18 paths
+[PASS] login: POST /api/auth/login -> 200
+[PASS] inspector_crud_and_relationship: statuses=[201, 200, 200, 200, 201, 200, 200] relationship=200 delete_while_referenced=409 after_delete=404
+[PASS] validation_and_constraints: [bad_email, bad_code, dup_code, dup_email, missing]=[422, 422, 409, 409, 404]
+[PASS] app_code_unchanged: unchanged
+
+12/12 checks passed -> /Users/pc/Documents/sjsu/Data-260-HW-Git/data260-7117/reports/hw05/verification.json
+
+===== [2026-10-05 13:19:27 PDT] make retry-demo (user: rachandeep Kaur) =====
+Retry policy: max_attempts=3, timeout=2.0s per attempt, backoff=0.1s x2 (cap 1.0s)
+Backend: MySQL s7117_rel
+
+== 1. success on first attempt
+   attempt 1: success [492.8 ms]
+   result after 1 attempt(s), 492.8 ms: {"ok": true, "data": "<3 results>", "error": null}
+
+== 2. timeout on attempt 1, success after retry
+   attempt 1: transient_error (ToolTimeout: timed out after 2s) [2004.2 ms] -> backoff 0.1s
+   attempt 2: success [3.5 ms]
+   result after 2 attempt(s), 2110.7 ms: {"ok": true, "data": "<3 results>", "error": null}
+
+== 3. failure after all allowed retries
+   attempt 1: transient_error (TransientError: injected fault: connection reset by peer) [0.1 ms] -> backoff 0.1s
+   attempt 2: transient_error (TransientError: injected fault: connection reset by peer) [0.2 ms] -> backoff 0.2s
+   attempt 3: transient_error (TransientError: injected fault: connection reset by peer) [1.4 ms]
+   result after 3 attempt(s), 325.8 ms: {"ok": false, "data": null, "error": "search_inspections failed after 3 attempt(s): TransientError: injected fault: connection reset by peer"}
+
+wrote /Users/pc/Documents/sjsu/Data-260-HW-Git/data260-7117/reports/hw05/raw/retry_demo.json
+
+===== [2026-10-05 13:24:59 PDT] make fault-injection (user: rachandeep Kaur) =====
+VERIFY_SEED=267117  calls/rate=50  backend=MySQL s7117_rel
+policy: max_attempts=3 timeout=2.0s backoff=0.1s x2 cap 1.0s
+
+rate   0%: success 50/50 (100%), mean 12.07 ms, p99 237.63 ms, attempts 50, injected failures 0, reproducible=True
+          per-call outcomes: S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S S
+rate  20%: success 50/50 (100%), mean 13.19 ms, p99 211.81 ms, attempts 54, injected failures 4, reproducible=True
+          per-call outcomes: S S S S S S S S S S S S S S S S S S S FFS S S FS S S S S S S S S S S S S S S S S S S S S S S S S S FS S
+rate  50%: success 47/50 (94%), mean 83.61 ms, p99 312.94 ms, attempts 80, injected failures 33, reproducible=True
+          per-call outcomes: FS S S FS FS S S FS FS S FFS FFF S S S FS S S S S S FFS FS FS FS S S S FS S S S FFF FS S FFF FFS S FFS S S S S FFS FS S S FFS S S
+
+wrote 150 call records to /Users/pc/Documents/sjsu/Data-260-HW-Git/data260-7117/reports/hw05/raw/fault_injection_calls.csv/.json and fault_injection_summary.csv
+
+===== [2026-10-05 13:31:55 PDT] make test-hw05 (user: rachandeep Kaur) =====
+HW5 offline tool tests - Rachandeep Kaur (SID4 7117)
+================================================================
+PASS  test_search_valid
+PASS  test_search_rejects_limit_out_of_range
+PASS  test_search_rejects_unknown_field
+PASS  test_detail_valid
+PASS  test_detail_rejects_malformed_code
+PASS  test_detail_not_found_is_clean_error
+PASS  test_stats_valid
+PASS  test_stats_rejects_bad_zip
+PASS  test_unknown_tool_and_non_object_inputs
+PASS  test_retry_recovers_after_transient_failure
+PASS  test_retry_exhausted_returns_clean_error
+PASS  test_safety_rule_blocks_small_group_aggregate
+PASS  test_run_agent_stops_at_max_steps_with_mock_model
+PASS  test_run_agent_normal_completion_with_mock_model
+================================================================
+14/14 tests passed
+
+===== [2026-10-05 13:39:45 PDT] make safety-demo (user: rachandeep Kaur) =====
+Safety rule: inspection_stats must cover >= 5 inspections
+
+[ALLOWED] execute_tool('inspection_stats', {"inspector_id": 1})
+  -> {"ok": true, "data": {"filters": {"inspector_id": 1}, "inspection_count": 250, "avg_score": 99.81, "min_score": 84, "max_score": 100, "pass_rate": 1.0, "violation_count": 19}, "error": null}
+
+[BLOCKED] execute_tool('inspection_stats', {"facility_query": "FA0183034"})
+  -> {"ok": false, "data": null, "error": "SAFETY_RULE_BLOCKED: inspection_stats matched 1 inspection(s); aggregates over fewer than 5 inspections are suppressed because they would disclose individual results. Use get_inspection for a single record or widen the filter."}
+

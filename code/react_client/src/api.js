@@ -1,5 +1,10 @@
-// Thin fetch wrapper for the FastAPI backend. `credentials: "include"` makes
-// the browser send the HttpOnly session cookie; JS never reads the cookie.
+import axios from "axios";
+
+// Axios instance for the FastAPI backend. Vite proxies /api to PORT_BASE
+// (8817), and `withCredentials` makes the browser send the HttpOnly session
+// cookie; JS never reads the cookie.
+export const http = axios.create({ withCredentials: true });
+
 export class ApiError extends Error {
   constructor(status, message) {
     super(message);
@@ -7,35 +12,22 @@ export class ApiError extends Error {
   }
 }
 
-async function request(path, { method = "GET", body } = {}) {
-  const response = await fetch(path, {
-    method,
-    credentials: "include",
-    headers: body ? { "Content-Type": "application/json" } : undefined,
-    body: body ? JSON.stringify(body) : undefined,
-  });
-  if (!response.ok) {
-    let detail = `${method} ${path} failed (${response.status})`;
-    try {
-      const data = await response.json();
-      if (typeof data.detail === "string") detail = data.detail;
-      else if (Array.isArray(data.detail)) detail = data.detail.map((d) => d.msg).join("; ");
-    } catch {
-      /* non-JSON error body */
-    }
-    throw new ApiError(response.status, detail);
+// Turn FastAPI error bodies ({detail: "..."} or a 422 list) into one readable message.
+http.interceptors.response.use(
+  (response) => response,
+  (error) => {
+    const status = error.response?.status ?? 0;
+    const detail = error.response?.data?.detail;
+    let message = error.message;
+    if (typeof detail === "string") message = detail;
+    else if (Array.isArray(detail)) message = detail.map((d) => `${d.loc?.slice(-1)[0]}: ${d.msg}`).join("; ");
+    return Promise.reject(new ApiError(status, message));
   }
-  if (response.status === 204) return { data: null, headers: response.headers };
-  return { data: await response.json(), headers: response.headers };
-}
+);
 
 export const api = {
-  me: () => request("/api/auth/me"),
-  login: (email, password) => request("/api/auth/login", { method: "POST", body: { email, password } }),
-  logout: () => request("/api/auth/logout", { method: "POST" }),
-  listRecords: (limit, offset) => request(`/api/records?limit=${limit}&offset=${offset}`),
-  getRecord: (id) => request(`/api/records/${id}`),
-  createRecord: (record) => request("/api/records", { method: "POST", body: record }),
-  updateRecord: (id, record) => request(`/api/records/${id}`, { method: "PUT", body: record }),
-  deleteRecord: (id) => request(`/api/records/${id}`, { method: "DELETE" }),
+  me: () => http.get("/api/auth/me"),
+  login: (email, password) => http.post("/api/auth/login", { email, password }),
+  logout: () => http.post("/api/auth/logout"),
+  getRecord: (id) => http.get(`/api/records/${id}`),
 };

@@ -1,0 +1,538 @@
+[
+  {
+    "label": "login",
+    "method": "POST",
+    "path": "/api/auth/login",
+    "body": {
+      "email": "demo@s7117.dev",
+      "password": "Inspect!7117"
+    },
+    "status": 200,
+    "expected": 200,
+    "pass": true,
+    "total_count": null,
+    "response": {
+      "id": 1,
+      "name": "Rachandeep Kaur",
+      "email": "demo@s7117.dev"
+    }
+  },
+  {
+    "label": "create inspector",
+    "method": "POST",
+    "path": "/api/inspectors",
+    "body": {
+      "full_name": "Rachandeep Kaur",
+      "district": "Downtown San Jose",
+      "email": "rachandeep.kaur@sccgov-eh.org"
+    },
+    "status": 201,
+    "expected": 201,
+    "pass": true,
+    "total_count": null,
+    "response": {
+      "id": 21,
+      "full_name": "Rachandeep Kaur",
+      "district": "Downtown San Jose",
+      "email": "rachandeep.kaur@sccgov-eh.org",
+      "created_at": "2026-10-05T04:56:51",
+      "updated_at": "2026-10-05T04:56:51"
+    }
+  },
+  {
+    "label": "list inspectors page 1",
+    "method": "GET",
+    "path": "/api/inspectors?page=1&page_size=5",
+    "body": null,
+    "status": 200,
+    "expected": 200,
+    "pass": true,
+    "total_count": "21",
+    "response": [
+      {
+        "id": 1,
+        "full_name": "Linh Nguyen",
+        "district": "Alum Rock",
+        "email": "linh.nguyen@sccgov-eh.org",
+        "created_at": "2026-10-05T04:44:48",
+        "updated_at": "2026-10-05T04:44:48"
+      },
+      {
+        "id": 2,
+        "full_name": "Daniel Ramos",
+        "district": "Almaden Valley",
+        "email": "daniel.ramos@sccgov-eh.org",
+        "created_at": "2026-10-05T04:44:48",
+        "updated_at": "2026-10-05T04:44:48"
+      },
+      {
+        "id": 3,
+        "full_name": "Linh Shah",
+        "district": "Cambrian",
+        "email": "linh.shah@sccgov-eh.org",
+        "created_at": "2026-10-05T04:44:48",
+        "updated_at": "2026-10-05T04:44:48"
+      },
+      {
+        "id": 4,
+        "full_name": "Maria Ramos",
+        "district": "North San Jose",
+        "email": "maria.ramos@sccgov-eh.org",
+        "created_at": "2026-10-05T04:44:48",
+        "updated_at": "2026-10-05T04:44:48"
+      },
+      {
+        "id": 5,
+        "full_name": "Mei Lopez",
+        "district": "Alum Rock",
+        "email": "mei.lopez@sccgov-eh.org",
+        "created_at": "2026-10-05T04:44:48",
+        "updated_at": "2026-10-05T04:44:48"
+      }
+    ]
+  },
+  {
+    "label": "get inspector",
+    "method": "GET",
+    "path": "/api/inspectors/21",
+    "body": null,
+    "status": 200,
+    "expected": 200,
+    "pass": true,
+    "total_count": null,
+    "response": {
+      "id": 21,
+      "full_name": "Rachandeep Kaur",
+      "district": "Downtown San Jose",
+      "email": "rachandeep.kaur@sccgov-eh.org",
+      "created_at": "2026-10-05T04:56:51",
+      "updated_at": "2026-10-05T04:56:51"
+    }
+  },
+  {
+    "label": "update inspector",
+    "method": "PUT",
+    "path": "/api/inspectors/21",
+    "body": {
+      "district": "Willow Glen"
+    },
+    "status": 200,
+    "expected": 200,
+    "pass": true,
+    "total_count": null,
+    "response": {
+      "id": 21,
+      "full_name": "Rachandeep Kaur",
+      "district": "Willow Glen",
+      "email": "rachandeep.kaur@sccgov-eh.org",
+      "created_at": "2026-10-05T04:56:51",
+      "updated_at": "2026-10-05T04:56:51"
+    }
+  },
+  {
+    "label": "create inspection",
+    "method": "POST",
+    "path": "/api/records",
+    "body": {
+      "inspection_code": "INS-005001",
+      "facility_name": "FA0206933 - YUMMY KITCHEN",
+      "site_address": "1711 BRANHAM LN A9, SAN JOSE, CA 95118",
+      "score": 94,
+      "inspector_id": 21
+    },
+    "status": 201,
+    "expected": 201,
+    "pass": true,
+    "total_count": null,
+    "response": {
+      "id": 5001,
+      "inspection_code": "INS-005001",
+      "facility_name": "FA0206933 - YUMMY KITCHEN",
+      "site_address": "1711 BRANHAM LN A9, SAN JOSE, CA 95118",
+      "score": 94,
+      "inspector_id": 21,
+      "created_at": "2026-10-05T04:56:51",
+      "updated_at": "2026-10-05T04:56:51"
+    }
+  },
+  {
+    "label": "list inspections",
+    "method": "GET",
+    "path": "/api/records?limit=3&offset=0",
+    "body": null,
+    "status": 200,
+    "expected": 200,
+    "pass": true,
+    "total_count": "5001",
+    "response": [
+      {
+        "id": 5001,
+        "inspection_code": "INS-005001",
+        "facility_name": "FA0206933 - YUMMY KITCHEN",
+        "site_address": "1711 BRANHAM LN A9, SAN JOSE, CA 95118",
+        "score": 94,
+        "inspector_id": 21,
+        "created_at": "2026-10-05T04:56:51",
+        "updated_at": "2026-10-05T04:56:51"
+      },
+      {
+        "id": 5000,
+        "inspection_code": "INS-005000",
+        "facility_name": "FA0470962 - LA CANTINA",
+        "site_address": "8859 WINCHESTER BLVD, SAN JOSE, CA 95127",
+        "score": 100,
+        "inspector_id": 1,
+        "created_at": "2026-10-05T04:44:48",
+        "updated_at": "2026-10-05T04:44:48"
+      },
+      {
+        "id": 4999,
+        "inspection_code": "INS-004999",
+        "facility_name": "FA0422276 - RED BURGERS",
+        "site_address": "4407 ALMADEN EXPY, SAN JOSE, CA 95128",
+        "score": 100,
+        "inspector_id": 4,
+        "created_at": "2026-10-05T04:44:48",
+        "updated_at": "2026-10-05T04:44:48"
+      }
+    ]
+  },
+  {
+    "label": "get inspection",
+    "method": "GET",
+    "path": "/api/records/5001",
+    "body": null,
+    "status": 200,
+    "expected": 200,
+    "pass": true,
+    "total_count": null,
+    "response": {
+      "id": 5001,
+      "inspection_code": "INS-005001",
+      "facility_name": "FA0206933 - YUMMY KITCHEN",
+      "site_address": "1711 BRANHAM LN A9, SAN JOSE, CA 95118",
+      "score": 94,
+      "inspector_id": 21,
+      "created_at": "2026-10-05T04:56:51",
+      "updated_at": "2026-10-05T04:56:51"
+    }
+  },
+  {
+    "label": "update inspection",
+    "method": "PUT",
+    "path": "/api/records/5001",
+    "body": {
+      "score": 88
+    },
+    "status": 200,
+    "expected": 200,
+    "pass": true,
+    "total_count": null,
+    "response": {
+      "id": 5001,
+      "inspection_code": "INS-005001",
+      "facility_name": "FA0206933 - YUMMY KITCHEN",
+      "site_address": "1711 BRANHAM LN A9, SAN JOSE, CA 95118",
+      "score": 88,
+      "inspector_id": 21,
+      "created_at": "2026-10-05T04:56:51",
+      "updated_at": "2026-10-05T04:56:51"
+    }
+  },
+  {
+    "label": "inspections of new inspector",
+    "method": "GET",
+    "path": "/api/inspectors/21/inspections",
+    "body": null,
+    "status": 200,
+    "expected": 200,
+    "pass": true,
+    "total_count": "1",
+    "response": [
+      {
+        "id": 5001,
+        "inspection_code": "INS-005001",
+        "facility_name": "FA0206933 - YUMMY KITCHEN",
+        "site_address": "1711 BRANHAM LN A9, SAN JOSE, CA 95118",
+        "score": 88,
+        "inspector_id": 21,
+        "created_at": "2026-10-05T04:56:51",
+        "updated_at": "2026-10-05T04:56:51"
+      }
+    ]
+  },
+  {
+    "label": "inspections of inspector 1",
+    "method": "GET",
+    "path": "/api/inspectors/1/inspections?limit=3",
+    "body": null,
+    "status": 200,
+    "expected": 200,
+    "pass": true,
+    "total_count": "250",
+    "response": [
+      {
+        "id": 20,
+        "inspection_code": "INS-000020",
+        "facility_name": "FA0966786 - MISSION TEA HOUSE",
+        "site_address": "1023 S BASCOM AVE, SAN JOSE, CA 95136",
+        "score": 94,
+        "inspector_id": 1,
+        "created_at": "2026-10-05T04:44:48",
+        "updated_at": "2026-10-05T04:44:48"
+      },
+      {
+        "id": 40,
+        "inspection_code": "INS-000040",
+        "facility_name": "FA0849664 - BAY WOK",
+        "site_address": "4564 STORY RD, SAN JOSE, CA 95133",
+        "score": 96,
+        "inspector_id": 1,
+        "created_at": "2026-10-05T04:44:48",
+        "updated_at": "2026-10-05T04:44:48"
+      },
+      {
+        "id": 60,
+        "inspection_code": "INS-000060",
+        "facility_name": "FA0550828 - TAQUERIA DINER",
+        "site_address": "1677 BRANHAM LN, SAN JOSE, CA 95131",
+        "score": 100,
+        "inspector_id": 1,
+        "created_at": "2026-10-05T04:44:48",
+        "updated_at": "2026-10-05T04:44:48"
+      }
+    ]
+  },
+  {
+    "label": "delete inspector that has inspections",
+    "method": "DELETE",
+    "path": "/api/inspectors/21",
+    "body": null,
+    "status": 409,
+    "expected": 409,
+    "pass": true,
+    "total_count": null,
+    "response": {
+      "detail": "Inspector 21 still has 1 inspection(s); reassign or delete them first"
+    }
+  },
+  {
+    "label": "invalid email",
+    "method": "POST",
+    "path": "/api/inspectors",
+    "body": {
+      "full_name": "Bad Email",
+      "district": "Evergreen",
+      "email": "not-an-email"
+    },
+    "status": 422,
+    "expected": 422,
+    "pass": true,
+    "total_count": null,
+    "response": {
+      "detail": [
+        {
+          "type": "value_error",
+          "loc": [
+            "body",
+            "email"
+          ],
+          "msg": "value is not a valid email address: An email address must have an @-sign.",
+          "input": "not-an-email",
+          "ctx": {
+            "reason": "An email address must have an @-sign."
+          }
+        }
+      ]
+    }
+  },
+  {
+    "label": "duplicate email",
+    "method": "POST",
+    "path": "/api/inspectors",
+    "body": {
+      "full_name": "Duplicate",
+      "district": "Evergreen",
+      "email": "rachandeep.kaur@sccgov-eh.org"
+    },
+    "status": 409,
+    "expected": 409,
+    "pass": true,
+    "total_count": null,
+    "response": {
+      "detail": "email rachandeep.kaur@sccgov-eh.org already exists"
+    }
+  },
+  {
+    "label": "inspector not found",
+    "method": "GET",
+    "path": "/api/inspectors/999999",
+    "body": null,
+    "status": 404,
+    "expected": 404,
+    "pass": true,
+    "total_count": null,
+    "response": {
+      "detail": "Inspector with id 999999 not found"
+    }
+  },
+  {
+    "label": "bad inspection_code format",
+    "method": "POST",
+    "path": "/api/records",
+    "body": {
+      "inspection_code": "12345",
+      "facility_name": "X",
+      "site_address": "Y",
+      "inspector_id": 1
+    },
+    "status": 422,
+    "expected": 422,
+    "pass": true,
+    "total_count": null,
+    "response": {
+      "detail": [
+        {
+          "type": "string_pattern_mismatch",
+          "loc": [
+            "body",
+            "inspection_code"
+          ],
+          "msg": "String should match pattern '^INS-\\d{6}$'",
+          "input": "12345",
+          "ctx": {
+            "pattern": "^INS-\\d{6}$"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "label": "duplicate inspection_code",
+    "method": "POST",
+    "path": "/api/records",
+    "body": {
+      "inspection_code": "INS-000001",
+      "facility_name": "X",
+      "site_address": "Y",
+      "inspector_id": 1
+    },
+    "status": 409,
+    "expected": 409,
+    "pass": true,
+    "total_count": null,
+    "response": {
+      "detail": "inspection_code INS-000001 already exists"
+    }
+  },
+  {
+    "label": "unknown inspector_id",
+    "method": "POST",
+    "path": "/api/records",
+    "body": {
+      "inspection_code": "INS-999998",
+      "facility_name": "X",
+      "site_address": "Y",
+      "inspector_id": 99999
+    },
+    "status": 422,
+    "expected": 422,
+    "pass": true,
+    "total_count": null,
+    "response": {
+      "detail": "inspector_id 99999 does not exist"
+    }
+  },
+  {
+    "label": "score out of range",
+    "method": "PUT",
+    "path": "/api/records/5001",
+    "body": {
+      "score": 150
+    },
+    "status": 422,
+    "expected": 422,
+    "pass": true,
+    "total_count": null,
+    "response": {
+      "detail": [
+        {
+          "type": "less_than_equal",
+          "loc": [
+            "body",
+            "score"
+          ],
+          "msg": "Input should be less than or equal to 100",
+          "input": 150,
+          "ctx": {
+            "le": 100
+          }
+        }
+      ]
+    }
+  },
+  {
+    "label": "inspection not found",
+    "method": "GET",
+    "path": "/api/records/999999",
+    "body": null,
+    "status": 404,
+    "expected": 404,
+    "pass": true,
+    "total_count": null,
+    "response": {
+      "detail": "Record with id 999999 not found"
+    }
+  },
+  {
+    "label": "delete inspection",
+    "method": "DELETE",
+    "path": "/api/records/5001",
+    "body": null,
+    "status": 200,
+    "expected": 200,
+    "pass": true,
+    "total_count": null,
+    "response": {
+      "id": 5001,
+      "inspection_code": "INS-005001",
+      "facility_name": "FA0206933 - YUMMY KITCHEN",
+      "site_address": "1711 BRANHAM LN A9, SAN JOSE, CA 95118",
+      "score": 88,
+      "inspector_id": 21,
+      "created_at": "2026-10-05T04:56:51",
+      "updated_at": "2026-10-05T04:56:51"
+    }
+  },
+  {
+    "label": "delete inspector (now unreferenced)",
+    "method": "DELETE",
+    "path": "/api/inspectors/21",
+    "body": null,
+    "status": 200,
+    "expected": 200,
+    "pass": true,
+    "total_count": null,
+    "response": {
+      "id": 21,
+      "full_name": "Rachandeep Kaur",
+      "district": "Willow Glen",
+      "email": "rachandeep.kaur@sccgov-eh.org",
+      "created_at": "2026-10-05T04:56:51",
+      "updated_at": "2026-10-05T04:56:51"
+    }
+  },
+  {
+    "label": "inspector gone",
+    "method": "GET",
+    "path": "/api/inspectors/21",
+    "body": null,
+    "status": 404,
+    "expected": 404,
+    "pass": true,
+    "total_count": null,
+    "response": {
+      "detail": "Inspector with id 21 not found"
+    }
+  }
+]

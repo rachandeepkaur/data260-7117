@@ -1,0 +1,405 @@
+{
+  "recorded_at": "2026-10-05T07:45:19.186755+00:00",
+  "servers": [
+    {
+      "server": "meals",
+      "tools": [
+        "search_meals_by_name",
+        "meals_by_ingredient",
+        "meal_details",
+        "random_meal"
+      ],
+      "calls": [
+        {
+          "tool": "search_meals_by_name",
+          "input": {
+            "query": "Arrabiata",
+            "limit": 5
+          },
+          "is_error": false,
+          "output": {
+            "count": 1,
+            "results": [
+              {
+                "id": "52771",
+                "name": "Spicy Arrabiata Penne",
+                "area": "Italian",
+                "category": "Vegetarian",
+                "thumb": "https://www.themealdb.com/images/media/meals/ustsqw1468250014.jpg"
+              }
+            ],
+            "message": null
+          }
+        },
+        {
+          "tool": "search_meals_by_name",
+          "input": {
+            "query": "zzzqqq"
+          },
+          "is_error": false,
+          "output": {
+            "count": 0,
+            "results": [],
+            "message": "no matches for 'zzzqqq'"
+          }
+        },
+        {
+          "tool": "meals_by_ingredient",
+          "input": {
+            "ingredient": "chicken",
+            "limit": 12
+          },
+          "is_error": false,
+          "output": {
+            "count": 12,
+            "results": [
+              {
+                "id": "52940",
+                "name": "Brown Stew Chicken",
+                "thumb": "https://www.themealdb.com/images/media/meals/sypxpx1515365095.jpg"
+              },
+              {
+                "id": "53161",
+                "name": "Chicken & chorizo rice pot",
+                "thumb": "https://www.themealdb.com/images/media/meals/fk80jp1763280767.jpg"
+              },
+              {
+                "id": "52846",
+                "name": "Chicken & mushroom Hotpot",
+                "thumb": "https://www.themealdb.com/images/media/meals/uuuspp1511297945.jpg"
+              },
+              {
+                "id": "52796",
+                "name": "Chicken Alfredo Primavera",
+                "thumb": "https://www.themealdb.com/images/media/meals/syqypv1486981727.jpg"
+              },
+              {
+                "id": "52934",
+                "name": "Chicken Basquaise",
+                "thumb": "https://www.themealdb.com/images/media/meals/wruvqv1511880994.jpg"
+              },
+              {
+                "id": "52956",
+                "name": "Chicken Congee",
+                "thumb": "https://www.themealdb.com/images/media/meals/1529446352.jpg"
+              },
+              {
+                "id": "52795",
+                "name": "Chicken Handi",
+                "thumb": "https://www.themealdb.com/images/media/meals/wyxwsp1486979827.jpg"
+              },
+              {
+                "id": "52831",
+                "name": "Chicken Karaage",
+                "thumb": "https://www.themealdb.com/images/media/meals/tyywsw1505930373.jpg"
+              },
+              {
+                "id": "53358",
+                "name": "Chicken Mandi",
+                "thumb": "https://www.themealdb.com/images/media/meals/er4d081765186828.jpg"
+              },
+              {
+                "id": "53186",
+                "name": "Chicken with saffron, raisins & pine nuts",
+                "thumb": "https://www.themealdb.com/images/media/meals/4mhr3u1763481087.jpg"
+              },
+              {
+                "id": "53220",
+                "name": "kabse",
+                "thumb": "https://www.themealdb.com/images/media/meals/utqnjv1763598650.jpg"
+              },
+              {
+                "id": "52813",
+                "name": "Kentucky Fried Chicken",
+                "thumb": "https://www.themealdb.com/images/media/meals/40r49m1763197022.jpg"
+              }
+            ],
+            "message": null
+          }
+        },
+        {
+          "tool": "meal_details",
+          "input": {
+            "id": "52771"
+          },
+          "is_error": false,
+          "output": {
+            "id": "52771",
+            "name": "Spicy Arrabiata Penne",
+            "category": "Vegetarian",
+            "area": "Italian",
+            "instructions": "Bring a large pot of water to a boil. Add kosher salt to the boiling water, then add the pasta. Cook according to the package instructions, about 9 minutes.\r\nIn a large skillet over medium-high heat, add the olive oil and heat until the oil starts to shimmer. Add the garlic and cook, stirring, until fragrant, 1 to 2 minutes. Add the chopped tomatoes, red chile flakes, Italian seasoning and salt and pepper to taste. Bring to a boil and cook for 5 minutes. Remove from the heat and add the chopped basil.\r\nDrain the pasta and add it to the sauce. Garnish with Parmigiano-Reggiano flakes and more basil and serve warm.",
+            "image": "https://www.themealdb.com/images/media/meals/ustsqw1468250014.jpg",
+            "source": null,
+            "youtube": "https://www.youtube.com/watch?v=1IszT_guI08",
+            "ingredients": [
+              {
+                "name": "penne rigate",
+                "measure": "1 pound"
+              },
+              {
+                "name": "olive oil",
+                "measure": "1/4 cup"
+              },
+              {
+                "name": "garlic",
+                "measure": "3 cloves"
+              },
+              {
+                "name": "chopped tomatoes",
+                "measure": "1 tin"
+              },
+              {
+                "name": "red chilli flakes",
+                "measure": "1/2 teaspoon"
+              },
+              {
+                "name": "italian seasoning",
+                "measure": "1/2 teaspoon"
+              },
+              {
+                "name": "basil",
+                "measure": "6 leaves"
+              },
+              {
+                "name": "Parmigiano-Reggiano",
+                "measure": "sprinkling"
+              }
+            ]
+          }
+        },
+        {
+          "tool": "random_meal",
+          "input": {},
+          "is_error": false,
+          "output": {
+            "id": "53225",
+            "name": "Yemeni Lahsa (Elite Shakshuka)",
+            "category": "Breakfast",
+            "area": "Saudi Arabian",
+            "instructions": "1\r\nFirst, On medium heat, heat the olive oil and add the diced onion until it wethers. Next, add the tomatoes and cook for another 4-5 min. Lastly, add the all spice, salt, and cracked pepper.\r\n2\r\nAdd the eggs and mix throughly for 2 minutes and cover to cook 5-6 minutes until top is solidified. Lastly, spread the liquid cheese and have it covered for a minute.\r\n3\r\nI served mine Mediterranean style with hash-browns, Egyptian fava beans, Turkish salami and olives, cheese wedges, and greek feta.",
+            "image": "https://www.themealdb.com/images/media/meals/30s7vf1763741844.jpg",
+            "source": "https://cookpad.com/eng/recipes/24629321?ref=search&search_term=saudi+arabia",
+            "youtube": "https://www.youtube.com/shorts/1QX-KBX6tmM",
+            "ingredients": [
+              {
+                "name": "Egg",
+                "measure": "5"
+              },
+              {
+                "name": "Onion",
+                "measure": "1 Diced"
+              },
+              {
+                "name": "Tomato",
+                "measure": "1 Diced"
+              },
+              {
+                "name": "Olive Oil",
+                "measure": "2 tablespoons"
+              },
+              {
+                "name": "Allspice",
+                "measure": "1/4 tsp"
+              },
+              {
+                "name": "Black Pepper",
+                "measure": "1/4 tsp"
+              },
+              {
+                "name": "Liquid Cheese",
+                "measure": "3  tablespoons"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "server": "s7117-inspections",
+      "tools": [
+        "search_inspections",
+        "get_inspection",
+        "inspection_stats"
+      ],
+      "calls": [
+        {
+          "tool": "search_inspections",
+          "input": {
+            "query": "golden",
+            "limit": 5,
+            "min_score": 90
+          },
+          "is_error": false,
+          "output": {
+            "ok": true,
+            "data": {
+              "count": 5,
+              "results": [
+                {
+                  "id": 1,
+                  "inspection_code": "INS-000001",
+                  "facility_name": "FA0183034 - GOLDEN DINER",
+                  "site_address": "8083 ALMADEN EXPY, SAN JOSE, CA 95112",
+                  "score": 100,
+                  "inspector_id": 18
+                },
+                {
+                  "id": 22,
+                  "inspection_code": "INS-000022",
+                  "facility_name": "FA0590635 - GOLDEN TACOS",
+                  "site_address": "454 N 1ST ST, SAN JOSE, CA 95111",
+                  "score": 100,
+                  "inspector_id": 15
+                },
+                {
+                  "id": 36,
+                  "inspection_code": "INS-000036",
+                  "facility_name": "FA0747679 - GOLDEN CANTINA",
+                  "site_address": "894 MONTEREY RD, SAN JOSE, CA 95124",
+                  "score": 93,
+                  "inspector_id": 13
+                },
+                {
+                  "id": 52,
+                  "inspection_code": "INS-000052",
+                  "facility_name": "FA0724205 - GOLDEN TACOS",
+                  "site_address": "9896 WINCHESTER BLVD, SAN JOSE, CA 95136",
+                  "score": 100,
+                  "inspector_id": 5
+                },
+                {
+                  "id": 110,
+                  "inspection_code": "INS-000110",
+                  "facility_name": "FA0806505 - GOLDEN CANTINA",
+                  "site_address": "9873 KING RD, SAN JOSE, CA 95127",
+                  "score": 100,
+                  "inspector_id": 11
+                }
+              ]
+            },
+            "error": null
+          },
+          "label": "valid"
+        },
+        {
+          "tool": "search_inspections",
+          "input": {
+            "query": "golden",
+            "limit": 500
+          },
+          "is_error": false,
+          "output": {
+            "ok": false,
+            "data": null,
+            "error": "invalid input for search_inspections: limit: Input should be less than or equal to 25"
+          },
+          "label": "invalid"
+        },
+        {
+          "tool": "get_inspection",
+          "input": {
+            "inspection_code": "INS-000038"
+          },
+          "is_error": false,
+          "output": {
+            "ok": true,
+            "data": {
+              "id": 38,
+              "inspection_code": "INS-000038",
+              "facility_name": "FA0649056 - EL NOODLE HOUSE",
+              "site_address": "1467 ALMADEN EXPY, SAN JOSE, CA 95127",
+              "score": 87,
+              "created_at": "2026-10-05 04:44:48",
+              "updated_at": "2026-10-05 04:44:48",
+              "inspector_id": 7,
+              "inspector_name": "Tara Shah",
+              "inspector_district": "Cambrian",
+              "violations": [
+                {
+                  "violation_code": "41",
+                  "description": "Plumbing not in good repair",
+                  "severity": "MINOR",
+                  "points_deducted": 1,
+                  "observed_on": "2025-04-01"
+                },
+                {
+                  "violation_code": "7",
+                  "description": "Improper hot holding temperature (below 135F)",
+                  "severity": "MAJOR",
+                  "points_deducted": 4,
+                  "observed_on": "2025-09-12"
+                },
+                {
+                  "violation_code": "7",
+                  "description": "Improper hot holding temperature (below 135F)",
+                  "severity": "MAJOR",
+                  "points_deducted": 4,
+                  "observed_on": "2026-03-10"
+                },
+                {
+                  "violation_code": "23",
+                  "description": "Vermin or animal contamination observed",
+                  "severity": "MAJOR",
+                  "points_deducted": 4,
+                  "observed_on": "2026-01-21"
+                }
+              ]
+            },
+            "error": null
+          },
+          "label": "valid"
+        },
+        {
+          "tool": "get_inspection",
+          "input": {
+            "inspection_code": "12345"
+          },
+          "is_error": false,
+          "output": {
+            "ok": false,
+            "data": null,
+            "error": "invalid input for get_inspection: inspection_code: String should match pattern '^INS-\\d{6}$'"
+          },
+          "label": "invalid"
+        },
+        {
+          "tool": "inspection_stats",
+          "input": {
+            "inspector_id": 3
+          },
+          "is_error": false,
+          "output": {
+            "ok": true,
+            "data": {
+              "filters": {
+                "inspector_id": 3
+              },
+              "inspection_count": 250,
+              "avg_score": 99.92,
+              "min_score": 88,
+              "max_score": 100,
+              "pass_rate": 1.0,
+              "violation_count": 8
+            },
+            "error": null
+          },
+          "label": "valid"
+        },
+        {
+          "tool": "inspection_stats",
+          "input": {
+            "zip_code": "95A18"
+          },
+          "is_error": false,
+          "output": {
+            "ok": false,
+            "data": null,
+            "error": "invalid input for inspection_stats: zip_code: String should match pattern '^\\d{5}$'"
+          },
+          "label": "invalid"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "homework": 5,
+  "sid4": 7117,
+  "commit": "c07b5b37bef8d0e6b47ec91550472da802d6b4df",
+  "tag_hw5": null,
+  "generated_at": "2026-10-05T08:17:21.375808+00:00",
+  "configuration": {
+    "PORT_BASE": 8817,
+    "PREFIX": "s7117",
+    "SEED": 7117,
+    "VERIFY_SEED": 267117,
+    "DOMAIN_ID": 5,
+    "database": "s7117_rel",
+    "local_model": "qwen3:8b",
+    "retry_policy": "3 attempts, 2s timeout/attempt, backoff 0.1s x2 cap 1s"
+  },
+  "checks": [
+    {
+      "name": "config_values",
+      "description": "Section 0 values derive from SID4 = 7117",
+      "passed": true,
+      "evidence": "PORT_BASE=8817 PREFIX=s7117 SEED=7117 VERIFY_SEED=267117 DOMAIN_ID=5"
+    },
+    {
+      "name": "offline_test_suite",
+      "description": "Part 4/5 offline test runner passes every test",
+      "passed": true,
+      "evidence": "14/14 tests passed"
+    },
+    {
+      "name": "fault_injection_reproducible",
+      "description": "Same VERIFY_SEED + rate -> identical failure sequence (0/20/50%)",
+      "passed": true,
+      "evidence": "failures per 150 draws: [0, 22, 63]"
+    },
+    {
+      "name": "safety_rule_blocks",
+      "description": "execute_tool returns {ok:false,data:null,error} for a <5-row aggregate",
+      "passed": true,
+      "evidence": "blocked.ok=False allowed.ok=True"
+    },
+    {
+      "name": "meals_mcp_server",
+      "description": "meals MCP server starts over STDIO, lists 4 tools, answers search_meals_by_name",
+      "passed": true,
+      "evidence": "tools=['search_meals_by_name', 'meals_by_ingredient', 'meal_details', 'random_meal'] count=1"
+    },
+    {
+      "name": "domain_mcp_server",
+      "description": "s7117-inspections MCP server answers valid calls ok and invalid calls with an envelope error",
+      "passed": true,
+      "evidence": "tools=['search_inspections', 'get_inspection', 'inspection_stats'] ok flags=[True, False, True]"
+    },
+    {
+      "name": "mysql_schema",
+      "description": "s7117_rel: inspectors exists; inspections has unique code + FK ON DELETE RESTRICT",
+      "passed": true,
+      "evidence": "inspectors=20 delete_rule=RESTRICT unique_code_index=True"
+    },
+    {
+      "name": "backend_on_port_base",
+      "description": "FastAPI backend responds on PORT_BASE 8817",
+      "passed": true,
+      "evidence": "GET /openapi.json -> 200, 18 paths"
+    },
+    {
+      "name": "login",
+      "description": "Demo user can log in (session cookie set)",
+      "passed": true,
+      "evidence": "POST /api/auth/login -> 200"
+    },
+    {
+      "name": "inspector_crud_and_relationship",
+      "description": "Inspector POST->GET->PUT->list; inspection POST linked to it; relationship query; cleanup",
+      "passed": true,
+      "evidence": "statuses=[201, 200, 200, 200, 201, 200, 200] relationship=200 delete_while_referenced=409 after_delete=404"
+    },
+    {
+      "name": "validation_and_constraints",
+      "description": "Bad email/code -> 422, duplicate code/email -> 409, missing -> 404",
+      "passed": true,
+      "evidence": "[bad_email, bad_code, dup_code, dup_email, missing]=[422, 422, 409, 409, 404]"
+    },
+    {
+      "name": "app_code_unchanged",
+      "description": "Self-check did not modify application code (git status of code/ unchanged)",
+      "passed": true,
+      "evidence": "unchanged"
+    }
+  ],
+  "passed": 12,
+  "total": 12,
+  "all_passed": true
+}

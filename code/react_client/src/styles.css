@@ -38,5 +38,8 @@ th, td { text-align: left; padding: 8px; border-bottom: 1px solid #e5e7eb; font-
 .pager { display: flex; justify-content: center; align-items: center; gap: 16px; margin-top: 16px; }
 .muted { color: #6b7280; }
 .alert { background: #fee2e2; color: #991b1b; padding: 8px 12px; border-radius: 6px; }
+.fail { color: #dc2626; font-weight: 600; }
+select { padding: 8px 10px; border: 1px solid #cbd5e1; border-radius: 6px; font-size: 1rem; }
 dt { font-weight: 600; font-size: .85rem; color: #6b7280; }
 dd { margin: 0 0 10px 0; }
+.nowrap { white-space: nowrap; }
