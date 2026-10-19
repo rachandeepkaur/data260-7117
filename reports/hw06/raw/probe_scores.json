@@ -1,0 +1,277 @@
+[
+  {
+    "setting": "SHORT_TERM_N=4",
+    "probe_id": "P1",
+    "question": "Quick check: what is my name, and which district do I cover?",
+    "reply": "Your name is Rachandeep Kaur, and you cover the Willow Glen district.  \nYou are a senior environmental health inspector with Santa Clara County.",
+    "score": 5,
+    "criteria_met": [
+      "name",
+      "district"
+    ],
+    "criteria_total": 2,
+    "stale_value_mentioned": false,
+    "change_explained": false
+  },
+  {
+    "setting": "SHORT_TERM_N=4",
+    "probe_id": "P2",
+    "question": "Which facility failed the cold-holding check, what is its facility code, and what temperature was its walk-in cooler at?",
+    "reply": "The facility that failed the cold-holding check is Golden Dragon, with facility code FA0148210. Its walk-in cooler was holding at 47\u00b0F.",
+    "score": 5,
+    "criteria_met": [
+      "facility",
+      "code",
+      "temperature"
+    ],
+    "criteria_total": 3,
+    "stale_value_mentioned": false,
+    "change_explained": false
+  },
+  {
+    "setting": "SHORT_TERM_N=4",
+    "probe_id": "P3",
+    "question": "When is the Golden Dragon follow-up inspection scheduled?",
+    "reply": "The Golden Dragon follow-up inspection is scheduled for November 10.",
+    "score": 5,
+    "criteria_met": [
+      "current_date"
+    ],
+    "criteria_total": 1,
+    "stale_value_mentioned": false,
+    "change_explained": false
+  },
+  {
+    "setting": "SHORT_TERM_N=4",
+    "probe_id": "P4",
+    "question": "How do I want the reports you draft for me to be formatted?",
+    "reply": "You prefer reports to be formatted using bullet points.",
+    "score": 3,
+    "criteria_met": [
+      "bullets"
+    ],
+    "criteria_total": 2,
+    "stale_value_mentioned": false,
+    "change_explained": false
+  },
+  {
+    "setting": "SHORT_TERM_N=4",
+    "probe_id": "P5",
+    "question": "Who is my supervisor, and what must I escalate to them?",
+    "reply": "Your supervisor is Dana Whitfield. Closure recommendations must be escalated to them.",
+    "score": 5,
+    "criteria_met": [
+      "supervisor",
+      "what_to_escalate"
+    ],
+    "criteria_total": 2,
+    "stale_value_mentioned": false,
+    "change_explained": false
+  },
+  {
+    "setting": "SHORT_TERM_N=12",
+    "probe_id": "P1",
+    "question": "Quick check: what is my name, and which district do I cover?",
+    "reply": "Your name is Rachandeep Kaur, and you cover the Willow Glen district.  \nYou are a senior environmental health inspector with Santa Clara County.  \nMake sure all your inspections and reports align with your district's requirements.  \nStay prepared for the November 3 follow-up and any other scheduled inspections.",
+    "score": 5,
+    "criteria_met": [
+      "name",
+      "district"
+    ],
+    "criteria_total": 2,
+    "stale_value_mentioned": false,
+    "change_explained": false
+  },
+  {
+    "setting": "SHORT_TERM_N=12",
+    "probe_id": "P2",
+    "question": "Which facility failed the cold-holding check, what is its facility code, and what temperature was its walk-in cooler at?",
+    "reply": "The facility that failed the cold-holding check is Golden Dragon, with facility code FA0148210.  \nIts walk-in cooler was holding at 47\u00b0F.  \nCorrective actions include repairing the cooler and retraining staff.  \nEnsure all records are documented and reviewed before the November 3 follow-up.",
+    "score": 5,
+    "criteria_met": [
+      "facility",
+      "code",
+      "temperature"
+    ],
+    "criteria_total": 3,
+    "stale_value_mentioned": false,
+    "change_explained": false
+  },
+  {
+    "setting": "SHORT_TERM_N=12",
+    "probe_id": "P3",
+    "question": "When is the Golden Dragon follow-up inspection scheduled?",
+    "reply": "The Golden Dragon follow-up inspection was rescheduled to November 10.  \nThis change was made due to a delayed compressor part.  \nEnsure all corrective actions are completed before the November 10 inspection.  \nDocument all steps taken and report to Dana Whitfield.",
+    "score": 5,
+    "criteria_met": [
+      "current_date"
+    ],
+    "criteria_total": 1,
+    "stale_value_mentioned": false,
+    "change_explained": true
+  },
+  {
+    "setting": "SHORT_TERM_N=12",
+    "probe_id": "P4",
+    "question": "How do I want the reports you draft for me to be formatted?",
+    "reply": "Your reports should be formatted using bullet points for clarity.  \nEach key point should be concise and easy to read.  \nInclude all necessary details such as facility names, dates, and corrective actions.  \nEnsure all documentation aligns with regulations and is ready for review.",
+    "score": 3,
+    "criteria_met": [
+      "bullets"
+    ],
+    "criteria_total": 2,
+    "stale_value_mentioned": false,
+    "change_explained": false
+  },
+  {
+    "setting": "SHORT_TERM_N=12",
+    "probe_id": "P5",
+    "question": "Who is my supervisor, and what must I escalate to them?",
+    "reply": "Your supervisor is Dana Whitfield.  \nAll closure recommendations and significant findings must be escalated to them.  \nEnsure all reports and corrective actions are documented and reviewed.  \nFollow up on any unresolved issues before the November 3 inspection.",
+    "score": 5,
+    "criteria_met": [
+      "supervisor",
+      "what_to_escalate"
+    ],
+    "criteria_total": 2,
+    "stale_value_mentioned": false,
+    "change_explained": false
+  },
+  {
+    "setting": "SHORT_TERM_N=30",
+    "probe_id": "P1",
+    "question": "Quick check: what is my name, and which district do I cover?",
+    "reply": "Your name is Rachandeep Kaur, and you cover the Willow Glen district.",
+    "score": 5,
+    "criteria_met": [
+      "name",
+      "district"
+    ],
+    "criteria_total": 2,
+    "stale_value_mentioned": false,
+    "change_explained": false
+  },
+  {
+    "setting": "SHORT_TERM_N=30",
+    "probe_id": "P2",
+    "question": "Which facility failed the cold-holding check, what is its facility code, and what temperature was its walk-in cooler at?",
+    "reply": "The facility that failed the cold-holding check is Golden Dragon, with facility code FA0148210. Its walk-in cooler was holding at 47\u00b0F.",
+    "score": 5,
+    "criteria_met": [
+      "facility",
+      "code",
+      "temperature"
+    ],
+    "criteria_total": 3,
+    "stale_value_mentioned": false,
+    "change_explained": false
+  },
+  {
+    "setting": "SHORT_TERM_N=30",
+    "probe_id": "P3",
+    "question": "When is the Golden Dragon follow-up inspection scheduled?",
+    "reply": "The Golden Dragon follow-up inspection is scheduled for November 10.",
+    "score": 5,
+    "criteria_met": [
+      "current_date"
+    ],
+    "criteria_total": 1,
+    "stale_value_mentioned": false,
+    "change_explained": false
+  },
+  {
+    "setting": "SHORT_TERM_N=30",
+    "probe_id": "P4",
+    "question": "How do I want the reports you draft for me to be formatted?",
+    "reply": "- Reports should be formatted with bullet points only.  \n- Each report may include a maximum of five bullet points.  \n- Use clear and concise language for each item.  \n- Ensure all key details are included without unnecessary information.  \n- Maintain a professional and organized structure for easy readability.",
+    "score": 5,
+    "criteria_met": [
+      "bullets",
+      "max_five"
+    ],
+    "criteria_total": 2,
+    "stale_value_mentioned": false,
+    "change_explained": false
+  },
+  {
+    "setting": "SHORT_TERM_N=30",
+    "probe_id": "P5",
+    "question": "Who is my supervisor, and what must I escalate to them?",
+    "reply": "Your supervisor is Dana Whitfield. Closure recommendations must be escalated to Dana Whitfield.",
+    "score": 5,
+    "criteria_met": [
+      "supervisor",
+      "what_to_escalate"
+    ],
+    "criteria_total": 2,
+    "stale_value_mentioned": false,
+    "change_explained": false
+  },
+  {
+    "setting": "Compression policy (N=12)",
+    "probe_id": "P1",
+    "question": "Quick check: what is my name, and which district do I cover?",
+    "reply": "Your name is Inspector Lee, and you cover the Willow Glen district.",
+    "score": 3,
+    "criteria_met": [
+      "district"
+    ],
+    "criteria_total": 2,
+    "stale_value_mentioned": false,
+    "change_explained": false
+  },
+  {
+    "setting": "Compression policy (N=12)",
+    "probe_id": "P2",
+    "question": "Which facility failed the cold-holding check, what is its facility code, and what temperature was its walk-in cooler at?",
+    "reply": "The facility that failed the cold-holding check is Golden Dragon, facility code FA0148210, with a walk-in cooler temperature of 47\u00b0F.",
+    "score": 5,
+    "criteria_met": [
+      "facility",
+      "code",
+      "temperature"
+    ],
+    "criteria_total": 3,
+    "stale_value_mentioned": false,
+    "change_explained": false
+  },
+  {
+    "setting": "Compression policy (N=12)",
+    "probe_id": "P3",
+    "question": "When is the Golden Dragon follow-up inspection scheduled?",
+    "reply": "The Golden Dragon follow-up inspection is scheduled for November 10.",
+    "score": 5,
+    "criteria_met": [
+      "current_date"
+    ],
+    "criteria_total": 1,
+    "stale_value_mentioned": false,
+    "change_explained": false
+  },
+  {
+    "setting": "Compression policy (N=12)",
+    "probe_id": "P4",
+    "question": "How do I want the reports you draft for me to be formatted?",
+    "reply": "Your reports should be formatted using bullet points only.",
+    "score": 3,
+    "criteria_met": [
+      "bullets"
+    ],
+    "criteria_total": 2,
+    "stale_value_mentioned": false,
+    "change_explained": false
+  },
+  {
+    "setting": "Compression policy (N=12)",
+    "probe_id": "P5",
+    "question": "Who is my supervisor, and what must I escalate to them?",
+    "reply": "Your supervisor is Dana Whitfield. You must escalate any critical violations or safety concerns to them.",
+    "score": 3,
+    "criteria_met": [
+      "supervisor"
+    ],
+    "criteria_total": 2,
+    "stale_value_mentioned": false,
+    "change_explained": false
+  }
+]

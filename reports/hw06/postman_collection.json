@@ -1,0 +1,364 @@
+{
+  "info": {
+    "name": "HW6 - s7117 MongoDB document API + chat memory",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": "Set doc_id to the id returned by 'Create inspection doc'. Base URL http://127.0.0.1:8817 (PORT_BASE)."
+  },
+  "variable": [
+    {
+      "key": "base",
+      "value": "http://127.0.0.1:8817"
+    },
+    {
+      "key": "doc_id",
+      "value": "REPLACE_WITH_CREATED_ID"
+    }
+  ],
+  "item": [
+    {
+      "name": "Part 1 - Document CRUD (MongoDB)",
+      "item": [
+        {
+          "name": "Create inspection doc",
+          "request": {
+            "method": "POST",
+            "url": {
+              "raw": "{{base}}/api/doc/inspections",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "doc",
+                "inspections"
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"facility_name\": \"FA0148210 - GOLDEN DRAGON\",\n  \"description\": \"Walk-in cooler at 47F.\",\n  \"status\": \"failed\",\n  \"program_element\": \"ROUTINE HEALTH INSPECTION\",\n  \"inspection_date\": \"2026-10-16T10:30:00-07:00\"\n}"
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.collectionVariables.set('doc_id', pm.response.json().id);"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "List inspection docs",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{base}}/api/doc/inspections?limit=10",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "doc",
+                "inspections?limit=10"
+              ]
+            },
+            "header": []
+          }
+        },
+        {
+          "name": "Get one by id",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{base}}/api/doc/inspections/{{doc_id}}",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "doc",
+                "inspections",
+                "{{doc_id}}"
+              ]
+            },
+            "header": []
+          }
+        },
+        {
+          "name": "Update by id",
+          "request": {
+            "method": "PUT",
+            "url": {
+              "raw": "{{base}}/api/doc/inspections/{{doc_id}}",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "doc",
+                "inspections",
+                "{{doc_id}}"
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"status\": \"follow_up_required\",\n  \"description\": \"Follow-up 2026-11-10.\"\n}"
+            }
+          }
+        },
+        {
+          "name": "Delete by id",
+          "request": {
+            "method": "DELETE",
+            "url": {
+              "raw": "{{base}}/api/doc/inspections/{{doc_id}}",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "doc",
+                "inspections",
+                "{{doc_id}}"
+              ]
+            },
+            "header": []
+          }
+        }
+      ]
+    },
+    {
+      "name": "Part 1 - Validation errors",
+      "item": [
+        {
+          "name": "Missing required fields (422)",
+          "request": {
+            "method": "POST",
+            "url": {
+              "raw": "{{base}}/api/doc/inspections",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "doc",
+                "inspections"
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"description\": \"only a description\"\n}"
+            }
+          }
+        },
+        {
+          "name": "Invalid enum values (422)",
+          "request": {
+            "method": "POST",
+            "url": {
+              "raw": "{{base}}/api/doc/inspections",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "doc",
+                "inspections"
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"facility_name\": \"FA0148210 - GOLDEN DRAGON\",\n  \"description\": \"Walk-in cooler at 47F.\",\n  \"status\": \"closed\",\n  \"program_element\": \"BAKERY\",\n  \"inspection_date\": \"2026-10-16T10:30:00-07:00\"\n}"
+            }
+          }
+        },
+        {
+          "name": "Wrong data types (422)",
+          "request": {
+            "method": "POST",
+            "url": {
+              "raw": "{{base}}/api/doc/inspections",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "doc",
+                "inspections"
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"facility_name\": 12345,\n  \"description\": \"Walk-in cooler at 47F.\",\n  \"status\": \"failed\",\n  \"program_element\": \"ROUTINE HEALTH INSPECTION\",\n  \"inspection_date\": true\n}"
+            }
+          }
+        },
+        {
+          "name": "Bad date format (422)",
+          "request": {
+            "method": "POST",
+            "url": {
+              "raw": "{{base}}/api/doc/inspections",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "doc",
+                "inspections"
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"facility_name\": \"FA0148210 - GOLDEN DRAGON\",\n  \"description\": \"Walk-in cooler at 47F.\",\n  \"status\": \"failed\",\n  \"program_element\": \"ROUTINE HEALTH INSPECTION\",\n  \"inspection_date\": \"16/10/2026\"\n}"
+            }
+          }
+        },
+        {
+          "name": "Malformed ObjectId (400)",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{base}}/api/doc/inspections/not-an-id",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "doc",
+                "inspections",
+                "not-an-id"
+              ]
+            },
+            "header": []
+          }
+        },
+        {
+          "name": "Not found (404)",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{base}}/api/doc/inspections/0123456789abcdef01234567",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "doc",
+                "inspections",
+                "0123456789abcdef01234567"
+              ]
+            },
+            "header": []
+          }
+        }
+      ]
+    },
+    {
+      "name": "Part 2 - Chat memory",
+      "item": [
+        {
+          "name": "Chat",
+          "request": {
+            "method": "POST",
+            "url": {
+              "raw": "{{base}}/api/chat",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "chat"
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"user_id\": \"s7117-rachandeep\",\n  \"session_id\": \"s7117-rachandeep-postman\",\n  \"message\": \"Hi, I'm Rachandeep Kaur. I cover Willow Glen.\"\n}"
+            }
+          }
+        },
+        {
+          "name": "Memory",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{base}}/api/memory/s7117-rachandeep",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "memory",
+                "s7117-rachandeep"
+              ]
+            },
+            "header": []
+          }
+        },
+        {
+          "name": "Aggregate",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{base}}/api/aggregate/s7117-rachandeep",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "aggregate",
+                "s7117-rachandeep"
+              ]
+            },
+            "header": []
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+# MEMORY.md
+<!-- last_consolidated: 2026-10-01T08:00:00+00:00 -->
+<!-- HW6 Part 4.5 test input: 55 lines with planted duplicates and contradictions (labels in expected.yaml). -->
+
+## Facts
+- (2026-09-01) The user's name is Rachandeep Kaur.
+- (2026-09-01) The user is a senior environmental health inspector with Santa Clara County.
+- (2026-09-01) The user covers the Downtown San Jose district.
+- (2026-09-02) The user's supervisor is Mark Chen.
+- (2026-09-02) The inspection API runs on port 8817.
+- (2026-09-03) The user's name is Rachandeep Kaur.
+- (2026-09-04) The user prefers temperatures reported in Fahrenheit.
+- (2026-09-05) The relational database is s7117_rel on MySQL.
+- (2026-09-06) The user starts field inspections at 8 AM on weekdays.
+- (2026-09-07) The inspection API runs on port 8817.
+- (2026-09-08) The local model is qwen3:8b served by Ollama.
+- (2026-09-10) The user prefers reports written as numbered paragraphs.
+- (2026-09-11) Yummy Kitchen's facility code is FA0206933.
+- (2026-09-12) Temperatures should be given in degrees Fahrenheit for this user.
+- (2026-09-13) Rachandeep Kaur works as a senior inspector for Santa Clara County.
+- (2026-09-14) The user's GitHub repository is data260-7117.
+- (2026-09-15) Ollama serves the qwen3:8b model locally.
+- (2026-09-16) The user's name is Rachandeep Kaur.
+- (2026-09-17) Yummy Kitchen's facility code is FA0206933.
+- (2026-09-20) Golden Dragon's facility code is FA0148210 (confirmed from the county permit).
+- (2026-09-22) Golden Dragon failed the cold-holding check with its walk-in cooler at 47F.
+- (2026-09-23) The user starts field inspections at 8 AM on weekdays.
+- (2026-09-25) The user covers the Willow Glen district.
+- (2026-09-26) MySQL database s7117_rel holds the relational inspection data.
+- (2026-09-27) Closure recommendations must be escalated to the user's supervisor.
+- (2026-09-28) Sakura Sushi must log rice pH every 4 hours.
+- (2026-09-30) The document database is s7117_doc on MongoDB.
+- (2026-10-01) The Golden Dragon follow-up inspection is on November 3.
+- (2026-10-02) Golden Dragon's walk-in cooler measured 47F, failing cold holding.
+- (2026-10-03) The user wants reports as bullet points, at most five bullets.
+- (2026-10-04) Bay BBQ passed its routine inspection with a score of 98.
+- (2026-10-05) The user's supervisor is Dana Whitfield.
+- (2026-10-06) Sakura Sushi must log rice pH every 4 hours.
+- (2026-10-07) The user's HW6 report is due on October 20.
+- (2026-10-08) The user prefers short answers of at most four sentences.
+- (2026-10-09) Curry House had a rodent finding in dry storage and needs a follow-up within 7 days.
+- (2026-10-10) The user prefers temperatures reported in Fahrenheit.
+- (2026-10-11) Golden Dragon's facility code is FA0148201 (assistant guess, unverified).
+- (2026-10-12) The inspection API listens on port 8817.
+- (2026-10-13) Bay BBQ scored 98 on its routine inspection and passed.
+- (2026-10-14) The Golden Dragon follow-up moved to November 10 because a compressor part is delayed.
+- (2026-10-14) Keep answers short: four sentences at most.
+- (2026-10-15) The user's supervisor is Dana Whitfield.
+- (2026-10-15) The user's GitHub repository is data260-7117.
+- (2026-10-15) The user covers the Willow Glen district.
+- (2026-10-15) Reports for the user should be bullet points only, no more than five.
+- (2026-10-15) The HW6 report deadline is October 20.
+- (2026-10-16) Curry House needs a follow-up within 7 days of its rodent finding.
+- (2026-10-16) The document store is MongoDB database s7117_doc.
+- (2026-10-16) Golden Dragon's follow-up inspection is November 10.

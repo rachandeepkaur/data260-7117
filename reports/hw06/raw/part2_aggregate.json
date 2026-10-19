@@ -1,0 +1,40 @@
+{
+  "user_id": "s7117-rachandeep",
+  "timezone": "America/Los_Angeles",
+  "daily_message_counts": [
+    {
+      "messages": 24,
+      "user_messages": 12,
+      "assistant_messages": 12,
+      "date": "2026-10-16",
+      "sessions": 1
+    }
+  ],
+  "total_messages": 24,
+  "recent_summaries": [
+    {
+      "user_id": "s7117-rachandeep",
+      "session_id": null,
+      "scope": "user",
+      "text": "- Golden Dragon (FA0148210) failed cold holding at 47\u00b0F (above safe range).  \n- Inspection rescheduled to November 10 due to delayed part.  \n- Immediate repair or adjustment required for cooler temperature.  \n- Closure recommendations to send to Dana Whitfield.  \n- Corrective actions and temperature monitoring must be documented.  \n- Yummy Kitchen (FA0206933) has routine inspection on October 22.  \n- Bring checklist, previous reports, corrective action docs, and notebook for inspection.",
+      "created_at": "2026-10-16T19:15:15.035000+00:00",
+      "id": "6ad277c34a969ab5be8b8898"
+    },
+    {
+      "user_id": "s7117-rachandeep",
+      "session_id": "s7117-rachandeep-demo1",
+      "scope": "session",
+      "text": "- Golden Dragon (FA0148210) failed cold holding with the walk-in cooler at 47\u00b0F, which is above the safe range of 41\u00b0F or below.  \n- Follow-up inspection for Golden Dragon has been rescheduled to November 10 due to a delayed part.  \n- Golden Dragon should immediately repair or adjust the cooler to reach the proper temperature.  \n- Closure recommendations should be sent to Dana Whitfield, Rachandeep's supervisor.  \n- Corrective actions and temperature monitoring should be documented.  \n- Yummy Kitchen (FA0206933) is next on the list for a routine inspection on October 22.  \n- Bring inspection checklist, previous reports, corrective action documentation, and notebook for the routine inspection.",
+      "created_at": "2026-10-16T19:14:32.571000+00:00",
+      "id": "6ad277984a969ab5be8b8897"
+    },
+    {
+      "user_id": "s7117-rachandeep",
+      "session_id": "s7117-rachandeep-demo1",
+      "scope": "session",
+      "text": "- Rachandeep Kaur is a Santa Clara County food inspector covering the Willow Glen district.  \n- Golden Dragon (FA0148210) failed cold holding with the walk-in cooler at 47\u00b0F.  \n- Follow-up inspection for Golden Dragon is scheduled for November 3.  \n- The cooler temperature was 47\u00b0F, which is above the acceptable range.  \n- Golden Dragon should immediately repair or adjust the cooler to reach the proper temperature.  \n- Closure recommendations should be sent to Dana Whitfield, Rachandeep's supervisor.  \n- The follow-up inspection date remains November 3.  \n- Corrective actions and temperature monitoring should be documented.",
+      "created_at": "2026-10-16T19:10:17.961000+00:00",
+      "id": "6ad276994a969ab5be8b8888"
+    }
+  ]
+}

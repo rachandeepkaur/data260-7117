@@ -98,3 +98,55 @@ metrics-hw05:        ## rebuild reports/hw05/METRICS.md from raw/
 
 verify-hw05:         ## smoke test -> reports/hw05/verification.json
 	$(call logged05,$(PY) $(HW05)/verify.py)
+
+# ---------------------------------------------------------------------------
+# HW6 - every logged target appends a timestamped copy of its console output
+# to reports/hw06/RUN_LOG.txt.
+HW06 = code/hw06
+LOG06 = reports/hw06/RUN_LOG.txt
+define logged06
+	@mkdir -p reports/hw06/raw
+	@printf '\n===== [%s] make %s (user: %s) =====\n' "$$(date '+%Y-%m-%d %H:%M:%S %Z')" "$@" "$$(git config user.name)" | tee -a $(LOG06)
+	@set -o pipefail; $(1) 2>&1 | tee -a $(LOG06)
+endef
+
+.PHONY: file-memory-demo-hw06 mongo-up mongo-shell setup-mongo-hw06 doc-api-demo-hw06 chat-demo-hw06 memory-experiment-hw06 metrics-hw06 file-memory-chat consolidation-test-hw06 agent-md-check-hw06 test-hw06 verify-hw06
+
+mongo-up:            ## HW6: MongoDB 7 in Docker on :27017 (data in the s7117_mongo_data volume)
+	docker start s7117-mongo 2>/dev/null || docker run -d --name s7117-mongo -p 27017:27017 -v s7117_mongo_data:/data/db mongo:7.0
+
+mongo-shell:         ## HW6: mongosh inside the container, on s7117_doc
+	docker exec -it s7117-mongo mongosh s7117_doc
+
+setup-mongo-hw06:    ## HW6 Part 1.I: s7117_doc collections + $$jsonSchema validators + indexes + sample docs
+	$(call logged06,$(PY) $(HW06)/setup_mongo.py)
+
+doc-api-demo-hw06:   ## HW6 Part 1: CRUD + validation cases against the running API -> raw/part1_doc_api_calls.json
+	$(call logged06,$(PY) $(HW06)/part1_doc_api_demo.py)
+
+chat-demo-hw06:      ## HW6 Part 2: 12 messages in one session + GET memory/aggregate -> raw/part2_*.json
+	$(call logged06,$(PY) $(HW06)/part2_chat_demo.py)
+
+memory-experiment-hw06: ## HW6 Part 3: 30 msgs + 5 probes x 4 settings (starts its own API; stop run-api first)
+	$(call logged06,$(PY) $(HW06)/run_memory_experiment.py)
+
+metrics-hw06:        ## HW6: rebuild reports/hw06/METRICS.md from raw/
+	$(call logged06,$(PY) $(HW06)/compute_metrics.py)
+
+file-memory-chat:    ## HW6 Part 4: interactive chat with AGENT.md + MEMORY.md (/memory /compact /dream /help)
+	$(PY) $(HW06)/file_memory_chat.py
+
+consolidation-test-hw06: ## HW6 Part 4.5: 55-line MEMORY.md -> consolidated (<40 lines) + contradiction audit
+	$(call logged06,$(PY) $(HW06)/consolidation_test.py)
+
+agent-md-check-hw06: ## HW6 Part 4.4: generate one function with AGENT.md as system prompt, check it follows AGENT.md
+	$(call logged06,$(PY) $(HW06)/agent_md_check.py)
+
+test-hw06:           ## HW6: offline tests (no MongoDB/Ollama needed)
+	$(call logged06,$(PY) code/tests/test_hw06_memory.py)
+
+verify-hw06:         ## HW6 smoke test -> reports/hw06/verification.json
+	$(call logged06,$(PY) $(HW06)/verify.py)
+
+file-memory-demo-hw06: ## HW6 Part 4.3: scripted run of /help /memory /dream /compact (evidence for RUN_LOG)
+	$(call logged06,$(PY) $(HW06)/file_memory_chat.py --script reports/hw06/file_memory_demo_script.txt --no-auto-consolidate)

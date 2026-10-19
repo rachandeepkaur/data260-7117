@@ -1,0 +1,46 @@
+# Ground truth for MEMORY.original.md (written together with it, before running
+# consolidation). Used by code/hw06/consolidation_test.py to grade the result.
+#
+# Contradictions: the consolidated "## Facts" section must state `keep` and must
+# not state `drop` as a current fact; `drop` must still be visible in
+# "## Resolved contradictions" or "## Needs review" (no silent deletion).
+contradictions:
+  - topic: supervisor
+    keep: "Dana Whitfield"
+    drop: "Mark Chen"
+    rule: newest date wins (2026-10-05 over 2026-09-02)
+  - topic: district
+    keep: "Willow Glen"
+    drop: "Downtown San Jose"
+    rule: newest date wins (2026-09-25 over 2026-09-01)
+  - topic: report format
+    keep: "bullet"
+    drop: "numbered paragraphs"
+    rule: newest date wins (2026-10-03 over 2026-09-10)
+  - topic: Golden Dragon follow-up date
+    keep: "November 10"
+    drop: "November 3"
+    rule: newest date wins (2026-10-14 over 2026-10-01)
+  - topic: Golden Dragon facility code
+    keep: "FA0148210"
+    drop: "FA0148201"
+    rule: the OLDER fact wins - it is confirmed from the permit, the newer one is an unverified guess
+          (a plain newest-wins consolidation gets this one wrong)
+
+# Duplicates: each topic (regex) must appear in exactly one line of "## Facts".
+duplicates:
+  - {topic: "name", pattern: "name is Rachandeep|Rachandeep Kaur\\b(?!.*inspector)", copies: 3}
+  - {topic: "API port", pattern: "8817", copies: 3}
+  - {topic: "Fahrenheit", pattern: "Fahrenheit", copies: 3}
+  - {topic: "8 AM start", pattern: "8 AM", copies: 2}
+  - {topic: "qwen3 model", pattern: "qwen3", copies: 2}
+  - {topic: "Yummy Kitchen code", pattern: "FA0206933", copies: 2}
+  - {topic: "GitHub repo", pattern: "data260-7117", copies: 2}
+  - {topic: "Sakura rice pH", pattern: "rice pH", copies: 2}
+  - {topic: "MySQL db", pattern: "s7117_rel", copies: 2}
+  - {topic: "MongoDB db", pattern: "s7117_doc", copies: 2}
+  - {topic: "cooler 47F", pattern: "47F", copies: 2}
+  - {topic: "Bay BBQ 98", pattern: "Bay BBQ", copies: 2}
+  - {topic: "short answers", pattern: "four sentences", copies: 2}
+  - {topic: "HW6 deadline", pattern: "October 20", copies: 2}
+  - {topic: "Curry House follow-up", pattern: "Curry House", copies: 2}

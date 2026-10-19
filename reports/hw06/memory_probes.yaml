@@ -1,0 +1,70 @@
+# HW6 Part 3.2 - memory probes. Written BEFORE any experiment run and kept
+# fixed for every setting. The five questions are asked, in this order, in the
+# same session right after the 30-message conversation (conversation_30.yaml).
+#
+# Scoring (automatic, code/hw06/probe_scoring.py): each probe lists criteria;
+# a criterion is met when the reply matches ANY of its regex alternatives
+# (case-insensitive). f = criteria met / criteria total, then the rubric below.
+# `stale` lists superseded values: naming one without saying it changed costs
+# one point (min 1), and naming only the stale value scores 1.
+
+rubric:
+  5: "All key facts correct and specific (every criterion met), no stale or invented values."
+  4: "Mostly correct: at least 2/3 of the criteria met, nothing contradicted."
+  3: "Partially correct: at least half of the criteria met, or a correct answer mixed with a stale value."
+  2: "Vague or mostly wrong: some related detail recalled, but the key fact is missing."
+  1: "No recall: says it does not know, answers with only a stale value, or invents facts."
+
+probes:
+  - id: P1
+    question: "Quick check: what is my name, and which district do I cover?"
+    planted_turn: 1
+    expected: "Rachandeep Kaur; Willow Glen district (Santa Clara County)."
+    criteria:
+      - name: name
+        any: ["rachandeep"]
+      - name: district
+        any: ["willow\\s*glen"]
+
+  - id: P2
+    question: "Which facility failed the cold-holding check, what is its facility code, and what temperature was its walk-in cooler at?"
+    planted_turn: 3
+    expected: "Golden Dragon, FA0148210, walk-in cooler at 47F."
+    criteria:
+      - name: facility
+        any: ["golden\\s*dragon"]
+      - name: code
+        any: ["fa\\s*0?148210"]
+      - name: temperature
+        any: ["\\b47\\s*(°|º|degrees|f\\b)", "\\b47\\b"]
+
+  - id: P3
+    question: "When is the Golden Dragon follow-up inspection scheduled?"
+    planted_turn: 18
+    expected: "November 10 (moved from November 3 because of a delayed compressor part)."
+    criteria:
+      - name: current_date
+        any: ["nov(ember)?\\.?\\s*10\\b", "\\b11/10\\b", "10(th)?\\s+(of\\s+)?nov"]
+    stale:
+      any: ["nov(ember)?\\.?\\s*3(rd)?\\b", "\\b11/3\\b"]
+      change_words: ["moved", "changed", "reschedul", "postpon", "instead", "from november 3", "delayed", "originally"]
+
+  - id: P4
+    question: "How do I want the reports you draft for me to be formatted?"
+    planted_turn: 7
+    expected: "Bullet points only, at most five bullets."
+    criteria:
+      - name: bullets
+        any: ["bullet"]
+      - name: max_five
+        any: ["\\bfive\\b", "\\b5\\b"]
+
+  - id: P5
+    question: "Who is my supervisor, and what must I escalate to them?"
+    planted_turn: 9
+    expected: "Dana Whitfield; any closure recommendation must be escalated to her."
+    criteria:
+      - name: supervisor
+        any: ["dana\\s+whitfield", "whitfield"]
+      - name: what_to_escalate
+        any: ["clos(ure|ing|e)"]

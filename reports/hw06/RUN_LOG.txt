@@ -1,0 +1,1944 @@
+
+===== [2026-10-16 02:23:52 PDT] make memory-experiment-hw06 (user: rachandeep Kaur) =====
+
+=== SHORT_TERM_N=4  env={'SHORT_TERM_N': '4', 'MEMORY_POLICY': 'none'}  started 2026-10-16 02:23:53 ===
+[02:24:27] SHORT_TERM_N=4 turn  1/35 prompt=  138 completion=  52 window= 0 facts=0 latency=28890ms
+[02:24:52] SHORT_TERM_N=4 turn  2/35 prompt=  209 completion=  58 window= 2 facts=0 latency=24649ms
+[02:25:36] SHORT_TERM_N=4 turn  3/35 prompt=  362 completion=  64 window= 4 facts=1 latency=44427ms
+[02:26:22] SHORT_TERM_N=4 turn  4/35 prompt=  397 completion=  63 window= 4 facts=2 latency=45804ms
+[02:28:13] SHORT_TERM_N=4 turn  5/35 prompt=  449 completion=  63 window= 4 facts=3 latency=111222ms
+[02:28:57] SHORT_TERM_N=4 turn  6/35 prompt=  582 completion=  64 window= 4 facts=2 latency=44178ms
+[02:29:28] SHORT_TERM_N=4 turn  7/35 prompt=  509 completion=  46 window= 4 facts=0 latency=30892ms
+[02:30:16] SHORT_TERM_N=4 turn  8/35 prompt=  576 completion=  78 window= 4 facts=2 latency=48093ms
+[02:31:04] SHORT_TERM_N=4 turn  9/35 prompt=  513 completion=  61 window= 4 facts=0 latency=47894ms
+[02:33:35] SHORT_TERM_N=4 turn 10/35 prompt=  633 completion=  63 window= 4 facts=3 latency=150229ms
+[02:34:22] SHORT_TERM_N=4 turn 11/35 prompt=  575 completion=  56 window= 4 facts=1 latency=47152ms
+[02:34:59] SHORT_TERM_N=4 turn 12/35 prompt=  623 completion=  55 window= 4 facts=3 latency=37455ms
+[02:35:27] SHORT_TERM_N=4 turn 13/35 prompt=  590 completion=  49 window= 4 facts=2 latency=27216ms
+[02:35:48] SHORT_TERM_N=4 turn 14/35 prompt=  550 completion=  51 window= 4 facts=1 latency=21751ms
+[02:37:31] SHORT_TERM_N=4 turn 15/35 prompt=  577 completion=  64 window= 4 facts=2 latency=102605ms
+[02:38:12] SHORT_TERM_N=4 turn 16/35 prompt=  654 completion=  65 window= 4 facts=3 latency=40997ms
+[02:38:48] SHORT_TERM_N=4 turn 17/35 prompt=  656 completion=  75 window= 4 facts=3 latency=35612ms
+[02:39:33] SHORT_TERM_N=4 turn 18/35 prompt=  694 completion=  89 window= 4 facts=3 latency=44936ms
+[02:40:16] SHORT_TERM_N=4 turn 19/35 prompt=  708 completion=  95 window= 4 facts=3 latency=42765ms
+[02:43:00] SHORT_TERM_N=4 turn 20/35 prompt=  725 completion=  74 window= 4 facts=3 latency=164074ms
+[02:43:51] SHORT_TERM_N=4 turn 21/35 prompt=  862 completion=  69 window= 4 facts=3 latency=51467ms
+[02:44:18] SHORT_TERM_N=4 turn 22/35 prompt=  726 completion=  61 window= 4 facts=0 latency=26550ms
+[02:45:12] SHORT_TERM_N=4 turn 23/35 prompt=  824 completion=  74 window= 4 facts=3 latency=53877ms
+[02:45:42] SHORT_TERM_N=4 turn 24/35 prompt=  837 completion=  68 window= 4 facts=3 latency=30554ms
+[02:47:25] SHORT_TERM_N=4 turn 25/35 prompt=  831 completion=  67 window= 4 facts=3 latency=102843ms
+[02:47:59] SHORT_TERM_N=4 turn 26/35 prompt=  827 completion=  66 window= 4 facts=3 latency=34133ms
+[02:48:37] SHORT_TERM_N=4 turn 27/35 prompt=  797 completion=  70 window= 4 facts=2 latency=37182ms
+[02:49:08] SHORT_TERM_N=4 turn 28/35 prompt=  837 completion=  65 window= 4 facts=3 latency=31036ms
+[02:49:42] SHORT_TERM_N=4 turn 29/35 prompt=  839 completion=  78 window= 4 facts=3 latency=34760ms
+[02:52:25] SHORT_TERM_N=4 turn 30/35 prompt=  845 completion=  49 window= 4 facts=3 latency=163001ms
+[02:52:56] SHORT_TERM_N=4 turn 31/35 prompt=  788 completion=  31 window= 4 facts=2 latency=30039ms probe=P1 score=5
+      Q: Quick check: what is my name, and which district do I cover?
+      A: Your name is Rachandeep Kaur, and you cover the Willow Glen district.  
+You are a senior environmental health inspector with Santa Clara County.
+[02:53:36] SHORT_TERM_N=4 turn 32/35 prompt=  807 completion=  38 window= 4 facts=3 latency=40086ms probe=P2 score=5
+      Q: Which facility failed the cold-holding check, what is its facility code, and what temperature was its walk-in cooler at?
+      A: The facility that failed the cold-holding check is Golden Dragon, with facility code FA0148210. Its walk-in cooler was holding at 47°F.
+[02:53:56] SHORT_TERM_N=4 turn 33/35 prompt=  787 completion=  15 window= 4 facts=3 latency=20562ms probe=P3 score=5
+      Q: When is the Golden Dragon follow-up inspection scheduled?
+      A: The Golden Dragon follow-up inspection is scheduled for November 10.
+[02:54:08] SHORT_TERM_N=4 turn 34/35 prompt=  692 completion=  11 window= 4 facts=1 latency=11816ms probe=P4 score=3
+      Q: How do I want the reports you draft for me to be formatted?
+      A: You prefer reports to be formatted using bullet points.
+[02:55:17] SHORT_TERM_N=4 turn 35/35 prompt=  684 completion=  16 window= 4 facts=2 latency=68902ms probe=P5 score=5
+      Q: Who is my supervisor, and what must I escalate to them?
+      A: Your supervisor is Dana Whitfield. Closure recommendations must be escalated to them.
+
+=== SHORT_TERM_N=12  env={'SHORT_TERM_N': '12', 'MEMORY_POLICY': 'none'}  started 2026-10-16 02:55:17 ===
+[02:55:55] SHORT_TERM_N=12 turn  1/35 prompt=  138 completion=  53 window= 0 facts=0 latency=31338ms
+[02:56:23] SHORT_TERM_N=12 turn  2/35 prompt=  210 completion=  74 window= 2 facts=0 latency=28715ms
+[02:57:12] SHORT_TERM_N=12 turn  3/35 prompt=  379 completion=  68 window= 4 facts=1 latency=48108ms
+[02:57:53] SHORT_TERM_N=12 turn  4/35 prompt=  506 completion=  53 window= 6 facts=2 latency=41463ms
+[02:59:31] SHORT_TERM_N=12 turn  5/35 prompt=  625 completion=  63 window= 8 facts=3 latency=98184ms
+[03:00:21] SHORT_TERM_N=12 turn  6/35 prompt=  859 completion=  55 window=10 facts=2 latency=50163ms
+[03:00:54] SHORT_TERM_N=12 turn  7/35 prompt=  861 completion=  55 window=12 facts=0 latency=32751ms
+[03:01:45] SHORT_TERM_N=12 turn  8/35 prompt=  933 completion=  74 window=12 facts=2 latency=50713ms
+[03:02:37] SHORT_TERM_N=12 turn  9/35 prompt=  857 completion=  67 window=12 facts=0 latency=51810ms
+[03:04:48] SHORT_TERM_N=12 turn 10/35 prompt=  943 completion=  68 window=12 facts=3 latency=131228ms
+[03:05:38] SHORT_TERM_N=12 turn 11/35 prompt=  952 completion=  70 window=12 facts=1 latency=50386ms
+[03:06:24] SHORT_TERM_N=12 turn 12/35 prompt= 1015 completion=  70 window=12 facts=3 latency=45426ms
+[03:07:05] SHORT_TERM_N=12 turn 13/35 prompt= 1007 completion=  69 window=12 facts=2 latency=40888ms
+[03:07:45] SHORT_TERM_N=12 turn 14/35 prompt=  983 completion=  74 window=12 facts=1 latency=40039ms
+[03:09:22] SHORT_TERM_N=12 turn 15/35 prompt= 1012 completion=  68 window=12 facts=2 latency=96664ms
+[03:10:06] SHORT_TERM_N=12 turn 16/35 prompt= 1066 completion=  55 window=12 facts=3 latency=44390ms
+[03:10:50] SHORT_TERM_N=12 turn 17/35 prompt= 1042 completion=  58 window=12 facts=3 latency=43995ms
+[03:11:44] SHORT_TERM_N=12 turn 18/35 prompt= 1054 completion=  77 window=12 facts=3 latency=54267ms
+[03:12:28] SHORT_TERM_N=12 turn 19/35 prompt= 1048 completion=  59 window=12 facts=3 latency=43541ms
+[03:14:53] SHORT_TERM_N=12 turn 20/35 prompt= 1033 completion=  58 window=12 facts=3 latency=144901ms
+[03:15:46] SHORT_TERM_N=12 turn 21/35 prompt= 1080 completion=  62 window=12 facts=3 latency=53274ms
+[03:16:20] SHORT_TERM_N=12 turn 22/35 prompt=  965 completion=  57 window=12 facts=0 latency=33416ms
+[03:17:14] SHORT_TERM_N=12 turn 23/35 prompt= 1079 completion=  63 window=12 facts=3 latency=53943ms
+[03:17:51] SHORT_TERM_N=12 turn 24/35 prompt= 1090 completion=  60 window=12 facts=3 latency=37261ms
+[03:19:27] SHORT_TERM_N=12 turn 25/35 prompt= 1047 completion=  73 window=12 facts=3 latency=96145ms
+[03:20:11] SHORT_TERM_N=12 turn 26/35 prompt= 1065 completion=  69 window=12 facts=3 latency=44240ms
+[09:50:09] SHORT_TERM_N=12 turn 27/35 prompt= 1045 completion=  85 window=12 facts=2 latency=81419ms
+
+[2026-10-16 09:50:21 PDT] NOTE: run above interrupted - the Mac went into idle sleep at 03:20:41 during SHORT_TERM_N=12 turn 27 (woke 09:49). SHORT_TERM_N=12 is re-run from scratch below under caffeinate; SHORT_TERM_N=4 (complete) is kept.
+
+===== [2026-10-16 09:50:29 PDT] make memory-experiment-hw06 (user: rachandeep Kaur) =====
+SHORT_TERM_N=4: already complete (35 rows) - skipped (use --force to re-run)
+
+=== SHORT_TERM_N=12  env={'SHORT_TERM_N': '12', 'MEMORY_POLICY': 'none'}  started 2026-10-16 09:50:30 ===
+[09:51:23] SHORT_TERM_N=12 turn  1/35 prompt=  138 completion=  53 window= 0 facts=0 latency=46374ms
+[09:51:48] SHORT_TERM_N=12 turn  2/35 prompt=  210 completion=  65 window= 2 facts=0 latency=25228ms
+[09:52:29] SHORT_TERM_N=12 turn  3/35 prompt=  370 completion=  58 window= 4 facts=1 latency=40908ms
+[09:53:09] SHORT_TERM_N=12 turn  4/35 prompt=  487 completion=  57 window= 6 facts=2 latency=39416ms
+[09:54:31] SHORT_TERM_N=12 turn  5/35 prompt=  610 completion=  54 window= 8 facts=3 latency=82627ms
+[09:55:23] SHORT_TERM_N=12 turn  6/35 prompt=  846 completion=  74 window=10 facts=2 latency=51220ms
+[09:55:49] SHORT_TERM_N=12 turn  7/35 prompt=  867 completion=  50 window=12 facts=0 latency=26827ms
+[09:56:29] SHORT_TERM_N=12 turn  8/35 prompt=  934 completion=  72 window=12 facts=2 latency=39061ms
+[09:57:12] SHORT_TERM_N=12 turn  9/35 prompt=  865 completion=  60 window=12 facts=0 latency=43823ms
+[10:00:01] SHORT_TERM_N=12 turn 10/35 prompt=  954 completion= 100 window=12 facts=3 latency=168422ms
+[10:00:57] SHORT_TERM_N=12 turn 11/35 prompt= 1135 completion=  68 window=12 facts=1 latency=55674ms
+[10:01:29] SHORT_TERM_N=12 turn 12/35 prompt= 1205 completion=   6 window=12 facts=3 latency=32926ms
+[10:02:08] SHORT_TERM_N=12 turn 13/35 prompt= 1114 completion=  73 window=12 facts=2 latency=38750ms
+[10:02:47] SHORT_TERM_N=12 turn 14/35 prompt= 1099 completion=  72 window=12 facts=1 latency=38821ms
+[10:04:21] SHORT_TERM_N=12 turn 15/35 prompt= 1128 completion=  62 window=12 facts=2 latency=93665ms
+[10:05:08] SHORT_TERM_N=12 turn 16/35 prompt= 1022 completion=  75 window=12 facts=3 latency=47153ms
+[10:05:50] SHORT_TERM_N=12 turn 17/35 prompt=  986 completion=  72 window=12 facts=3 latency=42151ms
+[10:06:42] SHORT_TERM_N=12 turn 18/35 prompt= 1014 completion=  81 window=12 facts=3 latency=51510ms
+[10:07:33] SHORT_TERM_N=12 turn 19/35 prompt= 1076 completion=  98 window=12 facts=3 latency=51715ms
+[10:10:19] SHORT_TERM_N=12 turn 20/35 prompt= 1096 completion=  68 window=12 facts=3 latency=165096ms
+[10:11:20] SHORT_TERM_N=12 turn 21/35 prompt= 1225 completion=  86 window=12 facts=3 latency=61579ms
+[10:11:55] SHORT_TERM_N=12 turn 22/35 prompt= 1140 completion=  48 window=12 facts=0 latency=34738ms
+[10:12:57] SHORT_TERM_N=12 turn 23/35 prompt= 1225 completion=  82 window=12 facts=3 latency=61684ms
+[10:13:39] SHORT_TERM_N=12 turn 24/35 prompt= 1241 completion=  69 window=12 facts=3 latency=42182ms
+[10:15:20] SHORT_TERM_N=12 turn 25/35 prompt= 1203 completion=  71 window=12 facts=3 latency=101014ms
+[10:16:20] SHORT_TERM_N=12 turn 26/35 prompt= 1145 completion=  69 window=12 facts=3 latency=60441ms
+[10:17:10] SHORT_TERM_N=12 turn 27/35 prompt= 1115 completion=  94 window=12 facts=2 latency=50090ms
+[10:17:48] SHORT_TERM_N=12 turn 28/35 prompt= 1160 completion=  58 window=12 facts=3 latency=37841ms
+[10:18:31] SHORT_TERM_N=12 turn 29/35 prompt= 1172 completion=  76 window=12 facts=3 latency=43067ms
+[10:21:19] SHORT_TERM_N=12 turn 30/35 prompt= 1163 completion=  66 window=12 facts=3 latency=167802ms
+[10:22:22] SHORT_TERM_N=12 turn 31/35 prompt= 1197 completion=  62 window=12 facts=2 latency=63200ms probe=P1 score=5
+      Q: Quick check: what is my name, and which district do I cover?
+      A: Your name is Rachandeep Kaur, and you cover the Willow Glen district.  
+You are a senior environmental health inspector with Santa Clara County.  
+Make sure all your inspections and reports align with your district's requirements.  
+Stay prepared for the November 3 follow-up and any other scheduled 
+[10:23:21] SHORT_TERM_N=12 turn 32/35 prompt= 1258 completion=  68 window=12 facts=3 latency=58624ms probe=P2 score=5
+      Q: Which facility failed the cold-holding check, what is its facility code, and what temperature was its walk-in cooler at?
+      A: The facility that failed the cold-holding check is Golden Dragon, with facility code FA0148210.  
+Its walk-in cooler was holding at 47°F.  
+Corrective actions include repairing the cooler and retraining staff.  
+Ensure all records are documented and reviewed before the November 3 follow-up.
+[10:24:06] SHORT_TERM_N=12 turn 33/35 prompt= 1247 completion=  55 window=12 facts=3 latency=44981ms probe=P3 score=5
+      Q: When is the Golden Dragon follow-up inspection scheduled?
+      A: The Golden Dragon follow-up inspection was rescheduled to November 10.  
+This change was made due to a delayed compressor part.  
+Ensure all corrective actions are completed before the November 10 inspection.  
+Document all steps taken and report to Dana Whitfield.
+[10:24:41] SHORT_TERM_N=12 turn 34/35 prompt= 1132 completion=  54 window=12 facts=1 latency=34673ms probe=P4 score=3
+      Q: How do I want the reports you draft for me to be formatted?
+      A: Your reports should be formatted using bullet points for clarity.  
+Each key point should be concise and easy to read.  
+Include all necessary details such as facility names, dates, and corrective actions.  
+Ensure all documentation aligns with regulations and is ready for review.
+[10:26:11] SHORT_TERM_N=12 turn 35/35 prompt= 1158 completion=  47 window=12 facts=2 latency=90074ms probe=P5 score=5
+      Q: Who is my supervisor, and what must I escalate to them?
+      A: Your supervisor is Dana Whitfield.  
+All closure recommendations and significant findings must be escalated to them.  
+Ensure all reports and corrective actions are documented and reviewed.  
+Follow up on any unresolved issues before the November 3 inspection.
+
+=== SHORT_TERM_N=30  env={'SHORT_TERM_N': '30', 'MEMORY_POLICY': 'none'}  started 2026-10-16 10:26:11 ===
+[10:26:47] SHORT_TERM_N=30 turn  1/35 prompt=  138 completion=  48 window= 0 facts=0 latency=30801ms
+[10:27:11] SHORT_TERM_N=30 turn  2/35 prompt=  205 completion=  65 window= 2 facts=0 latency=23737ms
+[10:27:54] SHORT_TERM_N=30 turn  3/35 prompt=  365 completion=  77 window= 4 facts=1 latency=43249ms
+[10:28:28] SHORT_TERM_N=30 turn  4/35 prompt=  501 completion=  57 window= 6 facts=2 latency=34290ms
+[10:29:52] SHORT_TERM_N=30 turn  5/35 prompt=  624 completion=  56 window= 8 facts=3 latency=84004ms
+[10:30:40] SHORT_TERM_N=30 turn  6/35 prompt=  859 completion=  60 window=10 facts=2 latency=48023ms
+[10:31:15] SHORT_TERM_N=30 turn  7/35 prompt=  866 completion=  93 window=12 facts=0 latency=34700ms
+[10:31:46] SHORT_TERM_N=30 turn  8/35 prompt= 1065 completion= 102 window=14 facts=2 latency=30966ms
+[10:32:20] SHORT_TERM_N=30 turn  9/35 prompt= 1110 completion=  79 window=16 facts=0 latency=33531ms
+[10:34:42] SHORT_TERM_N=30 turn 10/35 prompt= 1322 completion=  95 window=18 facts=3 latency=140139ms
+[10:36:00] SHORT_TERM_N=30 turn 11/35 prompt= 1512 completion= 105 window=20 facts=1 latency=78218ms
+[10:36:19] SHORT_TERM_N=30 turn 12/35 prompt= 1695 completion=   6 window=22 facts=3 latency=19273ms
+[10:36:40] SHORT_TERM_N=30 turn 13/35 prompt= 1698 completion=  63 window=24 facts=2 latency=20923ms
+[10:37:06] SHORT_TERM_N=30 turn 14/35 prompt= 1751 completion=  69 window=26 facts=1 latency=25781ms
+[10:38:36] SHORT_TERM_N=30 turn 15/35 prompt= 1873 completion=  83 window=28 facts=2 latency=89633ms
+[10:39:02] SHORT_TERM_N=30 turn 16/35 prompt= 2010 completion=  37 window=30 facts=3 latency=25878ms
+[10:40:30] SHORT_TERM_N=30 turn 17/35 prompt= 1974 completion=  64 window=30 facts=3 latency=88338ms
+[10:42:09] SHORT_TERM_N=30 turn 18/35 prompt= 2001 completion=  74 window=30 facts=3 latency=99054ms
+[11:08:22] SHORT_TERM_N=30 turn 19/35 prompt= 1961 completion=  69 window=30 facts=3 latency=135918ms
+[11:11:34] SHORT_TERM_N=30 turn 20/35 prompt= 1968 completion=  50 window=30 facts=3 latency=192216ms
+[11:13:20] SHORT_TERM_N=30 turn 21/35 prompt= 1966 completion=  77 window=30 facts=3 latency=105513ms
+[11:14:50] SHORT_TERM_N=30 turn 22/35 prompt= 1874 completion=  65 window=30 facts=0 latency=90386ms
+[11:16:50] SHORT_TERM_N=30 turn 23/35 prompt= 1949 completion=  87 window=30 facts=3 latency=119320ms
+[11:18:23] SHORT_TERM_N=30 turn 24/35 prompt= 1935 completion=  90 window=30 facts=3 latency=93117ms
+[11:20:50] SHORT_TERM_N=30 turn 25/35 prompt= 1930 completion=  68 window=30 facts=3 latency=147094ms
+[11:22:35] SHORT_TERM_N=30 turn 26/35 prompt= 1906 completion=  69 window=30 facts=3 latency=104708ms
+[11:24:12] SHORT_TERM_N=30 turn 27/35 prompt= 1836 completion=  68 window=30 facts=2 latency=97042ms
+[11:25:43] SHORT_TERM_N=30 turn 28/35 prompt= 1930 completion=  55 window=30 facts=3 latency=91022ms
+[11:27:21] SHORT_TERM_N=30 turn 29/35 prompt= 1925 completion=  69 window=30 facts=3 latency=98218ms
+[11:31:03] SHORT_TERM_N=30 turn 30/35 prompt= 1921 completion=  26 window=30 facts=3 latency=221981ms
+[11:32:57] SHORT_TERM_N=30 turn 31/35 prompt= 1826 completion=  18 window=30 facts=2 latency=113246ms probe=P1 score=5
+      Q: Quick check: what is my name, and which district do I cover?
+      A: Your name is Rachandeep Kaur, and you cover the Willow Glen district.
+[11:35:34] SHORT_TERM_N=30 turn 32/35 prompt= 1875 completion=  38 window=30 facts=3 latency=157825ms probe=P2 score=5
+      Q: Which facility failed the cold-holding check, what is its facility code, and what temperature was its walk-in cooler at?
+      A: The facility that failed the cold-holding check is Golden Dragon, with facility code FA0148210. Its walk-in cooler was holding at 47°F.
+[11:37:20] SHORT_TERM_N=30 turn 33/35 prompt= 1841 completion=  15 window=30 facts=3 latency=105986ms probe=P3 score=5
+      Q: When is the Golden Dragon follow-up inspection scheduled?
+      A: The Golden Dragon follow-up inspection is scheduled for November 10.
+[11:38:45] SHORT_TERM_N=30 turn 34/35 prompt= 1724 completion=  59 window=30 facts=2 latency=84969ms probe=P4 score=5
+      Q: How do I want the reports you draft for me to be formatted?
+      A: - Reports should be formatted with bullet points only.  
+- Each report may include a maximum of five bullet points.  
+- Use clear and concise language for each item.  
+- Ensure all key details are included without unnecessary information.  
+- Maintain a professional and organized structure for easy 
+[11:41:04] SHORT_TERM_N=30 turn 35/35 prompt= 1714 completion=  18 window=30 facts=2 latency=138759ms probe=P5 score=5
+      Q: Who is my supervisor, and what must I escalate to them?
+      A: Your supervisor is Dana Whitfield. Closure recommendations must be escalated to Dana Whitfield.
+
+=== Compression policy (N=12)  env={'SHORT_TERM_N': '12', 'MEMORY_POLICY': 'compress'}  started 2026-10-16 11:41:05 ===
+[11:41:44] Compression policy (N=12) turn  1/35 prompt=  138 completion=  48 window= 0 facts=0 latency=32555ms
+[11:42:06] Compression policy (N=12) turn  2/35 prompt=  205 completion=  65 window= 2 facts=0 latency=21378ms
+[11:42:46] Compression policy (N=12) turn  3/35 prompt=  277 completion=  60 window= 4 facts=0 latency=39832ms
+[11:43:19] Compression policy (N=12) turn  4/35 prompt=  362 completion=  49 window= 6 facts=1 latency=33463ms
+[11:44:40] Compression policy (N=12) turn  5/35 prompt=  447 completion=  61 window= 8 facts=2 latency=80766ms
+[11:45:16] Compression policy (N=12) turn  6/35 prompt=  628 completion=  36 window=10 facts=0 latency=36133ms
+[11:45:45] Compression policy (N=12) turn  7/35 prompt=  656 completion=  50 window=12 facts=0 latency=28997ms
+[11:46:21] Compression policy (N=12) turn  8/35 prompt=  712 completion=  72 window=12 facts=1 latency=36102ms
+[11:47:00] Compression policy (N=12) turn  9/35 prompt=  685 completion=  66 window=12 facts=0 latency=39352ms
+[11:48:39] Compression policy (N=12) turn 10/35 prompt=  631 completion=  55 window=12 facts=0 latency=98172ms
+[11:49:15] Compression policy (N=12) turn 11/35 prompt=  577 completion=  67 window=12 facts=0 latency=36252ms
+[11:49:37] Compression policy (N=12) turn 12/35 prompt=  619 completion=   6 window=12 facts=1 latency=21604ms
+[11:49:53] Compression policy (N=12) turn 13/35 prompt=  510 completion=  14 window=12 facts=0 latency=16882ms
+[11:50:18] Compression policy (N=12) turn 14/35 prompt=  558 completion=  59 window=12 facts=1 latency=24999ms
+[11:51:26] Compression policy (N=12) turn 15/35 prompt=  551 completion=  50 window=12 facts=0 latency=67990ms
+[11:52:19] Compression policy (N=12) turn 16/35 prompt=  614 completion=  62 window=12 facts=1 latency=52296ms
+[11:52:52] Compression policy (N=12) turn 17/35 prompt=  580 completion=  61 window=12 facts=0 latency=32748ms
+[11:53:38] Compression policy (N=12) turn 18/35 prompt=  677 completion=  66 window=12 facts=2 latency=46648ms
+[11:54:13] Compression policy (N=12) turn 19/35 prompt=  613 completion=  75 window=12 facts=0 latency=34829ms
+[11:55:45] Compression policy (N=12) turn 20/35 prompt=  738 completion=  27 window=12 facts=3 latency=92030ms
+[11:56:16] Compression policy (N=12) turn 21/35 prompt=  580 completion=  30 window=12 facts=0 latency=30459ms
+[11:56:37] Compression policy (N=12) turn 22/35 prompt=  594 completion=  32 window=12 facts=0 latency=21146ms
+[11:57:18] Compression policy (N=12) turn 23/35 prompt=  689 completion=  34 window=12 facts=2 latency=40867ms
+[11:57:38] Compression policy (N=12) turn 24/35 prompt=  616 completion=  32 window=12 facts=0 latency=20054ms
+[11:58:49] Compression policy (N=12) turn 25/35 prompt=  597 completion=  35 window=12 facts=0 latency=71202ms
+[11:59:16] Compression policy (N=12) turn 26/35 prompt=  670 completion=  39 window=12 facts=0 latency=27276ms
+[11:59:46] Compression policy (N=12) turn 27/35 prompt=  677 completion=  48 window=12 facts=0 latency=29611ms
+[12:00:11] Compression policy (N=12) turn 28/35 prompt=  700 completion=  41 window=12 facts=0 latency=25097ms
+[12:00:47] Compression policy (N=12) turn 29/35 prompt=  697 completion=  43 window=12 facts=0 latency=35570ms
+[12:02:59] Compression policy (N=12) turn 30/35 prompt=  703 completion=  24 window=12 facts=0 latency=132119ms
+[12:03:51] Compression policy (N=12) turn 31/35 prompt=  832 completion=  15 window=12 facts=1 latency=52199ms probe=P1 score=3
+      Q: Quick check: what is my name, and which district do I cover?
+      A: Your name is Inspector Lee, and you cover the Willow Glen district.
+[12:04:43] Compression policy (N=12) turn 32/35 prompt=  901 completion=  37 window=12 facts=3 latency=52313ms probe=P2 score=5
+      Q: Which facility failed the cold-holding check, what is its facility code, and what temperature was its walk-in cooler at?
+      A: The facility that failed the cold-holding check is Golden Dragon, facility code FA0148210, with a walk-in cooler temperature of 47°F.
+[12:05:14] Compression policy (N=12) turn 33/35 prompt=  890 completion=  15 window=12 facts=3 latency=30261ms probe=P3 score=5
+      Q: When is the Golden Dragon follow-up inspection scheduled?
+      A: The Golden Dragon follow-up inspection is scheduled for November 10.
+[12:05:33] Compression policy (N=12) turn 34/35 prompt=  805 completion=  11 window=12 facts=1 latency=18922ms probe=P4 score=3
+      Q: How do I want the reports you draft for me to be formatted?
+      A: Your reports should be formatted using bullet points only.
+[12:06:56] Compression policy (N=12) turn 35/35 prompt=  780 completion=  20 window=12 facts=1 latency=83096ms probe=P5 score=3
+      Q: Who is my supervisor, and what must I escalate to them?
+      A: Your supervisor is Dana Whitfield. You must escalate any critical violations or safety concerns to them.
+
+wrote 140 rows -> /Users/pc/Documents/sjsu/Data-260-HW-Git/data260-7117/reports/hw06/raw/memory_turns.csv, 20 probe scores -> probe_scores.json
+
+===== [2026-10-16 12:07:07 PDT] make metrics-hw06 (user: rachandeep Kaur) =====
+# HW6 Metrics
+
+Generated by `make metrics-hw06` on 2026-10-16 12:07 from `reports/hw06/raw/`. Model: qwen3:8b (Ollama, local CPU). SID4 7117, PORT_BASE 8817, SEED 7117, VERIFY_SEED 267117.
+
+## Part 3.3/3.4 - Short-term memory size and compression policy
+
+Means over the 30 conversation turns of one fresh run per setting; probe quality = mean of the 5 probe scores (rubric in `memory_probes.yaml`).
+
+| Setting | Mean prompt tokens/turn | Mean latency (ms) | Probe quality (1-5) | Turns |
+|---|---|---|---|---|
+| SHORT_TERM_N=4 | 631.5 | 56875 | 4.6 | 30 |
+| SHORT_TERM_N=12 | 964.8 | 61394 | 4.6 | 30 |
+| SHORT_TERM_N=30 | 1489.0 | 81569 | 5.0 | 30 |
+| Compression policy (N=12) | 576.7 | 43548 | 3.8 | 30 |
+
+### Prompt composition (mean tokens per turn)
+
+| Setting | System primer | Long-term summary | Short-term window | Episodic facts | Current message | Counted total | Ollama prompt | Mean completion | Model latency (ms) | Upkeep latency (ms) |
+|---|---|---|---|---|---|---|---|---|---|---|
+| SHORT_TERM_N=4 | 95.0 | 258.0 | 168.0 | 82.2 | 18.9 | 622.2 | 631.5 | 65.1 | 28875 | 27835 |
+| SHORT_TERM_N=12 | 95.0 | 279.2 | 480.2 | 82.2 | 18.9 | 955.5 | 964.8 | 67.9 | 36099 | 25164 |
+| SHORT_TERM_N=30 | 95.0 | 265.0 | 1018.5 | 82.2 | 18.9 | 1479.7 | 1489.0 | 67.5 | 57749 | 23679 |
+| Compression policy (N=12) | 95.0 | 177.7 | 255.5 | 19.8 | 18.9 | 566.8 | 576.7 | 46.9 | 23208 | 20212 |
+
+### Probe scores per question
+
+| Setting | P1 | P2 | P3 | P4 | P5 |
+|---|---|---|---|---|---|
+| SHORT_TERM_N=4 | 5 | 5 | 5 | 3 | 5 |
+| SHORT_TERM_N=12 | 5 | 5 | 5 | 3 | 5 |
+| SHORT_TERM_N=30 | 5 | 5 | 5 | 5 | 5 |
+| Compression policy (N=12) | 3 | 5 | 5 | 3 | 3 |
+
+### Part 3.4 - Compression policy vs. the same window without it
+
+Policy: keep the newest 2 messages verbatim, cut older assistant turns in the window to their first sentence (<=160 chars), never shorten user turns, and evict episodic facts with cosine < 0.40.
+
+| Metric | SHORT_TERM_N=12 | Compression policy (N=12) | Change |
+|---|---|---|---|
+| Mean prompt tokens/turn | 964.8 | 576.7 | -388.1 (-40.2%) |
+| Short-term window tokens/turn | 480.2 | 255.5 | -224.7 |
+| Episodic-fact tokens/turn | 82.2 | 19.8 | -62.4 |
+| Input tokens per 30-turn conversation | 28945.0 | 17301.0 | -11644 |
+| Mean latency (ms) | 61394.0 | 43548.0 | -17846 |
+| Probe quality (1-5) | 4.6 | 3.8 | -0.80 |
+
+## Part 3.5 - Memory cost estimate (10,000 x 30-turn conversations)
+
+Pricing: $1 / 1M input, $5 / 1M output tokens. Token counts are the measured sums over one 30-turn run. "Upkeep" = the fact-extraction and summary calls the memory system adds per turn.
+
+| Setting | Role | Input tok/conv | Output tok/conv | Upkeep in/out tok/conv | Chat $/conv | Chat $ x10k | Incl. upkeep $ x10k |
+|---|---|---|---|---|---|---|---|
+| SHORT_TERM_N=4 | best | 18945 | 1952 | 10304 / 2517 | 0.02871 | 287.05 | 515.94 |
+| SHORT_TERM_N=12 |  | 28945 | 2037 | 10679 / 2672 | 0.03913 | 391.30 | 631.69 |
+| SHORT_TERM_N=30 | worst | 44670 | 2026 | 10468 / 2507 | 0.05480 | 548.00 | 778.03 |
+| Compression policy (N=12) |  | 17301 | 1407 | 9204 / 2109 | 0.02434 | 243.36 | 440.85 |
+
+**Selection rule.** Worst = the highest total cost (SHORT_TERM_N=30). Best = the cheapest setting whose probe quality is within 0.5 points of the best probe score (5.00) - so a setting cannot win on price by forgetting the facts the probes test. Best: **SHORT_TERM_N=4**; worst: **SHORT_TERM_N=30**.
+
+wrote /Users/pc/Documents/sjsu/Data-260-HW-Git/data260-7117/reports/hw06/METRICS.md
+
+===== [2026-10-16 12:07:34 PDT] make doc-api-demo-hw06 (user: rachandeep Kaur) =====
+HW6 Part 1 - MongoDB document API demo - user: rachandeep Kaur - 2026-10-16 12:07:35
+
+--- CRUD ---
+[PASS] create (POST)                                POST   /api/doc/inspections -> 201 (expected 201)
+       {"id": "6ad275f74a969ab5be8b8874", "facility_name": "FA0148210 - GOLDEN DRAGON", "description": "Walk-in cooler at 47F; cold holding failed.", "status": "failed", "program_element": "ROUTINE HEALTH INSPECTION", "inspection_date": "2026-10-16T17:30:00Z", "created_at": "2026-10-16T19:07:35.066807Z", "updated_at": "2026-10-16T19:07:35.066807Z"}
+[PASS] retrieve one (GET /:id)                      GET    /api/doc/inspections/6ad275f74a969ab5be8b8874 -> 200 (expected 200)
+       {"id": "6ad275f74a969ab5be8b8874", "facility_name": "FA0148210 - GOLDEN DRAGON", "description": "Walk-in cooler at 47F; cold holding failed.", "status": "failed", "program_element": "ROUTINE HEALTH INSPECTION", "inspection_date": "2026-10-16T17:30:00Z", "created_at": "2026-10-16T19:07:35.066000Z", "updated_at": "2026-10-16T19:07:35.066000Z"}
+[PASS] retrieve all (GET)                           GET    /api/doc/inspections?limit=5 -> 200 (expected 200)
+       [{"id": "6ad275f74a969ab5be8b8874", "facility_name": "FA0148210 - GOLDEN DRAGON", "description": "Walk-in cooler at 47F; cold holding failed.", "status": "failed", "program_element": "ROUTINE HEALTH INSPECTION", "inspection_date": "2026-10-16T17:30:00Z", "created_at": "2026-10-16T19:07:35.066000Z", "updated_at": "2026-10-16T19:07:35.066000Z"}, {"id": "6ad1ec49f3bf08418bdb243b", "facility_name": "F
+       X-Total-Count: 13
+[PASS] filter by status (GET ?status=failed)        GET    /api/doc/inspections?status=failed&limit=3 -> 200 (expected 200)
+       [{"id": "6ad275f74a969ab5be8b8874", "facility_name": "FA0148210 - GOLDEN DRAGON", "description": "Walk-in cooler at 47F; cold holding failed.", "status": "failed", "program_element": "ROUTINE HEALTH INSPECTION", "inspection_date": "2026-10-16T17:30:00Z", "created_at": "2026-10-16T19:07:35.066000Z", "updated_at": "2026-10-16T19:07:35.066000Z"}, {"id": "6ad1ec49f3bf08418bdb243a", "facility_name": "F
+[PASS] update (PUT /:id)                            PUT    /api/doc/inspections/6ad275f74a969ab5be8b8874 -> 200 (expected 200)
+       {"id": "6ad275f74a969ab5be8b8874", "facility_name": "FA0148210 - GOLDEN DRAGON", "description": "Follow-up moved to 2026-11-10.", "status": "follow_up_required", "program_element": "ROUTINE HEALTH INSPECTION", "inspection_date": "2026-10-16T17:30:00Z", "created_at": "2026-10-16T19:07:35.066000Z", "updated_at": "2026-10-16T19:07:35.103000Z"}
+[PASS] delete (DELETE /:id)                         DELETE /api/doc/inspections/6ad275f74a969ab5be8b8874 -> 200 (expected 200)
+       {"deleted": true, "id": "6ad275f74a969ab5be8b8874"}
+[PASS] get deleted -> not found                     GET    /api/doc/inspections/6ad275f74a969ab5be8b8874 -> 404 (expected 404)
+       {"detail": "Inspection document 6ad275f74a969ab5be8b8874 not found"}
+[PASS] update missing -> not found                  PUT    /api/doc/inspections/6ad275f74a969ab5be8b8874 -> 404 (expected 404)
+       {"detail": "Inspection document 6ad275f74a969ab5be8b8874 not found"}
+[PASS] delete missing -> not found                  DELETE /api/doc/inspections/6ad275f74a969ab5be8b8874 -> 404 (expected 404)
+       {"detail": "Inspection document 6ad275f74a969ab5be8b8874 not found"}
+
+--- validation ---
+[PASS] missing required fields                      POST   /api/doc/inspections -> 422 (expected 422)
+       {"error": "validation_error", "detail": [{"field": "facility_name", "message": "Field required", "type": "missing"}, {"field": "program_element", "message": "Field required", "type": "missing"}, {"field": "inspection_date", "message": "Field required", "type": "missing"}]}
+[PASS] invalid enum values                          POST   /api/doc/inspections -> 422 (expected 422)
+       {"error": "validation_error", "detail": [{"field": "status", "message": "Input should be 'scheduled', 'in_progress', 'passed', 'failed' or 'follow_up_required'", "type": "enum", "allowed": "'scheduled', 'in_progress', 'passed', 'failed' or 'follow_up_required'"}, {"field": "program_element", "message": "Input should be 'FOOD PREP / FOOD SVC OP 0-5 EMPLOYEES RC 3 - FP11', 'FOOD PREP / FOOD SVC OP 6
+[PASS] incorrect data types                         POST   /api/doc/inspections -> 422 (expected 422)
+       {"error": "validation_error", "detail": [{"field": "facility_name", "message": "Input should be a valid string", "type": "string_type"}, {"field": "inspection_date", "message": "Input should be a valid datetime", "type": "datetime_type"}]}
+[PASS] bad date format                              POST   /api/doc/inspections -> 422 (expected 422)
+       {"error": "validation_error", "detail": [{"field": "inspection_date", "message": "Input should be a valid datetime or date, invalid character in year", "type": "datetime_from_date_parsing"}]}
+[PASS] facility_name over 100 chars                 POST   /api/doc/inspections -> 422 (expected 422)
+       {"error": "validation_error", "detail": [{"field": "facility_name", "message": "String should have at most 100 characters", "type": "string_too_long"}]}
+[PASS] blank facility_name                          POST   /api/doc/inspections -> 422 (expected 422)
+       {"error": "validation_error", "detail": [{"field": "facility_name", "message": "Value error, must not be blank", "type": "value_error"}]}
+[PASS] unknown field (client-set created_at)        POST   /api/doc/inspections -> 422 (expected 422)
+       {"error": "validation_error", "detail": [{"field": "created_at", "message": "Extra inputs are not permitted", "type": "extra_forbidden"}]}
+[PASS] empty update body                            PUT    /api/doc/inspections/000000000000000000000000 -> 422 (expected 422)
+       {"error": "validation_error", "detail": [{"field": "body", "message": "Value error, provide at least one field to update", "type": "value_error"}]}
+[PASS] malformed JSON                               POST   /api/doc/inspections -> 400 (expected 400)
+       {"error": "malformed_json", "detail": "Expecting property name enclosed in double quotes: line 1 column 2 (char 1)"}
+[PASS] wrong content type                           POST   /api/doc/inspections -> 415 (expected 415)
+       {"error": "unsupported_media_type", "detail": "Send the request body as application/json"}
+[PASS] malformed ObjectId                           GET    /api/doc/inspections/not-an-id -> 400 (expected 400)
+       {"detail": "'not-an-id' is not a valid 24-character hex ObjectId"}
+[PASS] create sample doc kept for Compass           POST   /api/doc/inspections -> 201 (expected 201)
+       {"id": "6ad275f74a969ab5be8b8875", "facility_name": "FA0206933 - YUMMY KITCHEN", "description": "Created by part1_doc_api_demo.py", "status": "scheduled", "program_element": "FOLLOW-UP COMPLIANCE CHECK", "inspection_date": "2026-10-22T16:00:00Z", "created_at": "2026-10-16T19:07:35.181174Z", "updated_at": "2026-10-16T19:07:35.181174Z"}
+       kept document id 6ad275f74a969ab5be8b8875
+
+21/21 calls returned the expected status -> /Users/pc/Documents/sjsu/Data-260-HW-Git/data260-7117/reports/hw06/raw/part1_doc_api_calls.json
+
+===== [2026-10-16 12:07:35 PDT] make chat-demo-hw06 (user: rachandeep Kaur) =====
+HW6 Part 2 - chat memory demo - user: rachandeep Kaur - 2026-10-16 12:07:35
+user_id=s7117-rachandeep session_id=s7117-rachandeep-demo1
+
+[ 1] rachandeep Kaur: Hi, I'm Rachandeep Kaur, a Santa Clara County food inspector. I cover the Willow Glen district.
+     InspectBot: Hello, Rachandeep Kaur. I'm InspectBot for the s7117 restaurant-inspection app. I'll assist with your inspections in the Willow Glen district. Let me know how I can help.
+     memory used: short_term=0 msgs, session_summary=no, lifetime_summary=no, facts=[]
+     updates: extracted=["The user's name is Rachandeep Kaur.", 'The user is a Santa Clara County food inspector.', 'The user covers the Willow Glen district.'] session_summary_updated=False lifetime_summary_updated=False
+     tokens prompt=135 completion=46 latency=33406ms
+
+[ 2] rachandeep Kaur: Today Golden Dragon (FA0148210) failed cold holding: the walk-in cooler was at 47F.
+     InspectBot: Golden Dragon (FA0148210) failed cold holding with the walk-in cooler at 47°F. This temperature is above the acceptable range. The issue needs to be corrected immediately. I'll log this inspection finding.
+     memory used: short_term=2 msgs, session_summary=no, lifetime_summary=no, facts=[]
+     updates: extracted=['The user mentioned Golden Dragon (FA0148210) failed cold holding.', 'The walk-in cooler was at 47F.'] session_summary_updated=False lifetime_summary_updated=False
+     tokens prompt=218 completion=50 latency=27281ms
+
+[ 3] rachandeep Kaur: I set their follow-up inspection for November 3.
+     InspectBot: Follow-up inspection for Golden Dragon (FA0148210) is scheduled for November 3. I've noted the date in the system. Let me know if you need further assistance.
+     memory used: short_term=4 msgs, session_summary=no, lifetime_summary=no, facts=['The user is a Santa Clara County food inspector.']
+     updates: extracted=['The user scheduled a follow-up inspection for November 3.'] session_summary_updated=False lifetime_summary_updated=False
+     tokens prompt=330 completion=42 latency=20722ms
+
+[ 4] rachandeep Kaur: What should they do right away about the cooler?
+     InspectBot: The cooler temperature was 47°F, which is too high. They should immediately repair or adjust the cooler to ensure it reaches the proper temperature range. Monitor the temperature closely and document any corrective actions taken.
+     memory used: short_term=6 msgs, session_summary=no, lifetime_summary=no, facts=['The walk-in cooler was at 47F.']
+     updates: extracted=[] session_summary_updated=False lifetime_summary_updated=False
+     tokens prompt=392 completion=43 latency=15038ms
+
+[ 5] rachandeep Kaur: My supervisor is Dana Whitfield, and closure recommendations go to her.
+     InspectBot: Your closure recommendations should be sent to Dana Whitfield. The follow-up inspection for Golden Dragon is still scheduled for November 3. Let me know if you need help preparing the report.
+     memory used: short_term=8 msgs, session_summary=no, lifetime_summary=no, facts=['The user scheduled a follow-up inspection for November 3.']
+     updates: extracted=["The user's supervisor is Dana Whitfield", 'Closure recommendations go to Dana Whitfield'] session_summary_updated=True lifetime_summary_updated=False
+     tokens prompt=459 completion=38 latency=65630ms
+
+[ 6] rachandeep Kaur: Remind me, what is the safe cold-holding temperature?
+     InspectBot: The safe cold-holding temperature for food is 41°F or below. The cooler at Golden Dragon was at 47°F, which is above the safe range.
+     memory used: short_term=10 msgs, session_summary=yes, lifetime_summary=no, facts=['The user mentioned Golden Dragon (FA0148210) failed cold holding.', 'The walk-in cooler was at 47F.']
+     updates: extracted=['The user is asking about the safe cold-holding temperature.'] session_summary_updated=False lifetime_summary_updated=False
+     tokens prompt=703 completion=36 latency=41549ms
+
+[ 7] rachandeep Kaur: Update: the Golden Dragon follow-up moved to November 10 because a part is delayed.
+     InspectBot: The follow-up inspection for Golden Dragon (FA0148210) has been moved to November 10 due to a delayed part. I've updated the schedule in the system. Let me know if you need further adjustments.
+     memory used: short_term=12 msgs, session_summary=yes, lifetime_summary=no, facts=['The user mentioned Golden Dragon (FA0148210) failed cold holding.', 'The user scheduled a follow-up inspection for November 3.']
+     updates: extracted=['The Golden Dragon follow-up was moved to November 10.', 'A part is delayed, causing the delay.'] session_summary_updated=False lifetime_summary_updated=False
+     tokens prompt=768 completion=50 latency=35028ms
+
+[ 8] rachandeep Kaur: Yummy Kitchen FA0206933 is next on my list for a routine inspection on October 22.
+     InspectBot: Yummy Kitchen (FA0206933) is next on your list for a routine inspection on October 22. Ensure all previous findings are addressed before the visit. Let me know if you need help preparing for the inspection.
+     memory used: short_term=12 msgs, session_summary=yes, lifetime_summary=no, facts=['The user scheduled a follow-up inspection for November 3.', 'The user is a Santa Clara County food inspector.']
+     updates: extracted=['The user is scheduled to inspect Yummy Kitchen FA0206933 on October 22.'] session_summary_updated=False lifetime_summary_updated=False
+     tokens prompt=765 completion=51 latency=46190ms
+
+[ 9] rachandeep Kaur: What should I bring to a routine inspection?
+     InspectBot: Bring your inspection checklist, any previous inspection reports, and documentation of corrective actions taken. Also, carry your notebook and pen for notes during the visit. Let me know if you need a template for the checklist.
+     memory used: short_term=12 msgs, session_summary=yes, lifetime_summary=no, facts=['The user scheduled a follow-up inspection for November 3.']
+     updates: extracted=[] session_summary_updated=False lifetime_summary_updated=False
+     tokens prompt=718 completion=43 latency=30620ms
+
+[10] rachandeep Kaur: Draft a two-line note to my supervisor about Golden Dragon.
+     InspectBot: The follow-up inspection for Golden Dragon (FA0148210) has been rescheduled to November 10 due to a delayed part. The cold-holding failure remains unresolved and requires immediate corrective action.
+     memory used: short_term=12 msgs, session_summary=yes, lifetime_summary=no, facts=['The Golden Dragon follow-up was moved to November 10.', 'The user mentioned Golden Dragon (FA0148210) failed cold holding.']
+     updates: extracted=[] session_summary_updated=True lifetime_summary_updated=True
+     tokens prompt=759 completion=46 latency=143610ms
+
+[11] rachandeep Kaur: Which facility had the cooler problem, and when is its follow-up?
+     InspectBot: The facility with the cooler problem is Golden Dragon (FA0148210). Its follow-up inspection is scheduled for November 10.
+     memory used: short_term=12 msgs, session_summary=yes, lifetime_summary=yes, facts=['The walk-in cooler was at 47F.', 'The user is asking about the safe cold-holding temperature.', 'The user mentioned Golden Dragon (FA0148210) failed cold holding.']
+     updates: extracted=['The facility had a cooler problem.', "The facility's follow-up is scheduled for a specific date."] session_summary_updated=False lifetime_summary_updated=False
+     tokens prompt=940 completion=32 latency=55627ms
+
+[12] rachandeep Kaur: What do you remember about me?
+     InspectBot: You are preparing for inspections in the San Jose area, focusing on Golden Dragon (FA0148210) and Yummy Kitchen (FA0206933). You need to bring checklists, previous reports, and corrective action documentation for inspections. You also need to send closure recommendations to Dana Whitfield.
+     memory used: short_term=12 msgs, session_summary=yes, lifetime_summary=yes, facts=[]
+     updates: extracted=[] session_summary_updated=False lifetime_summary_updated=False
+     tokens prompt=815 completion=69 latency=35435ms
+
+GET /api/memory/s7117-rachandeep: 16 messages, session_summary=yes, lifetime_summary=yes, 14 facts
+GET /api/aggregate/s7117-rachandeep: [{"messages": 24, "user_messages": 12, "assistant_messages": 12, "date": "2026-10-16", "sessions": 1}]
+saved -> /Users/pc/Documents/sjsu/Data-260-HW-Git/data260-7117/reports/hw06/raw/part2_*.json
+
+===== [2026-10-16 12:16:49 PDT] make consolidation-test-hw06 (user: rachandeep Kaur) =====
+[12:16:51] copied MEMORY.original.md (55 lines) -> /Users/pc/Documents/sjsu/Data-260-HW-Git/data260-7117/MEMORY.md
+needs_consolidation: True - ['52 non-empty, non-comment lines > 40', 'last consolidated 15 days, 11:16:51.724048 ago (> 24h)']
+
+> /compact
+/compact done
+  MEMORY.md lines (non-empty, non-comment): 52 -> 34
+  MEMORY.md facts:                          50 -> 28
+  conversation messages:                    0 -> 0
+  exact duplicates merged: 10; contradictions resolved: 3; needs review: 0
+  - Golden Dragon's facility code: kept F20 over F38 [consistent_with_rule]
+  - Report format: kept F46 over F30 [consistent_with_rule]
+  - Golden Dragon follow-up inspection date: kept F50 over F28, F41 [consistent_with_rule]
+
+saved /Users/pc/Documents/sjsu/Data-260-HW-Git/data260-7117/reports/hw06/memory_consolidation/MEMORY.consolidated.md (38 lines):
+# MEMORY.md
+<!-- last_consolidated: 2026-10-16T19:16:51+00:00 -->
+<!-- Durable facts. Consolidated by code/file_memory/consolidation.py; [Fxx] = source lines of the version before consolidation. -->
+
+## Facts
+- (2026-09-01) The user covers the Downtown San Jose district. [F03]
+- (2026-09-02) The user's supervisor is Mark Chen. [F04]
+- (2026-09-10) The user prefers reports written as numbered paragraphs. [F12]
+- (2026-09-15) The local model is qwen3:8b served by Ollama. [F11+F17]
+- (2026-09-16) The user is a senior environmental health inspector with Santa Clara County. [F01+F02+F06+F15+F18]
+- (2026-09-16) Rachandeep Kaur works as a senior inspector for Santa Clara County. [F01+F06+F15+F18]
+- (2026-09-17) Yummy Kitchen's facility code is FA0206933. [F13+F19]
+- (2026-09-20) Golden Dragon's facility code is FA0148210 (confirmed from the county permit). [F20]
+- (2026-09-23) The user starts field inspections at 8 AM on weekdays. [F09+F22]
+- (2026-09-26) The relational database is s7117_rel on MySQL. [F08+F24]
+- (2026-09-26) MySQL database s7117_rel holds the relational inspection data. [F24]
+- (2026-09-27) Closure recommendations must be escalated to the user's supervisor. [F25]
+- (2026-10-02) Golden Dragon failed the cold-holding check with its walk-in cooler at 47F. [F21+F29]
+- (2026-10-06) Sakura Sushi must log rice pH every 4 hours. [F26+F33]
+- (2026-10-08) The user prefers short answers of at most four sentences. [F35]
+- (2026-10-10) Temperatures should be given in degrees Fahrenheit for this user. [F07+F14+F37]
+- (2026-10-10) The user prefers temperatures reported in Fahrenheit. [F07+F37]
+- (2026-10-12) The inspection API runs on port 8817. [F05+F10+F39]
+- (2026-10-13) Bay BBQ passed its routine inspection with a score of 98. [F31+F40]
+- (2026-10-14) Keep answers short: four sentences at most. [F42]
+- (2026-10-15) The user wants reports as bullet points, at most five bullets. [F46]
+- (2026-10-15) The user's HW6 report is due on October 20. [F34+F47]
+- (2026-10-15) The user's supervisor is Dana Whitfield. [F32+F43]
+- (2026-10-15) The user's GitHub repository is data260-7117. [F16+F44]
+- (2026-10-15) The user covers the Willow Glen district. [F23+F45]
+- (2026-10-16) The document database is s7117_doc on MongoDB. [F27+F49]
+- (2026-10-16) The Golden Dragon follow-up inspection is November 10. [F50]
+- (2026-10-16) Curry House had a rodent finding in dry storage and needs a follow-up within 7 days. [F36+F48]
+
+## Resolved contradictions
+- Golden Dragon's facility code: kept "Golden Dragon's facility code is FA0148210 (confirmed from the county permit)." (2026-09-20, F20) over "Golden Dragon's facility code is FA0148201 (assistant guess, unverified)." (2026-10-11, F38).
+- Report format: kept "Reports for the user should be bullet points only, no more than five." (2026-10-15, F46) over "The user wants reports as bullet points, at most five bullets." (2026-10-03, F30).
+- Golden Dragon follow-up inspection date: kept "Golden Dragon's follow-up inspection is November 10." (2026-10-16, F50) over "The Golden Dragon follow-up inspection is on November 3." (2026-10-01, F28); "The Golden Dragon follow-up moved to November 10 because a compressor part is delayed." (2026-10-14, F41).
+
+# Consolidation test (HW6 Part 4.5)
+
+Generated by `make consolidation-test-hw06` on 2026-10-16 12:22.
+Input: `MEMORY.original.md` (55 lines). Output: `MEMORY.consolidated.md`
+(38 lines, under 40: **True**).
+
+- Non-empty, non-comment lines: 52 -> 34
+- Facts: 50 -> 28
+- Exact duplicates merged before the model call: 10
+- Duplicate topics merged to one line: 11/15
+- Contradictions resolved correctly: 2/5
+- Superseded values still visible (no silent deletion): True
+- Facts left for review: 0
+
+## Contradictions
+
+| Topic | Result | Superseded value still visible | Flagged by audit | Correct rule |
+|---|---|---|---|---|
+| supervisor | unresolved_both_kept | no | no | newest date wins (2026-10-05 over 2026-09-02) |
+| district | unresolved_both_kept | no | no | newest date wins (2026-09-25 over 2026-09-01) |
+| report format | unresolved_both_kept | no | no | newest date wins (2026-10-03 over 2026-09-10) |
+| Golden Dragon follow-up date | correct | yes | no | newest date wins (2026-10-14 over 2026-10-01) |
+| Golden Dragon facility code | correct | yes | no | the OLDER fact wins - it is confirmed from the permit, the newer one is an unverified guess (a plain newest-wins consolidation gets this one wrong) |
+
+## Duplicates
+
+| Topic | Copies before | Lines after |
+|---|---|---|
+| name | 3 | 0 |
+| API port | 3 | 1 |
+| Fahrenheit | 3 | 2 |
+| 8 AM start | 2 | 1 |
+| qwen3 model | 2 | 1 |
+| Yummy Kitchen code | 2 | 1 |
+| GitHub repo | 2 | 1 |
+| Sakura rice pH | 2 | 1 |
+| MySQL db | 2 | 2 |
+| MongoDB db | 2 | 1 |
+| cooler 47F | 2 | 1 |
+| Bay BBQ 98 | 2 | 1 |
+| short answers | 2 | 2 |
+| HW6 deadline | 2 | 1 |
+| Curry House follow-up | 2 | 1 |
+
+
+===== [2026-10-16 12:22:37 PDT] make file-memory-demo-hw06 (user: rachandeep Kaur) =====
+file_memory_chat.py - user: rachandeep Kaur - 2026-10-16 12:22:40 - memory: /Users/pc/Documents/sjsu/Data-260-HW-Git/data260-7117/MEMORY.md
+type a message, or /help for commands
+MEMORY.md: 34 non-empty non-comment lines, 28 facts; last consolidated: 2026-10-16T19:16:51+00:00; consolidation not required
+
+rachandeep Kaur> # HW6 Part 4.3 evidence run: python code/hw06/file_memory_chat.py --script reports/hw06/file_memory_demo_script.txt
+
+rachandeep Kaur> /help
+Commands:
+  /memory   show AGENT.md + MEMORY.md as loaded into the system prompt, with line count,
+            last-consolidated time and whether consolidation is due
+  /compact  consolidate MEMORY.md (merge duplicates, resolve contradictions) and compact the
+            conversation into a summary; reports the counts before and after
+  /dream    find durable long-term facts in the recent conversation and add them to MEMORY.md
+  /help     this help
+  /exit     quit (Ctrl-D also works)
+Anything else is sent to the model with AGENT.md + MEMORY.md in the system prompt.
+
+rachandeep Kaur> /memory
+----- AGENT.md (56 lines) -----
+# AGENT.md
+
+Durable project and agent instructions. Loaded verbatim as the system prompt by
+[code/hw1_client.py](code/hw1_client.py) (HW1) and, together with MEMORY.md, by the file-based
+memory chat [code/hw06/file_memory_chat.py](code/hw06/file_memory_chat.py) (HW6 Part 4).
+Facts learned from conversations belong in MEMORY.md, not here.
+
+## Project description
+
+- This repository (data260-7117) is one FastAPI application for Santa Clara County restaurant
+  inspections (DOMAIN_ID 5), extended by every homework. Add new features to the shared folders
+  under `code/`; never create a per-homework copy of application code.
+- Personal configuration is fixed: SID4 7117, PORT_BASE 8817, PREFIX s7117, SEED 7117,
+  VERIFY_SEED 267117. Read these from the config modules (`hw0X_config.py`, `settings.py`);
+  never hard-code 8817 or s7117 in new code.
+
+## Technology stack
+
+- Python 3.13, FastAPI with Pydantic v2 models for every request and response body.
+- MySQL `s7117_rel` through SQLAlchemy 2.0; MongoDB `s7117_doc` through PyMongo.
+- Language model: the local Ollama model `qwen3:8b`, always called through the HW1 adapter
+  `src/model_client.py`. Do not add hosted or paid model APIs.
+
+## Coding conventions
+
+- Every module starts with a docstring and `from __future__ import annotations`.
+- Every function has type hints on all parameters and on the return value, plus a docstring.
+- Names are snake_case for functions and variables, UPPER_CASE for constants.
+- Invalid input raises a specific exception (`ValueError`, `HTTPException`, ...); never use a bare
+  `except:` and never return `None` to signal an error.
+- Library code does not `print`; only scripts under `code/hw0X/` and CLIs print.
+
+## Testing approach
+
+- Tests run offline: no network, MongoDB, MySQL or Ollama. Replace those with fixtures or fakes.
+- Every new function gets at least one test for a valid input and one for an invalid input.
+- Tests are plain `test_*` functions using `assert`, collected by the runners in `code/tests/`.
+
+## Prohibited actions
+
+- Never commit secrets, `.env` files, certificates or the `.venv` folder.
+- Never edit files in `reports/*/raw/` by hand; they are written only by the experiment scripts.
+- Never use `eval` or `exec`, and never drop or truncate a database collection or table outside
+  the setup scripts.
+
+## Code-review persona (HW1, used when asked to review code)
+
+When the user asks you to review code, act as a strict code reviewer and follow these rules on
+every review response:
+
+- Respond only with a bulleted list. Every line must start with `- `.
+- Never write introductory or concluding prose (no "Here's my review:", no "Overall, ...", no summaries).
+- Never use numbered lists, headings, tables, or code fences in a review.
+- Each bullet must be one specific, actionable review point (a bug, a risk, or a concrete improvement) — not a restatement of what the code does.
+- If there is truly nothing to flag, respond with exactly one bullet: `- No issues found.`
+- These rules apply to every review turn in the conversation, including the fifth and beyond — do not relax formatting as the conversation continues.
+
+----- MEMORY.md -----
+# MEMORY.md
+<!-- last_consolidated: 2026-10-16T19:16:51+00:00 -->
+<!-- Durable facts. Consolidated by code/file_memory/consolidation.py; [Fxx] = source lines of the version before consolidation. -->
+
+## Facts
+- (2026-09-01) The user covers the Downtown San Jose district. [F03]
+- (2026-09-02) The user's supervisor is Mark Chen. [F04]
+- (2026-09-10) The user prefers reports written as numbered paragraphs. [F12]
+- (2026-09-15) The local model is qwen3:8b served by Ollama. [F11+F17]
+- (2026-09-16) The user is a senior environmental health inspector with Santa Clara County. [F01+F02+F06+F15+F18]
+- (2026-09-16) Rachandeep Kaur works as a senior inspector for Santa Clara County. [F01+F06+F15+F18]
+- (2026-09-17) Yummy Kitchen's facility code is FA0206933. [F13+F19]
+- (2026-09-20) Golden Dragon's facility code is FA0148210 (confirmed from the county permit). [F20]
+- (2026-09-23) The user starts field inspections at 8 AM on weekdays. [F09+F22]
+- (2026-09-26) The relational database is s7117_rel on MySQL. [F08+F24]
+- (2026-09-26) MySQL database s7117_rel holds the relational inspection data. [F24]
+- (2026-09-27) Closure recommendations must be escalated to the user's supervisor. [F25]
+- (2026-10-02) Golden Dragon failed the cold-holding check with its walk-in cooler at 47F. [F21+F29]
+- (2026-10-06) Sakura Sushi must log rice pH every 4 hours. [F26+F33]
+- (2026-10-08) The user prefers short answers of at most four sentences. [F35]
+- (2026-10-10) Temperatures should be given in degrees Fahrenheit for this user. [F07+F14+F37]
+- (2026-10-10) The user prefers temperatures reported in Fahrenheit. [F07+F37]
+- (2026-10-12) The inspection API runs on port 8817. [F05+F10+F39]
+- (2026-10-13) Bay BBQ passed its routine inspection with a score of 98. [F31+F40]
+- (2026-10-14) Keep answers short: four sentences at most. [F42]
+- (2026-10-15) The user wants reports as bullet points, at most five bullets. [F46]
+- (2026-10-15) The user's HW6 report is due on October 20. [F34+F47]
+- (2026-10-15) The user's supervisor is Dana Whitfield. [F32+F43]
+- (2026-10-15) The user's GitHub repository is data260-7117. [F16+F44]
+- (2026-10-15) The user covers the Willow Glen district. [F23+F45]
+- (2026-10-16) The document database is s7117_doc on MongoDB. [F27+F49]
+- (2026-10-16) The Golden Dragon follow-up inspection is November 10. [F50]
+- (2026-10-16) Curry House had a rodent finding in dry storage and needs a follow-up within 7 days. [F36+F48]
+
+## Resolved contradictions
+- Golden Dragon's facility code: kept "Golden Dragon's facility code is FA0148210 (confirmed from the county permit)." (2026-09-20, F20) over "Golden Dragon's facility code is FA0148201 (assistant guess, unverified)." (2026-10-11, F38).
+- Report format: kept "Reports for the user should be bullet points only, no more than five." (2026-10-15, F46) over "The user wants reports as bullet points, at most five bullets." (2026-10-03, F30).
+- Golden Dragon follow-up inspection date: kept "Golden Dragon's follow-up inspection is November 10." (2026-10-16, F50) over "The Golden Dragon follow-up inspection is on November 3." (2026-10-01, F28); "The Golden Dragon follow-up moved to November 10 because a compressor part is delayed." (2026-10-14, F41).
+
+MEMORY.md: 34 non-empty non-comment lines, 28 facts; last consolidated: 2026-10-16T19:16:51+00:00; consolidation not required
+
+rachandeep Kaur> Quick update for my notes: Bay BBQ's next routine inspection is on October 30, and I now also cover the Cambrian district.
+- Updated Bay BBQ's next routine inspection date to October 30.  
+- Added note that you now cover the Cambrian district.
+
+rachandeep Kaur> Who is my supervisor, and when is the Golden Dragon follow-up?
+- Your supervisor is Dana Whitfield.  
+- The Golden Dragon follow-up inspection is scheduled for November 10.
+
+rachandeep Kaur> /dream
+/dream added 2 fact(s) to MEMORY.md:
+  - (2026-10-16) The user's supervisor is Dana Whitfield.
+  - (2026-10-16) The Golden Dragon follow-up inspection is scheduled for November 10.
+
+rachandeep Kaur> /compact
+/compact done
+  MEMORY.md lines (non-empty, non-comment): 36 -> 29
+  MEMORY.md facts:                          30 -> 27
+  conversation messages:                    4 -> 2
+  exact duplicates merged: 0; contradictions resolved: 0; needs review: 0
+
+rachandeep Kaur> /memory
+----- AGENT.md (56 lines) -----
+# AGENT.md
+
+Durable project and agent instructions. Loaded verbatim as the system prompt by
+[code/hw1_client.py](code/hw1_client.py) (HW1) and, together with MEMORY.md, by the file-based
+memory chat [code/hw06/file_memory_chat.py](code/hw06/file_memory_chat.py) (HW6 Part 4).
+Facts learned from conversations belong in MEMORY.md, not here.
+
+## Project description
+
+- This repository (data260-7117) is one FastAPI application for Santa Clara County restaurant
+  inspections (DOMAIN_ID 5), extended by every homework. Add new features to the shared folders
+  under `code/`; never create a per-homework copy of application code.
+- Personal configuration is fixed: SID4 7117, PORT_BASE 8817, PREFIX s7117, SEED 7117,
+  VERIFY_SEED 267117. Read these from the config modules (`hw0X_config.py`, `settings.py`);
+  never hard-code 8817 or s7117 in new code.
+
+## Technology stack
+
+- Python 3.13, FastAPI with Pydantic v2 models for every request and response body.
+- MySQL `s7117_rel` through SQLAlchemy 2.0; MongoDB `s7117_doc` through PyMongo.
+- Language model: the local Ollama model `qwen3:8b`, always called through the HW1 adapter
+  `src/model_client.py`. Do not add hosted or paid model APIs.
+
+## Coding conventions
+
+- Every module starts with a docstring and `from __future__ import annotations`.
+- Every function has type hints on all parameters and on the return value, plus a docstring.
+- Names are snake_case for functions and variables, UPPER_CASE for constants.
+- Invalid input raises a specific exception (`ValueError`, `HTTPException`, ...); never use a bare
+  `except:` and never return `None` to signal an error.
+- Library code does not `print`; only scripts under `code/hw0X/` and CLIs print.
+
+## Testing approach
+
+- Tests run offline: no network, MongoDB, MySQL or Ollama. Replace those with fixtures or fakes.
+- Every new function gets at least one test for a valid input and one for an invalid input.
+- Tests are plain `test_*` functions using `assert`, collected by the runners in `code/tests/`.
+
+## Prohibited actions
+
+- Never commit secrets, `.env` files, certificates or the `.venv` folder.
+- Never edit files in `reports/*/raw/` by hand; they are written only by the experiment scripts.
+- Never use `eval` or `exec`, and never drop or truncate a database collection or table outside
+  the setup scripts.
+
+## Code-review persona (HW1, used when asked to review code)
+
+When the user asks you to review code, act as a strict code reviewer and follow these rules on
+every review response:
+
+- Respond only with a bulleted list. Every line must start with `- `.
+- Never write introductory or concluding prose (no "Here's my review:", no "Overall, ...", no summaries).
+- Never use numbered lists, headings, tables, or code fences in a review.
+- Each bullet must be one specific, actionable review point (a bug, a risk, or a concrete improvement) — not a restatement of what the code does.
+- If there is truly nothing to flag, respond with exactly one bullet: `- No issues found.`
+- These rules apply to every review turn in the conversation, including the fifth and beyond — do not relax formatting as the conversation continues.
+
+----- MEMORY.md -----
+# MEMORY.md
+<!-- last_consolidated: 2026-10-16T19:25:20+00:00 -->
+<!-- Durable facts. Consolidated by code/file_memory/consolidation.py; [Fxx] = source lines of the version before consolidation. -->
+
+## Facts
+- (2026-10-10) Temperatures should be given in degrees Fahrenheit for this user. [F16+F17]
+- (2026-10-10) The user prefers temperatures reported in Fahrenheit. [F17]
+- (2026-10-12) Rachandeep Kaur works as a senior inspector for Santa Clara County. [F06+F15+F18]
+- (2026-10-13) Yummy Kitchen's facility code is FA0206933. [F07+F13+F19]
+- (2026-10-13) Bay BBQ passed its routine inspection with a score of 98. [F19]
+- (2026-10-14) The user prefers short answers of at most four sentences. [F15+F20]
+- (2026-10-14) Keep answers short: four sentences at most. [F20]
+- (2026-10-15) The user covers the Downtown San Jose district. [F01+F03+F05+F15+F18+F25]
+- (2026-10-15) The user prefers reports written as numbered paragraphs. [F03+F12+F21]
+- (2026-10-15) The local model is qwen3:8b served by Ollama. [F04+F11+F17+F24]
+- (2026-10-15) The user is a senior environmental health inspector with Santa Clara County. [F05+F06+F15+F18+F25]
+- (2026-10-15) The user starts field inspections at 8 AM on weekdays. [F09+F22]
+- (2026-10-15) The relational database is s7117_rel on MySQL. [F10+F11+F24]
+- (2026-10-15) MySQL database s7117_rel holds the relational inspection data. [F11+F24]
+- (2026-10-15) Closure recommendations must be escalated to the user's supervisor. [F12+F25]
+- (2026-10-15) The inspection API runs on port 8817. [F18+F24]
+- (2026-10-15) The user's HW6 report is due on October 20. [F22]
+- (2026-10-15) The user's GitHub repository is data260-7117. [F16+F24]
+- (2026-10-15) The user covers the Willow Glen district. [F23+F25]
+- (2026-10-16) The user's supervisor is Mark Chen. [F02+F04+F23+F29]
+- (2026-10-16) Golden Dragon's facility code is FA0148210 (confirmed from the county permit). [F08+F13+F27+F30]
+- (2026-10-16) Golden Dragon failed the cold-holding check with its walk-in cooler at 47F. [F13+F21+F27+F30]
+- (2026-10-16) Sakura Sushi must log rice pH every 4 hours. [F14+F26]
+- (2026-10-16) The user's supervisor is Dana Whitfield. [F23+F29]
+- (2026-10-16) The document database is s7117_doc on MongoDB. [F26+F27]
+- (2026-10-16) The Golden Dragon follow-up inspection is November 10. [F27+F30]
+- (2026-10-16) Curry House had a rodent finding in dry storage and needs a follow-up within 7 days. [F28]
+
+MEMORY.md: 29 non-empty non-comment lines, 27 facts; last consolidated: 2026-10-16T19:25:20+00:00; consolidation not required
+
+===== [2026-10-16 12:31:02 PDT] make agent-md-check-hw06 (user: rachandeep Kaur) =====
+[12:31:04] system prompt = AGENT.md + MEMORY.md (5606 chars); task:
+  Write a new Python module for this repository containing a function `parse_fact_line(line)` that parses one MEMORY.md bullet of the form '- (YYYY-MM-DD) fact text' and returns a tuple of (datetime.date, str) with the fact text stripped. Lines that do not match this form, or whose date is not a real calendar date, are invalid input. Include the module's tests in the same file. Reply with only the complete module in a single ```python code block.
+
+--- generated module (58 lines) -> /Users/pc/Documents/sjsu/Data-260-HW-Git/data260-7117/reports/hw06/agent_md_check/generated_parse_fact_line.py ---
+from __future__ import annotations
+from datetime import date
+from typing import Tuple, Optional
+import re
+
+def parse_fact_line(line: str) -> Tuple[date, str]:
+    """
+    Parse a line from MEMORY.md in the format '- (YYYY-MM-DD) fact text' and return a tuple
+    of (datetime.date, str) with the fact text stripped. If the line is invalid, raise ValueError.
+    """
+    # Regular expression to match the line format
+    pattern = r'^- \((\d{4}-\d{2}-\d{2})\) (.*)$'
+    match = re.match(pattern, line)
+    
+    if not match:
+        raise ValueError("Line does not match the required format '- (YYYY-MM-DD) fact text'")
+    
+    date_str, fact_text = match.groups()
+    
+    try:
+        fact_date = date.fromisoformat(date_str)
+    except ValueError:
+        raise ValueError("Date is not a valid calendar date")
+    
+    return (fact_date, fact_text.strip())
+
+# Tests for parse_fact_line
+def test_parse_fact_line_valid():
+    line = "- (2026-10-10) Temperatures should be given in degrees Fahrenheit for this user."
+    result = parse_fact_line(line)
+    assert result[0] == date(2026, 10, 10)
+    assert result[1] == "Temperatures should be given in degrees Fahrenheit for this user."
+
+def test_parse_fact_line_invalid_date():
+    line = "- (2026-13-10) Invalid date"
+    try:
+        parse_fact_line(line)
+    except ValueError as e:
+        assert str(e) == "Date is not a valid calendar date"
+
+def test_parse_fact_line_invalid_format():
+    line = "Invalid format line"
+    try:
+        parse_fact_line(line)
+    except ValueError as e:
+        assert str(e) == "Line does not match the required format '- (YYYY-MM-DD) fact text'"
+
+def test_parse_fact_line_extra_spaces():
+    line = "- (2026-10-10)   Extra spaces in fact text   "
+    result = parse_fact_line(line)
+    assert result[0] == date(2026, 10, 10)
+    assert result[1] == "Extra spaces in fact text"
+
+def test_parse_fact_line_empty_fact_text():
+    line = "- (2026-10-10) "
+    result = parse_fact_line(line)
+    assert result[0] == date(2026, 10, 10)
+    assert result[1] == ""
+
+
+--- AGENT.md compliance ---
+[FAIL] (Coding conventions) Every module starts with a docstring
+[PASS] (Coding conventions) ... and `from __future__ import annotations`
+[PASS] (Coding conventions) Type hints on all parameters and on the return value
+[PASS] (Coding conventions) Every function has a docstring
+[PASS] (Coding conventions) snake_case function names, UPPER_CASE constants
+[PASS] (Coding conventions) Invalid input raises a specific exception; no bare `except:`
+[PASS] (Coding conventions) Never return None to signal an error
+[PASS] (Coding conventions) Library code does not print
+[PASS] (Testing approach) Tests are plain test_* functions using assert, valid + invalid case
+[PASS] (Testing approach) Tests run offline (no network/DB/Ollama imports)
+[PASS] (Prohibited actions) Never use eval or exec
+[PASS] (Project description) Never hard-code 8817 or s7117
+
+--- behaviour ---
+  valid_line: pass
+  strips_whitespace: fail: ValueError: Line does not match the required format '- (YYYY-MM-DD) fact text'
+  invalid_format_raises_ValueError: pass
+  invalid_date_raises_ValueError: pass
+  generated_test_names: ['test_parse_fact_line_empty_fact_text', 'test_parse_fact_line_extra_spaces', 'test_parse_fact_line_invalid_date', 'test_parse_fact_line_invalid_format', 'test_parse_fact_line_valid']
+  generated_tests_pass: pass
+
+static: 11/12 AGENT.md rules followed; behaviour: FAIL
+
+===== [2026-10-16 12:34:30 PDT] make test-hw06 (user: rachandeep Kaur) =====
+HW6 offline memory tests - Rachandeep Kaur (SID4 7117)
+================================================================
+PASS  test_doc_create_valid_and_default_status
+PASS  test_doc_create_rejects_missing_enum_length_type_and_extra
+PASS  test_doc_update_requires_a_field_and_rejects_null_required
+PASS  test_chat_request_validation
+PASS  test_summarization_trigger_every_m_user_messages
+PASS  test_cosine_ranks_most_similar_first
+PASS  test_retrieve_episodes_top_k_and_threshold
+PASS  test_build_prompt_order_and_components
+PASS  test_compress_policy_truncates_old_assistant_turns_only
+PASS  test_probe_scoring_rubric
+PASS  test_line_count_timestamp_and_consolidation_rules
+PASS  test_system_prompt_contains_both_files_without_comments
+PASS  test_parse_and_append_facts
+PASS  test_consolidation_merges_resolves_and_never_silently_deletes
+PASS  test_consolidation_with_unusable_model_output_keeps_everything
+PASS  test_audit_flags_incorrect_resolutions
+PASS  test_commands_help_memory_compact_dream
+================================================================
+17/17 tests passed
+
+===== [2026-10-16 12:34:33 PDT] make metrics-hw06 (user: rachandeep Kaur) =====
+# HW6 Metrics
+
+Generated by `make metrics-hw06` on 2026-10-16 12:34 from `reports/hw06/raw/`. Model: qwen3:8b (Ollama, local CPU). SID4 7117, PORT_BASE 8817, SEED 7117, VERIFY_SEED 267117.
+
+## Part 1 - Document API calls (21/21 as expected)
+
+| Case | Method | Status | Expected | OK |
+|---|---|---|---|---|
+| create (POST) | POST | 201 | 201 | yes |
+| retrieve one (GET /:id) | GET | 200 | 200 | yes |
+| retrieve all (GET) | GET | 200 | 200 | yes |
+| filter by status (GET ?status=failed) | GET | 200 | 200 | yes |
+| update (PUT /:id) | PUT | 200 | 200 | yes |
+| delete (DELETE /:id) | DELETE | 200 | 200 | yes |
+| get deleted -> not found | GET | 404 | 404 | yes |
+| update missing -> not found | PUT | 404 | 404 | yes |
+| delete missing -> not found | DELETE | 404 | 404 | yes |
+| missing required fields | POST | 422 | 422 | yes |
+| invalid enum values | POST | 422 | 422 | yes |
+| incorrect data types | POST | 422 | 422 | yes |
+| bad date format | POST | 422 | 422 | yes |
+| facility_name over 100 chars | POST | 422 | 422 | yes |
+| blank facility_name | POST | 422 | 422 | yes |
+| unknown field (client-set created_at) | POST | 422 | 422 | yes |
+| empty update body | PUT | 422 | 422 | yes |
+| malformed JSON | POST | 400 | 400 | yes |
+| wrong content type | POST | 415 | 415 | yes |
+| malformed ObjectId | GET | 400 | 400 | yes |
+| create sample doc kept for Compass | POST | 201 | 201 | yes |
+
+## Part 2 - 12-message session (memory observed per turn)
+
+| Turn | Window msgs | Session summary | Lifetime summary | Facts retrieved | Facts stored | Summary written | Prompt tok | Latency (ms) |
+|---|---|---|---|---|---|---|---|---|
+| 1 | 0 | - | - | 0 | 3 |  | 135 | 33406 |
+| 2 | 2 | - | - | 0 | 2 |  | 218 | 27281 |
+| 3 | 4 | - | - | 1 | 1 |  | 330 | 20722 |
+| 4 | 6 | - | - | 1 | 0 |  | 392 | 15038 |
+| 5 | 8 | - | - | 1 | 2 | session | 459 | 65630 |
+| 6 | 10 | yes | - | 2 | 1 |  | 703 | 41549 |
+| 7 | 12 | yes | - | 2 | 2 |  | 768 | 35028 |
+| 8 | 12 | yes | - | 2 | 1 |  | 765 | 46190 |
+| 9 | 12 | yes | - | 1 | 0 |  | 718 | 30620 |
+| 10 | 12 | yes | - | 2 | 0 | session + lifetime | 759 | 143610 |
+| 11 | 12 | yes | yes | 3 | 2 |  | 940 | 55627 |
+| 12 | 12 | yes | yes | 0 | 0 |  | 815 | 35435 |
+
+## Part 3.3/3.4 - Short-term memory size and compression policy
+
+Means over the 30 conversation turns of one fresh run per setting; probe quality = mean of the 5 probe scores (rubric in `memory_probes.yaml`).
+
+| Setting | Mean prompt tokens/turn | Mean latency (ms) | Probe quality (1-5) | Turns |
+|---|---|---|---|---|
+| SHORT_TERM_N=4 | 631.5 | 56875 | 4.6 | 30 |
+| SHORT_TERM_N=12 | 964.8 | 61394 | 4.6 | 30 |
+| SHORT_TERM_N=30 | 1489.0 | 81569 | 5.0 | 30 |
+| Compression policy (N=12) | 576.7 | 43548 | 3.8 | 30 |
+
+### Prompt composition (mean tokens per turn)
+
+| Setting | System primer | Long-term summary | Short-term window | Episodic facts | Current message | Counted total | Ollama prompt | Mean completion | Model latency (ms) | Upkeep latency (ms) |
+|---|---|---|---|---|---|---|---|---|---|---|
+| SHORT_TERM_N=4 | 95.0 | 258.0 | 168.0 | 82.2 | 18.9 | 622.2 | 631.5 | 65.1 | 28875 | 27835 |
+| SHORT_TERM_N=12 | 95.0 | 279.2 | 480.2 | 82.2 | 18.9 | 955.5 | 964.8 | 67.9 | 36099 | 25164 |
+| SHORT_TERM_N=30 | 95.0 | 265.0 | 1018.5 | 82.2 | 18.9 | 1479.7 | 1489.0 | 67.5 | 57749 | 23679 |
+| Compression policy (N=12) | 95.0 | 177.7 | 255.5 | 19.8 | 18.9 | 566.8 | 576.7 | 46.9 | 23208 | 20212 |
+
+### Probe scores per question
+
+| Setting | P1 | P2 | P3 | P4 | P5 |
+|---|---|---|---|---|---|
+| SHORT_TERM_N=4 | 5 | 5 | 5 | 3 | 5 |
+| SHORT_TERM_N=12 | 5 | 5 | 5 | 3 | 5 |
+| SHORT_TERM_N=30 | 5 | 5 | 5 | 5 | 5 |
+| Compression policy (N=12) | 3 | 5 | 5 | 3 | 3 |
+
+### Part 3.4 - Compression policy vs. the same window without it
+
+Policy: keep the newest 2 messages verbatim, cut older assistant turns in the window to their first sentence (<=160 chars), never shorten user turns, and evict episodic facts with cosine < 0.40.
+
+| Metric | SHORT_TERM_N=12 | Compression policy (N=12) | Change |
+|---|---|---|---|
+| Mean prompt tokens/turn | 964.8 | 576.7 | -388.1 (-40.2%) |
+| Short-term window tokens/turn | 480.2 | 255.5 | -224.7 |
+| Episodic-fact tokens/turn | 82.2 | 19.8 | -62.4 |
+| Input tokens per 30-turn conversation | 28945.0 | 17301.0 | -11644 |
+| Mean latency (ms) | 61394.0 | 43548.0 | -17846 |
+| Probe quality (1-5) | 4.6 | 3.8 | -0.80 |
+
+## Part 3.5 - Memory cost estimate (10,000 x 30-turn conversations)
+
+Pricing: $1 / 1M input, $5 / 1M output tokens. Token counts are the measured sums over one 30-turn run. "Upkeep" = the fact-extraction and summary calls the memory system adds per turn.
+
+| Setting | Role | Input tok/conv | Output tok/conv | Upkeep in/out tok/conv | Chat $/conv | Chat $ x10k | Incl. upkeep $ x10k |
+|---|---|---|---|---|---|---|---|
+| SHORT_TERM_N=4 | best | 18945 | 1952 | 10304 / 2517 | 0.02871 | 287.05 | 515.94 |
+| SHORT_TERM_N=12 |  | 28945 | 2037 | 10679 / 2672 | 0.03913 | 391.30 | 631.69 |
+| SHORT_TERM_N=30 | worst | 44670 | 2026 | 10468 / 2507 | 0.05480 | 548.00 | 778.03 |
+| Compression policy (N=12) |  | 17301 | 1407 | 9204 / 2109 | 0.02434 | 243.36 | 440.85 |
+
+**Selection rule.** Worst = the highest total cost (SHORT_TERM_N=30). Best = the cheapest setting whose probe quality is within 0.5 points of the best probe score (5.00) - so a setting cannot win on price by forgetting the facts the probes test. Best: **SHORT_TERM_N=4**; worst: **SHORT_TERM_N=30**.
+
+## Part 4.5 - Consolidation test
+
+- Total lines: 55 -> 38 (under 40: True)
+- Non-empty non-comment lines: 52 -> 34; facts 50 -> 28
+- Duplicate topics merged: 11/15 (10 exact copies merged before the model call)
+- Contradictions resolved correctly: 2/5; no silent deletion: True
+
+| Contradiction | Result | Superseded value kept visible | Audit flag |
+|---|---|---|---|
+| supervisor | unresolved_both_kept | no | no |
+| district | unresolved_both_kept | no | no |
+| report format | unresolved_both_kept | no | no |
+| Golden Dragon follow-up date | correct | yes | no |
+| Golden Dragon facility code | correct | yes | no |
+
+## Part 4.4 - Generated function vs. AGENT.md
+
+11/12 rules followed; behaviour tests FAIL.
+
+| Category | AGENT.md rule | Result |
+|---|---|---|
+| Coding conventions | Every module starts with a docstring | FAIL |
+| Coding conventions | ... and `from __future__ import annotations` | PASS |
+| Coding conventions | Type hints on all parameters and on the return value | PASS |
+| Coding conventions | Every function has a docstring | PASS |
+| Coding conventions | snake_case function names, UPPER_CASE constants | PASS |
+| Coding conventions | Invalid input raises a specific exception; no bare `except:` | PASS |
+| Coding conventions | Never return None to signal an error | PASS |
+| Coding conventions | Library code does not print | PASS |
+| Testing approach | Tests are plain test_* functions using assert, valid + invalid case | PASS |
+| Testing approach | Tests run offline (no network/DB/Ollama imports) | PASS |
+| Prohibited actions | Never use eval or exec | PASS |
+| Project description | Never hard-code 8817 or s7117 | PASS |
+
+wrote /Users/pc/Documents/sjsu/Data-260-HW-Git/data260-7117/reports/hw06/METRICS.md
+
+[2026-10-16 12:35:36 PDT] NOTE: consolidation run 1 left 3/5 contradictions unresolved (kept in raw/consolidation_run1/). Added a second conflict-check pass to code/file_memory/consolidation.py; run 2 below.
+
+===== [2026-10-16 12:35:36 PDT] make consolidation-test-hw06 (user: rachandeep Kaur) =====
+[12:35:38] copied MEMORY.original.md (55 lines) -> /Users/pc/Documents/sjsu/Data-260-HW-Git/data260-7117/MEMORY.md
+needs_consolidation: True - ['52 non-empty, non-comment lines > 40', 'last consolidated 15 days, 11:35:38.246396 ago (> 24h)']
+
+> /compact
+/compact done
+  MEMORY.md lines (non-empty, non-comment): 52 -> 34
+  MEMORY.md facts:                          50 -> 25
+  conversation messages:                    0 -> 0
+  exact duplicates merged: 10; contradictions resolved: 5; needs review: 1
+  - Golden Dragon's facility code: kept F20 over F38 [consistent_with_rule]
+  - Report format: kept F46 over F12, F30 [consistent_with_rule]
+  - Golden Dragon follow-up inspection date: kept F50 over F28, F41 [consistent_with_rule]
+  - User's preferred temperature unit: kept F14 over F37 [possibly_incorrect]
+  - User's supervisor: kept F04 over F32+F43 [possibly_incorrect]
+
+saved /Users/pc/Documents/sjsu/Data-260-HW-Git/data260-7117/reports/hw06/memory_consolidation/MEMORY.consolidated.md (39 lines):
+# MEMORY.md
+<!-- last_consolidated: 2026-10-16T19:35:38+00:00 -->
+<!-- Durable facts. Consolidated by code/file_memory/consolidation.py; [Fxx] = source lines of the version before consolidation. -->
+
+## Facts
+- (2026-09-01) The user covers the Downtown San Jose district. [F03]
+- (2026-09-02) The user's supervisor is Mark Chen. [F04]
+- (2026-09-12) Temperatures should be given in degrees Fahrenheit for this user. [F14]
+- (2026-09-15) The local model is qwen3:8b served by Ollama. [F11+F17]
+- (2026-09-16) The user is a senior environmental health inspector with Santa Clara County. [F01+F02+F06+F15+F18]
+- (2026-09-16) Rachandeep Kaur works as a senior inspector for Santa Clara County. [F01+F06+F15+F18]
+- (2026-09-17) Yummy Kitchen's facility code is FA0206933. [F13+F19]
+- (2026-09-20) Golden Dragon's facility code is FA0148210 (confirmed from the county permit). [F20]
+- (2026-09-23) The user starts field inspections at 8 AM on weekdays. [F09+F22]
+- (2026-09-26) The relational database is s7117_rel on MySQL. [F08+F24]
+- (2026-09-26) MySQL database s7117_rel holds the relational inspection data. [F24]
+- (2026-09-27) Closure recommendations must be escalated to the user's supervisor. [F25]
+- (2026-10-02) Golden Dragon failed the cold-holding check with its walk-in cooler at 47F. [F21+F29]
+- (2026-10-06) Sakura Sushi must log rice pH every 4 hours. [F26+F33]
+- (2026-10-08) The user prefers short answers of at most four sentences. [F35]
+- (2026-10-12) The inspection API runs on port 8817. [F05+F10+F39]
+- (2026-10-13) Bay BBQ passed its routine inspection with a score of 98. [F31+F40]
+- (2026-10-15) The user's HW6 report is due on October 20. [F34+F47]
+- (2026-10-15) The user covers the Willow Glen district. [F23+F45]
+- (2026-10-15) Reports for the user should be bullet points only, no more than five. [F46]
+- (2026-10-15) The user's GitHub repository is data260-7117. [F16+F44]
+- (2026-10-16) The document database is s7117_doc on MongoDB. [F27+F49]
+- (2026-10-16) The Golden Dragon follow-up inspection is November 10. [F50]
+- (2026-10-16) Curry House had a rodent finding in dry storage and needs a follow-up within 7 days. [F36+F48]
+
+## Resolved contradictions
+- Golden Dragon's facility code: kept "Golden Dragon's facility code is FA0148210 (confirmed from the county permit)." (2026-09-20, F20) over "Golden Dragon's facility code is FA0148201 (assistant guess, unverified)." (2026-10-11, F38).
+- Report format: kept "Reports for the user should be bullet points only, no more than five." (2026-10-15, F46) over "The user prefers reports written as numbered paragraphs." (2026-09-10, F12); "The user wants reports as bullet points, at most five bullets." (2026-10-03, F30).
+- Golden Dragon follow-up inspection date: kept "Golden Dragon's follow-up inspection is November 10." (2026-10-16, F50) over "The Golden Dragon follow-up inspection is on November 3." (2026-10-01, F28); "The Golden Dragon follow-up moved to November 10 because a compressor part is delayed." (2026-10-14, F41).
+- User's preferred temperature unit: kept "Temperatures should be given in degrees Fahrenheit for this user." (2026-09-12, F14) over "The user prefers temperatures reported in Fahrenheit." (2026-10-10, F37). AUDIT: possibly incorrect
+- User's supervisor: kept "The user's supervisor is Mark Chen" (2026-09-02, F04) over "The user's supervisor is Dana Whitfield" (2026-10-15, F32+F43). AUDIT: possibly incorrect
+
+## Needs review (not resolved by consolidation, kept verbatim)
+- (2026-10-14) Keep answers short: four sentences at most. [F42]
+
+# Consolidation test (HW6 Part 4.5)
+
+Generated by `make consolidation-test-hw06` on 2026-10-16 12:41.
+Input: `MEMORY.original.md` (55 lines). Output: `MEMORY.consolidated.md`
+(39 lines, under 40: **True**).
+
+- Non-empty, non-comment lines: 52 -> 34
+- Facts: 50 -> 25
+- Exact duplicates merged before the model call: 10
+- Duplicate topics merged to one line: 13/15
+- Contradictions resolved correctly: 3/5
+- Superseded values still visible (no silent deletion): True
+- Facts left for review: 1
+
+## Contradictions
+
+| Topic | Result | Superseded value still visible | Flagged by audit | Correct rule |
+|---|---|---|---|---|
+| supervisor | incorrect | yes | yes | newest date wins (2026-10-05 over 2026-09-02) |
+| district | unresolved_both_kept | no | no | newest date wins (2026-09-25 over 2026-09-01) |
+| report format | correct | yes | no | newest date wins (2026-10-03 over 2026-09-10) |
+| Golden Dragon follow-up date | correct | yes | no | newest date wins (2026-10-14 over 2026-10-01) |
+| Golden Dragon facility code | correct | yes | no | the OLDER fact wins - it is confirmed from the permit, the newer one is an unverified guess (a plain newest-wins consolidation gets this one wrong) |
+
+## Duplicates
+
+| Topic | Copies before | Lines after |
+|---|---|---|
+| name | 3 | 0 |
+| API port | 3 | 1 |
+| Fahrenheit | 3 | 1 |
+| 8 AM start | 2 | 1 |
+| qwen3 model | 2 | 1 |
+| Yummy Kitchen code | 2 | 1 |
+| GitHub repo | 2 | 1 |
+| Sakura rice pH | 2 | 1 |
+| MySQL db | 2 | 2 |
+| MongoDB db | 2 | 1 |
+| cooler 47F | 2 | 1 |
+| Bay BBQ 98 | 2 | 1 |
+| short answers | 2 | 1 |
+| HW6 deadline | 2 | 1 |
+| Curry House follow-up | 2 | 1 |
+
+
+===== [2026-10-16 12:41:17 PDT] make file-memory-demo-hw06 (user: rachandeep Kaur) =====
+file_memory_chat.py - user: rachandeep Kaur - 2026-10-16 12:41:19 - memory: /Users/pc/Documents/sjsu/Data-260-HW-Git/data260-7117/MEMORY.md
+type a message, or /help for commands
+MEMORY.md: 34 non-empty non-comment lines, 25 facts; last consolidated: 2026-10-16T19:35:38+00:00; consolidation not required
+
+rachandeep Kaur> # HW6 Part 4.3 evidence run: python code/hw06/file_memory_chat.py --script reports/hw06/file_memory_demo_script.txt
+
+rachandeep Kaur> /help
+Commands:
+  /memory   show AGENT.md + MEMORY.md as loaded into the system prompt, with line count,
+            last-consolidated time and whether consolidation is due
+  /compact  consolidate MEMORY.md (merge duplicates, resolve contradictions) and compact the
+            conversation into a summary; reports the counts before and after
+  /dream    find durable long-term facts in the recent conversation and add them to MEMORY.md
+  /help     this help
+  /exit     quit (Ctrl-D also works)
+Anything else is sent to the model with AGENT.md + MEMORY.md in the system prompt.
+
+rachandeep Kaur> /memory
+----- AGENT.md (56 lines) -----
+# AGENT.md
+
+Durable project and agent instructions. Loaded verbatim as the system prompt by
+[code/hw1_client.py](code/hw1_client.py) (HW1) and, together with MEMORY.md, by the file-based
+memory chat [code/hw06/file_memory_chat.py](code/hw06/file_memory_chat.py) (HW6 Part 4).
+Facts learned from conversations belong in MEMORY.md, not here.
+
+## Project description
+
+- This repository (data260-7117) is one FastAPI application for Santa Clara County restaurant
+  inspections (DOMAIN_ID 5), extended by every homework. Add new features to the shared folders
+  under `code/`; never create a per-homework copy of application code.
+- Personal configuration is fixed: SID4 7117, PORT_BASE 8817, PREFIX s7117, SEED 7117,
+  VERIFY_SEED 267117. Read these from the config modules (`hw0X_config.py`, `settings.py`);
+  never hard-code 8817 or s7117 in new code.
+
+## Technology stack
+
+- Python 3.13, FastAPI with Pydantic v2 models for every request and response body.
+- MySQL `s7117_rel` through SQLAlchemy 2.0; MongoDB `s7117_doc` through PyMongo.
+- Language model: the local Ollama model `qwen3:8b`, always called through the HW1 adapter
+  `src/model_client.py`. Do not add hosted or paid model APIs.
+
+## Coding conventions
+
+- Every module starts with a docstring and `from __future__ import annotations`.
+- Every function has type hints on all parameters and on the return value, plus a docstring.
+- Names are snake_case for functions and variables, UPPER_CASE for constants.
+- Invalid input raises a specific exception (`ValueError`, `HTTPException`, ...); never use a bare
+  `except:` and never return `None` to signal an error.
+- Library code does not `print`; only scripts under `code/hw0X/` and CLIs print.
+
+## Testing approach
+
+- Tests run offline: no network, MongoDB, MySQL or Ollama. Replace those with fixtures or fakes.
+- Every new function gets at least one test for a valid input and one for an invalid input.
+- Tests are plain `test_*` functions using `assert`, collected by the runners in `code/tests/`.
+
+## Prohibited actions
+
+- Never commit secrets, `.env` files, certificates or the `.venv` folder.
+- Never edit files in `reports/*/raw/` by hand; they are written only by the experiment scripts.
+- Never use `eval` or `exec`, and never drop or truncate a database collection or table outside
+  the setup scripts.
+
+## Code-review persona (HW1, used when asked to review code)
+
+When the user asks you to review code, act as a strict code reviewer and follow these rules on
+every review response:
+
+- Respond only with a bulleted list. Every line must start with `- `.
+- Never write introductory or concluding prose (no "Here's my review:", no "Overall, ...", no summaries).
+- Never use numbered lists, headings, tables, or code fences in a review.
+- Each bullet must be one specific, actionable review point (a bug, a risk, or a concrete improvement) — not a restatement of what the code does.
+- If there is truly nothing to flag, respond with exactly one bullet: `- No issues found.`
+- These rules apply to every review turn in the conversation, including the fifth and beyond — do not relax formatting as the conversation continues.
+
+----- MEMORY.md -----
+# MEMORY.md
+<!-- last_consolidated: 2026-10-16T19:35:38+00:00 -->
+<!-- Durable facts. Consolidated by code/file_memory/consolidation.py; [Fxx] = source lines of the version before consolidation. -->
+
+## Facts
+- (2026-09-01) The user covers the Downtown San Jose district. [F03]
+- (2026-09-02) The user's supervisor is Mark Chen. [F04]
+- (2026-09-12) Temperatures should be given in degrees Fahrenheit for this user. [F14]
+- (2026-09-15) The local model is qwen3:8b served by Ollama. [F11+F17]
+- (2026-09-16) The user is a senior environmental health inspector with Santa Clara County. [F01+F02+F06+F15+F18]
+- (2026-09-16) Rachandeep Kaur works as a senior inspector for Santa Clara County. [F01+F06+F15+F18]
+- (2026-09-17) Yummy Kitchen's facility code is FA0206933. [F13+F19]
+- (2026-09-20) Golden Dragon's facility code is FA0148210 (confirmed from the county permit). [F20]
+- (2026-09-23) The user starts field inspections at 8 AM on weekdays. [F09+F22]
+- (2026-09-26) The relational database is s7117_rel on MySQL. [F08+F24]
+- (2026-09-26) MySQL database s7117_rel holds the relational inspection data. [F24]
+- (2026-09-27) Closure recommendations must be escalated to the user's supervisor. [F25]
+- (2026-10-02) Golden Dragon failed the cold-holding check with its walk-in cooler at 47F. [F21+F29]
+- (2026-10-06) Sakura Sushi must log rice pH every 4 hours. [F26+F33]
+- (2026-10-08) The user prefers short answers of at most four sentences. [F35]
+- (2026-10-12) The inspection API runs on port 8817. [F05+F10+F39]
+- (2026-10-13) Bay BBQ passed its routine inspection with a score of 98. [F31+F40]
+- (2026-10-15) The user's HW6 report is due on October 20. [F34+F47]
+- (2026-10-15) The user covers the Willow Glen district. [F23+F45]
+- (2026-10-15) Reports for the user should be bullet points only, no more than five. [F46]
+- (2026-10-15) The user's GitHub repository is data260-7117. [F16+F44]
+- (2026-10-16) The document database is s7117_doc on MongoDB. [F27+F49]
+- (2026-10-16) The Golden Dragon follow-up inspection is November 10. [F50]
+- (2026-10-16) Curry House had a rodent finding in dry storage and needs a follow-up within 7 days. [F36+F48]
+
+## Resolved contradictions
+- Golden Dragon's facility code: kept "Golden Dragon's facility code is FA0148210 (confirmed from the county permit)." (2026-09-20, F20) over "Golden Dragon's facility code is FA0148201 (assistant guess, unverified)." (2026-10-11, F38).
+- Report format: kept "Reports for the user should be bullet points only, no more than five." (2026-10-15, F46) over "The user prefers reports written as numbered paragraphs." (2026-09-10, F12); "The user wants reports as bullet points, at most five bullets." (2026-10-03, F30).
+- Golden Dragon follow-up inspection date: kept "Golden Dragon's follow-up inspection is November 10." (2026-10-16, F50) over "The Golden Dragon follow-up inspection is on November 3." (2026-10-01, F28); "The Golden Dragon follow-up moved to November 10 because a compressor part is delayed." (2026-10-14, F41).
+- User's preferred temperature unit: kept "Temperatures should be given in degrees Fahrenheit for this user." (2026-09-12, F14) over "The user prefers temperatures reported in Fahrenheit." (2026-10-10, F37). AUDIT: possibly incorrect
+- User's supervisor: kept "The user's supervisor is Mark Chen" (2026-09-02, F04) over "The user's supervisor is Dana Whitfield" (2026-10-15, F32+F43). AUDIT: possibly incorrect
+
+## Needs review (not resolved by consolidation, kept verbatim)
+- (2026-10-14) Keep answers short: four sentences at most. [F42]
+
+MEMORY.md: 34 non-empty non-comment lines, 25 facts; last consolidated: 2026-10-16T19:35:38+00:00; consolidation not required
+
+rachandeep Kaur> Quick update for my notes: Bay BBQ's next routine inspection is on October 30, and I now also cover the Cambrian district.
+- Added "Bay BBQ's next routine inspection is on October 30" to notes.  
+- Added "I now also cover the Cambrian district" to notes.
+
+rachandeep Kaur> Who is my supervisor, and when is the Golden Dragon follow-up?
+- Your supervisor is Mark Chen.  
+- The Golden Dragon follow-up inspection is on November 10.
+
+rachandeep Kaur> /dream
+/dream added 2 fact(s) to MEMORY.md:
+  - (2026-10-16) The user's supervisor is Mark Chen.
+  - (2026-10-16) The Golden Dragon follow-up inspection is on November 10.
+
+rachandeep Kaur> /compact
+/compact done
+  MEMORY.md lines (non-empty, non-comment): 36 -> 26
+  MEMORY.md facts:                          27 -> 24
+  conversation messages:                    4 -> 2
+  exact duplicates merged: 0; contradictions resolved: 0; needs review: 0
+
+rachandeep Kaur> /memory
+----- AGENT.md (56 lines) -----
+# AGENT.md
+
+Durable project and agent instructions. Loaded verbatim as the system prompt by
+[code/hw1_client.py](code/hw1_client.py) (HW1) and, together with MEMORY.md, by the file-based
+memory chat [code/hw06/file_memory_chat.py](code/hw06/file_memory_chat.py) (HW6 Part 4).
+Facts learned from conversations belong in MEMORY.md, not here.
+
+## Project description
+
+- This repository (data260-7117) is one FastAPI application for Santa Clara County restaurant
+  inspections (DOMAIN_ID 5), extended by every homework. Add new features to the shared folders
+  under `code/`; never create a per-homework copy of application code.
+- Personal configuration is fixed: SID4 7117, PORT_BASE 8817, PREFIX s7117, SEED 7117,
+  VERIFY_SEED 267117. Read these from the config modules (`hw0X_config.py`, `settings.py`);
+  never hard-code 8817 or s7117 in new code.
+
+## Technology stack
+
+- Python 3.13, FastAPI with Pydantic v2 models for every request and response body.
+- MySQL `s7117_rel` through SQLAlchemy 2.0; MongoDB `s7117_doc` through PyMongo.
+- Language model: the local Ollama model `qwen3:8b`, always called through the HW1 adapter
+  `src/model_client.py`. Do not add hosted or paid model APIs.
+
+## Coding conventions
+
+- Every module starts with a docstring and `from __future__ import annotations`.
+- Every function has type hints on all parameters and on the return value, plus a docstring.
+- Names are snake_case for functions and variables, UPPER_CASE for constants.
+- Invalid input raises a specific exception (`ValueError`, `HTTPException`, ...); never use a bare
+  `except:` and never return `None` to signal an error.
+- Library code does not `print`; only scripts under `code/hw0X/` and CLIs print.
+
+## Testing approach
+
+- Tests run offline: no network, MongoDB, MySQL or Ollama. Replace those with fixtures or fakes.
+- Every new function gets at least one test for a valid input and one for an invalid input.
+- Tests are plain `test_*` functions using `assert`, collected by the runners in `code/tests/`.
+
+## Prohibited actions
+
+- Never commit secrets, `.env` files, certificates or the `.venv` folder.
+- Never edit files in `reports/*/raw/` by hand; they are written only by the experiment scripts.
+- Never use `eval` or `exec`, and never drop or truncate a database collection or table outside
+  the setup scripts.
+
+## Code-review persona (HW1, used when asked to review code)
+
+When the user asks you to review code, act as a strict code reviewer and follow these rules on
+every review response:
+
+- Respond only with a bulleted list. Every line must start with `- `.
+- Never write introductory or concluding prose (no "Here's my review:", no "Overall, ...", no summaries).
+- Never use numbered lists, headings, tables, or code fences in a review.
+- Each bullet must be one specific, actionable review point (a bug, a risk, or a concrete improvement) — not a restatement of what the code does.
+- If there is truly nothing to flag, respond with exactly one bullet: `- No issues found.`
+- These rules apply to every review turn in the conversation, including the fifth and beyond — do not relax formatting as the conversation continues.
+
+----- MEMORY.md -----
+# MEMORY.md
+<!-- last_consolidated: 2026-10-16T19:43:52+00:00 -->
+<!-- Durable facts. Consolidated by code/file_memory/consolidation.py; [Fxx] = source lines of the version before consolidation. -->
+
+## Facts
+- (2026-09-12) Temperatures should be given in degrees Fahrenheit for this user. [F03]
+- (2026-09-15) The local model is qwen3:8b served by Ollama. [F04]
+- (2026-09-16) Rachandeep Kaur works as a senior inspector for Santa Clara County. [F06]
+- (2026-09-17) Yummy Kitchen's facility code is FA0206933. [F07]
+- (2026-09-20) Golden Dragon's facility code is FA0148210 (confirmed from the county permit). [F08]
+- (2026-09-23) The user starts field inspections at 8 AM on weekdays. [F09]
+- (2026-09-26) The relational database is s7117_rel on MySQL. [F10]
+- (2026-09-26) MySQL database s7117_rel holds the relational inspection data. [F11]
+- (2026-09-27) Closure recommendations must be escalated to the user's supervisor. [F12]
+- (2026-10-02) Golden Dragon failed the cold-holding check with its walk-in cooler at 47F. [F13]
+- (2026-10-06) Sakura Sushi must log rice pH every 4 hours. [F14]
+- (2026-10-08) The user prefers short answers of at most four sentences. [F15]
+- (2026-10-12) The inspection API runs on port 8817. [F16]
+- (2026-10-13) Bay BBQ passed its routine inspection with a score of 98. [F17]
+- (2026-10-14) Keep answers short: four sentences at most. [F27]
+- (2026-10-15) The user covers the Downtown San Jose district. [F01+F19]
+- (2026-10-15) The user is a senior environmental health inspector with Santa Clara County. [F05+F06+F15+F18]
+- (2026-10-15) The user's HW6 report is due on October 20. [F18]
+- (2026-10-15) Reports for the user should be bullet points only, no more than five. [F20]
+- (2026-10-15) The user's GitHub repository is data260-7117. [F21]
+- (2026-10-16) The user's supervisor is Mark Chen. [F02+F25]
+- (2026-10-16) The document database is s7117_doc on MongoDB. [F22]
+- (2026-10-16) The Golden Dragon follow-up inspection is November 10. [F23+F26]
+- (2026-10-16) Curry House had a rodent finding in dry storage and needs a follow-up within 7 days. [F24]
+
+MEMORY.md: 26 non-empty non-comment lines, 24 facts; last consolidated: 2026-10-16T19:43:52+00:00; consolidation not required
+
+===== [2026-10-16 12:49:34 PDT] make test-hw06 (user: rachandeep Kaur) =====
+HW6 offline memory tests - Rachandeep Kaur (SID4 7117)
+================================================================
+PASS  test_doc_create_valid_and_default_status
+PASS  test_doc_create_rejects_missing_enum_length_type_and_extra
+PASS  test_doc_update_requires_a_field_and_rejects_null_required
+PASS  test_chat_request_validation
+PASS  test_summarization_trigger_every_m_user_messages
+PASS  test_cosine_ranks_most_similar_first
+PASS  test_retrieve_episodes_top_k_and_threshold
+PASS  test_build_prompt_order_and_components
+PASS  test_compress_policy_truncates_old_assistant_turns_only
+PASS  test_probe_scoring_rubric
+PASS  test_line_count_timestamp_and_consolidation_rules
+PASS  test_system_prompt_contains_both_files_without_comments
+PASS  test_parse_and_append_facts
+PASS  test_consolidation_merges_resolves_and_never_silently_deletes
+PASS  test_conflict_check_resolves_contradiction_left_in_facts
+PASS  test_consolidation_with_unusable_model_output_keeps_everything
+PASS  test_audit_flags_incorrect_resolutions
+PASS  test_commands_help_memory_compact_dream
+================================================================
+18/18 tests passed
+
+===== [2026-10-16 12:49:37 PDT] make metrics-hw06 (user: rachandeep Kaur) =====
+# HW6 Metrics
+
+Generated by `make metrics-hw06` on 2026-10-16 12:49 from `reports/hw06/raw/`. Model: qwen3:8b (Ollama, local CPU). SID4 7117, PORT_BASE 8817, SEED 7117, VERIFY_SEED 267117.
+
+## Part 1 - Document API calls (21/21 as expected)
+
+| Case | Method | Status | Expected | OK |
+|---|---|---|---|---|
+| create (POST) | POST | 201 | 201 | yes |
+| retrieve one (GET /:id) | GET | 200 | 200 | yes |
+| retrieve all (GET) | GET | 200 | 200 | yes |
+| filter by status (GET ?status=failed) | GET | 200 | 200 | yes |
+| update (PUT /:id) | PUT | 200 | 200 | yes |
+| delete (DELETE /:id) | DELETE | 200 | 200 | yes |
+| get deleted -> not found | GET | 404 | 404 | yes |
+| update missing -> not found | PUT | 404 | 404 | yes |
+| delete missing -> not found | DELETE | 404 | 404 | yes |
+| missing required fields | POST | 422 | 422 | yes |
+| invalid enum values | POST | 422 | 422 | yes |
+| incorrect data types | POST | 422 | 422 | yes |
+| bad date format | POST | 422 | 422 | yes |
+| facility_name over 100 chars | POST | 422 | 422 | yes |
+| blank facility_name | POST | 422 | 422 | yes |
+| unknown field (client-set created_at) | POST | 422 | 422 | yes |
+| empty update body | PUT | 422 | 422 | yes |
+| malformed JSON | POST | 400 | 400 | yes |
+| wrong content type | POST | 415 | 415 | yes |
+| malformed ObjectId | GET | 400 | 400 | yes |
+| create sample doc kept for Compass | POST | 201 | 201 | yes |
+
+## Part 2 - 12-message session (memory observed per turn)
+
+| Turn | Window msgs | Session summary | Lifetime summary | Facts retrieved | Facts stored | Summary written | Prompt tok | Latency (ms) |
+|---|---|---|---|---|---|---|---|---|
+| 1 | 0 | - | - | 0 | 3 |  | 135 | 33406 |
+| 2 | 2 | - | - | 0 | 2 |  | 218 | 27281 |
+| 3 | 4 | - | - | 1 | 1 |  | 330 | 20722 |
+| 4 | 6 | - | - | 1 | 0 |  | 392 | 15038 |
+| 5 | 8 | - | - | 1 | 2 | session | 459 | 65630 |
+| 6 | 10 | yes | - | 2 | 1 |  | 703 | 41549 |
+| 7 | 12 | yes | - | 2 | 2 |  | 768 | 35028 |
+| 8 | 12 | yes | - | 2 | 1 |  | 765 | 46190 |
+| 9 | 12 | yes | - | 1 | 0 |  | 718 | 30620 |
+| 10 | 12 | yes | - | 2 | 0 | session + lifetime | 759 | 143610 |
+| 11 | 12 | yes | yes | 3 | 2 |  | 940 | 55627 |
+| 12 | 12 | yes | yes | 0 | 0 |  | 815 | 35435 |
+
+## Part 3.3/3.4 - Short-term memory size and compression policy
+
+Means over the 30 conversation turns of one fresh run per setting; probe quality = mean of the 5 probe scores (rubric in `memory_probes.yaml`).
+
+| Setting | Mean prompt tokens/turn | Mean latency (ms) | Probe quality (1-5) | Turns |
+|---|---|---|---|---|
+| SHORT_TERM_N=4 | 631.5 | 56875 | 4.6 | 30 |
+| SHORT_TERM_N=12 | 964.8 | 61394 | 4.6 | 30 |
+| SHORT_TERM_N=30 | 1489.0 | 81569 | 5.0 | 30 |
+| Compression policy (N=12) | 576.7 | 43548 | 3.8 | 30 |
+
+### Prompt composition (mean tokens per turn)
+
+| Setting | System primer | Long-term summary | Short-term window | Episodic facts | Current message | Counted total | Ollama prompt | Mean completion | Model latency (ms) | Upkeep latency (ms) |
+|---|---|---|---|---|---|---|---|---|---|---|
+| SHORT_TERM_N=4 | 95.0 | 258.0 | 168.0 | 82.2 | 18.9 | 622.2 | 631.5 | 65.1 | 28875 | 27835 |
+| SHORT_TERM_N=12 | 95.0 | 279.2 | 480.2 | 82.2 | 18.9 | 955.5 | 964.8 | 67.9 | 36099 | 25164 |
+| SHORT_TERM_N=30 | 95.0 | 265.0 | 1018.5 | 82.2 | 18.9 | 1479.7 | 1489.0 | 67.5 | 57749 | 23679 |
+| Compression policy (N=12) | 95.0 | 177.7 | 255.5 | 19.8 | 18.9 | 566.8 | 576.7 | 46.9 | 23208 | 20212 |
+
+### Probe scores per question
+
+| Setting | P1 | P2 | P3 | P4 | P5 |
+|---|---|---|---|---|---|
+| SHORT_TERM_N=4 | 5 | 5 | 5 | 3 | 5 |
+| SHORT_TERM_N=12 | 5 | 5 | 5 | 3 | 5 |
+| SHORT_TERM_N=30 | 5 | 5 | 5 | 5 | 5 |
+| Compression policy (N=12) | 3 | 5 | 5 | 3 | 3 |
+
+### Part 3.4 - Compression policy vs. the same window without it
+
+Policy: keep the newest 2 messages verbatim, cut older assistant turns in the window to their first sentence (<=160 chars), never shorten user turns, and evict episodic facts with cosine < 0.40.
+
+| Metric | SHORT_TERM_N=12 | Compression policy (N=12) | Change |
+|---|---|---|---|
+| Mean prompt tokens/turn | 964.8 | 576.7 | -388.1 (-40.2%) |
+| Short-term window tokens/turn | 480.2 | 255.5 | -224.7 |
+| Episodic-fact tokens/turn | 82.2 | 19.8 | -62.4 |
+| Input tokens per 30-turn conversation | 28945.0 | 17301.0 | -11644 |
+| Mean latency (ms) | 61394.0 | 43548.0 | -17846 |
+| Probe quality (1-5) | 4.6 | 3.8 | -0.80 |
+
+## Part 3.5 - Memory cost estimate (10,000 x 30-turn conversations)
+
+Pricing: $1 / 1M input, $5 / 1M output tokens. Token counts are the measured sums over one 30-turn run. "Upkeep" = the fact-extraction and summary calls the memory system adds per turn.
+
+| Setting | Role | Input tok/conv | Output tok/conv | Upkeep in/out tok/conv | Chat $/conv | Chat $ x10k | Incl. upkeep $ x10k |
+|---|---|---|---|---|---|---|---|
+| SHORT_TERM_N=4 | best | 18945 | 1952 | 10304 / 2517 | 0.02871 | 287.05 | 515.94 |
+| SHORT_TERM_N=12 |  | 28945 | 2037 | 10679 / 2672 | 0.03913 | 391.30 | 631.69 |
+| SHORT_TERM_N=30 | worst | 44670 | 2026 | 10468 / 2507 | 0.05480 | 548.00 | 778.03 |
+| Compression policy (N=12) |  | 17301 | 1407 | 9204 / 2109 | 0.02434 | 243.36 | 440.85 |
+
+**Selection rule.** Worst = the highest total cost (SHORT_TERM_N=30). Best = the cheapest setting whose probe quality is within 0.5 points of the best probe score (5.00) - so a setting cannot win on price by forgetting the facts the probes test. Best: **SHORT_TERM_N=4**; worst: **SHORT_TERM_N=30**.
+
+## Part 4.5 - Consolidation test
+
+- Total lines: 55 -> 39 (under 40: True)
+- Non-empty non-comment lines: 52 -> 34; facts 50 -> 25
+- Duplicate topics merged: 13/15 (10 exact copies merged before the model call)
+- Contradictions resolved correctly: 3/5; no silent deletion: True
+
+| Contradiction | Result | Superseded value kept visible | Audit flag |
+|---|---|---|---|
+| supervisor | incorrect | yes | yes |
+| district | unresolved_both_kept | no | no |
+| report format | correct | yes | no |
+| Golden Dragon follow-up date | correct | yes | no |
+| Golden Dragon facility code | correct | yes | no |
+
+## Part 4.4 - Generated function vs. AGENT.md
+
+11/12 rules followed; behaviour tests FAIL.
+
+| Category | AGENT.md rule | Result |
+|---|---|---|
+| Coding conventions | Every module starts with a docstring | FAIL |
+| Coding conventions | ... and `from __future__ import annotations` | PASS |
+| Coding conventions | Type hints on all parameters and on the return value | PASS |
+| Coding conventions | Every function has a docstring | PASS |
+| Coding conventions | snake_case function names, UPPER_CASE constants | PASS |
+| Coding conventions | Invalid input raises a specific exception; no bare `except:` | PASS |
+| Coding conventions | Never return None to signal an error | PASS |
+| Coding conventions | Library code does not print | PASS |
+| Testing approach | Tests are plain test_* functions using assert, valid + invalid case | PASS |
+| Testing approach | Tests run offline (no network/DB/Ollama imports) | PASS |
+| Prohibited actions | Never use eval or exec | PASS |
+| Project description | Never hard-code 8817 or s7117 | PASS |
+
+wrote /Users/pc/Documents/sjsu/Data-260-HW-Git/data260-7117/reports/hw06/METRICS.md
+
+===== [2026-10-16 12:50:01 PDT] make verify-hw06 (user: rachandeep Kaur) =====
+HW6 verify - rachandeep Kaur - 2026-10-16 12:50:03 - tag 413472
+
+[PASS] config_values: PORT_BASE=8817 PREFIX=s7117 SEED=7117 VERIFY_SEED=267117 DOMAIN_ID=5 db=s7117_doc
+[PASS] offline_test_suite: 18/18 tests passed
+[PASS] mongo_collections_validated: {'inspections': True, 'messages': True, 'summaries': True, 'episodes': True}
+[PASS] mongo_rejects_invalid_doc: WriteError code 121 (DocumentValidationFailure)
+[PASS] backend_on_port_base: GET /openapi.json -> 200, HW6 routes present: True
+[PASS] doc_crud_lifecycle: statuses=[201, 200, 200, 200, 200] after_delete=404 default_status=scheduled
+[PASS] doc_validation_errors: statuses=[422, 422, 422, 422, 400, 400, 415] field_level_messages=True
+[PASS] chat_returns_reply_and_memory: status=200 reply_chars=107 prompt_tokens=133
+[PASS] memory_and_aggregate_endpoints: memory roles=['user', 'assistant'] aggregate=[{'messages': 2, 'user_messages': 1, 'assistant_messages': 1, 'date': '2026-10-16', 'sessions': 1}] unknown_user=404
+[PASS] part3_raw_data: {'SHORT_TERM_N=4': 35, 'SHORT_TERM_N=12': 35, 'SHORT_TERM_N=30': 35, 'Compression policy (N=12)': 35}
+[PASS] memory_probes_file: 5 probes, rubric levels [1, 2, 3, 4, 5]
+[PASS] agent_md_instructions: {'project description': 2, 'technology stack': 3, 'coding conventions': 5, 'testing approach': 3, 'prohibited actions': 3}
+[PASS] memory_consolidation_pair: original 55 lines (52 non-comment), consolidated 39 lines; contradictions correct 3/5
+[PASS] app_code_unchanged: unchanged
+
+14/14 checks passed -> /Users/pc/Documents/sjsu/Data-260-HW-Git/data260-7117/reports/hw06/verification.json
+
+===== [2026-10-19 10:00:46 PDT] make metrics-hw06 (user: rachandeep Kaur) =====
+# HW6 Metrics
+
+Generated by `make metrics-hw06` on 2026-10-19 10:00 from `reports/hw06/raw/`. Model: qwen3:8b (Ollama, local CPU). SID4 7117, PORT_BASE 8817, SEED 7117, VERIFY_SEED 267117.
+
+## Part 1 - Document API calls (21/21 as expected)
+
+| Case | Method | Status | Expected | OK |
+|---|---|---|---|---|
+| create (POST) | POST | 201 | 201 | yes |
+| retrieve one (GET /:id) | GET | 200 | 200 | yes |
+| retrieve all (GET) | GET | 200 | 200 | yes |
+| filter by status (GET ?status=failed) | GET | 200 | 200 | yes |
+| update (PUT /:id) | PUT | 200 | 200 | yes |
+| delete (DELETE /:id) | DELETE | 200 | 200 | yes |
+| get deleted -> not found | GET | 404 | 404 | yes |
+| update missing -> not found | PUT | 404 | 404 | yes |
+| delete missing -> not found | DELETE | 404 | 404 | yes |
+| missing required fields | POST | 422 | 422 | yes |
+| invalid enum values | POST | 422 | 422 | yes |
+| incorrect data types | POST | 422 | 422 | yes |
+| bad date format | POST | 422 | 422 | yes |
+| facility_name over 100 chars | POST | 422 | 422 | yes |
+| blank facility_name | POST | 422 | 422 | yes |
+| unknown field (client-set created_at) | POST | 422 | 422 | yes |
+| empty update body | PUT | 422 | 422 | yes |
+| malformed JSON | POST | 400 | 400 | yes |
+| wrong content type | POST | 415 | 415 | yes |
+| malformed ObjectId | GET | 400 | 400 | yes |
+| create sample doc kept for Compass | POST | 201 | 201 | yes |
+
+## Part 2 - 12-message session (memory observed per turn)
+
+| Turn | Window msgs | Session summary | Lifetime summary | Facts retrieved | Facts stored | Summary written | Prompt tok | Latency (ms) |
+|---|---|---|---|---|---|---|---|---|
+| 1 | 0 | - | - | 0 | 3 |  | 135 | 33406 |
+| 2 | 2 | - | - | 0 | 2 |  | 218 | 27281 |
+| 3 | 4 | - | - | 1 | 1 |  | 330 | 20722 |
+| 4 | 6 | - | - | 1 | 0 |  | 392 | 15038 |
+| 5 | 8 | - | - | 1 | 2 | session | 459 | 65630 |
+| 6 | 10 | yes | - | 2 | 1 |  | 703 | 41549 |
+| 7 | 12 | yes | - | 2 | 2 |  | 768 | 35028 |
+| 8 | 12 | yes | - | 2 | 1 |  | 765 | 46190 |
+| 9 | 12 | yes | - | 1 | 0 |  | 718 | 30620 |
+| 10 | 12 | yes | - | 2 | 0 | session + lifetime | 759 | 143610 |
+| 11 | 12 | yes | yes | 3 | 2 |  | 940 | 55627 |
+| 12 | 12 | yes | yes | 0 | 0 |  | 815 | 35435 |
+
+## Part 3.3/3.4 - Short-term memory size and compression policy
+
+Means over the 30 conversation turns of one fresh run per setting; probe quality = mean of the 5 probe scores (rubric in `memory_probes.yaml`).
+
+| Setting | Mean prompt tokens/turn | Mean latency (ms) | Probe quality (1-5) | Turns |
+|---|---|---|---|---|
+| SHORT_TERM_N=4 | 631.5 | 56875 | 4.6 | 30 |
+| SHORT_TERM_N=12 | 964.8 | 61394 | 4.6 | 30 |
+| SHORT_TERM_N=30 | 1489.0 | 81569 | 5.0 | 30 |
+| Compression policy (N=12) | 576.7 | 43548 | 3.8 | 30 |
+
+### Prompt composition (mean tokens per turn)
+
+| Setting | System primer | Long-term summary | Short-term window | Episodic facts | Current message | Counted total | Ollama prompt | Mean completion | Model latency (ms) | Upkeep latency (ms) |
+|---|---|---|---|---|---|---|---|---|---|---|
+| SHORT_TERM_N=4 | 95.0 | 258.0 | 168.0 | 82.2 | 18.9 | 622.2 | 631.5 | 65.1 | 28875 | 27835 |
+| SHORT_TERM_N=12 | 95.0 | 279.2 | 480.2 | 82.2 | 18.9 | 955.5 | 964.8 | 67.9 | 36099 | 25164 |
+| SHORT_TERM_N=30 | 95.0 | 265.0 | 1018.5 | 82.2 | 18.9 | 1479.7 | 1489.0 | 67.5 | 57749 | 23679 |
+| Compression policy (N=12) | 95.0 | 177.7 | 255.5 | 19.8 | 18.9 | 566.8 | 576.7 | 46.9 | 23208 | 20212 |
+
+### Probe scores per question
+
+| Setting | P1 | P2 | P3 | P4 | P5 |
+|---|---|---|---|---|---|
+| SHORT_TERM_N=4 | 5 | 5 | 5 | 3 | 5 |
+| SHORT_TERM_N=12 | 5 | 5 | 5 | 3 | 5 |
+| SHORT_TERM_N=30 | 5 | 5 | 5 | 5 | 5 |
+| Compression policy (N=12) | 3 | 5 | 5 | 3 | 3 |
+
+### Part 3.4 - Compression policy vs. the same window without it
+
+Policy: keep the newest 2 messages verbatim, cut older assistant turns in the window to their first sentence (<=160 chars), never shorten user turns, and evict episodic facts with cosine < 0.40.
+
+| Metric | SHORT_TERM_N=12 | Compression policy (N=12) | Change |
+|---|---|---|---|
+| Mean prompt tokens/turn | 964.8 | 576.7 | -388.1 (-40.2%) |
+| Short-term window tokens/turn | 480.2 | 255.5 | -224.7 |
+| Episodic-fact tokens/turn | 82.2 | 19.8 | -62.4 |
+| Input tokens per 30-turn conversation | 28945.0 | 17301.0 | -11644 |
+| Mean latency (ms) | 61394.0 | 43548.0 | -17846 |
+| Probe quality (1-5) | 4.6 | 3.8 | -0.80 |
+
+## Part 3.5 - Memory cost estimate (10,000 x 30-turn conversations)
+
+Pricing: $1 / 1M input, $5 / 1M output tokens. Token counts are the measured sums over one 30-turn run. "Upkeep" = the fact-extraction and summary calls the memory system adds per turn.
+
+| Setting | Role | Input tok/conv | Output tok/conv | Upkeep in/out tok/conv | Chat $/conv | Chat $ x10k | Incl. upkeep $ x10k |
+|---|---|---|---|---|---|---|---|
+| SHORT_TERM_N=4 | best | 18945 | 1952 | 10304 / 2517 | 0.02871 | 287.05 | 515.94 |
+| SHORT_TERM_N=12 |  | 28945 | 2037 | 10679 / 2672 | 0.03913 | 391.30 | 631.69 |
+| SHORT_TERM_N=30 | worst | 44670 | 2026 | 10468 / 2507 | 0.05480 | 548.00 | 778.03 |
+| Compression policy (N=12) |  | 17301 | 1407 | 9204 / 2109 | 0.02434 | 243.36 | 440.85 |
+
+**Selection rule.** Worst = the highest total cost (SHORT_TERM_N=30). Best = the cheapest setting whose probe quality is within 0.5 points of the best probe score (5.00) - so a setting cannot win on price by forgetting the facts the probes test. Best: **SHORT_TERM_N=4**; worst: **SHORT_TERM_N=30**.
+
+## Part 4.5 - Consolidation test
+
+- Total lines: 55 -> 39 (under 40: True)
+- Non-empty non-comment lines: 52 -> 34; facts 50 -> 25
+- Duplicate topics merged: 13/15 (10 exact copies merged before the model call)
+- Contradictions resolved correctly: 3/5; no silent deletion: True
+
+| Contradiction | Result | Superseded value kept visible | Audit flag |
+|---|---|---|---|
+| supervisor | incorrect | yes | yes |
+| district | unresolved_both_kept | no | no |
+| report format | correct | yes | no |
+| Golden Dragon follow-up date | correct | yes | no |
+| Golden Dragon facility code | correct | yes | no |
+
+## Part 4.4 - Generated function vs. AGENT.md
+
+11/12 rules followed; behaviour tests FAIL.
+
+| Category | AGENT.md rule | Result |
+|---|---|---|
+| Coding conventions | Every module starts with a docstring | FAIL |
+| Coding conventions | ... and `from __future__ import annotations` | PASS |
+| Coding conventions | Type hints on all parameters and on the return value | PASS |
+| Coding conventions | Every function has a docstring | PASS |
+| Coding conventions | snake_case function names, UPPER_CASE constants | PASS |
+| Coding conventions | Invalid input raises a specific exception; no bare `except:` | PASS |
+| Coding conventions | Never return None to signal an error | PASS |
+| Coding conventions | Library code does not print | PASS |
+| Testing approach | Tests are plain test_* functions using assert, valid + invalid case | PASS |
+| Testing approach | Tests run offline (no network/DB/Ollama imports) | PASS |
+| Prohibited actions | Never use eval or exec | PASS |
+| Project description | Never hard-code 8817 or s7117 | PASS |
+
+wrote /Users/pc/Documents/sjsu/Data-260-HW-Git/data260-7117/reports/hw06/METRICS.md
+
+===== [2026-10-19 10:01:16 PDT] make test-hw06 (user: rachandeep Kaur) =====
+HW6 offline memory tests - Rachandeep Kaur (SID4 7117)
+================================================================
+PASS  test_doc_create_valid_and_default_status
+PASS  test_doc_create_rejects_missing_enum_length_type_and_extra
+PASS  test_doc_update_requires_a_field_and_rejects_null_required
+PASS  test_chat_request_validation
+PASS  test_summarization_trigger_every_m_user_messages
+PASS  test_cosine_ranks_most_similar_first
+PASS  test_retrieve_episodes_top_k_and_threshold
+PASS  test_build_prompt_order_and_components
+PASS  test_compress_policy_truncates_old_assistant_turns_only
+PASS  test_probe_scoring_rubric
+PASS  test_line_count_timestamp_and_consolidation_rules
+PASS  test_system_prompt_contains_both_files_without_comments
+PASS  test_parse_and_append_facts
+PASS  test_consolidation_merges_resolves_and_never_silently_deletes
+PASS  test_conflict_check_resolves_contradiction_left_in_facts
+PASS  test_consolidation_with_unusable_model_output_keeps_everything
+PASS  test_audit_flags_incorrect_resolutions
+FAIL  test_commands_help_memory_compact_dream
+      AssertionError
+================================================================
+17/18 tests passed
+
+===== [2026-10-19 10:03:52 PDT] make verify-hw06 (user: rachandeep Kaur) =====
+HW6 verify - rachandeep Kaur - 2026-10-19 10:03:54 - tag 413472
+
+[PASS] config_values: PORT_BASE=8817 PREFIX=s7117 SEED=7117 VERIFY_SEED=267117 DOMAIN_ID=5 db=s7117_doc
+[FAIL] offline_test_suite: 17/18 tests passed
+[PASS] mongo_collections_validated: {'inspections': True, 'messages': True, 'summaries': True, 'episodes': True}
+[PASS] mongo_rejects_invalid_doc: WriteError code 121 (DocumentValidationFailure)
+[PASS] backend_on_port_base: GET /openapi.json -> 200, HW6 routes present: True
+[PASS] doc_crud_lifecycle: statuses=[201, 200, 200, 200, 200] after_delete=404 default_status=scheduled
+[PASS] doc_validation_errors: statuses=[422, 422, 422, 422, 400, 400, 415] field_level_messages=True
+[PASS] chat_returns_reply_and_memory: status=200 reply_chars=107 prompt_tokens=133
+[PASS] memory_and_aggregate_endpoints: memory roles=['user', 'assistant'] aggregate=[{'messages': 2, 'user_messages': 1, 'assistant_messages': 1, 'date': '2026-10-19', 'sessions': 1}] unknown_user=404
+[PASS] part3_raw_data: {'SHORT_TERM_N=4': 35, 'SHORT_TERM_N=12': 35, 'SHORT_TERM_N=30': 35, 'Compression policy (N=12)': 35}
+[PASS] memory_probes_file: 5 probes, rubric levels [1, 2, 3, 4, 5]
+[PASS] agent_md_instructions: {'project description': 2, 'technology stack': 3, 'coding conventions': 5, 'testing approach': 3, 'prohibited actions': 3}
+[PASS] memory_consolidation_pair: original 55 lines (52 non-comment), consolidated 39 lines; contradictions correct 3/5
+[PASS] app_code_unchanged: unchanged
+
+13/14 checks passed -> /Users/pc/Documents/sjsu/Data-260-HW-Git/data260-7117/reports/hw06/verification.json
+
+===== [2026-10-19 10:04:56 PDT] make verify-hw06 (user: rachandeep Kaur) =====
+HW6 verify - rachandeep Kaur - 2026-10-19 10:04:58 - tag 413472
+
+[PASS] config_values: PORT_BASE=8817 PREFIX=s7117 SEED=7117 VERIFY_SEED=267117 DOMAIN_ID=5 db=s7117_doc
+[PASS] offline_test_suite: 18/18 tests passed
+[PASS] mongo_collections_validated: {'inspections': True, 'messages': True, 'summaries': True, 'episodes': True}
+[PASS] mongo_rejects_invalid_doc: WriteError code 121 (DocumentValidationFailure)
+[PASS] backend_on_port_base: GET /openapi.json -> 200, HW6 routes present: True
+[PASS] doc_crud_lifecycle: statuses=[201, 200, 200, 200, 200] after_delete=404 default_status=scheduled
+[PASS] doc_validation_errors: statuses=[422, 422, 422, 422, 400, 400, 415] field_level_messages=True
+[PASS] chat_returns_reply_and_memory: status=200 reply_chars=107 prompt_tokens=133
+[PASS] memory_and_aggregate_endpoints: memory roles=['user', 'assistant'] aggregate=[{'messages': 2, 'user_messages': 1, 'assistant_messages': 1, 'date': '2026-10-19', 'sessions': 1}] unknown_user=404
+[PASS] part3_raw_data: {'SHORT_TERM_N=4': 35, 'SHORT_TERM_N=12': 35, 'SHORT_TERM_N=30': 35, 'Compression policy (N=12)': 35}
+[PASS] memory_probes_file: 5 probes, rubric levels [1, 2, 3, 4, 5]
+[PASS] agent_md_instructions: {'project description': 2, 'technology stack': 3, 'coding conventions': 5, 'testing approach': 3, 'prohibited actions': 3}
+[PASS] memory_consolidation_pair: original 55 lines (52 non-comment), consolidated 39 lines; contradictions correct 3/5
+[PASS] app_code_unchanged: unchanged
+
+14/14 checks passed -> /Users/pc/Documents/sjsu/Data-260-HW-Git/data260-7117/reports/hw06/verification.json
+
+===== [2026-10-19 10:05:23 PDT] make test-hw06 (user: rachandeep Kaur) =====
+HW6 offline memory tests - Rachandeep Kaur (SID4 7117)
+================================================================
+PASS  test_doc_create_valid_and_default_status
+PASS  test_doc_create_rejects_missing_enum_length_type_and_extra
+PASS  test_doc_update_requires_a_field_and_rejects_null_required
+PASS  test_chat_request_validation
+PASS  test_summarization_trigger_every_m_user_messages
+PASS  test_cosine_ranks_most_similar_first
+PASS  test_retrieve_episodes_top_k_and_threshold
+PASS  test_build_prompt_order_and_components
+PASS  test_compress_policy_truncates_old_assistant_turns_only
+PASS  test_probe_scoring_rubric
+PASS  test_line_count_timestamp_and_consolidation_rules
+PASS  test_system_prompt_contains_both_files_without_comments
+PASS  test_parse_and_append_facts
+PASS  test_consolidation_merges_resolves_and_never_silently_deletes
+PASS  test_conflict_check_resolves_contradiction_left_in_facts
+PASS  test_consolidation_with_unusable_model_output_keeps_everything
+PASS  test_audit_flags_incorrect_resolutions
+PASS  test_commands_help_memory_compact_dream
+================================================================
+18/18 tests passed
+
+===== [2026-10-19 11:57:58 PDT] make setup-mongo-hw06 (user: rachandeep Kaur) =====
+Traceback (most recent call last):
+  File "/Users/pc/Documents/sjsu/Data-260-HW-Git/data260-7117/code/hw06/setup_mongo.py", line 18, in <module>
+    import settings
+ModuleNotFoundError: No module named 'settings'
+
+===== [2026-10-19 12:00:28 PDT] make setup-mongo-hw06 (user: rachandeep Kaur) =====
+database s7117_doc: collections ready -> ['inspections', 'messages', 'summaries', 'episodes']
+14 inspection documents already present - seeding skipped
+  inspections: 14 documents
+  messages: 374 documents
+  summaries: 51 documents
+  episodes: 194 documents
+validator for 'inspections':
+{
+  "bsonType": "object",
+  "required": [
+    "facility_name",
+    "status",
+    "program_element",
+    "inspection_date",
+    "created_at",
+    "updated_at"
+  ],
+  "properties": {
+    "facility_name": {
+      "bsonType": "string",
+      "minLength": 1,
+      "maxLength": 100
+    },
+    "description": {
+      "bsonType": [
+        "string",
+        "null"
+      ],
+      "maxLength": 2000
+    },
+    "status": {
+      "enum": [
+        "scheduled",
+        "in_progress",
+        "passed",
+        "failed",
+        "follow_up_required"
+      ]
+    },
+    "program_element": {
+      "enum": [
+        "FOOD PREP / FOOD SVC OP 0-5 EMPLOYEES RC 3 - FP11",
+        "FOOD PREP / FOOD SVC OP 6-25 EMPLOYEES",
+        "ROUTINE HEALTH INSPECTION",
+        "FOLLOW-UP COMPLIANCE CHECK"
+      ]
+    },
+    "inspection_date": {
+      "bsonType": "date"
+    },
+    "created_at": {
+      "bsonType": "date"
+    },
+    "updated_at": {
+      "bsonType": "date"
+    }
+  }
+}
+
+===== [2026-10-19 12:00:53 PDT] make setup-mongo-hw06 (user: rachandeep Kaur) =====
+database s7117_doc: collections ready -> ['inspections', 'messages', 'summaries', 'episodes']
+14 inspection documents already present - seeding skipped
+  inspections: 14 documents
+  messages: 374 documents
+  summaries: 51 documents
+  episodes: 194 documents
+validator for 'inspections':
+{
+  "bsonType": "object",
+  "required": [
+    "facility_name",
+    "status",
+    "program_element",
+    "inspection_date",
+    "created_at",
+    "updated_at"
+  ],
+  "properties": {
+    "facility_name": {
+      "bsonType": "string",
+      "minLength": 1,
+      "maxLength": 100
+    },
+    "description": {
+      "bsonType": [
+        "string",
+        "null"
+      ],
+      "maxLength": 2000
+    },
+    "status": {
+      "enum": [
+        "scheduled",
+        "in_progress",
+        "passed",
+        "failed",
+        "follow_up_required"
+      ]
+    },
+    "program_element": {
+      "enum": [
+        "FOOD PREP / FOOD SVC OP 0-5 EMPLOYEES RC 3 - FP11",
+        "FOOD PREP / FOOD SVC OP 6-25 EMPLOYEES",
+        "ROUTINE HEALTH INSPECTION",
+        "FOLLOW-UP COMPLIANCE CHECK"
+      ]
+    },
+    "inspection_date": {
+      "bsonType": "date"
+    },
+    "created_at": {
+      "bsonType": "date"
+    },
+    "updated_at": {
+      "bsonType": "date"
+    }
+  }
+}
+
+===== [2026-10-19 12:28:24 PDT] make test-hw06 (user: rachandeep Kaur) =====
+HW6 offline memory tests - Rachandeep Kaur (SID4 7117)
+================================================================
+PASS  test_doc_create_valid_and_default_status
+PASS  test_doc_create_rejects_missing_enum_length_type_and_extra
+PASS  test_doc_update_requires_a_field_and_rejects_null_required
+PASS  test_chat_request_validation
+PASS  test_summarization_trigger_every_m_user_messages
+PASS  test_cosine_ranks_most_similar_first
+PASS  test_retrieve_episodes_top_k_and_threshold
+PASS  test_build_prompt_order_and_components
+PASS  test_compress_policy_truncates_old_assistant_turns_only
+PASS  test_probe_scoring_rubric
+PASS  test_line_count_timestamp_and_consolidation_rules
+PASS  test_system_prompt_contains_both_files_without_comments
+PASS  test_parse_and_append_facts
+PASS  test_consolidation_merges_resolves_and_never_silently_deletes
+PASS  test_conflict_check_resolves_contradiction_left_in_facts
+PASS  test_consolidation_with_unusable_model_output_keeps_everything
+PASS  test_audit_flags_incorrect_resolutions
+PASS  test_commands_help_memory_compact_dream
+================================================================
+18/18 tests passed
+
+===== [2026-10-19 12:35:06 PDT] make chat-demo-hw06 (user: rachandeep Kaur) =====
+
+===== [2026-10-19 13:10:40 PDT] make verify-hw06 (user: rachandeep Kaur) =====
+HW6 verify - rachandeep Kaur - 2026-10-19 13:10:42 - tag 413472
+
+[PASS] config_values: PORT_BASE=8817 PREFIX=s7117 SEED=7117 VERIFY_SEED=267117 DOMAIN_ID=5 db=s7117_doc
+[PASS] offline_test_suite: 18/18 tests passed
+[PASS] mongo_collections_validated: {'inspections': True, 'messages': True, 'summaries': True, 'episodes': True}
+[PASS] mongo_rejects_invalid_doc: WriteError code 121 (DocumentValidationFailure)
+[PASS] backend_on_port_base: GET /openapi.json -> 200, HW6 routes present: True
+[PASS] doc_crud_lifecycle: statuses=[201, 200, 200, 200, 200] after_delete=404 default_status=scheduled
+[PASS] doc_validation_errors: statuses=[422, 422, 422, 422, 400, 400, 415] field_level_messages=True
+[PASS] chat_returns_reply_and_memory: status=200 reply_chars=107 prompt_tokens=133
+[PASS] memory_and_aggregate_endpoints: memory roles=['user', 'assistant'] aggregate=[{'messages': 2, 'user_messages': 1, 'assistant_messages': 1, 'date': '2026-10-19', 'sessions': 1}] unknown_user=404
+[PASS] part3_raw_data: {'SHORT_TERM_N=4': 35, 'SHORT_TERM_N=12': 35, 'SHORT_TERM_N=30': 35, 'Compression policy (N=12)': 35}
+[PASS] memory_probes_file: 5 probes, rubric levels [1, 2, 3, 4, 5]
+[PASS] agent_md_instructions: {'project description': 2, 'technology stack': 3, 'coding conventions': 5, 'testing approach': 3, 'prohibited actions': 3}
+[PASS] memory_consolidation_pair: original 55 lines (52 non-comment), consolidated 39 lines; contradictions correct 3/5
+[PASS] app_code_unchanged: unchanged
+
+14/14 checks passed -> /Users/pc/Documents/sjsu/Data-260-HW-Git/data260-7117/reports/hw06/verification.json

@@ -1,0 +1,264 @@
+{
+  "user_id": "s7117-rachandeep",
+  "messages": [
+    {
+      "user_id": "s7117-rachandeep",
+      "session_id": "s7117-rachandeep-demo1",
+      "role": "user",
+      "content": "My supervisor is Dana Whitfield, and closure recommendations go to her.",
+      "created_at": "2026-10-16T19:09:12.335000+00:00",
+      "id": "6ad276584a969ab5be8b8884"
+    },
+    {
+      "user_id": "s7117-rachandeep",
+      "session_id": "s7117-rachandeep-demo1",
+      "role": "assistant",
+      "content": "Your closure recommendations should be sent to Dana Whitfield. The follow-up inspection for Golden Dragon is still scheduled for November 3. Let me know if you need help preparing the report.",
+      "created_at": "2026-10-16T19:09:24.709000+00:00",
+      "id": "6ad276644a969ab5be8b8885"
+    },
+    {
+      "user_id": "s7117-rachandeep",
+      "session_id": "s7117-rachandeep-demo1",
+      "role": "user",
+      "content": "Remind me, what is the safe cold-holding temperature?",
+      "created_at": "2026-10-16T19:10:17.977000+00:00",
+      "id": "6ad276994a969ab5be8b8889"
+    },
+    {
+      "user_id": "s7117-rachandeep",
+      "session_id": "s7117-rachandeep-demo1",
+      "role": "assistant",
+      "content": "The safe cold-holding temperature for food is 41\u00b0F or below. The cooler at Golden Dragon was at 47\u00b0F, which is above the safe range.",
+      "created_at": "2026-10-16T19:10:51.392000+00:00",
+      "id": "6ad276bb4a969ab5be8b888a"
+    },
+    {
+      "user_id": "s7117-rachandeep",
+      "session_id": "s7117-rachandeep-demo1",
+      "role": "user",
+      "content": "Update: the Golden Dragon follow-up moved to November 10 because a part is delayed.",
+      "created_at": "2026-10-16T19:10:59.539000+00:00",
+      "id": "6ad276c34a969ab5be8b888c"
+    },
+    {
+      "user_id": "s7117-rachandeep",
+      "session_id": "s7117-rachandeep-demo1",
+      "role": "assistant",
+      "content": "The follow-up inspection for Golden Dragon (FA0148210) has been moved to November 10 due to a delayed part. I've updated the schedule in the system. Let me know if you need further adjustments.",
+      "created_at": "2026-10-16T19:11:19.764000+00:00",
+      "id": "6ad276d74a969ab5be8b888d"
+    },
+    {
+      "user_id": "s7117-rachandeep",
+      "session_id": "s7117-rachandeep-demo1",
+      "role": "user",
+      "content": "Yummy Kitchen FA0206933 is next on my list for a routine inspection on October 22.",
+      "created_at": "2026-10-16T19:11:34.586000+00:00",
+      "id": "6ad276e64a969ab5be8b8890"
+    },
+    {
+      "user_id": "s7117-rachandeep",
+      "session_id": "s7117-rachandeep-demo1",
+      "role": "assistant",
+      "content": "Yummy Kitchen (FA0206933) is next on your list for a routine inspection on October 22. Ensure all previous findings are addressed before the visit. Let me know if you need help preparing for the inspection.",
+      "created_at": "2026-10-16T19:12:10.404000+00:00",
+      "id": "6ad2770a4a969ab5be8b8891"
+    },
+    {
+      "user_id": "s7117-rachandeep",
+      "session_id": "s7117-rachandeep-demo1",
+      "role": "user",
+      "content": "What should I bring to a routine inspection?",
+      "created_at": "2026-10-16T19:12:20.789000+00:00",
+      "id": "6ad277144a969ab5be8b8893"
+    },
+    {
+      "user_id": "s7117-rachandeep",
+      "session_id": "s7117-rachandeep-demo1",
+      "role": "assistant",
+      "content": "Bring your inspection checklist, any previous inspection reports, and documentation of corrective actions taken. Also, carry your notebook and pen for notes during the visit. Let me know if you need a template for the checklist.",
+      "created_at": "2026-10-16T19:12:49.360000+00:00",
+      "id": "6ad277314a969ab5be8b8894"
+    },
+    {
+      "user_id": "s7117-rachandeep",
+      "session_id": "s7117-rachandeep-demo1",
+      "role": "user",
+      "content": "Draft a two-line note to my supervisor about Golden Dragon.",
+      "created_at": "2026-10-16T19:12:51.426000+00:00",
+      "id": "6ad277334a969ab5be8b8895"
+    },
+    {
+      "user_id": "s7117-rachandeep",
+      "session_id": "s7117-rachandeep-demo1",
+      "role": "assistant",
+      "content": "The follow-up inspection for Golden Dragon (FA0148210) has been rescheduled to November 10 due to a delayed part. The cold-holding failure remains unresolved and requires immediate corrective action.",
+      "created_at": "2026-10-16T19:13:25.294000+00:00",
+      "id": "6ad277554a969ab5be8b8896"
+    },
+    {
+      "user_id": "s7117-rachandeep",
+      "session_id": "s7117-rachandeep-demo1",
+      "role": "user",
+      "content": "Which facility had the cooler problem, and when is its follow-up?",
+      "created_at": "2026-10-16T19:15:15.074000+00:00",
+      "id": "6ad277c34a969ab5be8b8899"
+    },
+    {
+      "user_id": "s7117-rachandeep",
+      "session_id": "s7117-rachandeep-demo1",
+      "role": "assistant",
+      "content": "The facility with the cooler problem is Golden Dragon (FA0148210). Its follow-up inspection is scheduled for November 10.",
+      "created_at": "2026-10-16T19:15:59.621000+00:00",
+      "id": "6ad277ef4a969ab5be8b889a"
+    },
+    {
+      "user_id": "s7117-rachandeep",
+      "session_id": "s7117-rachandeep-demo1",
+      "role": "user",
+      "content": "What do you remember about me?",
+      "created_at": "2026-10-16T19:16:10.730000+00:00",
+      "id": "6ad277fa4a969ab5be8b889d"
+    },
+    {
+      "user_id": "s7117-rachandeep",
+      "session_id": "s7117-rachandeep-demo1",
+      "role": "assistant",
+      "content": "You are preparing for inspections in the San Jose area, focusing on Golden Dragon (FA0148210) and Yummy Kitchen (FA0206933). You need to bring checklists, previous reports, and corrective action documentation for inspections. You also need to send closure recommendations to Dana Whitfield.",
+      "created_at": "2026-10-16T19:16:43.384000+00:00",
+      "id": "6ad2781b4a969ab5be8b889e"
+    }
+  ],
+  "session_summary": {
+    "user_id": "s7117-rachandeep",
+    "session_id": "s7117-rachandeep-demo1",
+    "scope": "session",
+    "text": "- Golden Dragon (FA0148210) failed cold holding with the walk-in cooler at 47\u00b0F, which is above the safe range of 41\u00b0F or below.  \n- Follow-up inspection for Golden Dragon has been rescheduled to November 10 due to a delayed part.  \n- Golden Dragon should immediately repair or adjust the cooler to reach the proper temperature.  \n- Closure recommendations should be sent to Dana Whitfield, Rachandeep's supervisor.  \n- Corrective actions and temperature monitoring should be documented.  \n- Yummy Kitchen (FA0206933) is next on the list for a routine inspection on October 22.  \n- Bring inspection checklist, previous reports, corrective action documentation, and notebook for the routine inspection.",
+    "created_at": "2026-10-16T19:14:32.571000+00:00",
+    "id": "6ad277984a969ab5be8b8897"
+  },
+  "lifetime_summary": {
+    "user_id": "s7117-rachandeep",
+    "session_id": null,
+    "scope": "user",
+    "text": "- Golden Dragon (FA0148210) failed cold holding at 47\u00b0F (above safe range).  \n- Inspection rescheduled to November 10 due to delayed part.  \n- Immediate repair or adjustment required for cooler temperature.  \n- Closure recommendations to send to Dana Whitfield.  \n- Corrective actions and temperature monitoring must be documented.  \n- Yummy Kitchen (FA0206933) has routine inspection on October 22.  \n- Bring checklist, previous reports, corrective action docs, and notebook for inspection.",
+    "created_at": "2026-10-16T19:15:15.035000+00:00",
+    "id": "6ad277c34a969ab5be8b8898"
+  },
+  "episodic_facts": [
+    {
+      "user_id": "s7117-rachandeep",
+      "session_id": "s7117-rachandeep-demo1",
+      "fact": "The facility's follow-up is scheduled for a specific date.",
+      "importance": 0.8,
+      "created_at": "2026-10-16T19:16:10.697000+00:00",
+      "id": "6ad277fa4a969ab5be8b889c"
+    },
+    {
+      "user_id": "s7117-rachandeep",
+      "session_id": "s7117-rachandeep-demo1",
+      "fact": "The facility had a cooler problem.",
+      "importance": 0.5,
+      "created_at": "2026-10-16T19:16:10.693000+00:00",
+      "id": "6ad277fa4a969ab5be8b889b"
+    },
+    {
+      "user_id": "s7117-rachandeep",
+      "session_id": "s7117-rachandeep-demo1",
+      "fact": "The user is scheduled to inspect Yummy Kitchen FA0206933 on October 22.",
+      "importance": 1.0,
+      "created_at": "2026-10-16T19:12:20.771000+00:00",
+      "id": "6ad277144a969ab5be8b8892"
+    },
+    {
+      "user_id": "s7117-rachandeep",
+      "session_id": "s7117-rachandeep-demo1",
+      "fact": "A part is delayed, causing the delay.",
+      "importance": 0.6,
+      "created_at": "2026-10-16T19:11:34.518000+00:00",
+      "id": "6ad276e64a969ab5be8b888f"
+    },
+    {
+      "user_id": "s7117-rachandeep",
+      "session_id": "s7117-rachandeep-demo1",
+      "fact": "The Golden Dragon follow-up was moved to November 10.",
+      "importance": 0.8,
+      "created_at": "2026-10-16T19:11:34.505000+00:00",
+      "id": "6ad276e64a969ab5be8b888e"
+    },
+    {
+      "user_id": "s7117-rachandeep",
+      "session_id": "s7117-rachandeep-demo1",
+      "fact": "The user is asking about the safe cold-holding temperature.",
+      "importance": 0.3,
+      "created_at": "2026-10-16T19:10:59.523000+00:00",
+      "id": "6ad276c34a969ab5be8b888b"
+    },
+    {
+      "user_id": "s7117-rachandeep",
+      "session_id": "s7117-rachandeep-demo1",
+      "fact": "Closure recommendations go to Dana Whitfield",
+      "importance": 0.8,
+      "created_at": "2026-10-16T19:09:34.823000+00:00",
+      "id": "6ad2766e4a969ab5be8b8887"
+    },
+    {
+      "user_id": "s7117-rachandeep",
+      "session_id": "s7117-rachandeep-demo1",
+      "fact": "The user's supervisor is Dana Whitfield",
+      "importance": 0.8,
+      "created_at": "2026-10-16T19:09:34.822000+00:00",
+      "id": "6ad2766e4a969ab5be8b8886"
+    },
+    {
+      "user_id": "s7117-rachandeep",
+      "session_id": "s7117-rachandeep-demo1",
+      "fact": "The user scheduled a follow-up inspection for November 3.",
+      "importance": 1.0,
+      "created_at": "2026-10-16T19:08:57.274000+00:00",
+      "id": "6ad276494a969ab5be8b8881"
+    },
+    {
+      "user_id": "s7117-rachandeep",
+      "session_id": "s7117-rachandeep-demo1",
+      "fact": "The walk-in cooler was at 47F.",
+      "importance": 0.7,
+      "created_at": "2026-10-16T19:08:36.541000+00:00",
+      "id": "6ad276344a969ab5be8b887e"
+    },
+    {
+      "user_id": "s7117-rachandeep",
+      "session_id": "s7117-rachandeep-demo1",
+      "fact": "The user mentioned Golden Dragon (FA0148210) failed cold holding.",
+      "importance": 0.8,
+      "created_at": "2026-10-16T19:08:36.539000+00:00",
+      "id": "6ad276344a969ab5be8b887d"
+    },
+    {
+      "user_id": "s7117-rachandeep",
+      "session_id": "s7117-rachandeep-demo1",
+      "fact": "The user covers the Willow Glen district.",
+      "importance": 0.8,
+      "created_at": "2026-10-16T19:08:09.247000+00:00",
+      "id": "6ad276194a969ab5be8b887a"
+    },
+    {
+      "user_id": "s7117-rachandeep",
+      "session_id": "s7117-rachandeep-demo1",
+      "fact": "The user is a Santa Clara County food inspector.",
+      "importance": 1.0,
+      "created_at": "2026-10-16T19:08:09.245000+00:00",
+      "id": "6ad276194a969ab5be8b8879"
+    },
+    {
+      "user_id": "s7117-rachandeep",
+      "session_id": "s7117-rachandeep-demo1",
+      "fact": "The user's name is Rachandeep Kaur.",
+      "importance": 0.8,
+      "created_at": "2026-10-16T19:08:09.242000+00:00",
+      "id": "6ad276194a969ab5be8b8878"
+    }
+  ],
+  "embedding_dim": 384
+}

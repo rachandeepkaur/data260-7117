@@ -1,0 +1,8 @@
+# HW6 Part 4.3 evidence run: python code/hw06/file_memory_chat.py --script reports/hw06/file_memory_demo_script.txt
+/help
+/memory
+Quick update for my notes: Bay BBQ's next routine inspection is on October 30, and I now also cover the Cambrian district.
+Who is my supervisor, and when is the Golden Dragon follow-up?
+/dream
+/compact
+/memory

@@ -1,0 +1,61 @@
+{
+  "facts": [
+    {"text": "The user is a senior environmental health inspector with Santa Clara County.", "sources": ["F02", "F15", "F18"]},
+    {"text": "The user covers the Downtown San Jose district.", "sources": ["F03"]},
+    {"text": "The user's supervisor is Mark Chen.", "sources": ["F04"]},
+    {"text": "The relational database is s7117_rel on MySQL.", "sources": ["F08", "F24"]},
+    {"text": "The inspection API runs on port 8817.", "sources": ["F10", "F39"]},
+    {"text": "The local model is qwen3:8b served by Ollama.", "sources": ["F11", "F17"]},
+    {"text": "The user prefers reports written as numbered paragraphs.", "sources": ["F12"]},
+    {"text": "Temperatures should be given in degrees Fahrenheit for this user.", "sources": ["F14", "F37"]},
+    {"text": "Rachandeep Kaur works as a senior inspector for Santa Clara County.", "sources": ["F15", "F18"]},
+    {"text": "Yummy Kitchen's facility code is FA0206933.", "sources": ["F19"]},
+    {"text": "Golden Dragon's facility code is FA0148210 (confirmed from the county permit).", "sources": ["F20"]},
+    {"text": "Golden Dragon failed the cold-holding check with its walk-in cooler at 47F.", "sources": ["F21", "F29"]},
+    {"text": "The user starts field inspections at 8 AM on weekdays.", "sources": ["F22"]},
+    {"text": "MySQL database s7117_rel holds the relational inspection data.", "sources": ["F24"]},
+    {"text": "Closure recommendations must be escalated to the user's supervisor.", "sources": ["F25"]},
+    {"text": "The document database is s7117_doc on MongoDB.", "sources": ["F27", "F49"]},
+    {"text": "The Golden Dragon follow-up inspection is on November 3.", "sources": ["F28"]},
+    {"text": "The Golden Dragon follow-up moved to November 10 because a compressor part is delayed.", "sources": ["F41"]},
+    {"text": "The Golden Dragon follow-up inspection is November 10.", "sources": ["F50"]},
+    {"text": "Bay BBQ passed its routine inspection with a score of 98.", "sources": ["F31", "F40"]},
+    {"text": "Sakura Sushi must log rice pH every 4 hours.", "sources": ["F33"]},
+    {"text": "The user's HW6 report is due on October 20.", "sources": ["F34", "F47"]},
+    {"text": "The user prefers short answers of at most four sentences.", "sources": ["F35"]},
+    {"text": "Curry House had a rodent finding in dry storage and needs a follow-up within 7 days.", "sources": ["F36", "F48"]},
+    {"text": "The user covers the Willow Glen district.", "sources": ["F45"]},
+    {"text": "Reports for the user should be bullet points only, no more than five.", "sources": ["F46"]},
+    {"text": "The user's supervisor is Dana Whitfield.", "sources": ["F43"]},
+    {"text": "The user's GitHub repository is data260-7117.", "sources": ["F44"]}
+  ],
+  "contradictions": [
+    {
+      "topic": "Golden Dragon's facility code",
+      "kept": "F20",
+      "superseded": ["F38"],
+      "reason": "F20 is confirmed from the county permit, while F38 is an unverified guess."
+    },
+    {
+      "topic": "Report format",
+      "kept": "F46",
+      "superseded": ["F12", "F30"],
+      "reason": "F46 is the most recent and specific instruction for report format."
+    },
+    {
+      "topic": "Golden Dragon follow-up inspection date",
+      "kept": "F50",
+      "superseded": ["F28", "F41"],
+      "reason": "F50 is the most recent and specific date for the follow-up inspection."
+    },
+    {
+      "topic": "User's preferred temperature unit",
+      "kept": "F14",
+      "superseded": ["F37"],
+      "reason": "F14 is the earliest and confirmed instruction for temperature unit."
+    }
+  ]
+}
+
+--- conflict check ---
+{"contradictions": [{"topic": "User's supervisor", "kept": "C03", "superseded": ["C24"], "reason": "C24 states the user's supervisor is Dana Whitfield, contradicting C03 which says it is Mark Chen."}]}

@@ -1,0 +1,133 @@
+{
+  "homework": 6,
+  "sid4": 7117,
+  "commit": "d913d1812dd1cfc2200714155ffd0ec7e3a7f2d2",
+  "tag_hw6": null,
+  "generated_at": "2026-10-19T20:11:31.138072+00:00",
+  "configuration": {
+    "PORT_BASE": 8817,
+    "PREFIX": "s7117",
+    "SEED": 7117,
+    "VERIFY_SEED": 267117,
+    "DOMAIN_ID": 5,
+    "mongo_database": "s7117_doc",
+    "local_model": "qwen3:8b",
+    "embedding_model": "sentence-transformers/all-MiniLM-L6-v2 (fastembed)",
+    "memory": {
+      "SHORT_TERM_N_default": 12,
+      "SUMMARIZE_EVERY_USER_MSGS": 5,
+      "EPISODE_TOP_K": 3,
+      "experiment_settings": [
+        "SHORT_TERM_N=4",
+        "SHORT_TERM_N=12",
+        "SHORT_TERM_N=30",
+        "Compression policy (N=12)"
+      ]
+    }
+  },
+  "checks": [
+    {
+      "name": "config_values",
+      "description": "Section 0 values derive from SID4 = 7117",
+      "passed": true,
+      "evidence": "PORT_BASE=8817 PREFIX=s7117 SEED=7117 VERIFY_SEED=267117 DOMAIN_ID=5 db=s7117_doc"
+    },
+    {
+      "name": "offline_test_suite",
+      "description": "HW6 offline tests (schemas, memory logic, probes, file memory, consolidation) pass",
+      "passed": true,
+      "evidence": "18/18 tests passed"
+    },
+    {
+      "name": "mongo_collections_validated",
+      "description": "s7117_doc has inspections/messages/summaries/episodes with $jsonSchema",
+      "passed": true,
+      "evidence": {
+        "inspections": true,
+        "messages": true,
+        "summaries": true,
+        "episodes": true
+      }
+    },
+    {
+      "name": "mongo_rejects_invalid_doc",
+      "description": "The database itself rejects a document that breaks the schema",
+      "passed": true,
+      "evidence": "WriteError code 121 (DocumentValidationFailure)"
+    },
+    {
+      "name": "backend_on_port_base",
+      "description": "FastAPI backend responds on PORT_BASE 8817 with the HW6 routes",
+      "passed": true,
+      "evidence": "GET /openapi.json -> 200, HW6 routes present: True"
+    },
+    {
+      "name": "doc_crud_lifecycle",
+      "description": "POST 201 -> GET 200 -> PUT 200 (updated_at moves) -> list 200 -> DELETE 200 -> GET 404",
+      "passed": true,
+      "evidence": "statuses=[201, 200, 200, 200, 200] after_delete=404 default_status=scheduled"
+    },
+    {
+      "name": "doc_validation_errors",
+      "description": "missing/enum/type/date -> 422, bad ObjectId -> 400, malformed JSON -> 400, non-JSON -> 415",
+      "passed": true,
+      "evidence": "statuses=[422, 422, 422, 422, 400, 400, 415] field_level_messages=True"
+    },
+    {
+      "name": "chat_returns_reply_and_memory",
+      "description": "POST /api/chat -> 200, non-empty reply, memory_used + usage objects",
+      "passed": true,
+      "evidence": "status=200 reply_chars=107 prompt_tokens=133"
+    },
+    {
+      "name": "memory_and_aggregate_endpoints",
+      "description": "GET /api/memory has the 2 messages; GET /api/aggregate counts them by date",
+      "passed": true,
+      "evidence": "memory roles=['user', 'assistant'] aggregate=[{'messages': 2, 'user_messages': 1, 'assistant_messages': 1, 'date': '2026-10-19', 'sessions': 1}] unknown_user=404"
+    },
+    {
+      "name": "part3_raw_data",
+      "description": "raw/memory_turns.csv has 35 turns (30 conversation + 5 probes) for each of the 4 settings",
+      "passed": true,
+      "evidence": {
+        "SHORT_TERM_N=4": 35,
+        "SHORT_TERM_N=12": 35,
+        "SHORT_TERM_N=30": 35,
+        "Compression policy (N=12)": 35
+      }
+    },
+    {
+      "name": "memory_probes_file",
+      "description": "memory_probes.yaml: 5 probes with criteria and a 1-5 rubric",
+      "passed": true,
+      "evidence": "5 probes, rubric levels [1, 2, 3, 4, 5]"
+    },
+    {
+      "name": "agent_md_instructions",
+      "description": "AGENT.md has >= 5 instructions across >= 3 required categories",
+      "passed": true,
+      "evidence": {
+        "project description": 2,
+        "technology stack": 3,
+        "coding conventions": 5,
+        "testing approach": 3,
+        "prohibited actions": 3
+      }
+    },
+    {
+      "name": "memory_consolidation_pair",
+      "description": "MEMORY.original.md is 55 lines and needs consolidation; consolidated is < 40 lines",
+      "passed": true,
+      "evidence": "original 55 lines (52 non-comment), consolidated 39 lines; contradictions correct 3/5"
+    },
+    {
+      "name": "app_code_unchanged",
+      "description": "Self-check did not modify application code (git status of code/ unchanged)",
+      "passed": true,
+      "evidence": "unchanged"
+    }
+  ],
+  "passed": 14,
+  "total": 14,
+  "all_passed": true
+}

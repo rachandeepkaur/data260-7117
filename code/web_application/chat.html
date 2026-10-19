@@ -1,0 +1,79 @@
+<!doctype html>
+<!-- HW6 Part 2 mini chat: one input box calling POST /api/chat. Served by the
+     static mount in app.py at http://127.0.0.1:8817/chat.html -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>InspectBot Memory Chat</title>
+<style>
+  :root { --bg:#f6f7f9; --panel:#fff; --ink:#1d2330; --muted:#667085; --line:#e3e6eb; --me:#1f6feb; --bot:#eef1f5; }
+  * { box-sizing: border-box; }
+  body { margin:0; font:15px/1.45 system-ui, -apple-system, Segoe UI, sans-serif; background:var(--bg); color:var(--ink); }
+  header { padding:12px 20px; background:var(--panel); border-bottom:1px solid var(--line); display:flex; gap:16px; align-items:center; flex-wrap:wrap; }
+  header h1 { font-size:17px; margin:0; }
+  header .who { color:var(--muted); font-size:13px; }
+  header label { font-size:13px; color:var(--muted); }
+  header input { font:inherit; font-size:13px; padding:4px 6px; border:1px solid var(--line); border-radius:6px; width:190px; }
+  main { display:grid; grid-template-columns: minmax(0,1fr) 360px; gap:16px; padding:16px 20px; height:calc(100vh - 58px); }
+  #log { background:var(--panel); border:1px solid var(--line); border-radius:10px; padding:14px; overflow-y:auto; display:flex; flex-direction:column; gap:10px; }
+  .msg { max-width:80%; padding:8px 12px; border-radius:12px; white-space:pre-wrap; }
+  .user { align-self:flex-end; background:var(--me); color:#fff; }
+  .assistant { align-self:flex-start; background:var(--bot); }
+  .meta { font-size:11px; color:var(--muted); align-self:flex-start; margin-top:-6px; }
+  aside { background:var(--panel); border:1px solid var(--line); border-radius:10px; padding:14px; overflow-y:auto; font-size:13px; }
+  aside h2 { font-size:13px; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); margin:14px 0 6px; }
+  aside h2:first-child { margin-top:0; }
+  aside pre { white-space:pre-wrap; margin:0; font:12px/1.4 ui-monospace, Menlo, monospace; background:var(--bg); padding:8px; border-radius:6px; }
+  form { grid-column:1; display:flex; gap:8px; }
+  form input { flex:1; font:inherit; padding:10px 12px; border:1px solid var(--line); border-radius:8px; }
+  form button { font:inherit; padding:10px 16px; border:0; border-radius:8px; background:var(--me); color:#fff; cursor:pointer; }
+  form button:disabled { opacity:.5; cursor:wait; }
+  .chatcol { display:grid; grid-template-rows:minmax(0,1fr) auto; gap:10px; min-height:0; }
+  @media (max-width: 800px) { main { grid-template-columns:1fr; height:auto; } #log { height:60vh; } }
+</style>
+</head>
+<body>
+<header>
+  <h1>InspectBot memory chat</h1>
+  <span class="who">Rachandeep Kaur · s7117 · POST /api/chat</span>
+  <label>user_id <input id="uid" value="s7117-rachandeep"></label>
+  <label>session_id <input id="sid" value="s7117-rachandeep-web1"></label>
+</header>
+<main>
+  <div class="chatcol">
+    <div id="log"></div>
+    <form id="f"><input id="m" placeholder="Type a message…" autocomplete="off" autofocus><button id="b">Send</button></form>
+  </div>
+  <aside id="mem"><h2>Memory used this turn</h2><p>Send a message to see the short-term window, summaries and episodic facts.</p></aside>
+</main>
+<script>
+const $ = (id) => document.getElementById(id);
+function add(cls, text) { const d = document.createElement("div"); d.className = cls; d.textContent = text; $("log").append(d); $("log").scrollTop = 1e9; }
+function esc(s) { return String(s ?? "").replace(/[&<>]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;"}[c])); }
+$("f").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const message = $("m").value.trim(); if (!message) return;
+  add("msg user", message); $("m").value = ""; $("b").disabled = true;
+  const t0 = performance.now();
+  try {
+    const r = await fetch("/api/chat", { method:"POST", headers:{"Content-Type":"application/json"},
+      body: JSON.stringify({ user_id:$("uid").value, session_id:$("sid").value || null, message }) });
+    const j = await r.json();
+    if (!r.ok) { add("msg assistant", "Error " + r.status + ": " + JSON.stringify(j.detail ?? j)); return; }
+    add("msg assistant", j.reply);
+    const u = j.usage, m = j.memory_used;
+    add("meta", `window ${m.short_term_count} msgs · ${m.episodic_facts.length} facts · ${u.prompt_tokens}+${u.completion_tokens} tokens · ${(u.latency_ms/1000).toFixed(1)} s`);
+    $("mem").innerHTML =
+      `<h2>Short-term window (${m.short_term_count})</h2><pre>${esc(m.short_term.map(x => x.role + ": " + x.content).join("\n\n")) || "(empty)"}</pre>` +
+      `<h2>Session summary</h2><pre>${esc(m.session_summary) || "(none yet)"}</pre>` +
+      `<h2>Lifetime summary</h2><pre>${esc(m.lifetime_summary) || "(none yet)"}</pre>` +
+      `<h2>Episodic facts retrieved</h2><pre>${esc(m.episodic_facts.map(f => `${f.similarity.toFixed(2)}  ${f.fact}`).join("\n")) || "(none)"}</pre>` +
+      `<h2>Stored this turn</h2><pre>${esc(j.memory_updates.facts_extracted.map(f => `${f.action}: ${f.fact} (${f.importance})`).join("\n")) || "(no new facts)"}` +
+      `${j.memory_updates.session_summary_updated ? "\nsession summary updated" : ""}${j.memory_updates.lifetime_summary_updated ? "\nlifetime summary updated" : ""}</pre>`;
+  } catch (err) { add("msg assistant", "Request failed: " + err); }
+  finally { $("b").disabled = false; $("m").focus(); }
+});
+</script>
+</body>
+</html>

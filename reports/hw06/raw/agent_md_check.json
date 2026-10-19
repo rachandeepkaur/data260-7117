@@ -1,0 +1,118 @@
+{
+  "task": "Write a new Python module for this repository containing a function `parse_fact_line(line)` that parses one MEMORY.md bullet of the form '- (YYYY-MM-DD) fact text' and returns a tuple of (datetime.date, str) with the fact text stripped. Lines that do not match this form, or whose date is not a real calendar date, are invalid input. Include the module's tests in the same file. Reply with only the complete module in a single ```python code block.",
+  "model": "qwen3:8b",
+  "generated_file": "reports/hw06/agent_md_check/generated_parse_fact_line.py",
+  "usage": {
+    "input_tokens": 1915,
+    "output_tokens": 563,
+    "total_tokens": 2478
+  },
+  "static_checks": [
+    {
+      "agent_md_rule": "Every module starts with a docstring",
+      "category": "Coding conventions",
+      "passed": false,
+      "evidence": "missing"
+    },
+    {
+      "agent_md_rule": "... and `from __future__ import annotations`",
+      "category": "Coding conventions",
+      "passed": true,
+      "evidence": "checked top-level imports"
+    },
+    {
+      "agent_md_rule": "Type hints on all parameters and on the return value",
+      "category": "Coding conventions",
+      "passed": true,
+      "evidence": {
+        "parse_fact_line": true
+      }
+    },
+    {
+      "agent_md_rule": "Every function has a docstring",
+      "category": "Coding conventions",
+      "passed": true,
+      "evidence": {
+        "parse_fact_line": true
+      }
+    },
+    {
+      "agent_md_rule": "snake_case function names, UPPER_CASE constants",
+      "category": "Coding conventions",
+      "passed": true,
+      "evidence": [
+        "parse_fact_line",
+        "test_parse_fact_line_valid",
+        "test_parse_fact_line_invalid_date",
+        "test_parse_fact_line_invalid_format",
+        "test_parse_fact_line_extra_spaces",
+        "test_parse_fact_line_empty_fact_text"
+      ]
+    },
+    {
+      "agent_md_rule": "Invalid input raises a specific exception; no bare `except:`",
+      "category": "Coding conventions",
+      "passed": true,
+      "evidence": "raise found, no bare except"
+    },
+    {
+      "agent_md_rule": "Never return None to signal an error",
+      "category": "Coding conventions",
+      "passed": true,
+      "evidence": "no `return None` in library functions"
+    },
+    {
+      "agent_md_rule": "Library code does not print",
+      "category": "Coding conventions",
+      "passed": true,
+      "evidence": "no print() in library functions"
+    },
+    {
+      "agent_md_rule": "Tests are plain test_* functions using assert, valid + invalid case",
+      "category": "Testing approach",
+      "passed": true,
+      "evidence": [
+        "test_parse_fact_line_valid",
+        "test_parse_fact_line_invalid_date",
+        "test_parse_fact_line_invalid_format",
+        "test_parse_fact_line_extra_spaces",
+        "test_parse_fact_line_empty_fact_text"
+      ]
+    },
+    {
+      "agent_md_rule": "Tests run offline (no network/DB/Ollama imports)",
+      "category": "Testing approach",
+      "passed": true,
+      "evidence": "no network/database imports"
+    },
+    {
+      "agent_md_rule": "Never use eval or exec",
+      "category": "Prohibited actions",
+      "passed": true,
+      "evidence": "no eval/exec calls"
+    },
+    {
+      "agent_md_rule": "Never hard-code 8817 or s7117",
+      "category": "Project description",
+      "passed": true,
+      "evidence": "no hard-coded port/prefix"
+    }
+  ],
+  "behaviour": {
+    "valid_line": "pass",
+    "strips_whitespace": "fail: ValueError: Line does not match the required format '- (YYYY-MM-DD) fact text'",
+    "invalid_format_raises_ValueError": "pass",
+    "invalid_date_raises_ValueError": "pass",
+    "generated_test_names": [
+      "test_parse_fact_line_empty_fact_text",
+      "test_parse_fact_line_extra_spaces",
+      "test_parse_fact_line_invalid_date",
+      "test_parse_fact_line_invalid_format",
+      "test_parse_fact_line_valid"
+    ],
+    "generated_tests_pass": "pass"
+  },
+  "rules_followed": 11,
+  "rules_checked": 12,
+  "behaviour_ok": false
+}

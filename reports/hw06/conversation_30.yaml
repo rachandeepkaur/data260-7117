@@ -1,0 +1,41 @@
+# HW6 Part 3 - the fixed 30-message conversation replayed (in a fresh user +
+# session) for every memory setting. Turns marked `plants` contain a fact that
+# a memory probe asks about later; turn 18 deliberately *changes* the turn-5
+# fact, so probe P3 also tests whether memory keeps the newest value.
+messages:
+  - text: "Hi! I'm Rachandeep Kaur, a senior environmental health inspector with Santa Clara County. I cover the Willow Glen district."
+    plants: [P1]
+  - text: "What temperature range counts as the food danger zone?"
+  - text: "Today I inspected Golden Dragon, facility FA0148210. Their walk-in cooler was holding at 47F, so they failed the cold-holding check."
+    plants: [P2]
+  - text: "What corrective actions should a restaurant take when cold holding fails?"
+  - text: "I scheduled the Golden Dragon follow-up inspection for November 3."
+    plants: [P3]
+  - text: "How long can cooked rice safely sit at room temperature?"
+  - text: "For any report you draft for me, use bullet points only, with at most five bullets."
+    plants: [P4]
+  - text: "What's the difference between a routine inspection and a follow-up compliance check?"
+  - text: "My supervisor is Dana Whitfield. Any closure recommendation must be escalated to her."
+    plants: [P5]
+  - text: "Which violations usually count as major under the California Retail Food Code?"
+  - text: "What should I check first when inspecting a hand-wash sink?"
+  - text: "How often do food handler cards need to be renewed in California?"
+  - text: "What's a good way to verify sanitizer concentration on site?"
+  - text: "Give me tips for inspecting rice acidification at a sushi bar."
+  - text: "How should I document evidence of pests in dry storage?"
+  - text: "What is the minimum internal cooking temperature for poultry?"
+  - text: "How should raw meats be ordered on refrigerator shelves?"
+  - text: "Change of plan: the Golden Dragon follow-up moved from November 3 to November 10 because their compressor part is delayed."
+    plants: [P3]
+  - text: "What's the cooling rule for a large batch of soup?"
+  - text: "Can a restaurant use a household refrigerator for food storage?"
+  - text: "What does an ice machine inspection involve?"
+  - text: "How should I handle an operator who refuses to let me in?"
+  - text: "What records should a restaurant keep for its HACCP plan?"
+  - text: "Any advice on inspecting food trucks?"
+  - text: "What should an employee illness policy include?"
+  - text: "How do I check that a dishwasher reaches sanitizing temperature?"
+  - text: "What allergen labeling should I look for at a bakery?"
+  - text: "How would you rate a facility with one major and two minor violations?"
+  - text: "What are common causes of cross-contamination at prep stations?"
+  - text: "Thanks, that's all my inspection questions for today."

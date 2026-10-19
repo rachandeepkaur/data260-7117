@@ -1,0 +1,1165 @@
+[
+  {
+    "turn": 1,
+    "message": "Hi, I'm Rachandeep Kaur, a Santa Clara County food inspector. I cover the Willow Glen district.",
+    "user_id": "s7117-rachandeep",
+    "session_id": "s7117-rachandeep-demo1",
+    "reply": "Hello, Rachandeep Kaur. I'm InspectBot for the s7117 restaurant-inspection app. I'll assist with your inspections in the Willow Glen district. Let me know how I can help.",
+    "memory_used": {
+      "short_term_count": 0,
+      "short_term": [],
+      "session_summary": null,
+      "lifetime_summary": null,
+      "episodic_facts": []
+    },
+    "memory_updates": {
+      "facts_extracted": [
+        {
+          "fact": "The user's name is Rachandeep Kaur.",
+          "importance": 0.8,
+          "action": "inserted"
+        },
+        {
+          "fact": "The user is a Santa Clara County food inspector.",
+          "importance": 1.0,
+          "action": "inserted"
+        },
+        {
+          "fact": "The user covers the Willow Glen district.",
+          "importance": 0.8,
+          "action": "inserted"
+        }
+      ],
+      "session_summary_updated": false,
+      "lifetime_summary_updated": false,
+      "policy": "none"
+    },
+    "usage": {
+      "prompt_tokens": 135,
+      "completion_tokens": 46,
+      "components": {
+        "system_primer": 95,
+        "long_term_summary": 0,
+        "short_term_window": 0,
+        "episodic_facts": 0,
+        "current_message": 29,
+        "counted_total": 124
+      },
+      "aux_prompt_tokens": 183,
+      "aux_completion_tokens": 73,
+      "aux_calls": 1,
+      "model_latency_ms": 15407.4,
+      "aux_latency_ms": 17876.7,
+      "latency_ms": 33405.8,
+      "tokenizer": "Qwen/Qwen3-8B"
+    },
+    "config": {
+      "SHORT_TERM_N": 12,
+      "SUMMARIZE_EVERY_USER_MSGS": 5,
+      "LIFETIME_EVERY_SESSION_SUMMARIES": 2,
+      "EPISODE_TOP_K": 3,
+      "MEMORY_POLICY": "none"
+    }
+  },
+  {
+    "turn": 2,
+    "message": "Today Golden Dragon (FA0148210) failed cold holding: the walk-in cooler was at 47F.",
+    "user_id": "s7117-rachandeep",
+    "session_id": "s7117-rachandeep-demo1",
+    "reply": "Golden Dragon (FA0148210) failed cold holding with the walk-in cooler at 47\u00b0F. This temperature is above the acceptable range. The issue needs to be corrected immediately. I'll log this inspection finding.",
+    "memory_used": {
+      "short_term_count": 2,
+      "short_term": [
+        {
+          "role": "user",
+          "content": "Hi, I'm Rachandeep Kaur, a Santa Clara County food inspector. I cover the Willow Glen district."
+        },
+        {
+          "role": "assistant",
+          "content": "Hello, Rachandeep Kaur. I'm InspectBot for the s7117 restaurant-inspection app. I'll assist with your inspections in the Willow Glen district. Let me know how I can help."
+        }
+      ],
+      "session_summary": null,
+      "lifetime_summary": null,
+      "episodic_facts": []
+    },
+    "memory_updates": {
+      "facts_extracted": [
+        {
+          "fact": "The user mentioned Golden Dragon (FA0148210) failed cold holding.",
+          "importance": 0.8,
+          "action": "inserted"
+        },
+        {
+          "fact": "The walk-in cooler was at 47F.",
+          "importance": 0.7,
+          "action": "inserted"
+        }
+      ],
+      "session_summary_updated": false,
+      "lifetime_summary_updated": false,
+      "policy": "none"
+    },
+    "usage": {
+      "prompt_tokens": 218,
+      "completion_tokens": 50,
+      "components": {
+        "system_primer": 95,
+        "long_term_summary": 0,
+        "short_term_window": 79,
+        "episodic_facts": 0,
+        "current_message": 33,
+        "counted_total": 207
+      },
+      "aux_prompt_tokens": 187,
+      "aux_completion_tokens": 61,
+      "aux_calls": 1,
+      "model_latency_ms": 13505.3,
+      "aux_latency_ms": 13667.1,
+      "latency_ms": 27281.0,
+      "tokenizer": "Qwen/Qwen3-8B"
+    },
+    "config": {
+      "SHORT_TERM_N": 12,
+      "SUMMARIZE_EVERY_USER_MSGS": 5,
+      "LIFETIME_EVERY_SESSION_SUMMARIES": 2,
+      "EPISODE_TOP_K": 3,
+      "MEMORY_POLICY": "none"
+    }
+  },
+  {
+    "turn": 3,
+    "message": "I set their follow-up inspection for November 3.",
+    "user_id": "s7117-rachandeep",
+    "session_id": "s7117-rachandeep-demo1",
+    "reply": "Follow-up inspection for Golden Dragon (FA0148210) is scheduled for November 3. I've noted the date in the system. Let me know if you need further assistance.",
+    "memory_used": {
+      "short_term_count": 4,
+      "short_term": [
+        {
+          "role": "user",
+          "content": "Hi, I'm Rachandeep Kaur, a Santa Clara County food inspector. I cover the Willow Glen district."
+        },
+        {
+          "role": "assistant",
+          "content": "Hello, Rachandeep Kaur. I'm InspectBot for the s7117 restaurant-inspection app. I'll assist with your inspections in the Willow Glen district. Let me know how I can help."
+        },
+        {
+          "role": "user",
+          "content": "Today Golden Dragon (FA0148210) failed cold holding: the walk-in cooler was at 47F."
+        },
+        {
+          "role": "assistant",
+          "content": "Golden Dragon (FA0148210) failed cold holding with the walk-in cooler at 47\u00b0F. This temperature is above the acceptable range. The issue needs to be corrected immediately. I'll log this inspection finding."
+        }
+      ],
+      "session_summary": null,
+      "lifetime_summary": null,
+      "episodic_facts": [
+        {
+          "id": "6ad276194a969ab5be8b8879",
+          "fact": "The user is a Santa Clara County food inspector.",
+          "importance": 1.0,
+          "similarity": 0.2694,
+          "created_at": "2026-10-16T19:08:09.245000+00:00"
+        }
+      ]
+    },
+    "memory_updates": {
+      "facts_extracted": [
+        {
+          "fact": "The user scheduled a follow-up inspection for November 3.",
+          "importance": 1.0,
+          "action": "inserted"
+        }
+      ],
+      "session_summary_updated": false,
+      "lifetime_summary_updated": false,
+      "policy": "none"
+    },
+    "usage": {
+      "prompt_tokens": 330,
+      "completion_tokens": 42,
+      "components": {
+        "system_primer": 95,
+        "long_term_summary": 0,
+        "short_term_window": 166,
+        "episodic_facts": 43,
+        "current_message": 16,
+        "counted_total": 320
+      },
+      "aux_prompt_tokens": 170,
+      "aux_completion_tokens": 30,
+      "aux_calls": 1,
+      "model_latency_ms": 14002.5,
+      "aux_latency_ms": 6619.4,
+      "latency_ms": 20722.3,
+      "tokenizer": "Qwen/Qwen3-8B"
+    },
+    "config": {
+      "SHORT_TERM_N": 12,
+      "SUMMARIZE_EVERY_USER_MSGS": 5,
+      "LIFETIME_EVERY_SESSION_SUMMARIES": 2,
+      "EPISODE_TOP_K": 3,
+      "MEMORY_POLICY": "none"
+    }
+  },
+  {
+    "turn": 4,
+    "message": "What should they do right away about the cooler?",
+    "user_id": "s7117-rachandeep",
+    "session_id": "s7117-rachandeep-demo1",
+    "reply": "The cooler temperature was 47\u00b0F, which is too high. They should immediately repair or adjust the cooler to ensure it reaches the proper temperature range. Monitor the temperature closely and document any corrective actions taken.",
+    "memory_used": {
+      "short_term_count": 6,
+      "short_term": [
+        {
+          "role": "user",
+          "content": "Hi, I'm Rachandeep Kaur, a Santa Clara County food inspector. I cover the Willow Glen district."
+        },
+        {
+          "role": "assistant",
+          "content": "Hello, Rachandeep Kaur. I'm InspectBot for the s7117 restaurant-inspection app. I'll assist with your inspections in the Willow Glen district. Let me know how I can help."
+        },
+        {
+          "role": "user",
+          "content": "Today Golden Dragon (FA0148210) failed cold holding: the walk-in cooler was at 47F."
+        },
+        {
+          "role": "assistant",
+          "content": "Golden Dragon (FA0148210) failed cold holding with the walk-in cooler at 47\u00b0F. This temperature is above the acceptable range. The issue needs to be corrected immediately. I'll log this inspection finding."
+        },
+        {
+          "role": "user",
+          "content": "I set their follow-up inspection for November 3."
+        },
+        {
+          "role": "assistant",
+          "content": "Follow-up inspection for Golden Dragon (FA0148210) is scheduled for November 3. I've noted the date in the system. Let me know if you need further assistance."
+        }
+      ],
+      "session_summary": null,
+      "lifetime_summary": null,
+      "episodic_facts": [
+        {
+          "id": "6ad276344a969ab5be8b887e",
+          "fact": "The walk-in cooler was at 47F.",
+          "importance": 0.7,
+          "similarity": 0.4064,
+          "created_at": "2026-10-16T19:08:36.541000+00:00"
+        }
+      ]
+    },
+    "memory_updates": {
+      "facts_extracted": [],
+      "session_summary_updated": false,
+      "lifetime_summary_updated": false,
+      "policy": "none"
+    },
+    "usage": {
+      "prompt_tokens": 392,
+      "completion_tokens": 43,
+      "components": {
+        "system_primer": 95,
+        "long_term_summary": 0,
+        "short_term_window": 228,
+        "episodic_facts": 44,
+        "current_message": 15,
+        "counted_total": 382
+      },
+      "aux_prompt_tokens": 169,
+      "aux_completion_tokens": 6,
+      "aux_calls": 1,
+      "model_latency_ms": 12973.7,
+      "aux_latency_ms": 1978.7,
+      "latency_ms": 15037.8,
+      "tokenizer": "Qwen/Qwen3-8B"
+    },
+    "config": {
+      "SHORT_TERM_N": 12,
+      "SUMMARIZE_EVERY_USER_MSGS": 5,
+      "LIFETIME_EVERY_SESSION_SUMMARIES": 2,
+      "EPISODE_TOP_K": 3,
+      "MEMORY_POLICY": "none"
+    }
+  },
+  {
+    "turn": 5,
+    "message": "My supervisor is Dana Whitfield, and closure recommendations go to her.",
+    "user_id": "s7117-rachandeep",
+    "session_id": "s7117-rachandeep-demo1",
+    "reply": "Your closure recommendations should be sent to Dana Whitfield. The follow-up inspection for Golden Dragon is still scheduled for November 3. Let me know if you need help preparing the report.",
+    "memory_used": {
+      "short_term_count": 8,
+      "short_term": [
+        {
+          "role": "user",
+          "content": "Hi, I'm Rachandeep Kaur, a Santa Clara County food inspector. I cover the Willow Glen district."
+        },
+        {
+          "role": "assistant",
+          "content": "Hello, Rachandeep Kaur. I'm InspectBot for the s7117 restaurant-inspection app. I'll assist with your inspections in the Willow Glen district. Let me know how I can help."
+        },
+        {
+          "role": "user",
+          "content": "Today Golden Dragon (FA0148210) failed cold holding: the walk-in cooler was at 47F."
+        },
+        {
+          "role": "assistant",
+          "content": "Golden Dragon (FA0148210) failed cold holding with the walk-in cooler at 47\u00b0F. This temperature is above the acceptable range. The issue needs to be corrected immediately. I'll log this inspection finding."
+        },
+        {
+          "role": "user",
+          "content": "I set their follow-up inspection for November 3."
+        },
+        {
+          "role": "assistant",
+          "content": "Follow-up inspection for Golden Dragon (FA0148210) is scheduled for November 3. I've noted the date in the system. Let me know if you need further assistance."
+        },
+        {
+          "role": "user",
+          "content": "What should they do right away about the cooler?"
+        },
+        {
+          "role": "assistant",
+          "content": "The cooler temperature was 47\u00b0F, which is too high. They should immediately repair or adjust the cooler to ensure it reaches the proper temperature range. Monitor the temperature closely and document any corrective actions taken."
+        }
+      ],
+      "session_summary": null,
+      "lifetime_summary": null,
+      "episodic_facts": [
+        {
+          "id": "6ad276494a969ab5be8b8881",
+          "fact": "The user scheduled a follow-up inspection for November 3.",
+          "importance": 1.0,
+          "similarity": 0.2572,
+          "created_at": "2026-10-16T19:08:57.274000+00:00"
+        }
+      ]
+    },
+    "memory_updates": {
+      "facts_extracted": [
+        {
+          "fact": "The user's supervisor is Dana Whitfield",
+          "importance": 0.8,
+          "action": "inserted"
+        },
+        {
+          "fact": "Closure recommendations go to Dana Whitfield",
+          "importance": 0.8,
+          "action": "inserted"
+        }
+      ],
+      "session_summary_updated": true,
+      "lifetime_summary_updated": false,
+      "policy": "none"
+    },
+    "usage": {
+      "prompt_tokens": 459,
+      "completion_tokens": 38,
+      "components": {
+        "system_primer": 95,
+        "long_term_summary": 0,
+        "short_term_window": 290,
+        "episodic_facts": 45,
+        "current_message": 19,
+        "counted_total": 449
+      },
+      "aux_prompt_tokens": 595,
+      "aux_completion_tokens": 188,
+      "aux_calls": 2,
+      "model_latency_ms": 12321.7,
+      "aux_latency_ms": 53169.3,
+      "latency_ms": 65629.6,
+      "tokenizer": "Qwen/Qwen3-8B"
+    },
+    "config": {
+      "SHORT_TERM_N": 12,
+      "SUMMARIZE_EVERY_USER_MSGS": 5,
+      "LIFETIME_EVERY_SESSION_SUMMARIES": 2,
+      "EPISODE_TOP_K": 3,
+      "MEMORY_POLICY": "none"
+    }
+  },
+  {
+    "turn": 6,
+    "message": "Remind me, what is the safe cold-holding temperature?",
+    "user_id": "s7117-rachandeep",
+    "session_id": "s7117-rachandeep-demo1",
+    "reply": "The safe cold-holding temperature for food is 41\u00b0F or below. The cooler at Golden Dragon was at 47\u00b0F, which is above the safe range.",
+    "memory_used": {
+      "short_term_count": 10,
+      "short_term": [
+        {
+          "role": "user",
+          "content": "Hi, I'm Rachandeep Kaur, a Santa Clara County food inspector. I cover the Willow Glen district."
+        },
+        {
+          "role": "assistant",
+          "content": "Hello, Rachandeep Kaur. I'm InspectBot for the s7117 restaurant-inspection app. I'll assist with your inspections in the Willow Glen district. Let me know how I can help."
+        },
+        {
+          "role": "user",
+          "content": "Today Golden Dragon (FA0148210) failed cold holding: the walk-in cooler was at 47F."
+        },
+        {
+          "role": "assistant",
+          "content": "Golden Dragon (FA0148210) failed cold holding with the walk-in cooler at 47\u00b0F. This temperature is above the acceptable range. The issue needs to be corrected immediately. I'll log this inspection finding."
+        },
+        {
+          "role": "user",
+          "content": "I set their follow-up inspection for November 3."
+        },
+        {
+          "role": "assistant",
+          "content": "Follow-up inspection for Golden Dragon (FA0148210) is scheduled for November 3. I've noted the date in the system. Let me know if you need further assistance."
+        },
+        {
+          "role": "user",
+          "content": "What should they do right away about the cooler?"
+        },
+        {
+          "role": "assistant",
+          "content": "The cooler temperature was 47\u00b0F, which is too high. They should immediately repair or adjust the cooler to ensure it reaches the proper temperature range. Monitor the temperature closely and document any corrective actions taken."
+        },
+        {
+          "role": "user",
+          "content": "My supervisor is Dana Whitfield, and closure recommendations go to her."
+        },
+        {
+          "role": "assistant",
+          "content": "Your closure recommendations should be sent to Dana Whitfield. The follow-up inspection for Golden Dragon is still scheduled for November 3. Let me know if you need help preparing the report."
+        }
+      ],
+      "session_summary": "- Rachandeep Kaur is a Santa Clara County food inspector covering the Willow Glen district.  \n- Golden Dragon (FA0148210) failed cold holding with the walk-in cooler at 47\u00b0F.  \n- Follow-up inspection for Golden Dragon is scheduled for November 3.  \n- The cooler temperature was 47\u00b0F, which is above the acceptable range.  \n- Golden Dragon should immediately repair or adjust the cooler to reach the proper temperature.  \n- Closure recommendations should be sent to Dana Whitfield, Rachandeep's supervisor.  \n- The follow-up inspection date remains November 3.  \n- Corrective actions and temperature monitoring should be documented.",
+      "lifetime_summary": null,
+      "episodic_facts": [
+        {
+          "id": "6ad276344a969ab5be8b887d",
+          "fact": "The user mentioned Golden Dragon (FA0148210) failed cold holding.",
+          "importance": 0.8,
+          "similarity": 0.4393,
+          "created_at": "2026-10-16T19:08:36.539000+00:00"
+        },
+        {
+          "id": "6ad276344a969ab5be8b887e",
+          "fact": "The walk-in cooler was at 47F.",
+          "importance": 0.7,
+          "similarity": 0.3787,
+          "created_at": "2026-10-16T19:08:36.541000+00:00"
+        }
+      ]
+    },
+    "memory_updates": {
+      "facts_extracted": [
+        {
+          "fact": "The user is asking about the safe cold-holding temperature.",
+          "importance": 0.3,
+          "action": "inserted"
+        }
+      ],
+      "session_summary_updated": false,
+      "lifetime_summary_updated": false,
+      "policy": "none"
+    },
+    "usage": {
+      "prompt_tokens": 703,
+      "completion_tokens": 36,
+      "components": {
+        "system_primer": 95,
+        "long_term_summary": 148,
+        "short_term_window": 351,
+        "episodic_facts": 82,
+        "current_message": 18,
+        "counted_total": 694
+      },
+      "aux_prompt_tokens": 172,
+      "aux_completion_tokens": 30,
+      "aux_calls": 1,
+      "model_latency_ms": 33343.4,
+      "aux_latency_ms": 8080.4,
+      "latency_ms": 41549.3,
+      "tokenizer": "Qwen/Qwen3-8B"
+    },
+    "config": {
+      "SHORT_TERM_N": 12,
+      "SUMMARIZE_EVERY_USER_MSGS": 5,
+      "LIFETIME_EVERY_SESSION_SUMMARIES": 2,
+      "EPISODE_TOP_K": 3,
+      "MEMORY_POLICY": "none"
+    }
+  },
+  {
+    "turn": 7,
+    "message": "Update: the Golden Dragon follow-up moved to November 10 because a part is delayed.",
+    "user_id": "s7117-rachandeep",
+    "session_id": "s7117-rachandeep-demo1",
+    "reply": "The follow-up inspection for Golden Dragon (FA0148210) has been moved to November 10 due to a delayed part. I've updated the schedule in the system. Let me know if you need further adjustments.",
+    "memory_used": {
+      "short_term_count": 12,
+      "short_term": [
+        {
+          "role": "user",
+          "content": "Hi, I'm Rachandeep Kaur, a Santa Clara County food inspector. I cover the Willow Glen district."
+        },
+        {
+          "role": "assistant",
+          "content": "Hello, Rachandeep Kaur. I'm InspectBot for the s7117 restaurant-inspection app. I'll assist with your inspections in the Willow Glen district. Let me know how I can help."
+        },
+        {
+          "role": "user",
+          "content": "Today Golden Dragon (FA0148210) failed cold holding: the walk-in cooler was at 47F."
+        },
+        {
+          "role": "assistant",
+          "content": "Golden Dragon (FA0148210) failed cold holding with the walk-in cooler at 47\u00b0F. This temperature is above the acceptable range. The issue needs to be corrected immediately. I'll log this inspection finding."
+        },
+        {
+          "role": "user",
+          "content": "I set their follow-up inspection for November 3."
+        },
+        {
+          "role": "assistant",
+          "content": "Follow-up inspection for Golden Dragon (FA0148210) is scheduled for November 3. I've noted the date in the system. Let me know if you need further assistance."
+        },
+        {
+          "role": "user",
+          "content": "What should they do right away about the cooler?"
+        },
+        {
+          "role": "assistant",
+          "content": "The cooler temperature was 47\u00b0F, which is too high. They should immediately repair or adjust the cooler to ensure it reaches the proper temperature range. Monitor the temperature closely and document any corrective actions taken."
+        },
+        {
+          "role": "user",
+          "content": "My supervisor is Dana Whitfield, and closure recommendations go to her."
+        },
+        {
+          "role": "assistant",
+          "content": "Your closure recommendations should be sent to Dana Whitfield. The follow-up inspection for Golden Dragon is still scheduled for November 3. Let me know if you need help preparing the report."
+        },
+        {
+          "role": "user",
+          "content": "Remind me, what is the safe cold-holding temperature?"
+        },
+        {
+          "role": "assistant",
+          "content": "The safe cold-holding temperature for food is 41\u00b0F or below. The cooler at Golden Dragon was at 47\u00b0F, which is above the safe range."
+        }
+      ],
+      "session_summary": "- Rachandeep Kaur is a Santa Clara County food inspector covering the Willow Glen district.  \n- Golden Dragon (FA0148210) failed cold holding with the walk-in cooler at 47\u00b0F.  \n- Follow-up inspection for Golden Dragon is scheduled for November 3.  \n- The cooler temperature was 47\u00b0F, which is above the acceptable range.  \n- Golden Dragon should immediately repair or adjust the cooler to reach the proper temperature.  \n- Closure recommendations should be sent to Dana Whitfield, Rachandeep's supervisor.  \n- The follow-up inspection date remains November 3.  \n- Corrective actions and temperature monitoring should be documented.",
+      "lifetime_summary": null,
+      "episodic_facts": [
+        {
+          "id": "6ad276344a969ab5be8b887d",
+          "fact": "The user mentioned Golden Dragon (FA0148210) failed cold holding.",
+          "importance": 0.8,
+          "similarity": 0.4535,
+          "created_at": "2026-10-16T19:08:36.539000+00:00"
+        },
+        {
+          "id": "6ad276494a969ab5be8b8881",
+          "fact": "The user scheduled a follow-up inspection for November 3.",
+          "importance": 1.0,
+          "similarity": 0.3539,
+          "created_at": "2026-10-16T19:08:57.274000+00:00"
+        }
+      ]
+    },
+    "memory_updates": {
+      "facts_extracted": [
+        {
+          "fact": "The Golden Dragon follow-up was moved to November 10.",
+          "importance": 0.8,
+          "action": "inserted"
+        },
+        {
+          "fact": "A part is delayed, causing the delay.",
+          "importance": 0.6,
+          "action": "inserted"
+        }
+      ],
+      "session_summary_updated": false,
+      "lifetime_summary_updated": false,
+      "policy": "none"
+    },
+    "usage": {
+      "prompt_tokens": 768,
+      "completion_tokens": 50,
+      "components": {
+        "system_primer": 95,
+        "long_term_summary": 148,
+        "short_term_window": 409,
+        "episodic_facts": 83,
+        "current_message": 24,
+        "counted_total": 759
+      },
+      "aux_prompt_tokens": 178,
+      "aux_completion_tokens": 53,
+      "aux_calls": 1,
+      "model_latency_ms": 20179.2,
+      "aux_latency_ms": 14659.3,
+      "latency_ms": 35027.6,
+      "tokenizer": "Qwen/Qwen3-8B"
+    },
+    "config": {
+      "SHORT_TERM_N": 12,
+      "SUMMARIZE_EVERY_USER_MSGS": 5,
+      "LIFETIME_EVERY_SESSION_SUMMARIES": 2,
+      "EPISODE_TOP_K": 3,
+      "MEMORY_POLICY": "none"
+    }
+  },
+  {
+    "turn": 8,
+    "message": "Yummy Kitchen FA0206933 is next on my list for a routine inspection on October 22.",
+    "user_id": "s7117-rachandeep",
+    "session_id": "s7117-rachandeep-demo1",
+    "reply": "Yummy Kitchen (FA0206933) is next on your list for a routine inspection on October 22. Ensure all previous findings are addressed before the visit. Let me know if you need help preparing for the inspection.",
+    "memory_used": {
+      "short_term_count": 12,
+      "short_term": [
+        {
+          "role": "user",
+          "content": "Today Golden Dragon (FA0148210) failed cold holding: the walk-in cooler was at 47F."
+        },
+        {
+          "role": "assistant",
+          "content": "Golden Dragon (FA0148210) failed cold holding with the walk-in cooler at 47\u00b0F. This temperature is above the acceptable range. The issue needs to be corrected immediately. I'll log this inspection finding."
+        },
+        {
+          "role": "user",
+          "content": "I set their follow-up inspection for November 3."
+        },
+        {
+          "role": "assistant",
+          "content": "Follow-up inspection for Golden Dragon (FA0148210) is scheduled for November 3. I've noted the date in the system. Let me know if you need further assistance."
+        },
+        {
+          "role": "user",
+          "content": "What should they do right away about the cooler?"
+        },
+        {
+          "role": "assistant",
+          "content": "The cooler temperature was 47\u00b0F, which is too high. They should immediately repair or adjust the cooler to ensure it reaches the proper temperature range. Monitor the temperature closely and document any corrective actions taken."
+        },
+        {
+          "role": "user",
+          "content": "My supervisor is Dana Whitfield, and closure recommendations go to her."
+        },
+        {
+          "role": "assistant",
+          "content": "Your closure recommendations should be sent to Dana Whitfield. The follow-up inspection for Golden Dragon is still scheduled for November 3. Let me know if you need help preparing the report."
+        },
+        {
+          "role": "user",
+          "content": "Remind me, what is the safe cold-holding temperature?"
+        },
+        {
+          "role": "assistant",
+          "content": "The safe cold-holding temperature for food is 41\u00b0F or below. The cooler at Golden Dragon was at 47\u00b0F, which is above the safe range."
+        },
+        {
+          "role": "user",
+          "content": "Update: the Golden Dragon follow-up moved to November 10 because a part is delayed."
+        },
+        {
+          "role": "assistant",
+          "content": "The follow-up inspection for Golden Dragon (FA0148210) has been moved to November 10 due to a delayed part. I've updated the schedule in the system. Let me know if you need further adjustments."
+        }
+      ],
+      "session_summary": "- Rachandeep Kaur is a Santa Clara County food inspector covering the Willow Glen district.  \n- Golden Dragon (FA0148210) failed cold holding with the walk-in cooler at 47\u00b0F.  \n- Follow-up inspection for Golden Dragon is scheduled for November 3.  \n- The cooler temperature was 47\u00b0F, which is above the acceptable range.  \n- Golden Dragon should immediately repair or adjust the cooler to reach the proper temperature.  \n- Closure recommendations should be sent to Dana Whitfield, Rachandeep's supervisor.  \n- The follow-up inspection date remains November 3.  \n- Corrective actions and temperature monitoring should be documented.",
+      "lifetime_summary": null,
+      "episodic_facts": [
+        {
+          "id": "6ad276494a969ab5be8b8881",
+          "fact": "The user scheduled a follow-up inspection for November 3.",
+          "importance": 1.0,
+          "similarity": 0.4841,
+          "created_at": "2026-10-16T19:08:57.274000+00:00"
+        },
+        {
+          "id": "6ad276194a969ab5be8b8879",
+          "fact": "The user is a Santa Clara County food inspector.",
+          "importance": 1.0,
+          "similarity": 0.3703,
+          "created_at": "2026-10-16T19:08:09.245000+00:00"
+        }
+      ]
+    },
+    "memory_updates": {
+      "facts_extracted": [
+        {
+          "fact": "The user is scheduled to inspect Yummy Kitchen FA0206933 on October 22.",
+          "importance": 1.0,
+          "action": "inserted"
+        }
+      ],
+      "session_summary_updated": false,
+      "lifetime_summary_updated": false,
+      "policy": "none"
+    },
+    "usage": {
+      "prompt_tokens": 765,
+      "completion_tokens": 51,
+      "components": {
+        "system_primer": 95,
+        "long_term_summary": 148,
+        "short_term_window": 408,
+        "episodic_facts": 74,
+        "current_message": 31,
+        "counted_total": 756
+      },
+      "aux_prompt_tokens": 185,
+      "aux_completion_tokens": 41,
+      "aux_calls": 1,
+      "model_latency_ms": 35757.7,
+      "aux_latency_ms": 10307.7,
+      "latency_ms": 46189.6,
+      "tokenizer": "Qwen/Qwen3-8B"
+    },
+    "config": {
+      "SHORT_TERM_N": 12,
+      "SUMMARIZE_EVERY_USER_MSGS": 5,
+      "LIFETIME_EVERY_SESSION_SUMMARIES": 2,
+      "EPISODE_TOP_K": 3,
+      "MEMORY_POLICY": "none"
+    }
+  },
+  {
+    "turn": 9,
+    "message": "What should I bring to a routine inspection?",
+    "user_id": "s7117-rachandeep",
+    "session_id": "s7117-rachandeep-demo1",
+    "reply": "Bring your inspection checklist, any previous inspection reports, and documentation of corrective actions taken. Also, carry your notebook and pen for notes during the visit. Let me know if you need a template for the checklist.",
+    "memory_used": {
+      "short_term_count": 12,
+      "short_term": [
+        {
+          "role": "user",
+          "content": "I set their follow-up inspection for November 3."
+        },
+        {
+          "role": "assistant",
+          "content": "Follow-up inspection for Golden Dragon (FA0148210) is scheduled for November 3. I've noted the date in the system. Let me know if you need further assistance."
+        },
+        {
+          "role": "user",
+          "content": "What should they do right away about the cooler?"
+        },
+        {
+          "role": "assistant",
+          "content": "The cooler temperature was 47\u00b0F, which is too high. They should immediately repair or adjust the cooler to ensure it reaches the proper temperature range. Monitor the temperature closely and document any corrective actions taken."
+        },
+        {
+          "role": "user",
+          "content": "My supervisor is Dana Whitfield, and closure recommendations go to her."
+        },
+        {
+          "role": "assistant",
+          "content": "Your closure recommendations should be sent to Dana Whitfield. The follow-up inspection for Golden Dragon is still scheduled for November 3. Let me know if you need help preparing the report."
+        },
+        {
+          "role": "user",
+          "content": "Remind me, what is the safe cold-holding temperature?"
+        },
+        {
+          "role": "assistant",
+          "content": "The safe cold-holding temperature for food is 41\u00b0F or below. The cooler at Golden Dragon was at 47\u00b0F, which is above the safe range."
+        },
+        {
+          "role": "user",
+          "content": "Update: the Golden Dragon follow-up moved to November 10 because a part is delayed."
+        },
+        {
+          "role": "assistant",
+          "content": "The follow-up inspection for Golden Dragon (FA0148210) has been moved to November 10 due to a delayed part. I've updated the schedule in the system. Let me know if you need further adjustments."
+        },
+        {
+          "role": "user",
+          "content": "Yummy Kitchen FA0206933 is next on my list for a routine inspection on October 22."
+        },
+        {
+          "role": "assistant",
+          "content": "Yummy Kitchen (FA0206933) is next on your list for a routine inspection on October 22. Ensure all previous findings are addressed before the visit. Let me know if you need help preparing for the inspection."
+        }
+      ],
+      "session_summary": "- Rachandeep Kaur is a Santa Clara County food inspector covering the Willow Glen district.  \n- Golden Dragon (FA0148210) failed cold holding with the walk-in cooler at 47\u00b0F.  \n- Follow-up inspection for Golden Dragon is scheduled for November 3.  \n- The cooler temperature was 47\u00b0F, which is above the acceptable range.  \n- Golden Dragon should immediately repair or adjust the cooler to reach the proper temperature.  \n- Closure recommendations should be sent to Dana Whitfield, Rachandeep's supervisor.  \n- The follow-up inspection date remains November 3.  \n- Corrective actions and temperature monitoring should be documented.",
+      "lifetime_summary": null,
+      "episodic_facts": [
+        {
+          "id": "6ad276494a969ab5be8b8881",
+          "fact": "The user scheduled a follow-up inspection for November 3.",
+          "importance": 1.0,
+          "similarity": 0.4378,
+          "created_at": "2026-10-16T19:08:57.274000+00:00"
+        }
+      ]
+    },
+    "memory_updates": {
+      "facts_extracted": [],
+      "session_summary_updated": false,
+      "lifetime_summary_updated": false,
+      "policy": "none"
+    },
+    "usage": {
+      "prompt_tokens": 718,
+      "completion_tokens": 43,
+      "components": {
+        "system_primer": 95,
+        "long_term_summary": 148,
+        "short_term_window": 407,
+        "episodic_facts": 45,
+        "current_message": 14,
+        "counted_total": 709
+      },
+      "aux_prompt_tokens": 168,
+      "aux_completion_tokens": 6,
+      "aux_calls": 1,
+      "model_latency_ms": 28525.3,
+      "aux_latency_ms": 2011.2,
+      "latency_ms": 30619.9,
+      "tokenizer": "Qwen/Qwen3-8B"
+    },
+    "config": {
+      "SHORT_TERM_N": 12,
+      "SUMMARIZE_EVERY_USER_MSGS": 5,
+      "LIFETIME_EVERY_SESSION_SUMMARIES": 2,
+      "EPISODE_TOP_K": 3,
+      "MEMORY_POLICY": "none"
+    }
+  },
+  {
+    "turn": 10,
+    "message": "Draft a two-line note to my supervisor about Golden Dragon.",
+    "user_id": "s7117-rachandeep",
+    "session_id": "s7117-rachandeep-demo1",
+    "reply": "The follow-up inspection for Golden Dragon (FA0148210) has been rescheduled to November 10 due to a delayed part. The cold-holding failure remains unresolved and requires immediate corrective action.",
+    "memory_used": {
+      "short_term_count": 12,
+      "short_term": [
+        {
+          "role": "user",
+          "content": "What should they do right away about the cooler?"
+        },
+        {
+          "role": "assistant",
+          "content": "The cooler temperature was 47\u00b0F, which is too high. They should immediately repair or adjust the cooler to ensure it reaches the proper temperature range. Monitor the temperature closely and document any corrective actions taken."
+        },
+        {
+          "role": "user",
+          "content": "My supervisor is Dana Whitfield, and closure recommendations go to her."
+        },
+        {
+          "role": "assistant",
+          "content": "Your closure recommendations should be sent to Dana Whitfield. The follow-up inspection for Golden Dragon is still scheduled for November 3. Let me know if you need help preparing the report."
+        },
+        {
+          "role": "user",
+          "content": "Remind me, what is the safe cold-holding temperature?"
+        },
+        {
+          "role": "assistant",
+          "content": "The safe cold-holding temperature for food is 41\u00b0F or below. The cooler at Golden Dragon was at 47\u00b0F, which is above the safe range."
+        },
+        {
+          "role": "user",
+          "content": "Update: the Golden Dragon follow-up moved to November 10 because a part is delayed."
+        },
+        {
+          "role": "assistant",
+          "content": "The follow-up inspection for Golden Dragon (FA0148210) has been moved to November 10 due to a delayed part. I've updated the schedule in the system. Let me know if you need further adjustments."
+        },
+        {
+          "role": "user",
+          "content": "Yummy Kitchen FA0206933 is next on my list for a routine inspection on October 22."
+        },
+        {
+          "role": "assistant",
+          "content": "Yummy Kitchen (FA0206933) is next on your list for a routine inspection on October 22. Ensure all previous findings are addressed before the visit. Let me know if you need help preparing for the inspection."
+        },
+        {
+          "role": "user",
+          "content": "What should I bring to a routine inspection?"
+        },
+        {
+          "role": "assistant",
+          "content": "Bring your inspection checklist, any previous inspection reports, and documentation of corrective actions taken. Also, carry your notebook and pen for notes during the visit. Let me know if you need a template for the checklist."
+        }
+      ],
+      "session_summary": "- Rachandeep Kaur is a Santa Clara County food inspector covering the Willow Glen district.  \n- Golden Dragon (FA0148210) failed cold holding with the walk-in cooler at 47\u00b0F.  \n- Follow-up inspection for Golden Dragon is scheduled for November 3.  \n- The cooler temperature was 47\u00b0F, which is above the acceptable range.  \n- Golden Dragon should immediately repair or adjust the cooler to reach the proper temperature.  \n- Closure recommendations should be sent to Dana Whitfield, Rachandeep's supervisor.  \n- The follow-up inspection date remains November 3.  \n- Corrective actions and temperature monitoring should be documented.",
+      "lifetime_summary": null,
+      "episodic_facts": [
+        {
+          "id": "6ad276e64a969ab5be8b888e",
+          "fact": "The Golden Dragon follow-up was moved to November 10.",
+          "importance": 0.8,
+          "similarity": 0.4967,
+          "created_at": "2026-10-16T19:11:34.505000+00:00"
+        },
+        {
+          "id": "6ad276344a969ab5be8b887d",
+          "fact": "The user mentioned Golden Dragon (FA0148210) failed cold holding.",
+          "importance": 0.8,
+          "similarity": 0.4671,
+          "created_at": "2026-10-16T19:08:36.539000+00:00"
+        }
+      ]
+    },
+    "memory_updates": {
+      "facts_extracted": [],
+      "session_summary_updated": true,
+      "lifetime_summary_updated": true,
+      "policy": "none"
+    },
+    "usage": {
+      "prompt_tokens": 759,
+      "completion_tokens": 46,
+      "components": {
+        "system_primer": 95,
+        "long_term_summary": 148,
+        "short_term_window": 406,
+        "episodic_facts": 84,
+        "current_message": 17,
+        "counted_total": 750
+      },
+      "aux_prompt_tokens": 997,
+      "aux_completion_tokens": 285,
+      "aux_calls": 3,
+      "model_latency_ms": 33798.1,
+      "aux_latency_ms": 109592.4,
+      "latency_ms": 143609.7,
+      "tokenizer": "Qwen/Qwen3-8B"
+    },
+    "config": {
+      "SHORT_TERM_N": 12,
+      "SUMMARIZE_EVERY_USER_MSGS": 5,
+      "LIFETIME_EVERY_SESSION_SUMMARIES": 2,
+      "EPISODE_TOP_K": 3,
+      "MEMORY_POLICY": "none"
+    }
+  },
+  {
+    "turn": 11,
+    "message": "Which facility had the cooler problem, and when is its follow-up?",
+    "user_id": "s7117-rachandeep",
+    "session_id": "s7117-rachandeep-demo1",
+    "reply": "The facility with the cooler problem is Golden Dragon (FA0148210). Its follow-up inspection is scheduled for November 10.",
+    "memory_used": {
+      "short_term_count": 12,
+      "short_term": [
+        {
+          "role": "user",
+          "content": "My supervisor is Dana Whitfield, and closure recommendations go to her."
+        },
+        {
+          "role": "assistant",
+          "content": "Your closure recommendations should be sent to Dana Whitfield. The follow-up inspection for Golden Dragon is still scheduled for November 3. Let me know if you need help preparing the report."
+        },
+        {
+          "role": "user",
+          "content": "Remind me, what is the safe cold-holding temperature?"
+        },
+        {
+          "role": "assistant",
+          "content": "The safe cold-holding temperature for food is 41\u00b0F or below. The cooler at Golden Dragon was at 47\u00b0F, which is above the safe range."
+        },
+        {
+          "role": "user",
+          "content": "Update: the Golden Dragon follow-up moved to November 10 because a part is delayed."
+        },
+        {
+          "role": "assistant",
+          "content": "The follow-up inspection for Golden Dragon (FA0148210) has been moved to November 10 due to a delayed part. I've updated the schedule in the system. Let me know if you need further adjustments."
+        },
+        {
+          "role": "user",
+          "content": "Yummy Kitchen FA0206933 is next on my list for a routine inspection on October 22."
+        },
+        {
+          "role": "assistant",
+          "content": "Yummy Kitchen (FA0206933) is next on your list for a routine inspection on October 22. Ensure all previous findings are addressed before the visit. Let me know if you need help preparing for the inspection."
+        },
+        {
+          "role": "user",
+          "content": "What should I bring to a routine inspection?"
+        },
+        {
+          "role": "assistant",
+          "content": "Bring your inspection checklist, any previous inspection reports, and documentation of corrective actions taken. Also, carry your notebook and pen for notes during the visit. Let me know if you need a template for the checklist."
+        },
+        {
+          "role": "user",
+          "content": "Draft a two-line note to my supervisor about Golden Dragon."
+        },
+        {
+          "role": "assistant",
+          "content": "The follow-up inspection for Golden Dragon (FA0148210) has been rescheduled to November 10 due to a delayed part. The cold-holding failure remains unresolved and requires immediate corrective action."
+        }
+      ],
+      "session_summary": "- Golden Dragon (FA0148210) failed cold holding with the walk-in cooler at 47\u00b0F, which is above the safe range of 41\u00b0F or below.  \n- Follow-up inspection for Golden Dragon has been rescheduled to November 10 due to a delayed part.  \n- Golden Dragon should immediately repair or adjust the cooler to reach the proper temperature.  \n- Closure recommendations should be sent to Dana Whitfield, Rachandeep's supervisor.  \n- Corrective actions and temperature monitoring should be documented.  \n- Yummy Kitchen (FA0206933) is next on the list for a routine inspection on October 22.  \n- Bring inspection checklist, previous reports, corrective action documentation, and notebook for the routine inspection.",
+      "lifetime_summary": "- Golden Dragon (FA0148210) failed cold holding at 47\u00b0F (above safe range).  \n- Inspection rescheduled to November 10 due to delayed part.  \n- Immediate repair or adjustment required for cooler temperature.  \n- Closure recommendations to send to Dana Whitfield.  \n- Corrective actions and temperature monitoring must be documented.  \n- Yummy Kitchen (FA0206933) has routine inspection on October 22.  \n- Bring checklist, previous reports, corrective action docs, and notebook for inspection.",
+      "episodic_facts": [
+        {
+          "id": "6ad276344a969ab5be8b887e",
+          "fact": "The walk-in cooler was at 47F.",
+          "importance": 0.7,
+          "similarity": 0.5327,
+          "created_at": "2026-10-16T19:08:36.541000+00:00"
+        },
+        {
+          "id": "6ad276c34a969ab5be8b888b",
+          "fact": "The user is asking about the safe cold-holding temperature.",
+          "importance": 0.3,
+          "similarity": 0.4089,
+          "created_at": "2026-10-16T19:10:59.523000+00:00"
+        },
+        {
+          "id": "6ad276344a969ab5be8b887d",
+          "fact": "The user mentioned Golden Dragon (FA0148210) failed cold holding.",
+          "importance": 0.8,
+          "similarity": 0.3604,
+          "created_at": "2026-10-16T19:08:36.539000+00:00"
+        }
+      ]
+    },
+    "memory_updates": {
+      "facts_extracted": [
+        {
+          "fact": "The facility had a cooler problem.",
+          "importance": 0.5,
+          "action": "inserted"
+        },
+        {
+          "fact": "The facility's follow-up is scheduled for a specific date.",
+          "importance": 0.8,
+          "action": "inserted"
+        }
+      ],
+      "session_summary_updated": false,
+      "lifetime_summary_updated": false,
+      "policy": "none"
+    },
+    "usage": {
+      "prompt_tokens": 940,
+      "completion_tokens": 32,
+      "components": {
+        "system_primer": 95,
+        "long_term_summary": 293,
+        "short_term_window": 411,
+        "episodic_facts": 113,
+        "current_message": 19,
+        "counted_total": 931
+      },
+      "aux_prompt_tokens": 173,
+      "aux_completion_tokens": 50,
+      "aux_calls": 1,
+      "model_latency_ms": 44481.4,
+      "aux_latency_ms": 11015.2,
+      "latency_ms": 55627.1,
+      "tokenizer": "Qwen/Qwen3-8B"
+    },
+    "config": {
+      "SHORT_TERM_N": 12,
+      "SUMMARIZE_EVERY_USER_MSGS": 5,
+      "LIFETIME_EVERY_SESSION_SUMMARIES": 2,
+      "EPISODE_TOP_K": 3,
+      "MEMORY_POLICY": "none"
+    }
+  },
+  {
+    "turn": 12,
+    "message": "What do you remember about me?",
+    "user_id": "s7117-rachandeep",
+    "session_id": "s7117-rachandeep-demo1",
+    "reply": "You are preparing for inspections in the San Jose area, focusing on Golden Dragon (FA0148210) and Yummy Kitchen (FA0206933). You need to bring checklists, previous reports, and corrective action documentation for inspections. You also need to send closure recommendations to Dana Whitfield.",
+    "memory_used": {
+      "short_term_count": 12,
+      "short_term": [
+        {
+          "role": "user",
+          "content": "Remind me, what is the safe cold-holding temperature?"
+        },
+        {
+          "role": "assistant",
+          "content": "The safe cold-holding temperature for food is 41\u00b0F or below. The cooler at Golden Dragon was at 47\u00b0F, which is above the safe range."
+        },
+        {
+          "role": "user",
+          "content": "Update: the Golden Dragon follow-up moved to November 10 because a part is delayed."
+        },
+        {
+          "role": "assistant",
+          "content": "The follow-up inspection for Golden Dragon (FA0148210) has been moved to November 10 due to a delayed part. I've updated the schedule in the system. Let me know if you need further adjustments."
+        },
+        {
+          "role": "user",
+          "content": "Yummy Kitchen FA0206933 is next on my list for a routine inspection on October 22."
+        },
+        {
+          "role": "assistant",
+          "content": "Yummy Kitchen (FA0206933) is next on your list for a routine inspection on October 22. Ensure all previous findings are addressed before the visit. Let me know if you need help preparing for the inspection."
+        },
+        {
+          "role": "user",
+          "content": "What should I bring to a routine inspection?"
+        },
+        {
+          "role": "assistant",
+          "content": "Bring your inspection checklist, any previous inspection reports, and documentation of corrective actions taken. Also, carry your notebook and pen for notes during the visit. Let me know if you need a template for the checklist."
+        },
+        {
+          "role": "user",
+          "content": "Draft a two-line note to my supervisor about Golden Dragon."
+        },
+        {
+          "role": "assistant",
+          "content": "The follow-up inspection for Golden Dragon (FA0148210) has been rescheduled to November 10 due to a delayed part. The cold-holding failure remains unresolved and requires immediate corrective action."
+        },
+        {
+          "role": "user",
+          "content": "Which facility had the cooler problem, and when is its follow-up?"
+        },
+        {
+          "role": "assistant",
+          "content": "The facility with the cooler problem is Golden Dragon (FA0148210). Its follow-up inspection is scheduled for November 10."
+        }
+      ],
+      "session_summary": "- Golden Dragon (FA0148210) failed cold holding with the walk-in cooler at 47\u00b0F, which is above the safe range of 41\u00b0F or below.  \n- Follow-up inspection for Golden Dragon has been rescheduled to November 10 due to a delayed part.  \n- Golden Dragon should immediately repair or adjust the cooler to reach the proper temperature.  \n- Closure recommendations should be sent to Dana Whitfield, Rachandeep's supervisor.  \n- Corrective actions and temperature monitoring should be documented.  \n- Yummy Kitchen (FA0206933) is next on the list for a routine inspection on October 22.  \n- Bring inspection checklist, previous reports, corrective action documentation, and notebook for the routine inspection.",
+      "lifetime_summary": "- Golden Dragon (FA0148210) failed cold holding at 47\u00b0F (above safe range).  \n- Inspection rescheduled to November 10 due to delayed part.  \n- Immediate repair or adjustment required for cooler temperature.  \n- Closure recommendations to send to Dana Whitfield.  \n- Corrective actions and temperature monitoring must be documented.  \n- Yummy Kitchen (FA0206933) has routine inspection on October 22.  \n- Bring checklist, previous reports, corrective action docs, and notebook for inspection.",
+      "episodic_facts": []
+    },
+    "memory_updates": {
+      "facts_extracted": [],
+      "session_summary_updated": false,
+      "lifetime_summary_updated": false,
+      "policy": "none"
+    },
+    "usage": {
+      "prompt_tokens": 815,
+      "completion_tokens": 69,
+      "components": {
+        "system_primer": 95,
+        "long_term_summary": 293,
+        "short_term_window": 405,
+        "episodic_facts": 0,
+        "current_message": 12,
+        "counted_total": 805
+      },
+      "aux_prompt_tokens": 166,
+      "aux_completion_tokens": 6,
+      "aux_calls": 1,
+      "model_latency_ms": 32605.6,
+      "aux_latency_ms": 2729.4,
+      "latency_ms": 35435.2,
+      "tokenizer": "Qwen/Qwen3-8B"
+    },
+    "config": {
+      "SHORT_TERM_N": 12,
+      "SUMMARIZE_EVERY_USER_MSGS": 5,
+      "LIFETIME_EVERY_SESSION_SUMMARIES": 2,
+      "EPISODE_TOP_K": 3,
+      "MEMORY_POLICY": "none"
+    }
+  }
+]

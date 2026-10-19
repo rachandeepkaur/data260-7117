@@ -1,0 +1,539 @@
+[
+  {
+    "label": "create (POST)",
+    "request": {
+      "method": "POST",
+      "url": "http://127.0.0.1:8817/api/doc/inspections",
+      "body": {
+        "facility_name": "FA0148210 - GOLDEN DRAGON",
+        "description": "Walk-in cooler at 47F; cold holding failed.",
+        "status": "failed",
+        "program_element": "ROUTINE HEALTH INSPECTION",
+        "inspection_date": "2026-10-16T10:30:00-07:00"
+      }
+    },
+    "status": 201,
+    "expected": 201,
+    "ok": true,
+    "response": {
+      "id": "6ad275f74a969ab5be8b8874",
+      "facility_name": "FA0148210 - GOLDEN DRAGON",
+      "description": "Walk-in cooler at 47F; cold holding failed.",
+      "status": "failed",
+      "program_element": "ROUTINE HEALTH INSPECTION",
+      "inspection_date": "2026-10-16T17:30:00Z",
+      "created_at": "2026-10-16T19:07:35.066807Z",
+      "updated_at": "2026-10-16T19:07:35.066807Z"
+    }
+  },
+  {
+    "label": "retrieve one (GET /:id)",
+    "request": {
+      "method": "GET",
+      "url": "http://127.0.0.1:8817/api/doc/inspections/6ad275f74a969ab5be8b8874",
+      "body": null
+    },
+    "status": 200,
+    "expected": 200,
+    "ok": true,
+    "response": {
+      "id": "6ad275f74a969ab5be8b8874",
+      "facility_name": "FA0148210 - GOLDEN DRAGON",
+      "description": "Walk-in cooler at 47F; cold holding failed.",
+      "status": "failed",
+      "program_element": "ROUTINE HEALTH INSPECTION",
+      "inspection_date": "2026-10-16T17:30:00Z",
+      "created_at": "2026-10-16T19:07:35.066000Z",
+      "updated_at": "2026-10-16T19:07:35.066000Z"
+    }
+  },
+  {
+    "label": "retrieve all (GET)",
+    "request": {
+      "method": "GET",
+      "url": "http://127.0.0.1:8817/api/doc/inspections?limit=5",
+      "body": null
+    },
+    "status": 200,
+    "expected": 200,
+    "ok": true,
+    "response": [
+      {
+        "id": "6ad275f74a969ab5be8b8874",
+        "facility_name": "FA0148210 - GOLDEN DRAGON",
+        "description": "Walk-in cooler at 47F; cold holding failed.",
+        "status": "failed",
+        "program_element": "ROUTINE HEALTH INSPECTION",
+        "inspection_date": "2026-10-16T17:30:00Z",
+        "created_at": "2026-10-16T19:07:35.066000Z",
+        "updated_at": "2026-10-16T19:07:35.066000Z"
+      },
+      {
+        "id": "6ad1ec49f3bf08418bdb243b",
+        "facility_name": "FA0225566 - BURGER BARN",
+        "description": "No violations observed. Food handler cards current.",
+        "status": "passed",
+        "program_element": "FOOD PREP / FOOD SVC OP 0-5 EMPLOYEES RC 3 - FP11",
+        "inspection_date": "2026-10-04T15:00:00Z",
+        "created_at": "2026-10-16T09:20:09.938000Z",
+        "updated_at": "2026-10-16T09:20:09.938000Z"
+      },
+      {
+        "id": "6ad1ec49f3bf08418bdb243a",
+        "facility_name": "FA0213344 - LUCKY NOODLE",
+        "description": "No violations observed. Food handler cards current.",
+        "status": "failed",
+        "program_element": "ROUTINE HEALTH INSPECTION",
+        "inspection_date": "2026-10-01T14:00:00Z",
+        "created_at": "2026-10-16T09:20:09.938000Z",
+        "updated_at": "2026-10-16T09:20:09.938000Z"
+      },
+      {
+        "id": "6ad1ec49f3bf08418bdb2439",
+        "facility_name": "FA0201122 - GREEN BOWL CAFE",
+        "description": "Walk-in cooler at 45F, above the 41F limit; product discarded.",
+        "status": "failed",
+        "program_element": "ROUTINE HEALTH INSPECTION",
+        "inspection_date": "2026-09-28T15:00:00Z",
+        "created_at": "2026-10-16T09:20:09.938000Z",
+        "updated_at": "2026-10-16T09:20:09.938000Z"
+      },
+      {
+        "id": "6ad1ec49f3bf08418bdb2438",
+        "facility_name": "FA0199887 - CURRY HOUSE",
+        "description": "Evidence of rodent droppings in dry storage; follow-up scheduled.",
+        "status": "passed",
+        "program_element": "FOLLOW-UP COMPLIANCE CHECK",
+        "inspection_date": "2026-09-25T15:00:00Z",
+        "created_at": "2026-10-16T09:20:09.938000Z",
+        "updated_at": "2026-10-16T09:20:09.938000Z"
+      }
+    ]
+  },
+  {
+    "label": "filter by status (GET ?status=failed)",
+    "request": {
+      "method": "GET",
+      "url": "http://127.0.0.1:8817/api/doc/inspections?status=failed&limit=3",
+      "body": null
+    },
+    "status": 200,
+    "expected": 200,
+    "ok": true,
+    "response": [
+      {
+        "id": "6ad275f74a969ab5be8b8874",
+        "facility_name": "FA0148210 - GOLDEN DRAGON",
+        "description": "Walk-in cooler at 47F; cold holding failed.",
+        "status": "failed",
+        "program_element": "ROUTINE HEALTH INSPECTION",
+        "inspection_date": "2026-10-16T17:30:00Z",
+        "created_at": "2026-10-16T19:07:35.066000Z",
+        "updated_at": "2026-10-16T19:07:35.066000Z"
+      },
+      {
+        "id": "6ad1ec49f3bf08418bdb243a",
+        "facility_name": "FA0213344 - LUCKY NOODLE",
+        "description": "No violations observed. Food handler cards current.",
+        "status": "failed",
+        "program_element": "ROUTINE HEALTH INSPECTION",
+        "inspection_date": "2026-10-01T14:00:00Z",
+        "created_at": "2026-10-16T09:20:09.938000Z",
+        "updated_at": "2026-10-16T09:20:09.938000Z"
+      },
+      {
+        "id": "6ad1ec49f3bf08418bdb2439",
+        "facility_name": "FA0201122 - GREEN BOWL CAFE",
+        "description": "Walk-in cooler at 45F, above the 41F limit; product discarded.",
+        "status": "failed",
+        "program_element": "ROUTINE HEALTH INSPECTION",
+        "inspection_date": "2026-09-28T15:00:00Z",
+        "created_at": "2026-10-16T09:20:09.938000Z",
+        "updated_at": "2026-10-16T09:20:09.938000Z"
+      }
+    ]
+  },
+  {
+    "label": "update (PUT /:id)",
+    "request": {
+      "method": "PUT",
+      "url": "http://127.0.0.1:8817/api/doc/inspections/6ad275f74a969ab5be8b8874",
+      "body": {
+        "status": "follow_up_required",
+        "description": "Follow-up moved to 2026-11-10."
+      }
+    },
+    "status": 200,
+    "expected": 200,
+    "ok": true,
+    "response": {
+      "id": "6ad275f74a969ab5be8b8874",
+      "facility_name": "FA0148210 - GOLDEN DRAGON",
+      "description": "Follow-up moved to 2026-11-10.",
+      "status": "follow_up_required",
+      "program_element": "ROUTINE HEALTH INSPECTION",
+      "inspection_date": "2026-10-16T17:30:00Z",
+      "created_at": "2026-10-16T19:07:35.066000Z",
+      "updated_at": "2026-10-16T19:07:35.103000Z"
+    }
+  },
+  {
+    "label": "delete (DELETE /:id)",
+    "request": {
+      "method": "DELETE",
+      "url": "http://127.0.0.1:8817/api/doc/inspections/6ad275f74a969ab5be8b8874",
+      "body": null
+    },
+    "status": 200,
+    "expected": 200,
+    "ok": true,
+    "response": {
+      "deleted": true,
+      "id": "6ad275f74a969ab5be8b8874"
+    }
+  },
+  {
+    "label": "get deleted -> not found",
+    "request": {
+      "method": "GET",
+      "url": "http://127.0.0.1:8817/api/doc/inspections/6ad275f74a969ab5be8b8874",
+      "body": null
+    },
+    "status": 404,
+    "expected": 404,
+    "ok": true,
+    "response": {
+      "detail": "Inspection document 6ad275f74a969ab5be8b8874 not found"
+    }
+  },
+  {
+    "label": "update missing -> not found",
+    "request": {
+      "method": "PUT",
+      "url": "http://127.0.0.1:8817/api/doc/inspections/6ad275f74a969ab5be8b8874",
+      "body": {
+        "status": "passed"
+      }
+    },
+    "status": 404,
+    "expected": 404,
+    "ok": true,
+    "response": {
+      "detail": "Inspection document 6ad275f74a969ab5be8b8874 not found"
+    }
+  },
+  {
+    "label": "delete missing -> not found",
+    "request": {
+      "method": "DELETE",
+      "url": "http://127.0.0.1:8817/api/doc/inspections/6ad275f74a969ab5be8b8874",
+      "body": null
+    },
+    "status": 404,
+    "expected": 404,
+    "ok": true,
+    "response": {
+      "detail": "Inspection document 6ad275f74a969ab5be8b8874 not found"
+    }
+  },
+  {
+    "label": "missing required fields",
+    "request": {
+      "method": "POST",
+      "url": "http://127.0.0.1:8817/api/doc/inspections",
+      "body": {
+        "description": "no title, no category, no date"
+      }
+    },
+    "status": 422,
+    "expected": 422,
+    "ok": true,
+    "response": {
+      "error": "validation_error",
+      "detail": [
+        {
+          "field": "facility_name",
+          "message": "Field required",
+          "type": "missing"
+        },
+        {
+          "field": "program_element",
+          "message": "Field required",
+          "type": "missing"
+        },
+        {
+          "field": "inspection_date",
+          "message": "Field required",
+          "type": "missing"
+        }
+      ]
+    }
+  },
+  {
+    "label": "invalid enum values",
+    "request": {
+      "method": "POST",
+      "url": "http://127.0.0.1:8817/api/doc/inspections",
+      "body": {
+        "facility_name": "FA0148210 - GOLDEN DRAGON",
+        "description": "Walk-in cooler at 47F; cold holding failed.",
+        "status": "closed",
+        "program_element": "BAKERY",
+        "inspection_date": "2026-10-16T10:30:00-07:00"
+      }
+    },
+    "status": 422,
+    "expected": 422,
+    "ok": true,
+    "response": {
+      "error": "validation_error",
+      "detail": [
+        {
+          "field": "status",
+          "message": "Input should be 'scheduled', 'in_progress', 'passed', 'failed' or 'follow_up_required'",
+          "type": "enum",
+          "allowed": "'scheduled', 'in_progress', 'passed', 'failed' or 'follow_up_required'"
+        },
+        {
+          "field": "program_element",
+          "message": "Input should be 'FOOD PREP / FOOD SVC OP 0-5 EMPLOYEES RC 3 - FP11', 'FOOD PREP / FOOD SVC OP 6-25 EMPLOYEES', 'ROUTINE HEALTH INSPECTION' or 'FOLLOW-UP COMPLIANCE CHECK'",
+          "type": "enum",
+          "allowed": "'FOOD PREP / FOOD SVC OP 0-5 EMPLOYEES RC 3 - FP11', 'FOOD PREP / FOOD SVC OP 6-25 EMPLOYEES', 'ROUTINE HEALTH INSPECTION' or 'FOLLOW-UP COMPLIANCE CHECK'"
+        }
+      ]
+    }
+  },
+  {
+    "label": "incorrect data types",
+    "request": {
+      "method": "POST",
+      "url": "http://127.0.0.1:8817/api/doc/inspections",
+      "body": {
+        "facility_name": 12345,
+        "description": "Walk-in cooler at 47F; cold holding failed.",
+        "status": "failed",
+        "program_element": "ROUTINE HEALTH INSPECTION",
+        "inspection_date": true
+      }
+    },
+    "status": 422,
+    "expected": 422,
+    "ok": true,
+    "response": {
+      "error": "validation_error",
+      "detail": [
+        {
+          "field": "facility_name",
+          "message": "Input should be a valid string",
+          "type": "string_type"
+        },
+        {
+          "field": "inspection_date",
+          "message": "Input should be a valid datetime",
+          "type": "datetime_type"
+        }
+      ]
+    }
+  },
+  {
+    "label": "bad date format",
+    "request": {
+      "method": "POST",
+      "url": "http://127.0.0.1:8817/api/doc/inspections",
+      "body": {
+        "facility_name": "FA0148210 - GOLDEN DRAGON",
+        "description": "Walk-in cooler at 47F; cold holding failed.",
+        "status": "failed",
+        "program_element": "ROUTINE HEALTH INSPECTION",
+        "inspection_date": "16/10/2026"
+      }
+    },
+    "status": 422,
+    "expected": 422,
+    "ok": true,
+    "response": {
+      "error": "validation_error",
+      "detail": [
+        {
+          "field": "inspection_date",
+          "message": "Input should be a valid datetime or date, invalid character in year",
+          "type": "datetime_from_date_parsing"
+        }
+      ]
+    }
+  },
+  {
+    "label": "facility_name over 100 chars",
+    "request": {
+      "method": "POST",
+      "url": "http://127.0.0.1:8817/api/doc/inspections",
+      "body": {
+        "facility_name": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+        "description": "Walk-in cooler at 47F; cold holding failed.",
+        "status": "failed",
+        "program_element": "ROUTINE HEALTH INSPECTION",
+        "inspection_date": "2026-10-16T10:30:00-07:00"
+      }
+    },
+    "status": 422,
+    "expected": 422,
+    "ok": true,
+    "response": {
+      "error": "validation_error",
+      "detail": [
+        {
+          "field": "facility_name",
+          "message": "String should have at most 100 characters",
+          "type": "string_too_long"
+        }
+      ]
+    }
+  },
+  {
+    "label": "blank facility_name",
+    "request": {
+      "method": "POST",
+      "url": "http://127.0.0.1:8817/api/doc/inspections",
+      "body": {
+        "facility_name": "   ",
+        "description": "Walk-in cooler at 47F; cold holding failed.",
+        "status": "failed",
+        "program_element": "ROUTINE HEALTH INSPECTION",
+        "inspection_date": "2026-10-16T10:30:00-07:00"
+      }
+    },
+    "status": 422,
+    "expected": 422,
+    "ok": true,
+    "response": {
+      "error": "validation_error",
+      "detail": [
+        {
+          "field": "facility_name",
+          "message": "Value error, must not be blank",
+          "type": "value_error"
+        }
+      ]
+    }
+  },
+  {
+    "label": "unknown field (client-set created_at)",
+    "request": {
+      "method": "POST",
+      "url": "http://127.0.0.1:8817/api/doc/inspections",
+      "body": {
+        "facility_name": "FA0148210 - GOLDEN DRAGON",
+        "description": "Walk-in cooler at 47F; cold holding failed.",
+        "status": "failed",
+        "program_element": "ROUTINE HEALTH INSPECTION",
+        "inspection_date": "2026-10-16T10:30:00-07:00",
+        "created_at": "2020-01-01"
+      }
+    },
+    "status": 422,
+    "expected": 422,
+    "ok": true,
+    "response": {
+      "error": "validation_error",
+      "detail": [
+        {
+          "field": "created_at",
+          "message": "Extra inputs are not permitted",
+          "type": "extra_forbidden"
+        }
+      ]
+    }
+  },
+  {
+    "label": "empty update body",
+    "request": {
+      "method": "PUT",
+      "url": "http://127.0.0.1:8817/api/doc/inspections/000000000000000000000000",
+      "body": {}
+    },
+    "status": 422,
+    "expected": 422,
+    "ok": true,
+    "response": {
+      "error": "validation_error",
+      "detail": [
+        {
+          "field": "body",
+          "message": "Value error, provide at least one field to update",
+          "type": "value_error"
+        }
+      ]
+    }
+  },
+  {
+    "label": "malformed JSON",
+    "request": {
+      "method": "POST",
+      "url": "http://127.0.0.1:8817/api/doc/inspections",
+      "body": "{bad json"
+    },
+    "status": 400,
+    "expected": 400,
+    "ok": true,
+    "response": {
+      "error": "malformed_json",
+      "detail": "Expecting property name enclosed in double quotes: line 1 column 2 (char 1)"
+    }
+  },
+  {
+    "label": "wrong content type",
+    "request": {
+      "method": "POST",
+      "url": "http://127.0.0.1:8817/api/doc/inspections",
+      "body": "facility_name=x"
+    },
+    "status": 415,
+    "expected": 415,
+    "ok": true,
+    "response": {
+      "error": "unsupported_media_type",
+      "detail": "Send the request body as application/json"
+    }
+  },
+  {
+    "label": "malformed ObjectId",
+    "request": {
+      "method": "GET",
+      "url": "http://127.0.0.1:8817/api/doc/inspections/not-an-id",
+      "body": null
+    },
+    "status": 400,
+    "expected": 400,
+    "ok": true,
+    "response": {
+      "detail": "'not-an-id' is not a valid 24-character hex ObjectId"
+    }
+  },
+  {
+    "label": "create sample doc kept for Compass",
+    "request": {
+      "method": "POST",
+      "url": "http://127.0.0.1:8817/api/doc/inspections",
+      "body": {
+        "facility_name": "FA0206933 - YUMMY KITCHEN",
+        "description": "Created by part1_doc_api_demo.py",
+        "status": "scheduled",
+        "program_element": "FOLLOW-UP COMPLIANCE CHECK",
+        "inspection_date": "2026-10-22T09:00:00-07:00"
+      }
+    },
+    "status": 201,
+    "expected": 201,
+    "ok": true,
+    "response": {
+      "id": "6ad275f74a969ab5be8b8875",
+      "facility_name": "FA0206933 - YUMMY KITCHEN",
+      "description": "Created by part1_doc_api_demo.py",
+      "status": "scheduled",
+      "program_element": "FOLLOW-UP COMPLIANCE CHECK",
+      "inspection_date": "2026-10-22T16:00:00Z",
+      "created_at": "2026-10-16T19:07:35.181174Z",
+      "updated_at": "2026-10-16T19:07:35.181174Z"
+    }
+  }
+]

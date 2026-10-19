@@ -1,0 +1,38 @@
+[
+  {
+    "Metric":"Mean prompt tokens\/turn",
+    "SHORT_TERM_N=12":964.8,
+    "Compression policy (N=12)":576.7,
+    "Change":"-388.1 (-40.2%)"
+  },
+  {
+    "Metric":"Short-term window tokens\/turn",
+    "SHORT_TERM_N=12":480.2,
+    "Compression policy (N=12)":255.5,
+    "Change":"-224.7"
+  },
+  {
+    "Metric":"Episodic-fact tokens\/turn",
+    "SHORT_TERM_N=12":82.2,
+    "Compression policy (N=12)":19.8,
+    "Change":"-62.4"
+  },
+  {
+    "Metric":"Input tokens per 30-turn conversation",
+    "SHORT_TERM_N=12":28945.0,
+    "Compression policy (N=12)":17301.0,
+    "Change":"-11644"
+  },
+  {
+    "Metric":"Mean latency (ms)",
+    "SHORT_TERM_N=12":61394.0,
+    "Compression policy (N=12)":43548.0,
+    "Change":"-17846"
+  },
+  {
+    "Metric":"Probe quality (1-5)",
+    "SHORT_TERM_N=12":4.6,
+    "Compression policy (N=12)":3.8,
+    "Change":"-0.80"
+  }
+]

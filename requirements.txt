@@ -21,3 +21,6 @@ requests>=2.31
 # HW5
 mcp[cli]>=1.9,<2   # 2.x renamed FastMCP -> MCPServer
 httpx>=0.27
+# HW6
+pymongo>=4.6
+tokenizers>=0.15   # Qwen3 tokenizer for per-component token counts

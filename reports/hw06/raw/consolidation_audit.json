@@ -1,0 +1,205 @@
+{
+  "total_lines_before": 55,
+  "total_lines_after": 39,
+  "under_40_lines": true,
+  "non_comment_lines": [
+    52,
+    34
+  ],
+  "facts": [
+    50,
+    25
+  ],
+  "exact_duplicates_merged_deterministically": 10,
+  "duplicates": [
+    {
+      "topic": "name",
+      "copies_before": 3,
+      "lines_after": 0,
+      "merged": false
+    },
+    {
+      "topic": "API port",
+      "copies_before": 3,
+      "lines_after": 1,
+      "merged": true
+    },
+    {
+      "topic": "Fahrenheit",
+      "copies_before": 3,
+      "lines_after": 1,
+      "merged": true
+    },
+    {
+      "topic": "8 AM start",
+      "copies_before": 2,
+      "lines_after": 1,
+      "merged": true
+    },
+    {
+      "topic": "qwen3 model",
+      "copies_before": 2,
+      "lines_after": 1,
+      "merged": true
+    },
+    {
+      "topic": "Yummy Kitchen code",
+      "copies_before": 2,
+      "lines_after": 1,
+      "merged": true
+    },
+    {
+      "topic": "GitHub repo",
+      "copies_before": 2,
+      "lines_after": 1,
+      "merged": true
+    },
+    {
+      "topic": "Sakura rice pH",
+      "copies_before": 2,
+      "lines_after": 1,
+      "merged": true
+    },
+    {
+      "topic": "MySQL db",
+      "copies_before": 2,
+      "lines_after": 2,
+      "merged": false
+    },
+    {
+      "topic": "MongoDB db",
+      "copies_before": 2,
+      "lines_after": 1,
+      "merged": true
+    },
+    {
+      "topic": "cooler 47F",
+      "copies_before": 2,
+      "lines_after": 1,
+      "merged": true
+    },
+    {
+      "topic": "Bay BBQ 98",
+      "copies_before": 2,
+      "lines_after": 1,
+      "merged": true
+    },
+    {
+      "topic": "short answers",
+      "copies_before": 2,
+      "lines_after": 1,
+      "merged": true
+    },
+    {
+      "topic": "HW6 deadline",
+      "copies_before": 2,
+      "lines_after": 1,
+      "merged": true
+    },
+    {
+      "topic": "Curry House follow-up",
+      "copies_before": 2,
+      "lines_after": 1,
+      "merged": true
+    }
+  ],
+  "duplicates_merged": 13,
+  "contradictions": [
+    {
+      "topic": "supervisor",
+      "status": "incorrect",
+      "superseded_value_still_visible": true,
+      "silently_deleted": false,
+      "audit_flagged": true,
+      "rule": "newest date wins (2026-10-05 over 2026-09-02)"
+    },
+    {
+      "topic": "district",
+      "status": "unresolved_both_kept",
+      "superseded_value_still_visible": false,
+      "silently_deleted": false,
+      "audit_flagged": false,
+      "rule": "newest date wins (2026-09-25 over 2026-09-01)"
+    },
+    {
+      "topic": "report format",
+      "status": "correct",
+      "superseded_value_still_visible": true,
+      "silently_deleted": false,
+      "audit_flagged": false,
+      "rule": "newest date wins (2026-10-03 over 2026-09-10)"
+    },
+    {
+      "topic": "Golden Dragon follow-up date",
+      "status": "correct",
+      "superseded_value_still_visible": true,
+      "silently_deleted": false,
+      "audit_flagged": false,
+      "rule": "newest date wins (2026-10-14 over 2026-10-01)"
+    },
+    {
+      "topic": "Golden Dragon facility code",
+      "status": "correct",
+      "superseded_value_still_visible": true,
+      "silently_deleted": false,
+      "audit_flagged": false,
+      "rule": "the OLDER fact wins - it is confirmed from the permit, the newer one is an unverified guess (a plain newest-wins consolidation gets this one wrong)"
+    }
+  ],
+  "contradictions_correct": 3,
+  "no_silent_deletion": true,
+  "needs_review": [
+    {
+      "id": "F42",
+      "text": "Keep answers short: four sentences at most."
+    }
+  ],
+  "model_resolutions_audit": [
+    {
+      "kept": "F20",
+      "superseded": [
+        "F38"
+      ],
+      "verdict": "consistent_with_rule",
+      "issues": []
+    },
+    {
+      "kept": "F46",
+      "superseded": [
+        "F12",
+        "F30"
+      ],
+      "verdict": "consistent_with_rule",
+      "issues": []
+    },
+    {
+      "kept": "F50",
+      "superseded": [
+        "F28",
+        "F41"
+      ],
+      "verdict": "consistent_with_rule",
+      "issues": []
+    },
+    {
+      "kept": "F14",
+      "superseded": [
+        "F37"
+      ],
+      "verdict": "possibly_incorrect",
+      "issues": [
+        "kept F14 (2026-09-12) over NEWER F37 (2026-10-10)"
+      ]
+    },
+    {
+      "kept": "F04",
+      "superseded": [
+        "F32+F43"
+      ],
+      "verdict": "possibly_incorrect",
+      "issues": [
+        "kept F04 (2026-09-02) over NEWER F32+F43 (2026-10-15)"
+      ]
+    }
+  ]
+}
