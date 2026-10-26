@@ -1,0 +1,52 @@
+{
+  "instruction": "Find the Python file in the sandbox that contains DEBUG and show me its full contents. Use exactly three steps: glob_files to list the *.py files, then search_in_files for DEBUG with file_pattern *.py, then read_file on the matching file.",
+  "offline": false,
+  "tool_order": [
+    "glob_files",
+    "search_in_files",
+    "read_file"
+  ],
+  "sequence_ok": true,
+  "found_debug_file": true,
+  "contents_shown": true,
+  "stop_reason": "final_answer",
+  "tool_calls": 3,
+  "final_answer": "Here is the full contents of the Python file containing DEBUG:\n\n```\nDEBUG = True\n\ndef main() -> None:\n    \"\"\"Entry point.\"\"\"\n    print(\"inspection app\")\n```",
+  "trace": [
+    {
+      "tool": "glob_files",
+      "inputs": {
+        "pattern": "**/*.py"
+      },
+      "ok": true
+    },
+    {
+      "tool": "search_in_files",
+      "inputs": {
+        "pattern": "DEBUG",
+        "file_pattern": "*.py",
+        "regex": false
+      },
+      "ok": true
+    },
+    {
+      "tool": "read_file",
+      "inputs": {
+        "path": "app.py"
+      },
+      "ok": true
+    }
+  ],
+  "read_max_lines": {
+    "path": "models.py",
+    "content": "from dataclasses import dataclass\n",
+    "total_lines": 7,
+    "lines_returned": 2,
+    "truncated": true
+  },
+  "search_file_pattern": [
+    "utils.py"
+  ],
+  "edit_diff": "--- a/app.py\n+++ b/app.py\n@@ -1,2 +1,2 @@\n-DEBUG = True\n+DEBUG = False\n ",
+  "passed": true
+}

@@ -16,11 +16,6 @@ from typing import List, Optional
 
 from bson import ObjectId
 from bson.errors import InvalidId
-from fastapi import APIRouter, HTTPException, Query, Response, status
-from pymongo import ReturnDocument
-from pymongo.errors import WriteError
-
-import settings
 from doc_schemas import (
     InspectionDocCreate,
     InspectionDocOut,
@@ -28,6 +23,11 @@ from doc_schemas import (
     InspectionStatus,
     ProgramElement,
 )
+from fastapi import APIRouter, HTTPException, Query, Response, status
+from pymongo import ReturnDocument
+from pymongo.errors import WriteError
+
+import settings
 from mongo import get_db
 
 router = APIRouter(prefix="/api/doc/inspections", tags=["doc-inspections (MongoDB)"])
@@ -41,7 +41,7 @@ def _object_id(doc_id: str) -> ObjectId:
     try:
         return ObjectId(doc_id)
     except (InvalidId, TypeError):
-        raise HTTPException(status_code=400, detail=f"'{doc_id}' is not a valid 24-character hex ObjectId")
+        raise HTTPException(status_code=400, detail=f"'{doc_id}' is not a valid 24-character hex ObjectId") from None
 
 
 def _not_found(doc_id: str) -> HTTPException:

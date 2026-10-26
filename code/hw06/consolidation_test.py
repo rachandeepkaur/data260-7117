@@ -56,8 +56,10 @@ def grade(text: str, expected: dict, audit: list[dict], summary: dict) -> dict:
         status = ("correct" if keep_now and not drop_now else
                   "incorrect" if drop_now and not keep_now else
                   "unresolved_both_kept" if keep_now and drop_now else "missing")
-        flagged = any(c["drop"].lower() in line.lower() and "AUDIT" in line for line in sec.get("resolved contradictions", [])) \
-            or any(c["keep"].lower() in line.lower() and "AUDIT" in line for line in sec.get("resolved contradictions", []))
+        flagged = any(c["drop"].lower() in line.lower() and "AUDIT" in line for line in sec.get("resolved "
+                                                                                                "contradictions", [])) \
+            or any(c["keep"].lower() in line.lower() and "AUDIT" in line for line in sec.get("resolved "
+                                                                                             "contradictions", []))
         contradictions.append({"topic": c["topic"], "status": status, "superseded_value_still_visible": visible,
                                "silently_deleted": not drop_now and not visible,
                                "audit_flagged": flagged, "rule": c["rule"]})

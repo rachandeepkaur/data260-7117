@@ -6,8 +6,9 @@ sys.path.insert(0, str(REPO / "code"))
 sys.path.insert(0, str(REPO / "src"))
 
 from agents_demo import InspectionSubmission, PlannerOutput, ReviewerOutput, RevisedOutput
+from langgraph_agent import MAX_TURNS, build_graph
+
 from model_client import ModelClientError
-from langgraph_agent import build_graph, MAX_TURNS
 
 
 class StubClient:
@@ -27,8 +28,8 @@ class StubClient:
             self.planner_prompts.append(user)
             if self.planner_calls <= self.fail_times:
                 raise ModelClientError(
-                    f"Model did not return valid 'PlannerOutput' JSON after 3 attempt(s). "
-                    f"Last error: ValidationError('draft_summary must be at most 25 words, got 31')"
+                    "Model did not return valid 'PlannerOutput' JSON after 3 attempt(s). "
+                    "Last error: ValidationError('draft_summary must be at most 25 words, got 31')"
                 )
             return PlannerOutput(tags=["tag one", "tag two", "tag three"], draft_summary="a fine draft summary")
         if output_format is ReviewerOutput:
@@ -59,7 +60,9 @@ for step in app.stream(initial_state):
             print(f"  supervisor -> turn_count={update['turn_count']}")
         elif node_name == "planner":
             ok = "planner_proposal" in update and update["planner_proposal"] is not None
-            print(f"  planner call #{client.planner_calls}: {'SUCCEEDED' if ok else 'CAUGHT ModelClientError, fed back as reviewer_feedback'}")
+            print(f"  planner call "
+                  f"#{client.planner_calls}: {'SUCCEEDED' if ok else 'CAUGHT ModelClientError, fed back as '
+                                                                     'reviewer_feedback'}")
             if not ok:
                 print(f"    reviewer_feedback = {update['reviewer_feedback']}")
         elif node_name == "reviewer":

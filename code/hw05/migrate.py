@@ -29,7 +29,7 @@ def load_blocks() -> dict[str, str]:
     blocks: dict[str, str] = {}
     for chunk in re.split(r"^-- @block ", sql, flags=re.M)[1:]:
         name, _, body = chunk.partition("\n")
-        body = "\n".join(l for l in body.splitlines() if not l.strip().startswith("--"))
+        body = "\n".join(line for line in body.splitlines() if not line.strip().startswith("--"))
         blocks[name.strip()] = body.strip().rstrip(";")
     return blocks
 
@@ -88,7 +88,8 @@ def main() -> None:
 
         if not constraint_exists(conn, "fk_inspections_inspector"):
             conn.execute(text(blocks["constrain_inspections"]))
-            say("inspections: NOT NULL + UNIQUE(inspection_code) + CHECK(score) + FK -> inspectors (ON DELETE RESTRICT)")
+            say("inspections: NOT NULL + UNIQUE(inspection_code) + CHECK(score) + FK -> inspectors (ON DELETE "
+                "RESTRICT)")
         else:
             say("constraints already present - skipped")
 

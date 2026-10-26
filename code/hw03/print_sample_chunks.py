@@ -38,7 +38,8 @@ def main() -> None:
             continue
         row = row.iloc[0]
         print("=" * 100)
-        print(f"{DISPLAY_NAMES[technique]}  |  question={question_id}  |  chunk_length={int(row['chunk_length'])} chars  |  cosine={row['cosine_similarity']:.4f}")
+        print(f"{DISPLAY_NAMES[technique]}  |  question={question_id}  |  "
+              f"chunk_length={int(row['chunk_length'])} chars  |  cosine={row['cosine_similarity']:.4f}")
         print("=" * 100)
         print(row["text"])
         print()

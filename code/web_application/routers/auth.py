@@ -2,10 +2,9 @@ import os
 import secrets
 import time
 
-from fastapi import APIRouter, Request, Form
+from fastapi import APIRouter, Form, Request
 from fastapi.responses import RedirectResponse
 from starlette.status import HTTP_302_FOUND
-
 from templating import templates
 
 # Create a router object

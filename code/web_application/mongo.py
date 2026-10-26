@@ -9,12 +9,12 @@ from __future__ import annotations
 
 from functools import lru_cache
 
+from doc_schemas import CATEGORIES, STATUSES
 from pymongo import ASCENDING, DESCENDING, MongoClient
 from pymongo.database import Database
 from pymongo.errors import CollectionInvalid
 
 import settings
-from doc_schemas import CATEGORIES, STATUSES
 
 
 @lru_cache(maxsize=1)

@@ -20,11 +20,12 @@ CODE = Path(__file__).resolve().parent.parent
 for p in (CODE / "web_application", CODE / "hw06", CODE):
     sys.path.insert(0, str(p))
 
+import memory_service as ms  # noqa: E402
 import numpy as np  # noqa: E402
+from doc_schemas import ChatRequest, InspectionDocCreate, InspectionDocUpdate  # noqa: E402
+from probe_scoring import load_probes, score_reply  # noqa: E402
 from pydantic import ValidationError  # noqa: E402
 
-import memory_service as ms  # noqa: E402
-from doc_schemas import ChatRequest, InspectionDocCreate, InspectionDocUpdate  # noqa: E402
 from file_memory import (  # noqa: E402
     FileMemorySession,
     append_facts,
@@ -37,7 +38,6 @@ from file_memory import (  # noqa: E402
     parse_facts,
     read_last_consolidated,
 )
-from probe_scoring import load_probes, score_reply  # noqa: E402
 
 NOW = datetime(2026, 10, 16, 12, 0, tzinfo=timezone.utc)
 VALID_DOC = {"facility_name": "FA1 - TEST CAFE", "program_element": "ROUTINE HEALTH INSPECTION",

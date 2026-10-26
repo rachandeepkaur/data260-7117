@@ -493,3 +493,36 @@ Safety rule: inspection_stats must cover >= 5 inspections
 [BLOCKED] execute_tool('inspection_stats', {"facility_query": "FA0183034"})
   -> {"ok": false, "data": null, "error": "SAFETY_RULE_BLOCKED: inspection_stats matched 1 inspection(s); aggregates over fewer than 5 inspections are suppressed because they would disclose individual results. Use get_inspection for a single record or widen the filter."}
 
+
+===== [2026-10-26 12:41:26 PDT] make migrate-hw05 (user: rachandeep Kaur) =====
+inspectors table: ok
+seeded 20 inspectors (SEED=7117)
+inspections: added inspection_code, score, inspector_id, created_at, updated_at
+backfilled 5000 inspections
+inspections: NOT NULL + UNIQUE(inspection_code) + CHECK(score) + FK -> inspectors (ON DELETE RESTRICT)
+CREATE TABLE `inspectors` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `full_name` varchar(120) NOT NULL,
+  `district` varchar(120) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `created_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `updated_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uq_inspectors_email` (`email`)
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+CREATE TABLE `inspections` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `inspection_code` varchar(16) NOT NULL,
+  `facility_name` varchar(255) NOT NULL,
+  `site_address` varchar(255) NOT NULL,
+  `score` int NOT NULL DEFAULT '100',
+  `inspector_id` int NOT NULL,
+  `created_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `updated_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uq_inspections_code` (`inspection_code`),
+  KEY `fk_inspections_inspector` (`inspector_id`),
+  CONSTRAINT `fk_inspections_inspector` FOREIGN KEY (`inspector_id`) REFERENCES `inspectors` (`id`) ON DELETE RESTRICT ON UPDATE CASCADE,
+  CONSTRAINT `ck_inspections_score` CHECK ((`score` between 0 and 100))
+) ENGINE=InnoDB AUTO_INCREMENT=5001 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+row counts: inspectors=20 inspections=5000

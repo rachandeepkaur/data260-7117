@@ -17,12 +17,12 @@ import time
 
 from fastapi import APIRouter, Depends, Query, Response
 from pydantic import BaseModel
+from query_counter import count_queries
 from sqlalchemy import select
 from sqlalchemy.orm import Session, selectinload
 
 from database import get_db
 from models import Inspection, User, Violation
-from query_counter import count_queries
 from security import get_current_user
 
 router = APIRouter(prefix="/api/nplus1", tags=["n+1 experiment"])

@@ -1,6 +1,7 @@
 """MySQL-backed CRUD for inspection records (HW4 Part 2, extended in HW5).
 
-Every route requires a logged-in user (server-side session cookie).
+Every route requires a JWT bearer token (HW7; HW4 used a session cookie):
+list/read any role, create/update writer or moderator, delete moderator only.
     POST   /api/records            add a record
     GET    /api/records            view all records (optional limit/offset)
     GET    /api/records/{id}       view one record
@@ -26,9 +27,13 @@ from sqlalchemy.orm import Session
 
 from database import get_db
 from models import Inspection, Inspector, User
-from security import get_current_user
+from security import get_current_user, require_roles
 
 router = APIRouter(prefix="/api/records", tags=["records"])
+
+# HW7 role rules, shared with routers/inspectors.py.
+WRITE_ROLES = require_roles("writer", "moderator")
+DELETE_ROLES = require_roles("moderator")
 
 INSPECTION_CODE_PATTERN = r"^INS-\d{6}$"
 
@@ -115,7 +120,7 @@ def list_records(
 @router.post("", response_model=RecordOut, status_code=201)
 def create_record(
     payload: RecordIn,
-    _user: User = Depends(get_current_user),
+    _user: User = Depends(WRITE_ROLES),
     db_session_basede26: Session = Depends(get_db),
 ) -> Inspection:
     _require_inspector(db_session_basede26, payload.inspector_id)
@@ -133,7 +138,7 @@ def create_record(
 # Registered before "/{record_id}" so "highest" isn't parsed as an int id.
 @router.delete("/highest", response_model=Optional[RecordOut])
 def delete_highest_record(
-    _user: User = Depends(get_current_user),
+    _user: User = Depends(DELETE_ROLES),
     db_session_basede26: Session = Depends(get_db),
 ) -> Optional[Inspection]:
     record = db_session_basede26.execute(
@@ -159,7 +164,7 @@ def get_record(
 def update_record(
     record_id: int,
     payload: RecordUpdate,
-    _user: User = Depends(get_current_user),
+    _user: User = Depends(WRITE_ROLES),
     db_session_basede26: Session = Depends(get_db),
 ) -> Inspection:
     record = _get_or_404(db_session_basede26, record_id)
@@ -174,7 +179,7 @@ def update_record(
 @router.delete("/{record_id}", response_model=RecordOut)
 def delete_record(
     record_id: int,
-    _user: User = Depends(get_current_user),
+    _user: User = Depends(DELETE_ROLES),
     db_session_basede26: Session = Depends(get_db),
 ) -> Inspection:
     record = _get_or_404(db_session_basede26, record_id)

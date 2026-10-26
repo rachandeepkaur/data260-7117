@@ -14,16 +14,14 @@ code/ is unchanged (no application code modified).
 from __future__ import annotations
 
 import csv
+import json
 import random
-import re
 import socket
 import subprocess
 import sys
 import time
 from datetime import datetime, timezone
 from pathlib import Path
-
-import json
 
 import requests
 import yaml
@@ -86,7 +84,8 @@ def main() -> None:
     def _():
         ok = (PORT_BASE == 8000 + SID4 % 900 and PREFIX == f"s{SID4}" and SEED == SID4
               and VERIFY_SEED == 260000 + SID4 and DOMAIN_ID == SID4 % 8 and MONGO_DB == f"{PREFIX}_doc")
-        return ok, f"PORT_BASE={PORT_BASE} PREFIX={PREFIX} SEED={SEED} VERIFY_SEED={VERIFY_SEED} DOMAIN_ID={DOMAIN_ID} db={MONGO_DB}"
+        return ok, (f"PORT_BASE={PORT_BASE} PREFIX={PREFIX} SEED={SEED} VERIFY_SEED={VERIFY_SEED} "
+                    f"DOMAIN_ID={DOMAIN_ID} db={MONGO_DB}")
 
     @check("offline_test_suite", "HW6 offline tests (schemas, memory logic, probes, file memory, consolidation) pass")
     def _():
@@ -136,7 +135,8 @@ def main() -> None:
             return r.status_code == 200 and all(p in paths for p in need), \
                 f"GET /openapi.json -> {r.status_code}, HW6 routes present: {all(p in paths for p in need)}"
 
-        @check("doc_crud_lifecycle", "POST 201 -> GET 200 -> PUT 200 (updated_at moves) -> list 200 -> DELETE 200 -> GET 404")
+        @check("doc_crud_lifecycle", "POST 201 -> GET 200 -> PUT 200 (updated_at moves) -> list 200 -> DELETE 200 -> "
+                                     "GET 404")
         def _():
             body = {"facility_name": f"FA{tag} - VERIFY CAFE", "program_element": "ROUTINE HEALTH INSPECTION",
                     "inspection_date": "2026-10-20T09:30:00Z"}
@@ -155,7 +155,8 @@ def main() -> None:
                   and u.json()["status"] == "passed" and u.json()["updated_at"] > created["updated_at"])
             return ok, f"statuses={codes} after_delete={gone} default_status={created['status']}"
 
-        @check("doc_validation_errors", "missing/enum/type/date -> 422, bad ObjectId -> 400, malformed JSON -> 400, non-JSON -> 415")
+        @check("doc_validation_errors", "missing/enum/type/date -> 422, bad ObjectId -> 400, malformed JSON -> 400, "
+                                        "non-JSON -> 415")
         def _():
             good = {"facility_name": "A", "program_element": "ROUTINE HEALTH INSPECTION",
                     "inspection_date": "2026-10-20T09:30:00Z"}
@@ -165,7 +166,8 @@ def main() -> None:
                 requests.post(doc_url, json={**good, "facility_name": 5}, timeout=10).status_code,
                 requests.post(doc_url, json={**good, "inspection_date": "16/10/2026"}, timeout=10).status_code,
                 requests.get(f"{doc_url}/not-an-id", timeout=10).status_code,
-                requests.post(doc_url, data="{bad", headers={"Content-Type": "application/json"}, timeout=10).status_code,
+                requests.post(doc_url, data="{bad", headers={"Content-Type": "application/json"},
+                              timeout=10).status_code,
                 requests.post(doc_url, data="x", headers={"Content-Type": "text/plain"}, timeout=10).status_code,
             ]
             r = requests.post(doc_url, json={"description": "x"}, timeout=10).json()
@@ -183,9 +185,11 @@ def main() -> None:
                   {"short_term_count", "short_term", "session_summary", "lifetime_summary", "episodic_facts"}
                   <= set(b["memory_used"]) and b["usage"]["prompt_tokens"] > 0
                   and b["usage"]["components"]["system_primer"] > 0)
-            return ok, f"status={r.status_code} reply_chars={len(b.get('reply', ''))} prompt_tokens={b['usage']['prompt_tokens']}"
+            return ok, (f"status={r.status_code} reply_chars={len(b.get('reply', ''))} "
+                        f"prompt_tokens={b['usage']['prompt_tokens']}")
 
-        @check("memory_and_aggregate_endpoints", "GET /api/memory has the 2 messages; GET /api/aggregate counts them by date")
+        @check("memory_and_aggregate_endpoints", "GET /api/memory has the 2 messages; GET /api/aggregate counts them "
+                                                 "by date")
         def _():
             m = requests.get(f"{BASE_URL}/api/memory/{user_id}", timeout=10)
             a = requests.get(f"{BASE_URL}/api/aggregate/{user_id}", timeout=10)
@@ -194,7 +198,8 @@ def main() -> None:
             ok = (m.status_code == 200 and roles == ["user", "assistant"] and a.status_code == 200
                   and agg["total_messages"] == 2 and len(agg["daily_message_counts"]) == 1)
             missing = requests.get(f"{BASE_URL}/api/memory/{PREFIX}-nobody-{tag}", timeout=10).status_code
-            return ok and missing == 404, f"memory roles={roles} aggregate={agg.get('daily_message_counts')} unknown_user={missing}"
+            return ok and missing == 404, (f"memory roles={roles} aggregate={agg.get('daily_message_counts')} "
+                                           f"unknown_user={missing}")
     finally:
         if server is not None:
             server.terminate()
@@ -207,7 +212,8 @@ def main() -> None:
         except Exception:  # noqa: BLE001 - cleanup is best effort
             pass
 
-    @check("part3_raw_data", "raw/memory_turns.csv has 35 turns (30 conversation + 5 probes) for each of the 4 settings")
+    @check("part3_raw_data", "raw/memory_turns.csv has 35 turns (30 conversation + 5 probes) for each of the 4 "
+                             "settings")
     def _():
         with (RAW_DIR / "memory_turns.csv").open() as fh:
             rows = list(csv.DictReader(fh))
@@ -218,13 +224,15 @@ def main() -> None:
     @check("memory_probes_file", "memory_probes.yaml: 5 probes with criteria and a 1-5 rubric")
     def _():
         p = yaml.safe_load(PROBES_FILE.read_text())
-        ok = len(p["probes"]) == 5 and sorted(p["rubric"]) == [1, 2, 3, 4, 5] and all(x["criteria"] for x in p["probes"])
+        ok = (len(p["probes"]) == 5 and sorted(p["rubric"]) == [1, 2, 3, 4, 5]
+              and all(x["criteria"] for x in p["probes"]))
         return ok, f"{len(p['probes'])} probes, rubric levels {sorted(p['rubric'])}"
 
     @check("agent_md_instructions", "AGENT.md has >= 5 instructions across >= 3 required categories")
     def _():
         cats, current = {}, None
-        wanted = ["project description", "technology stack", "coding conventions", "testing approach", "prohibited actions"]
+        wanted = ["project description", "technology "
+                                         "stack", "coding conventions", "testing approach", "prohibited actions"]
         for line in AGENT_MD.read_text().splitlines():
             if line.startswith("## "):
                 current = line[3:].strip().lower()
@@ -232,7 +240,8 @@ def main() -> None:
                 cats[current] = cats.get(current, 0) + 1
         return sum(cats.values()) >= 5 and len(cats) >= 3, cats
 
-    @check("memory_consolidation_pair", "MEMORY.original.md is 55 lines and needs consolidation; consolidated is < 40 lines")
+    @check("memory_consolidation_pair", "MEMORY.original.md is 55 lines and needs consolidation; consolidated is < 40 "
+                                        "lines")
     def _():
         orig = (MEMORY_TEST_DIR / "MEMORY.original.md").read_text()
         cons = (MEMORY_TEST_DIR / "MEMORY.consolidated.md").read_text()

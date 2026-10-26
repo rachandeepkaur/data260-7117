@@ -52,12 +52,14 @@ def main() -> None:
         print(f"[{i:2d}] {user}: {msg}")
         print(f"     InspectBot: {body['reply']}")
         print(f"     memory used: short_term={mem['short_term_count']} msgs, session_summary="
-              f"{'yes' if mem['session_summary'] else 'no'}, lifetime_summary={'yes' if mem['lifetime_summary'] else 'no'}, "
+              f"{'yes' if mem['session_summary'] else 'no'}, "
+              f"lifetime_summary={'yes' if mem['lifetime_summary'] else 'no'}, "
               f"facts={[f['fact'] for f in mem['episodic_facts']]}")
         print(f"     updates: extracted={[f['fact'] for f in upd['facts_extracted']]} "
               f"session_summary_updated={upd['session_summary_updated']} "
               f"lifetime_summary_updated={upd['lifetime_summary_updated']}")
-        print(f"     tokens prompt={u['prompt_tokens']} completion={u['completion_tokens']} latency={u['latency_ms']:.0f}ms\n")
+        print(f"     tokens "
+              f"prompt={u['prompt_tokens']} completion={u['completion_tokens']} latency={u['latency_ms']:.0f}ms\n")
 
     memory = requests.get(f"{BASE_URL}/api/memory/{USER_ID}", timeout=30).json()
     aggregate = requests.get(f"{BASE_URL}/api/aggregate/{USER_ID}", timeout=30).json()

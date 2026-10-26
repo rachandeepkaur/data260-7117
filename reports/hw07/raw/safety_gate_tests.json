@@ -1,0 +1,182 @@
+{
+  "generated_at": "2026-10-26T14:31:18",
+  "safe_prefixes": [
+    "ls",
+    "pwd",
+    "cat",
+    "head",
+    "tail",
+    "wc",
+    "grep",
+    "rg",
+    "find",
+    "echo",
+    "sort",
+    "uniq",
+    "diff",
+    "stat",
+    "file",
+    "which",
+    "date",
+    "whoami",
+    "tree",
+    "git status",
+    "git diff",
+    "git log",
+    "git show",
+    "python --version",
+    "python3 --version"
+  ],
+  "draft_deny_patterns": [
+    "\\brm\\s+-rf\\b",
+    "^\\s*sudo\\b",
+    "\\bchmod\\b",
+    "\\bchown\\b",
+    "\\bdd\\s+if=",
+    "\\bmkfs",
+    ">\\s*/etc/"
+  ],
+  "results": [
+    {
+      "command": "ls -la",
+      "expected": "allow",
+      "draft_decision": "allow",
+      "draft_false_allow": false,
+      "is_destructive": false,
+      "decision": "allow",
+      "reason": "read-only command matching SAFE_PREFIXES",
+      "categories": [],
+      "correct": true,
+      "exit_code": 0,
+      "with_confirmation": "allow"
+    },
+    {
+      "command": "cat notes.txt",
+      "expected": "allow",
+      "draft_decision": "allow",
+      "draft_false_allow": false,
+      "is_destructive": false,
+      "decision": "allow",
+      "reason": "read-only command matching SAFE_PREFIXES",
+      "categories": [],
+      "correct": true,
+      "exit_code": 0,
+      "with_confirmation": "allow"
+    },
+    {
+      "command": "grep -n DEBUG app.py utils.py models.py",
+      "expected": "allow",
+      "draft_decision": "allow",
+      "draft_false_allow": false,
+      "is_destructive": false,
+      "decision": "allow",
+      "reason": "read-only command matching SAFE_PREFIXES",
+      "categories": [],
+      "correct": true,
+      "exit_code": 0,
+      "with_confirmation": "allow"
+    },
+    {
+      "command": "head -n 3 app.py",
+      "expected": "allow",
+      "draft_decision": "allow",
+      "draft_false_allow": false,
+      "is_destructive": false,
+      "decision": "allow",
+      "reason": "read-only command matching SAFE_PREFIXES",
+      "categories": [],
+      "correct": true,
+      "exit_code": 0,
+      "with_confirmation": "allow"
+    },
+    {
+      "command": "wc -l app.py",
+      "expected": "allow",
+      "draft_decision": "allow",
+      "draft_false_allow": false,
+      "is_destructive": false,
+      "decision": "allow",
+      "reason": "read-only command matching SAFE_PREFIXES",
+      "categories": [],
+      "correct": true,
+      "exit_code": 0,
+      "with_confirmation": "allow"
+    },
+    {
+      "command": "ls; rm -fr ./build",
+      "expected": "block",
+      "draft_decision": "allow",
+      "draft_false_allow": true,
+      "is_destructive": true,
+      "decision": "block",
+      "reason": "destructive (recursive_deletion) - requires explicit confirmation",
+      "categories": [
+        "recursive_deletion"
+      ],
+      "correct": true,
+      "exit_code": null,
+      "with_confirmation": "allow"
+    },
+    {
+      "command": "sudo chown root:wheel notes.txt",
+      "expected": "block",
+      "draft_decision": "block",
+      "draft_false_allow": false,
+      "is_destructive": true,
+      "decision": "block",
+      "reason": "destructive (permission_change, privilege_escalation) - requires explicit confirmation",
+      "categories": [
+        "permission_change",
+        "privilege_escalation"
+      ],
+      "correct": true,
+      "exit_code": null,
+      "with_confirmation": "allow"
+    },
+    {
+      "command": "dd if=/dev/zero of=/dev/disk2 bs=1m",
+      "expected": "block",
+      "draft_decision": "block",
+      "draft_false_allow": false,
+      "is_destructive": true,
+      "decision": "block",
+      "reason": "destructive (raw_device_write) - requires explicit confirmation",
+      "categories": [
+        "raw_device_write"
+      ],
+      "correct": true,
+      "exit_code": null,
+      "with_confirmation": "allow"
+    },
+    {
+      "command": "mkfs.ext4 /dev/sdb1",
+      "expected": "block",
+      "draft_decision": "block",
+      "draft_false_allow": false,
+      "is_destructive": true,
+      "decision": "block",
+      "reason": "destructive (filesystem_creation) - requires explicit confirmation",
+      "categories": [
+        "filesystem_creation"
+      ],
+      "correct": true,
+      "exit_code": null,
+      "with_confirmation": "allow"
+    },
+    {
+      "command": "cat notes.txt > /etc/hosts",
+      "expected": "block",
+      "draft_decision": "block",
+      "draft_false_allow": false,
+      "is_destructive": true,
+      "decision": "block",
+      "reason": "destructive (root_redirection) - requires explicit confirmation",
+      "categories": [
+        "root_redirection"
+      ],
+      "correct": true,
+      "exit_code": null,
+      "with_confirmation": "allow"
+    }
+  ]
+}

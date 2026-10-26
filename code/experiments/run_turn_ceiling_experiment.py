@@ -40,8 +40,9 @@ REPO_ROOT = Path(__file__).resolve().parent.parent.parent
 sys.path.insert(0, str(REPO_ROOT / "code"))
 sys.path.insert(0, str(REPO_ROOT / "src"))
 
-from agents_demo import InspectionSubmission  # noqa: E402
 import langgraph_agent as lg  # noqa: E402
+from agents_demo import InspectionSubmission  # noqa: E402
+
 from model_client import ModelClient  # noqa: E402
 
 REPORT_DIR = REPO_ROOT / "reports" / "hw02"
@@ -134,7 +135,9 @@ def summarize(results: List[Dict[str, Any]], ceiling: int) -> Dict[str, Any]:
         "completed": len(completed),
         "completion_rate": round(100 * len(completed) / len(runs), 1) if runs else 0.0,
         "mean_latency_ms": round(statistics.mean(r["latency_ms"] for r in runs), 1) if runs else 0.0,
-        "mean_latency_completed_ms": round(statistics.mean(r["latency_ms"] for r in completed), 1) if completed else None,
+        "mean_latency_completed_ms": (
+            round(statistics.mean(r["latency_ms"] for r in completed), 1) if completed else None
+        ),
     }
 
 
@@ -156,7 +159,8 @@ def write_report(results: List[Dict[str, Any]]) -> None:
     lines.append("")
     lines.append("## Results")
     lines.append("")
-    lines.append("| MAX_TURNS | Runs | Completed | Completion rate | Mean latency (all runs) | Mean latency (completed only) |")
+    lines.append("| MAX_TURNS | Runs | Completed | Completion rate | Mean latency (all runs) | Mean latency (completed "
+                 "only) |")
     lines.append("|---|---|---|---|---|---|")
     for ceiling in CEILINGS:
         s = summaries[ceiling]

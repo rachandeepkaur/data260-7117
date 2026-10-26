@@ -1,5 +1,4 @@
 from fastapi import APIRouter, Request
-
 from templating import templates
 
 # Create a router object

@@ -20,12 +20,11 @@ import csv
 import json
 import math
 
-from hw05_config import CALLS_PER_RATE, FAILURE_RATES, RAW_DIR, VERIFY_SEED
-
 from domain_tools.executor import run_tool
 from domain_tools.fixtures import make_fixture_repo
 from domain_tools.repository import FaultyRepository, SqlRepository
 from domain_tools.resilience import INTERACTIVE_POLICY, FaultInjector
+from hw05_config import CALLS_PER_RATE, FAILURE_RATES, RAW_DIR, VERIFY_SEED
 
 QUERIES = ["golden", "kitchen", "taqueria", "pho", "story rd", "bakery", "grill", "95122", "sushi", "cafe"]
 

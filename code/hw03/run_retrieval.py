@@ -115,7 +115,7 @@ def retrieve(technique: str, index: VectorStoreIndex, question: dict, k: int) ->
 
     rows = []
     table_rows = []
-    for rank, (node, cos_sim) in enumerate(zip(result_nodes, cos_sims), start=1):
+    for rank, (node, cos_sim) in enumerate(zip(result_nodes, cos_sims, strict=False), start=1):
         text = node.get_content()
         preview = text[:160].replace("\n", " ")
         window_text = node.metadata.get("window") if technique == "sentence_window" else None

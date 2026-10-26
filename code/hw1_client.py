@@ -3,7 +3,7 @@ from __future__ import annotations
 import json
 import sys
 from pathlib import Path
-from typing import Any, Dict, List
+from typing import Dict, List
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "src"))
 from model_client import ModelClient, ModelClientError  # noqa: E402
@@ -16,7 +16,7 @@ def load_system_prompt() -> str:
 
 
 class ConversationStats:
-    
+
     def __init__(self) -> None:
         self.turns = 0
         self.input_tokens = 0
@@ -39,7 +39,8 @@ def print_turn_usage(usage: Dict[str, int]) -> None:
 
 
 def print_stats(stats: ConversationStats, history: List[Dict[str, str]]) -> None:
-    # json.dumps(history) only reads the list - it doesn't mutate it, so this is safe to call as often as needed without affecting later turns.
+    # json.dumps(history) only reads the list - it doesn't mutate it, so this is safe to call as often as needed without
+    # affecting later turns.
     history_length = len(json.dumps(history))
     print("--- /stats ---")
     print(f"turns: {stats.turns}")
@@ -84,7 +85,7 @@ def main() -> None:
             reply = client.complete(history)
         except ModelClientError as exc:
             print(f"Model call failed: {exc}", file=sys.stderr)
-            history.pop() 
+            history.pop()
             continue
 
         history.append({"role": "assistant", "content": reply})

@@ -127,7 +127,7 @@ def test_run_agent_stops_at_max_steps_with_mock_model():
     with tempfile.TemporaryDirectory() as tmp:
         log_path = Path(tmp) / "agent_runs.jsonl"
         result = run_agent("loop forever", model=mock, max_steps=3, repo=make_fixture_repo(), log_path=log_path)
-        lines = [json.loads(l) for l in log_path.read_text().splitlines()]
+        lines = [json.loads(line) for line in log_path.read_text().splitlines()]
     assert result["stop_reason"] == "max_steps"
     assert result["steps"] == 3 and result["tool_calls"] == 3 and mock.calls == 3
     assert lines[-1]["event"] == "stop" and lines[-1]["stop_reason"] == "max_steps"

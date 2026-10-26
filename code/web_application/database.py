@@ -8,10 +8,9 @@ from __future__ import annotations
 
 import os
 
+import query_counter
 from sqlalchemy import create_engine
 from sqlalchemy.orm import DeclarativeBase, Session, sessionmaker
-
-import query_counter
 
 PREFIX = "s7117"
 DB_NAME = f"{PREFIX}_rel"

@@ -211,7 +211,8 @@ def consolidate(memory_text: str, planner: Optional[Planner] = None,
     lines = ["# MEMORY.md", "<!-- last_consolidated: placeholder -->",
              "<!-- Durable facts. Consolidated by code/file_memory/consolidation.py; [Fxx] = source lines "
              "of the version before consolidation. -->", "", "## Facts"]
-    lines += [f"- ({f['date']}) {f['text']}. [{'+'.join(f['sources'])}]" for f in sorted(out_facts, key=lambda f: f["date"])]
+    lines += [f"- ({f['date']}) {f['text']}. [{'+'.join(f['sources'])}]"
+              for f in sorted(out_facts, key=lambda f: f["date"])]
     if contradictions:
         lines += ["", "## Resolved contradictions"]
         for c in contradictions:

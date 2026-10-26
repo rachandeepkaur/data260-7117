@@ -1,8 +1,15 @@
-"""Password hashing and the server-side session dependency (HW4).
+"""Password hashing, JWT bearer authentication and role checks (HW7).
 
-Passwords are hashed with PBKDF2-HMAC-SHA256 (stdlib, salted). A successful
-login creates a row in the `sessions` table keyed by a random opaque token;
-the browser only ever receives that token, in an HttpOnly cookie.
+Passwords are hashed with PBKDF2-HMAC-SHA256 (stdlib, salted) and only the
+hash is stored in the MySQL `users` table. POST /auth/login verifies the
+password and returns a signed HS256 JWT access token; protected routes read
+it from `Authorization: Bearer <token>`.
+
+    get_current_user        any valid token          -> the User, else 401
+    require_roles(*roles)   valid token + role check -> the User, else 401 / 403
+
+HW4's server-side session cookie (sessions table) is kept only as history at
+the hw4 tag; no HW7 route accepts it.
 """
 from __future__ import annotations
 
@@ -11,29 +18,40 @@ import hmac
 import os
 import secrets
 from datetime import datetime, timedelta, timezone
+from typing import Callable
 
-from fastapi import Cookie, Depends, HTTPException
-from sqlalchemy import select
+import jwt
+from fastapi import Depends, HTTPException
+from fastapi.security import HTTPAuthorizationCredentials, HTTPBearer
 from sqlalchemy.orm import Session
 
 from database import get_db
-from models import User, UserSession
+from models import User
 
-SESSION_COOKIE_NAME = "s7117_session"
-SESSION_TTL = timedelta(hours=int(os.getenv("SESSION_TTL_HOURS", "8")))
-# Local dev runs over plain http; set COOKIE_SECURE=1 when served over https.
-COOKIE_SECURE = os.getenv("COOKIE_SECURE", "0") == "1"
+ROLES = ("reader", "writer", "moderator")
+
+# Set a real secret via env in any deployment; this default is for local dev only.
+JWT_SECRET = os.getenv("JWT_SECRET", "s7117-dev-only-jwt-secret-change-me-0123456789")
+JWT_ALGORITHM = "HS256"
+JWT_ISSUER = "s7117-inspections-api"
+ACCESS_TOKEN_TTL = timedelta(minutes=int(os.getenv("ACCESS_TOKEN_TTL_MINUTES", "30")))
 
 _PBKDF2_ITERATIONS = 200_000
 
+# auto_error=False: a missing header is turned into our own 401 (with
+# WWW-Authenticate: Bearer) instead of FastAPI's default response.
+bearer_scheme = HTTPBearer(auto_error=False, description="JWT from POST /auth/login")
+
 
 def hash_password(password: str) -> str:
+    """Salted PBKDF2-SHA256 hash in the form pbkdf2_sha256$<iterations>$<salt>$<digest>."""
     salt = secrets.token_hex(16)
     digest = hashlib.pbkdf2_hmac("sha256", password.encode(), bytes.fromhex(salt), _PBKDF2_ITERATIONS)
     return f"pbkdf2_sha256${_PBKDF2_ITERATIONS}${salt}${digest.hex()}"
 
 
 def verify_password(password: str, stored_hash: str) -> bool:
+    """Constant-time check of `password` against a hash from hash_password()."""
     try:
         _algo, iterations, salt, expected = stored_hash.split("$")
     except ValueError:
@@ -42,34 +60,65 @@ def verify_password(password: str, stored_hash: str) -> bool:
     return hmac.compare_digest(digest.hex(), expected)
 
 
-def utcnow() -> datetime:
-    # MySQL DATETIME has no timezone; store naive UTC consistently.
-    return datetime.now(timezone.utc).replace(tzinfo=None)
+def create_access_token(user: User, *, ttl: timedelta = ACCESS_TOKEN_TTL, now: datetime | None = None) -> str:
+    """Sign a JWT for `user`: sub=username, uid, role, iat, exp, iss."""
+    issued = now or datetime.now(timezone.utc)
+    claims = {
+        "sub": user.username,
+        "uid": user.id,
+        "role": user.role,
+        "iss": JWT_ISSUER,
+        "iat": issued,
+        "exp": issued + ttl,
+    }
+    return jwt.encode(claims, JWT_SECRET, algorithm=JWT_ALGORITHM)
 
 
-def create_session(db_session_basede26: Session, user: User) -> UserSession:
-    now = utcnow()
-    user_session = UserSession(
-        id=secrets.token_urlsafe(32),
-        user_id=user.id,
-        created_at=now,
-        expires_at=now + SESSION_TTL,
-    )
-    db_session_basede26.add(user_session)
-    db_session_basede26.commit()
-    return user_session
+def decode_access_token(token: str) -> dict:
+    """Verify signature, expiry and issuer; raise HTTPException 401 on any failure."""
+    try:
+        return jwt.decode(token, JWT_SECRET, algorithms=[JWT_ALGORITHM], issuer=JWT_ISSUER,
+                          options={"require": ["sub", "uid", "role", "exp", "iat"]})
+    except jwt.ExpiredSignatureError as exc:
+        raise _unauthorized("Token expired") from exc
+    except jwt.InvalidTokenError as exc:
+        raise _unauthorized("Invalid token") from exc
+
+
+def _unauthorized(detail: str) -> HTTPException:
+    """401 with the header RFC 6750 asks for."""
+    return HTTPException(status_code=401, detail=detail, headers={"WWW-Authenticate": "Bearer"})
 
 
 def get_current_user(
-    s7117_session: str | None = Cookie(default=None),
+    credentials: HTTPAuthorizationCredentials | None = Depends(bearer_scheme),
     db_session_basede26: Session = Depends(get_db),
 ) -> User:
-    """Resolve the session cookie to a user via the sessions table, or 401."""
-    if not s7117_session:
-        raise HTTPException(status_code=401, detail="Login required")
-    user_session = db_session_basede26.execute(
-        select(UserSession).where(UserSession.id == s7117_session)
-    ).scalar_one_or_none()
-    if user_session is None or user_session.expires_at <= utcnow():
-        raise HTTPException(status_code=401, detail="Login required")
-    return db_session_basede26.get(User, user_session.user_id)
+    """Resolve the bearer token to a User row, or 401 (missing, invalid, expired, deleted user)."""
+    if credentials is None or credentials.scheme.lower() != "bearer":
+        raise _unauthorized("Not authenticated")
+    claims = decode_access_token(credentials.credentials)
+    user = db_session_basede26.get(User, claims["uid"])
+    if user is None or user.username != claims["sub"]:
+        raise _unauthorized("Invalid token")
+    return user
+
+
+def require_roles(*allowed: str) -> Callable[..., User]:
+    """Dependency factory: valid token AND a role in `allowed`, else 403.
+
+    The role comes from the users table (not the token), so a role change
+    takes effect on the next request."""
+    unknown = set(allowed) - set(ROLES)
+    if unknown:
+        raise ValueError(f"unknown role(s): {sorted(unknown)}")
+
+    def dependency(user: User = Depends(get_current_user)) -> User:
+        if user.role not in allowed:
+            raise HTTPException(
+                status_code=403,
+                detail=f"Role '{user.role}' may not perform this action (requires: {', '.join(allowed)})",
+            )
+        return user
+
+    return dependency

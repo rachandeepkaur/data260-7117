@@ -11,11 +11,10 @@ from __future__ import annotations
 import argparse
 import json
 
-from hw05_config import RAW_DIR
-
 from domain_tools import MIN_AGGREGATE_GROUP, execute_tool
 from domain_tools.fixtures import make_fixture_repo
 from domain_tools.repository import SqlRepository
+from hw05_config import RAW_DIR
 
 
 def main() -> None:

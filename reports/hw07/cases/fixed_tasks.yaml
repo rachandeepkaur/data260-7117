@@ -1,0 +1,36 @@
+# HW7 Part 2 / 3 fixed verification cases (loaded by code/agent_loop/tasks.py).
+# Each case must take >= 2 tool calls with no follow-up prompt. Expected values
+# are NOT stored here: the strict verifier checks the answer against the run's
+# own tool observations, and the independent oracle recomputes the truth from
+# s7117_rel directly (SqlRepository), so the cases stay valid if the data is
+# re-seeded with SEED = 7117.
+tasks:
+  - id: A
+    kind: search_then_detail
+    params: {term: jade}
+    required_tools: [search_inspections, get_inspection]
+    prompt: >-
+      Search the inspections for facilities matching "jade", then look up the full details of the
+      first result. Tell me its inspection code, facility name, score, inspector and violations.
+
+  - id: B
+    kind: aggregate_then_example
+    params: {zip_code: "95122"}
+    required_tools: [inspection_stats, search_inspections]
+    prompt: >-
+      What are the average inspection score and the pass rate for restaurants in ZIP code 95122?
+      Then find one inspection in that ZIP code as a supporting example and give its inspection code
+      and score.
+
+  - id: C
+    kind: compare_two
+    params: {term: taqueria}
+    required_tools: [search_inspections, get_inspection, get_inspection]
+    prompt: >-
+      Compare the first two inspections returned by a search for "taqueria": look up both of them in
+      detail, then tell me both scores, which one scored higher, and by how many points.
+
+# Part 2.II error recovery: a nonexistent inspection id.
+error_recovery:
+  id: E
+  prompt: Show me the full details of inspection INS-999999.

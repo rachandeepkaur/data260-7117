@@ -61,7 +61,7 @@ def main() -> None:
     meals = asyncio.run(call_tools(str(MCP_SERVERS_DIR / "meals_server.py"), MEALS_CALLS))
     domain = asyncio.run(call_tools(str(MCP_SERVERS_DIR / "inspections_server.py"),
                                     [(t, i) for _, t, i in DOMAIN_CALLS]))
-    for (label, _, _), call in zip(DOMAIN_CALLS, domain["calls"]):
+    for (label, _, _), call in zip(DOMAIN_CALLS, domain["calls"], strict=False):
         call["label"] = label
 
     for server in (meals, domain):

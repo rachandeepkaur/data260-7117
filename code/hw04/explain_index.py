@@ -48,7 +48,7 @@ def index_exists(conn) -> bool:
 def explain(conn, sql: str) -> dict:
     result = conn.execute(text(f"EXPLAIN {sql}"))
     columns = list(result.keys())
-    rows = [dict(zip(columns, row)) for row in result]
+    rows = [dict(zip(columns, row, strict=False)) for row in result]
     analyze = conn.execute(text(f"EXPLAIN ANALYZE {sql}")).scalar()
     return {"columns": columns, "rows": rows, "analyze": analyze}
 
@@ -59,8 +59,8 @@ def format_table(plan: dict) -> str:
     cells = [[str(r.get(c)) for c in cols] for r in plan["rows"]]
     widths = [max(len(c), *(len(row[i]) for row in cells)) for i, c in enumerate(cols)]
     line = "+" + "+".join("-" * (w + 2) for w in widths) + "+"
-    out = [line, "| " + " | ".join(c.ljust(w) for c, w in zip(cols, widths)) + " |", line]
-    out += ["| " + " | ".join(v.ljust(w) for v, w in zip(row, widths)) + " |" for row in cells]
+    out = [line, "| " + " | ".join(c.ljust(w) for c, w in zip(cols, widths, strict=False)) + " |", line]
+    out += ["| " + " | ".join(v.ljust(w) for v, w in zip(row, widths, strict=False)) + " |" for row in cells]
     out.append(line)
     return "\n".join(out)
 
@@ -90,7 +90,7 @@ def main() -> None:
 
         add_index_sql = (HW04_CODE_DIR / "add_index.sql").read_text(encoding="utf-8")
         statement = [s for s in add_index_sql.split(";") if "CREATE INDEX" in s][0]
-        statement = "\n".join(l for l in statement.splitlines() if not l.strip().startswith("--")).strip()
+        statement = "\n".join(line for line in statement.splitlines() if not line.strip().startswith("--")).strip()
         conn.execute(text(statement))
         conn.commit()
         lines.append(f"# applied: {statement}")

@@ -40,6 +40,7 @@ sys.path.insert(0, str(REPO_ROOT / "src"))
 
 from agents_demo import InspectionSubmission  # noqa: E402
 from langgraph_agent import MAX_TURNS, _initial_state, build_graph  # noqa: E402
+
 from model_client import ModelClient  # noqa: E402
 
 REPORT_DIR = REPO_ROOT / "reports" / "hw02"
@@ -100,7 +101,8 @@ def run_one(app, client: ModelClient, submission: InspectionSubmission, task: st
 
     print(
         f"[{now_iso()}] --- run {run}/{TOTAL_RUNS} done ({latency_ms} ms): "
-        f"{'HIT CEILING' if hit_ceiling else ('APPROVED' if final_approved else 'ENDED WITHOUT APPROVAL (not at ceiling)')} "
+        f"{'HIT CEILING' if hit_ceiling else ('APPROVED' if final_approved else 'ENDED WITHOUT APPROVAL (not at '
+                                                                                'ceiling)')} "
         f"(final_turn_count={final_turn_count}, planner_attempts={planner_attempts}, "
         f"planner_failures={planner_failures}, reviewer_rejections={reviewer_rejections}) ---\n"
     )

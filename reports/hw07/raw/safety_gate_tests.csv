@@ -1,0 +1,11 @@
+command,expected,draft_decision,draft_false_allow,is_destructive,decision,reason,categories,correct,exit_code,with_confirmation
+ls -la,allow,allow,False,False,allow,read-only command matching SAFE_PREFIXES,[],True,0,allow
+cat notes.txt,allow,allow,False,False,allow,read-only command matching SAFE_PREFIXES,[],True,0,allow
+grep -n DEBUG app.py utils.py models.py,allow,allow,False,False,allow,read-only command matching SAFE_PREFIXES,[],True,0,allow
+head -n 3 app.py,allow,allow,False,False,allow,read-only command matching SAFE_PREFIXES,[],True,0,allow
+wc -l app.py,allow,allow,False,False,allow,read-only command matching SAFE_PREFIXES,[],True,0,allow
+ls; rm -fr ./build,block,allow,True,True,block,destructive (recursive_deletion) - requires explicit confirmation,['recursive_deletion'],True,,allow
+sudo chown root:wheel notes.txt,block,block,False,True,block,"destructive (permission_change, privilege_escalation) - requires explicit confirmation","['permission_change', 'privilege_escalation']",True,,allow
+dd if=/dev/zero of=/dev/disk2 bs=1m,block,block,False,True,block,destructive (raw_device_write) - requires explicit confirmation,['raw_device_write'],True,,allow
+mkfs.ext4 /dev/sdb1,block,block,False,True,block,destructive (filesystem_creation) - requires explicit confirmation,['filesystem_creation'],True,,allow
+cat notes.txt > /etc/hosts,block,block,False,True,block,destructive (root_redirection) - requires explicit confirmation,['root_redirection'],True,,allow

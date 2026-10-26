@@ -15,12 +15,11 @@ import argparse
 import json
 import time
 
-from hw05_config import RAW_DIR
-
 from domain_tools.executor import run_tool
 from domain_tools.fixtures import make_fixture_repo
 from domain_tools.repository import FaultyRepository, SqlRepository
 from domain_tools.resilience import INTERACTIVE_POLICY, TransientError
+from hw05_config import RAW_DIR
 
 
 class Script:

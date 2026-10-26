@@ -1,0 +1,132 @@
+{
+  "scenario": "membership_wins",
+  "description": "Frequent, longer rides: per month 20 classic trips of 12-40 min and 20 ebike trips of 10-30 min (real public trips).",
+  "csv": "reports/hw07/cases/bikeshare/membership_wins.csv",
+  "csv_sha256": "247bcb7e28353ec65b7a399d8c2a6b6179e128c5a83345222664128e8236e76e",
+  "rows": 520,
+  "months": 13,
+  "first_trip": "2025-09-01 10:26:32.727",
+  "last_trip": "2026-09-30 20:25:16.098",
+  "rides_per_month": 40.0,
+  "by_rideable_type": {
+    "electric_bike": 260,
+    "classic_bike": 260
+  },
+  "duration_min": {
+    "min": 10.08,
+    "max": 39.95,
+    "mean": 17.38
+  },
+  "sampling": {
+    "seed_rule": "random.Random(7117 + yyyymm)",
+    "range_bytes_per_archive": 1500000,
+    "quota_per_month": [
+      {
+        "rideable_type": "classic_bike",
+        "min_minutes": 12,
+        "max_minutes": 40,
+        "trips": 20
+      },
+      {
+        "rideable_type": "electric_bike",
+        "min_minutes": 10,
+        "max_minutes": 30,
+        "trips": 20
+      }
+    ]
+  },
+  "assumption": "Public data has no rider id; the sample is treated as one hypothetical rider's history.",
+  "sources": [
+    {
+      "month": "202509",
+      "url": "https://s3.amazonaws.com/baywheels-data/202509-baywheels-tripdata.csv.zip",
+      "archive_bytes": 19452466,
+      "rows_scanned": 31637,
+      "rows_sampled": 40
+    },
+    {
+      "month": "202510",
+      "url": "https://s3.amazonaws.com/baywheels-data/202510-baywheels-tripdata.zip",
+      "archive_bytes": 19482817,
+      "rows_scanned": 32499,
+      "rows_sampled": 40
+    },
+    {
+      "month": "202511",
+      "url": "https://s3.amazonaws.com/baywheels-data/202511-baywheels-tripdata.csv.zip",
+      "archive_bytes": 15318391,
+      "rows_scanned": 34283,
+      "rows_sampled": 40
+    },
+    {
+      "month": "202512",
+      "url": "https://s3.amazonaws.com/baywheels-data/202512-baywheels-tripdata.csv.zip",
+      "archive_bytes": 11057362,
+      "rows_scanned": 36723,
+      "rows_sampled": 40
+    },
+    {
+      "month": "202601",
+      "url": "https://s3.amazonaws.com/baywheels-data/202601-baywheels-tripdata.zip",
+      "archive_bytes": 14285182,
+      "rows_scanned": 37755,
+      "rows_sampled": 40
+    },
+    {
+      "month": "202602",
+      "url": "https://s3.amazonaws.com/baywheels-data/202602-baywheels-tripdata.csv.zip",
+      "archive_bytes": 14978993,
+      "rows_scanned": 34570,
+      "rows_sampled": 40
+    },
+    {
+      "month": "202603",
+      "url": "https://s3.amazonaws.com/baywheels-data/202603-baywheels-tripdata.csv.zip",
+      "archive_bytes": 20366610,
+      "rows_scanned": 37188,
+      "rows_sampled": 40
+    },
+    {
+      "month": "202604",
+      "url": "https://s3.amazonaws.com/baywheels-data/202604-baywheels-tripdata.zip",
+      "archive_bytes": 18530077,
+      "rows_scanned": 38015,
+      "rows_sampled": 40
+    },
+    {
+      "month": "202605",
+      "url": "https://s3.amazonaws.com/baywheels-data/202605-baywheels-tripdata.csv.zip",
+      "archive_bytes": 19785818,
+      "rows_scanned": 39199,
+      "rows_sampled": 40
+    },
+    {
+      "month": "202606",
+      "url": "https://s3.amazonaws.com/baywheels-data/202606-baywheels-tripdata.csv.zip",
+      "archive_bytes": 21918316,
+      "rows_scanned": 31299,
+      "rows_sampled": 40
+    },
+    {
+      "month": "202607",
+      "url": "https://s3.amazonaws.com/baywheels-data/202607-baywheels-tripdata.csv.zip",
+      "archive_bytes": 21977091,
+      "rows_scanned": 40442,
+      "rows_sampled": 40
+    },
+    {
+      "month": "202608",
+      "url": "https://s3.amazonaws.com/baywheels-data/202608-baywheels-tripdata.csv.zip",
+      "archive_bytes": 22607693,
+      "rows_scanned": 34203,
+      "rows_sampled": 40
+    },
+    {
+      "month": "202609",
+      "url": "https://s3.amazonaws.com/baywheels-data/202609-lyftbikes-tripdata.zip",
+      "archive_bytes": 22079484,
+      "rows_scanned": 39855,
+      "rows_sampled": 40
+    }
+  ]
+}

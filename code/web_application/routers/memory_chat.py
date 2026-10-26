@@ -9,12 +9,12 @@ validate input, map errors to status codes and shape the JSON.
 """
 from __future__ import annotations
 
+import memory_service
+from doc_schemas import ChatRequest, ChatResponse
 from fastapi import APIRouter, HTTPException, Query
 from pymongo import DESCENDING
 
-import memory_service
 import settings
-from doc_schemas import ChatRequest, ChatResponse
 from mongo import get_db
 
 router = APIRouter(tags=["chat-memory (MongoDB)"])

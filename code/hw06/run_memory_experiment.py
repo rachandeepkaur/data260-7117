@@ -29,6 +29,7 @@ from datetime import datetime
 
 import requests
 import yaml
+from probe_scoring import load_probes, score_reply
 
 from hw06_config import (
     BASE_URL,
@@ -39,7 +40,6 @@ from hw06_config import (
     RAW_DIR,
     WEB_APP_DIR,
 )
-from probe_scoring import load_probes, score_reply
 
 CSV_FIELDS = ["setting", "turn", "kind", "probe_id", "prompt_tokens", "completion_tokens",
               "tok_system_primer", "tok_long_term_summary", "tok_short_term_window", "tok_episodic_facts",
@@ -173,7 +173,8 @@ def main() -> None:
     scores = [{"setting": r["setting"], "probe_id": r["probe_id"], "question": r["message"], "reply": r["reply"],
                **r["probe_result"]} for r in all_rows if r["kind"] == "probe"]
     (RAW_DIR / "probe_scores.json").write_text(json.dumps(scores, indent=2))
-    print(f"\nwrote {len(all_rows)} rows -> {RAW_DIR / 'memory_turns.csv'}, {len(scores)} probe scores -> probe_scores.json")
+    print(f"\nwrote {len(all_rows)} rows -> {RAW_DIR / 'memory_turns.csv'}, {len(scores)} probe scores -> "
+          f"probe_scores.json")
 
 
 if __name__ == "__main__":

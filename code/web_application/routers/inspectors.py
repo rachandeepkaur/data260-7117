@@ -1,7 +1,8 @@
 """CRUD for inspectors, the related entity (HW5 Part 1).
 
 One inspector performs many inspections (inspections.inspector_id FK).
-Every route requires a logged-in user (server-side session cookie).
+Every route requires a JWT bearer token (HW7): list/read any role,
+create/update writer or moderator, delete moderator only.
     POST   /api/inspectors                     add an inspector
     GET    /api/inspectors?page=&page_size=    list with pagination (total in X-Total-Count)
     GET    /api/inspectors/{id}                one inspector
@@ -25,7 +26,7 @@ from sqlalchemy.orm import Session
 
 from database import get_db
 from models import Inspection, Inspector, User
-from routers.records import RecordOut
+from routers.records import DELETE_ROLES, WRITE_ROLES, RecordOut
 from security import get_current_user
 
 router = APIRouter(prefix="/api/inspectors", tags=["inspectors"])
@@ -80,7 +81,7 @@ def _commit(db_session_basede26: Session, inspector: Inspector) -> Inspector:
 @router.post("", response_model=InspectorOut, status_code=201)
 def create_inspector(
     payload: InspectorIn,
-    _user: User = Depends(get_current_user),
+    _user: User = Depends(WRITE_ROLES),
     db_session_basede26: Session = Depends(get_db),
 ) -> Inspector:
     inspector = Inspector(
@@ -119,7 +120,7 @@ def get_inspector(
 def update_inspector(
     inspector_id: int,
     payload: InspectorUpdate,
-    _user: User = Depends(get_current_user),
+    _user: User = Depends(WRITE_ROLES),
     db_session_basede26: Session = Depends(get_db),
 ) -> Inspector:
     inspector = _get_or_404(db_session_basede26, inspector_id)
@@ -131,7 +132,7 @@ def update_inspector(
 @router.delete("/{inspector_id}", response_model=InspectorOut)
 def delete_inspector(
     inspector_id: int,
-    _user: User = Depends(get_current_user),
+    _user: User = Depends(DELETE_ROLES),
     db_session_basede26: Session = Depends(get_db),
 ) -> InspectorOut:
     inspector = _get_or_404(db_session_basede26, inspector_id)

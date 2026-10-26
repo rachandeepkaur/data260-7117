@@ -71,7 +71,7 @@ def part3(sections: list[str]) -> None:
                           "Chat $/conv": f"{chat_cost:.5f}", "Chat $ x10k": f"{chat_cost * N_CONVERSATIONS:,.2f}",
                           "Incl. upkeep $ x10k": f"{total_cost * N_CONVERSATIONS:,.2f}",
                           "_total": total_cost * N_CONVERSATIONS, "_quality": p.probe_score.mean()})
-        probe_rows.append({"Setting": s, **{pid: int(v) for pid, v in zip(p.probe_id, p.probe_score)}})
+        probe_rows.append({"Setting": s, **{pid: int(v) for pid, v in zip(p.probe_id, p.probe_score, strict=False)}})
 
     main = pd.DataFrame(rows)
     sections.append("## Part 3.3/3.4 - Short-term memory size and compression policy\n\n"
@@ -168,7 +168,8 @@ def part4(sections: list[str]) -> None:
         df = pd.DataFrame([{"Category": c["category"], "AGENT.md rule": c["agent_md_rule"],
                             "Result": "PASS" if c["passed"] else "FAIL"} for c in r["static_checks"]])
         sections.append(f"## Part 4.4 - Generated function vs. AGENT.md\n\n{r['rules_followed']}/{r['rules_checked']} "
-                        f"rules followed; behaviour tests {'pass' if r['behaviour_ok'] else 'FAIL'}.\n\n" + md_table(df))
+                        f"rules followed; behaviour tests {'pass' if r['behaviour_ok'] else 'FAIL'}.\n\n"
+                        + md_table(df))
 
 
 def main() -> None:

@@ -12,11 +12,10 @@ import argparse
 import csv
 import json
 
-from hw05_config import AGENT_LOG, LOCAL_MODEL, RAW_DIR
-
 from domain_tools import execute_tool
 from domain_tools.agent import DEFAULT_MAX_STEPS, OllamaModel, run_agent
 from domain_tools.repository import SqlRepository
+from hw05_config import AGENT_LOG, LOCAL_MODEL, RAW_DIR
 
 
 def scenarios(repo) -> list[tuple[str, str, int]]:

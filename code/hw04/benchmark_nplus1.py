@@ -136,7 +136,8 @@ def main() -> None:
             writer.writerow({k: (";".join(map(str, v)) if isinstance(v, list) else v) for k, v in row.items()})
 
     print()
-    print(f"{'page':>5} {'version':<6} {'sql/req':>8} {'p50':>9} {'p95':>9} {'p99':>9} {'srv p50':>9} {'speedup':>8} same_data")
+    print(f"{'page':>5} {'version':<6} {'sql/req':>8} {'p50':>9} {'p95':>9} {'p99':>9} "
+          f"{'srv p50':>9} {'speedup':>8} same_data")
     for row in summary:
         print(f"{row['page_size']:>5} {row['version']:<6} {'/'.join(map(str, row['sql_stmts_per_req'])):>8} "
               f"{row['p50_ms']:>9.2f} {row['p95_ms']:>9.2f} {row['p99_ms']:>9.2f} {row['server_p50_ms']:>9.2f} "

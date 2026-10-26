@@ -32,12 +32,12 @@ from pathlib import Path
 from typing import Optional
 
 import numpy as np
+import token_counter
+from doc_schemas import ChatRequest, ExtractedFacts
 from pymongo import DESCENDING
 from pymongo.database import Database
 
 import settings
-import token_counter
-from doc_schemas import ChatRequest, ExtractedFacts
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent.parent / "src"))
 from model_client import ModelClient, ModelClientError  # noqa: E402  (HW1 model adapter)
@@ -187,7 +187,7 @@ def retrieve_episodes(db: Database, user_id: str, query_vec: list[float], k: int
     if not episodes or k <= 0:
         return []
     scores = cosine(np.asarray(query_vec), np.asarray([e["embedding"] for e in episodes]))
-    ranked = sorted(zip(episodes, scores), key=lambda p: p[1], reverse=True)
+    ranked = sorted(zip(episodes, scores, strict=False), key=lambda p: p[1], reverse=True)
     return [{"id": str(e["_id"]), "fact": e["fact"], "importance": e["importance"], "similarity": round(float(s), 4),
              "created_at": e["created_at"].isoformat()}
             for e, s in ranked[:k] if s >= min_similarity]
@@ -215,7 +215,7 @@ def store_episodes(db: Database, user_id: str, session_id: str, facts: list[dict
     existing = list(db[settings.EPISODES].find({"user_id": user_id}, {"embedding": 1, "importance": 1}))
     matrix = np.asarray([e["embedding"] for e in existing]) if existing else None
     stored = []
-    for fact, vec in zip(facts, vectors):
+    for fact, vec in zip(facts, vectors, strict=False):
         importance = float(round(fact["importance"], 3))
         if matrix is not None:
             sims = cosine(np.asarray(vec), matrix)

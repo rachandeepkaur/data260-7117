@@ -13,10 +13,10 @@ import json
 import random
 from datetime import datetime, timedelta, timezone
 
-from hw06_config import MONGO_DB, SEED
+from doc_schemas import CATEGORIES, STATUSES
 
 import settings
-from doc_schemas import CATEGORIES, STATUSES
+from hw06_config import MONGO_DB, SEED
 from mongo import VALIDATORS, ensure_collections, get_db
 
 FACILITIES = [

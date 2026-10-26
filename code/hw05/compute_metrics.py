@@ -37,7 +37,8 @@ def main() -> None:
             "Retry policy: 3 attempts max, 2 s timeout per attempt, backoff 0.1 s → 0.2 s (×2, cap 1 s). "
             "Raw rows: `raw/fault_injection_calls.csv`.",
             "",
-            "| Injected failure rate | Success rate | Mean latency (ms) | p99 latency (ms) | Attempts | Injected failures | Reproducible |",
+            "| Injected failure rate | Success rate | Mean latency (ms) | p99 latency (ms) | Attempts | Injected "
+            "failures | Reproducible |",
             "|---|---|---|---|---|---|---|",
         ]
         for s in summary:

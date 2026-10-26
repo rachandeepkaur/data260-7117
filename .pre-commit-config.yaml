@@ -1,0 +1,11 @@
+# HW7 Part 1.V - Ruff runs on every `git commit` (staged Python files only).
+#   one-time setup:  .venv/bin/pre-commit install
+#   run by hand:     .venv/bin/pre-commit run --all-files
+# Rules live in pyproject.toml [tool.ruff]. The hook does not auto-fix, so a
+# failing commit shows the problem; fix it (or `ruff check --fix`) and commit again.
+repos:
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.17.2
+    hooks:
+      - id: ruff
+        name: ruff (lint)

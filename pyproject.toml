@@ -1,0 +1,21 @@
+# Lint configuration (HW7 Part 1.V). Run: .venv/bin/ruff check .   |   pre-commit runs it on staged files.
+[tool.ruff]
+target-version = "py313"
+line-length = 120
+extend-exclude = ["code/react_client", "reports", ".claude"]
+
+[tool.ruff.lint]
+# pycodestyle errors/warnings, pyflakes, import sorting, bugbear, pyupgrade-lite
+select = ["E", "W", "F", "I", "B"]
+# E402: scripts insert code/ folders on sys.path before importing project modules (repo-wide pattern).
+ignore = ["E402"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["agent_loop", "bikeshare_agent", "domain_tools", "file_tools", "file_memory",
+                     "database", "models", "security", "routers", "settings", "mongo",
+                     "hw04_config", "hw05_config", "hw06_config", "hw07_config", "model_client"]
+
+[tool.ruff.lint.flake8-bugbear]
+# FastAPI declares dependencies/params as default-argument calls by design.
+extend-immutable-calls = ["fastapi.Depends", "fastapi.Query", "fastapi.File", "fastapi.Form", "fastapi.Body",
+                          "fastapi.Cookie", "fastapi.Header", "fastapi.Path"]

@@ -46,6 +46,7 @@ sys.path.insert(0, str(REPO_ROOT / "src"))
 
 from agents_demo import InspectionSubmission  # noqa: E402
 from langgraph_agent import MAX_TURNS, _initial_state, build_graph  # noqa: E402
+
 from model_client import ModelClient  # noqa: E402
 
 REPORT_DIR = REPO_ROOT / "reports" / "hw02"
@@ -81,7 +82,8 @@ def classify(planner_failures_before_success: int, succeeded: bool) -> str:
 
 def run_one(app, client: ModelClient, submission: InspectionSubmission, run: int) -> Dict[str, Any]:
     t_start = time.time()
-    initial_state = _initial_state(client, submission, strict=True, task="Summarize the inspection findings and extract 3 topical tags.")
+    initial_state = _initial_state(client, submission, strict=True, task="Summarize the inspection findings and "
+                                                                         "extract 3 topical tags.")
 
     planner_attempts = 0
     planner_failures_before_success = 0

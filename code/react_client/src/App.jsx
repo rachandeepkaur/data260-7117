@@ -20,7 +20,7 @@ export default function App() {
   const [authChecked, setAuthChecked] = useState(false);
   const { page, pageSize, error } = useSelector((state) => state.inspections);
 
-  // On load, ask the backend whether the session cookie is still valid.
+  // On load, ask the backend whether the stored JWT is still valid.
   useEffect(() => {
     api
       .me()
@@ -38,7 +38,7 @@ export default function App() {
     }
   }, [user, page, pageSize, dispatch]);
 
-  // Session expired or revoked server-side.
+  // Token expired or no longer valid.
   useEffect(() => {
     if (error?.status === 401) {
       setUser(null);
@@ -46,8 +46,8 @@ export default function App() {
     }
   }, [error, navigate]);
 
-  const login = async (email, password) => {
-    const { data } = await api.login(email, password);
+  const login = async (username, password) => {
+    const { data } = await api.login(username, password);
     setUser(data);
     navigate("/");
   };
@@ -72,7 +72,7 @@ export default function App() {
             <>
               <Link to="/create" className="btn btn-primary">Add Inspection Record</Link>
               <Link to="/update" className="btn">Update by ID</Link>
-              <span className="muted">Signed in as {user.name}</span>
+              <span className="muted">Signed in as {user.username} ({user.role})</span>
               <button className="btn" onClick={logout}>Logout</button>
             </>
           ) : (

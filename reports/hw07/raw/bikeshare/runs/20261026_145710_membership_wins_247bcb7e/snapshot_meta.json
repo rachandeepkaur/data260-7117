@@ -1,0 +1,10 @@
+[
+  {
+    "url": "https://www.lyft.com/bikes/bay-wheels/pricing",
+    "accessed_at": "2026-10-26T21:49:51+00:00",
+    "text_sha256": "482eb096df485e2990b6cb79e6331e9a18113cb1aa0cddf993977a48981a87bc",
+    "html_sha256": "40ff6263d53c767da084f2ff530d2462f8de48325dd25ba4c9bcbe52c926de04",
+    "text_file": "pricing_snapshot.txt",
+    "html_file": "pricing_snapshot.html"
+  }
+]

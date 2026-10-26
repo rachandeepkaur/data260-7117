@@ -29,15 +29,19 @@ def nplus1_section(tag: str = "") -> str:
         return ""
     rows = read_csv(path)
     table = md_table(
-        ["Page size", "Version", "SQL stmts/req", "p50 (ms)", "p95 (ms)", "p99 (ms)", "server p50 (ms)", "records / violations returned"],
+        ["Page size", "Version", "SQL stmts/req", "p50 (ms)", "p95 (ms)", "p99 (ms)", "server p50 "
+                                                                                      "(ms)", "records / violations "
+                                                                                              "returned"],
         [[r["page_size"], r["version"], r["sql_stmts_per_req"], r["p50_ms"], r["p95_ms"], r["p99_ms"],
           r["server_p50_ms"], f"{r['records_returned']} / {r['violations_returned']}"] for r in rows],
     )
     speed = md_table(
-        ["Page size", "naive p50 (ms)", "fixed p50 (ms)", "Speed-up (naive p50 / fixed p50)", "Queries saved/req", "Identical data"],
+        ["Page size", "naive p50 "
+                      "(ms)", "fixed p50 "
+                              "(ms)", "Speed-up (naive p50 / fixed p50)", "Queries saved/req", "Identical data"],
         [[n["page_size"], n["p50_ms"], f["p50_ms"], f"{float(n['p50_ms']) / float(f['p50_ms']):.2f}x",
           int(n["sql_stmts_per_req"]) - int(f["sql_stmts_per_req"]), n["same_data_both_versions"]]
-         for n, f in zip(rows[0::2], rows[1::2])],
+         for n, f in zip(rows[0::2], rows[1::2], strict=False)],
     )
     return f"{table}\n\n{speed}\n"
 

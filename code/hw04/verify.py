@@ -79,7 +79,8 @@ def main() -> None:
     def _():
         expected = (8817, "s7117", 7117, 267117, 5)
         actual = (PORT_BASE, PREFIX, SEED, VERIFY_SEED, DOMAIN_ID)
-        return actual == expected, f"PORT_BASE={PORT_BASE} PREFIX={PREFIX} SEED={SEED} VERIFY_SEED={VERIFY_SEED} DOMAIN_ID={DOMAIN_ID}"
+        return actual == expected, (f"PORT_BASE={PORT_BASE} PREFIX={PREFIX} SEED={SEED} "
+                                    f"VERIFY_SEED={VERIFY_SEED} DOMAIN_ID={DOMAIN_ID}")
 
     @check("mysql_schema", f"MySQL database {DB_NAME} has inspections, inspection_violations, users, sessions")
     def _():
@@ -98,7 +99,8 @@ def main() -> None:
             n_insp = conn.execute(text("SELECT COUNT(*) FROM inspections WHERE id <= 5000")).scalar()
             n_viol = conn.execute(text("SELECT COUNT(*) FROM inspection_violations")).scalar()
             orphans = conn.execute(text(
-                "SELECT COUNT(*) FROM inspection_violations v LEFT JOIN inspections i ON i.id = v.inspection_id WHERE i.id IS NULL"
+                "SELECT COUNT(*) FROM inspection_violations v LEFT JOIN inspections i ON i.id = v.inspection_id WHERE "
+                "i.id IS NULL"
             )).scalar()
         return n_insp >= 4990 and n_viol == 200 and orphans == 0, \
             f"inspections(id<=5000)={n_insp}, violations={n_viol}, orphan violations={orphans}"
@@ -107,7 +109,8 @@ def main() -> None:
     def _():
         from database import engine
         with engine.connect() as conn:
-            rows = conn.execute(text("SHOW INDEX FROM inspection_violations WHERE Key_name = 'ix_violations_inspection_id'")).fetchall()
+            rows = conn.execute(text("SHOW INDEX FROM inspection_violations WHERE Key_name = "
+                                     "'ix_violations_inspection_id'")).fetchall()
         return len(rows) == 1, f"{len(rows)} matching index row(s)"
 
     if not port_open(PORT_BASE):
@@ -126,9 +129,11 @@ def main() -> None:
         def _():
             r = requests.get(f"{BASE_URL}/openapi.json", timeout=10)
             paths = r.json().get("paths", {})
-            need = ["/api/records", "/api/records/{record_id}", "/api/auth/login", "/api/nplus1/naive", "/api/nplus1/fixed"]
+            need = ["/api/records", "/api/records/{record_id}", "/api/auth/login",
+                    "/api/nplus1/naive", "/api/nplus1/fixed"]
             return r.status_code == 200 and all(p in paths for p in need), \
-                f"GET /openapi.json -> {r.status_code}; started_by_verify={started_here}; required paths present={all(p in paths for p in need)}"
+                f"GET /openapi.json -> {r.status_code}; started_by_verify={started_here}; " \
+                f"required paths present={all(p in paths for p in need)}"
 
         @check("unauthenticated_blocked", "Record list and N+1 endpoints return 401 without a session cookie")
         def _():
@@ -147,7 +152,8 @@ def main() -> None:
             token = session.cookies.get("s7117_session", "")
             from database import engine
             with engine.connect() as conn:
-                in_db = conn.execute(text("SELECT COUNT(*) FROM sessions WHERE id = :t AND expires_at > UTC_TIMESTAMP()"),
+                in_db = conn.execute(text("SELECT COUNT(*) FROM sessions WHERE id = :t AND expires_at > "
+                                          "UTC_TIMESTAMP()"),
                                      {"t": token}).scalar()
             opaque = bool(token) and "@" not in token and DEMO_USER_EMAIL.split("@")[0] not in token
             bad = requests.post(f"{BASE_URL}/api/auth/login",
@@ -160,11 +166,14 @@ def main() -> None:
         def _():
             name = f"FA{rng.randint(1000000, 9999999)} - VERIFY {VERIFY_SEED}"
             steps = []
-            r = session.post(f"{BASE_URL}/api/records", json={"facility_name": name, "site_address": "1 VERIFY WAY, SAN JOSE, CA 95112"}, timeout=10)
+            r = session.post(f"{BASE_URL}/api/records",
+                             json={"facility_name": name, "site_address": "1 VERIFY WAY, SAN JOSE, CA 95112"},
+                             timeout=10)
             rid = r.json().get("id")
             steps.append(("POST", r.status_code))
             steps.append(("GET id", session.get(f"{BASE_URL}/api/records/{rid}", timeout=10).status_code))
-            r = session.put(f"{BASE_URL}/api/records/{rid}", json={"facility_name": name + " UPDATED", "site_address": "2 VERIFY WAY"}, timeout=10)
+            r = session.put(f"{BASE_URL}/api/records/{rid}",
+                            json={"facility_name": name + " UPDATED", "site_address": "2 VERIFY WAY"}, timeout=10)
             steps.append(("PUT", r.status_code))
             updated = r.json().get("facility_name", "").endswith("UPDATED")
             r = session.get(f"{BASE_URL}/api/records", params={"limit": 5}, timeout=10)
@@ -181,7 +190,8 @@ def main() -> None:
             codes = {i: session.get(f"{BASE_URL}/api/records/{i}", timeout=10).status_code for i in ids}
             return all(c == 200 for c in codes.values()), f"ids={ids}, status={list(codes.values())}"
 
-        @check("nplus1_naive_and_fixed", "Both list versions return the same data; naive issues N+1 statements, fixed issues 2")
+        @check("nplus1_naive_and_fixed", "Both list versions return the same data; naive issues N+1 statements, fixed "
+                                         "issues 2")
         def _():
             details = []
             ok = True
@@ -231,7 +241,8 @@ def main() -> None:
             rows = {(r["question_id"], r["config"]): r for r in csv.DictReader(fh)}
         refused = {q: rows[(q, "C")]["refused"] == "True" for q in ("Q5", "Q6")}
         answered = {q: rows[(q, "C")]["refused"] == "False" for q in ("Q1", "Q2", "Q3")}
-        corpus = len(list((REPO_ROOT / "data" / "corpus").glob("*.txt")) + list((REPO_ROOT / "data" / "corpus" / "hw04").glob("*.txt")))
+        corpus = len(list((REPO_ROOT / "data" / "corpus").glob("*.txt"))
+                     + list((REPO_ROOT / "data" / "corpus" / "hw04").glob("*.txt")))
         return all(refused.values()) and all(answered.values()) and corpus >= 5, \
             f"corpus_docs={corpus}, C refused={refused}, C answered={answered}"
 
@@ -248,7 +259,8 @@ def main() -> None:
     @check("app_code_unmodified", "Running verify did not modify tracked or untracked files under code/")
     def _():
         after = git("status", "--porcelain", "--", "code")
-        return after == code_status_before, "git status of code/ identical before and after" if after == code_status_before else "code/ changed during verify"
+        return after == code_status_before, ("git status of code/ identical before and after"
+                                             if after == code_status_before else "code/ changed during verify")
 
     try:
         commit = git("rev-parse", "HEAD")

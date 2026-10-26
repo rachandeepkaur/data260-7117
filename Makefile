@@ -150,3 +150,58 @@ verify-hw06:         ## HW6 smoke test -> reports/hw06/verification.json
 
 file-memory-demo-hw06: ## HW6 Part 4.3: scripted run of /help /memory /dream /compact (evidence for RUN_LOG)
 	$(call logged06,$(PY) $(HW06)/file_memory_chat.py --script reports/hw06/file_memory_demo_script.txt --no-auto-consolidate)
+
+# ---------------------------------------------------------------------------
+# HW7 - every logged target appends a timestamped copy of its console output
+# to reports/hw07/RUN_LOG.txt.
+HW07 = code/hw07
+LOG07 = reports/hw07/RUN_LOG.txt
+define logged07
+	@mkdir -p reports/hw07/raw
+	@printf '\n===== [%s] make %s (user: %s, commit %s) =====\n' "$$(date '+%Y-%m-%d %H:%M:%S %Z')" "$@" "$$(git config user.name)" "$$(git rev-parse --short HEAD)" | tee -a $(LOG07)
+	@set -o pipefail; $(1) 2>&1 | tee -a $(LOG07)
+endef
+
+.PHONY: migrate-hw07 auth-demo-hw07 lint precommit-install test-hw07 agent-demo-hw07 reliability-hw07 reflexion-hw07 bikeshare-scenarios-hw07 bikeshare-hw07 injection-hw07 file-tools-hw07 metrics-hw07 verify-hw07
+
+migrate-hw07:        ## HW7 Part 1: users.username/role + reader/writer/moderator users (run after migrate-hw05)
+	$(call logged07,$(PY) $(HW07)/migrate.py)
+
+auth-demo-hw07:      ## HW7 Part 1: login/me/RBAC status codes against the running API (make run-api first)
+	$(call logged07,$(PY) $(HW07)/part1_auth_demo.py)
+
+lint:                ## HW7 Part 1.V: Ruff over the repo (rules in pyproject.toml)
+	.venv/bin/ruff check .
+
+precommit-install:   ## HW7 Part 1.V: install the Ruff pre-commit hook into .git/hooks
+	.venv/bin/pre-commit install
+
+test-hw07:           ## HW7: offline tests (no MySQL/Ollama/network)
+	$(call logged07,$(PY) code/tests/test_hw07.py)
+
+agent-demo-hw07:     ## HW7 Part 2.I/II: tasks A, B, C + nonexistent-id recovery on qwen3:8b
+	$(call logged07,$(PY) $(HW07)/run_agent_demo.py)
+
+reliability-hw07:    ## HW7 Part 2.III: 21 tool-use attempts -> raw/toolcall_reliability.csv
+	$(call logged07,$(PY) $(HW07)/run_reliability.py)
+
+reflexion-hw07:      ## HW7 Part 3: original vs Reflexion loop -> raw/reflexion_comparison.csv, raw/reflections.jsonl
+	$(call logged07,$(PY) $(HW07)/run_reflexion_comparison.py)
+
+bikeshare-scenarios-hw07: ## HW7 Part 4: build the 2 scenario CSVs from public Bay Wheels trip data
+	$(call logged07,cd $(HW07) && ../../$(PY) build_bikeshare_scenarios.py)
+
+bikeshare-hw07:      ## HW7 Part 4: run the ReAct agent on both scenarios (headless; UI at /bikeshare)
+	$(call logged07,cd $(HW07) && ../../$(PY) run_bikeshare_scenarios.py)
+
+injection-hw07:      ## HW7 Part 5: 3 attacks x 3 defense configs on the local hostile fixture
+	$(call logged07,$(PY) $(HW07)/run_injection_attacks.py)
+
+file-tools-hw07:     ## HW7 Part 6: glob->search->read integration test + 10-command safety-gate test
+	$(call logged07,$(PY) $(HW07)/file_tools_demo.py)
+
+metrics-hw07:        ## HW7: rebuild reports/hw07/METRICS.md from raw/
+	$(call logged07,$(PY) $(HW07)/compute_metrics.py)
+
+verify-hw07:         ## HW7 smoke test -> reports/hw07/verification.json
+	$(call logged07,$(PY) $(HW07)/verify.py)

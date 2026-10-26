@@ -38,7 +38,7 @@ import time
 from datetime import datetime, timezone
 from functools import lru_cache
 from pathlib import Path
-from typing import Any, List
+from typing import List
 
 import yaml
 from fastembed import TextEmbedding
@@ -177,7 +177,8 @@ def engineer_context(chunks: list[dict]) -> tuple[list[dict], list[dict]]:
             dropped.append({**c, "drop_reason": f"irrelevant (score {c['score']:.3f} < floor {MIN_SCORE})"})
             continue
         if c["score"] < best - RELATIVE_MARGIN:
-            dropped.append({**c, "drop_reason": f"irrelevant (score {c['score']:.3f} > {RELATIVE_MARGIN} below best {best:.3f})"})
+            dropped.append({**c, "drop_reason": f"irrelevant (score {c['score']:.3f} > {RELATIVE_MARGIN} "
+                                                  f"below best {best:.3f})"})
             continue
         sh = _shingles(c["text"])
         dup_of = None
@@ -194,12 +195,15 @@ def engineer_context(chunks: list[dict]) -> tuple[list[dict], list[dict]]:
     return kept, dropped
 
 
-GROUNDED_SYSTEM = f"""You answer questions about restaurant food-safety inspections using ONLY the numbered sources provided.
+GROUNDED_SYSTEM = f"""You answer questions about restaurant food-safety inspections \
+using ONLY the numbered sources provided.
 Rules:
 1. Use only facts stated in the sources. Do not use outside knowledge, even if you know the answer.
 2. Cite the source number in square brackets after every fact, e.g. [Source 1] or [Source 1][Source 2].
-3. If the sources do not contain enough evidence to answer, reply with exactly this sentence and nothing else: "{REFUSAL}."
-4. If the question is ambiguous (for example the sources describe different counties or facilities), say that it is ambiguous and answer each case separately, with citations.
+3. If the sources do not contain enough evidence to answer, reply with exactly this sentence and nothing else: \
+"{REFUSAL}."
+4. If the question is ambiguous (for example the sources describe different counties or facilities), say that it is \
+ambiguous and answer each case separately, with citations.
 5. Be concise: at most 5 sentences."""
 
 
@@ -209,7 +213,8 @@ def prompt_for(config: str, question: str, chunks: list[dict]) -> tuple[list, di
         return [HumanMessage(content=question)], {"context_chunks": [], "dropped": []}
     if config == "B":
         context = "\n\n".join(c["text"] for c in chunks)
-        user = f"Use the following context to answer the question.\n\nContext:\n{context}\n\nQuestion: {question}\nAnswer:"
+        user = (f"Use the following context to answer the question.\n\nContext:\n{context}\n\n"
+                f"Question: {question}\nAnswer:")
         return [HumanMessage(content=user)], {"context_chunks": chunks, "dropped": []}
     kept, dropped = engineer_context(chunks)
     blocks = [
@@ -217,7 +222,8 @@ def prompt_for(config: str, question: str, chunks: list[dict]) -> tuple[list, di
         for i, c in enumerate(kept, start=1)
     ]
     user = "Sources:\n\n" + ("\n\n".join(blocks) if blocks else "(no relevant sources)") + f"\n\nQuestion: {question}"
-    return [SystemMessage(content=GROUNDED_SYSTEM), HumanMessage(content=user)], {"context_chunks": kept, "dropped": dropped}
+    messages = [SystemMessage(content=GROUNDED_SYSTEM), HumanMessage(content=user)]
+    return messages, {"context_chunks": kept, "dropped": dropped}
 
 
 # ---------------------------------------------------------------- LLM
@@ -240,7 +246,8 @@ def run_config(config: str, question: dict, chunks: list[dict], k: int) -> dict:
     context_text = "\n\n".join(c["text"] for c in ctx["context_chunks"])
     if config == "C" and not ctx["context_chunks"]:
         # Nothing survived filtering: refuse deterministically, no LLM call.
-        answer, meta = f"{REFUSAL}.", {"llm_seconds": 0.0, "input_tokens": 0, "output_tokens": 0, "refused_by_filter": True}
+        answer = f"{REFUSAL}."
+        meta = {"llm_seconds": 0.0, "input_tokens": 0, "output_tokens": 0, "refused_by_filter": True}
     else:
         answer, meta = ask(messages)
         meta["refused_by_filter"] = False
@@ -249,9 +256,12 @@ def run_config(config: str, question: dict, chunks: list[dict], k: int) -> dict:
         "question_type": question["type"],
         "config": config,
         "top_k": k,
-        "retrieved": [{kk: c[kk] for kk in ("rank", "score", "source", "chunk_id")} for c in chunks] if config != "A" else [],
-        "context_chunks": [{kk: c[kk] for kk in ("rank", "score", "source", "chunk_id")} for c in ctx["context_chunks"]],
-        "dropped": [{kk: c[kk] for kk in ("rank", "score", "source", "chunk_id", "drop_reason")} for c in ctx["dropped"]],
+        "retrieved": ([{kk: c[kk] for kk in ("rank", "score", "source", "chunk_id")} for c in chunks]
+                      if config != "A" else []),
+        "context_chunks": [{kk: c[kk] for kk in ("rank", "score", "source", "chunk_id")}
+                           for c in ctx["context_chunks"]],
+        "dropped": [{kk: c[kk] for kk in ("rank", "score", "source", "chunk_id", "drop_reason")}
+                    for c in ctx["dropped"]],
         "context_tokens": n_tokens(context_text),
         "answer": answer,
         **meta,
@@ -268,10 +278,12 @@ def _matches(pattern: str, text: str) -> bool:
 def evaluate(question: dict, row: dict, context_chunks: list[dict], context_text: str) -> dict:
     """Automatic, rule-based scoring :
 
-    correct_retrieval  every retrieval_group regex matches some chunk placed in the prompt (n/a for A and for must-refuse questions)
+    correct_retrieval  every retrieval_group regex matches some chunk placed in the prompt (n/a for A and for \
+must-refuse questions)
     refused            answer matches REFUSAL_PATTERN
     correct_answer     must_refuse -> refused; else not refused and every answer_group matches
-    grounded           refused -> True; must_refuse but answered -> False; A -> n/a (no context); else every number in the answer appears in the context, and (C only)
+    grounded           refused -> True; must_refuse but answered -> False; A -> n/a (no context); else every number in \
+the answer appears in the context, and (C only)
                        every [Source n] cited exists in the prompt
     format_compliant   exact refusal sentence, or at least one valid [Source n] citation
     refused_when_needed must_refuse -> refused; else -> not refused
@@ -352,7 +364,8 @@ def summarize(rows: list[dict], questions: list[dict]) -> list[dict]:
             "faithfulness (grounded)": rate([r["grounded"] for r in subset]),
             "format compliance": rate([r["format_compliant"] for r in subset]),
             "robustness (Q4 flagged + Q5/Q6 refused)": rate(robust),
-            "refused when needed (Q5/Q6)": rate([r["refused"] for r in subset if by_id[r["question_id"]]["must_refuse"]]),
+            "refused when needed "
+            "(Q5/Q6)": rate([r["refused"] for r in subset if by_id[r["question_id"]]["must_refuse"]]),
             "false refusals (Q1-Q4)": sum(r["refused"] for r in subset if not by_id[r["question_id"]]["must_refuse"]),
             "mean context tokens": round(sum(r["context_tokens"] for r in subset) / max(1, len(subset)), 1),
             "mean LLM seconds": round(sum(r["llm_seconds"] for r in subset) / max(1, len(subset)), 1),
@@ -445,7 +458,8 @@ def main() -> None:
             rows.append(row)
             log(f"\n--- {q['id']} config {config} ({row['llm_seconds']}s, context {row['context_tokens']} tokens) ---")
             if config == "C":
-                log(f"    kept={[c['chunk_id'] for c in row['context_chunks']]} dropped={[(c['chunk_id'], c['drop_reason']) for c in row['dropped']]}")
+                log(f"    kept={[c['chunk_id'] for c in row['context_chunks']]} "
+                    f"dropped={[(c['chunk_id'], c['drop_reason']) for c in row['dropped']]}")
             log(row["answer"])
             log(f"    -> correct_retrieval={row['correct_retrieval']} correct_answer={row['correct_answer']} "
                 f"grounded={row['grounded']} refused={row['refused']} format={row['format_compliant']}")

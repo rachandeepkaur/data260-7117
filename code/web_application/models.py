@@ -9,10 +9,12 @@
   (FK ON DELETE RESTRICT, no cascade).
 - inspection_violations: the related test data for the N+1 experiment
   (200 rows, each belonging to one inspection).
-- users / sessions: authentication and server-side session storage.
+- users: login accounts for JWT auth (HW7 adds username + role; only the
+  PBKDF2 password hash is stored). The HW4 `sessions` table still exists in
+  MySQL but is no longer mapped or used (kept as history at the hw4 tag).
 
-Tables are created by code/hw04/schema.sql and code/hw05/migration.sql (the
-committed migrations), not by Base.metadata.create_all(), so the index
+Tables are created by code/hw04/schema.sql, code/hw05/migration.sql and
+code/hw07/migration.sql (the committed migrations), not by Base.metadata.create_all(), so the index
 experiment starts from a known state.
 """
 from __future__ import annotations
@@ -91,18 +93,9 @@ class User(Base):
     __tablename__ = "users"
 
     id: Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)
+    username: Mapped[str] = mapped_column(String(64), nullable=False, unique=True)
     name: Mapped[str] = mapped_column(String(120), nullable=False)
     email: Mapped[str] = mapped_column(String(255), nullable=False, unique=True)
     password_hash: Mapped[str] = mapped_column(String(255), nullable=False)
-
-
-class UserSession(Base):
-    __tablename__ = "sessions"
-
-    # The opaque session token itself; the browser cookie holds only this value.
-    id: Mapped[str] = mapped_column(String(64), primary_key=True)
-    user_id: Mapped[int] = mapped_column(ForeignKey("users.id", ondelete="CASCADE"), nullable=False)
-    created_at: Mapped[datetime] = mapped_column(DateTime, nullable=False)
-    expires_at: Mapped[datetime] = mapped_column(DateTime, nullable=False)
-
-    user: Mapped[User] = relationship()
+    # reader | writer | moderator (CHECK constraint in code/hw07/migration.sql)
+    role: Mapped[str] = mapped_column(String(16), nullable=False, server_default="reader")

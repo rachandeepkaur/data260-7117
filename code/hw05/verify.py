@@ -22,6 +22,7 @@ import time
 from datetime import datetime, timezone
 
 import requests
+from mcp_tool_calls import call_tools
 
 from hw05_config import (
     BASE_URL,
@@ -41,7 +42,6 @@ from hw05_config import (
     VERIFY_SEED,
     WEB_APP_DIR,
 )
-from mcp_tool_calls import call_tools
 
 checks: list[dict] = []
 
@@ -119,7 +119,8 @@ def main() -> None:
             and {"id", "name", "area", "category", "thumb"} <= set(out["results"][0])
         return ok, f"tools={res['tools']} count={out.get('count')}"
 
-    @check("domain_mcp_server", "s7117-inspections MCP server answers valid calls ok and invalid calls with an envelope error")
+    @check("domain_mcp_server", "s7117-inspections MCP server answers valid calls ok and invalid calls with an "
+                                "envelope error")
     def _():
         res = asyncio.run(call_tools(str(MCP_SERVERS_DIR / "inspections_server.py"), [
             ("search_inspections", {"query": "golden", "limit": 3}),
@@ -141,7 +142,8 @@ def main() -> None:
             n_inspectors = conn.execute(text("SELECT COUNT(*) FROM inspectors")).scalar()
             rule = conn.execute(text(
                 "SELECT DELETE_RULE FROM information_schema.referential_constraints "
-                "WHERE constraint_schema = :db AND constraint_name = 'fk_inspections_inspector'"), {"db": DB_NAME}).scalar()
+                "WHERE constraint_schema = :db AND constraint_name = "
+                "'fk_inspections_inspector'"), {"db": DB_NAME}).scalar()
             uniq = conn.execute(text(
                 "SELECT COUNT(*) FROM information_schema.statistics WHERE table_schema = :db "
                 "AND table_name = 'inspections' AND index_name = 'uq_inspections_code' AND non_unique = 0"),
@@ -183,7 +185,8 @@ def main() -> None:
             codes.append(r.status_code)
             iid = r.json()["id"]
             codes.append(s.get(f"{BASE_URL}/api/inspectors/{iid}", timeout=10).status_code)
-            codes.append(s.put(f"{BASE_URL}/api/inspectors/{iid}", json={"district": "Updated"}, timeout=10).status_code)
+            codes.append(s.put(f"{BASE_URL}/api/inspectors/{iid}", json={"district": "Updated"},
+                               timeout=10).status_code)
             codes.append(s.get(f"{BASE_URL}/api/inspectors?page=1&page_size=5", timeout=10).status_code)
             r = s.post(f"{BASE_URL}/api/records", json={
                 "inspection_code": f"INS-9{tag[:5]}", "facility_name": f"FA{tag} - VERIFY CAFE",
@@ -197,7 +200,8 @@ def main() -> None:
             gone = s.get(f"{BASE_URL}/api/inspectors/{iid}", timeout=10).status_code
             ok = (codes == [201, 200, 200, 200, 201, 200, 200] and rel.status_code == 200
                   and [x["id"] for x in rel.json()] == [rid] and blocked == 409 and gone == 404)
-            return ok, f"statuses={codes} relationship={rel.status_code} delete_while_referenced={blocked} after_delete={gone}"
+            return ok, (f"statuses={codes} relationship={rel.status_code} "
+                        f"delete_while_referenced={blocked} after_delete={gone}")
 
         @check("validation_and_constraints", "Bad email/code -> 422, duplicate code/email -> 409, missing -> 404")
         def _():

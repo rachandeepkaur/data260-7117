@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Navigate } from "react-router-dom";
 
 export default function Login({ onLogin, user }) {
-  const [email, setEmail] = useState("");
+  const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [submitting, setSubmitting] = useState(false);
@@ -14,7 +14,7 @@ export default function Login({ onLogin, user }) {
     setSubmitting(true);
     setError("");
     try {
-      await onLogin(email, password);
+      await onLogin(username, password);
     } catch (err) {
       setError(err.message);
     } finally {
@@ -27,8 +27,8 @@ export default function Login({ onLogin, user }) {
       <h2>Inspector Login</h2>
       {error && <div className="alert">{error}</div>}
       <label>
-        Email
-        <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} required autoFocus />
+        Username
+        <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} required autoFocus />
       </label>
       <label>
         Password

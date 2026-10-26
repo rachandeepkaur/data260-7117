@@ -1,0 +1,22 @@
+attempt,task_id,seed,stop_reason,tool_calls,iterations,first_try_turns,first_try_ok,repair_turns,repaired_ok,malformed_arguments,unknown_tool,text_instead_of_tool,lost_chain,chain_complete,verifier_passed,repairs,total_tokens,latency_ms,tools_used
+1,A,267117,final_answer,2,3,2,2,0,0,0,0,0,0,True,True,0,2408,50487.7,search_inspections > get_inspection
+2,B,267117,final_answer,2,2,1,1,0,0,0,0,0,0,True,True,0,1528,39922.2,inspection_stats > search_inspections
+3,C,267117,final_answer,3,4,3,3,0,0,0,0,0,0,True,True,0,3790,59026.3,search_inspections > get_inspection > get_inspection
+4,A,267118,final_answer,2,3,2,2,0,0,0,0,0,0,True,True,0,2410,46327.9,search_inspections > get_inspection
+5,B,267118,final_answer,2,2,1,1,0,0,0,0,0,0,True,True,0,1528,36567.2,inspection_stats > search_inspections
+6,C,267118,final_answer,3,4,3,3,0,0,0,0,0,0,True,True,0,3782,57245.4,search_inspections > get_inspection > get_inspection
+7,A,267119,final_answer,2,3,2,2,0,0,0,0,0,0,True,True,0,2410,49744.6,search_inspections > get_inspection
+8,B,267119,final_answer,2,2,1,1,0,0,0,0,0,0,True,True,0,1528,57038.7,inspection_stats > search_inspections
+9,C,267119,final_answer,3,4,3,3,0,0,0,0,0,0,True,False,0,3740,132941.5,search_inspections > get_inspection > get_inspection
+10,A,267120,final_answer,2,3,2,2,0,0,0,0,0,0,True,True,0,2406,108754.6,search_inspections > get_inspection
+11,B,267120,final_answer,2,2,1,1,0,0,0,0,0,0,True,True,0,1528,68536.3,inspection_stats > search_inspections
+12,C,267120,final_answer,3,4,3,3,0,0,0,0,0,0,True,True,0,3782,129989.4,search_inspections > get_inspection > get_inspection
+13,A,267121,final_answer,2,3,2,2,0,0,0,0,0,0,True,True,0,2410,99926.1,search_inspections > get_inspection
+14,B,267121,final_answer,2,2,1,1,0,0,0,0,0,0,True,True,0,1528,77968.5,inspection_stats > search_inspections
+15,C,267121,final_answer,3,4,3,3,0,0,0,0,0,0,True,True,0,3782,188280.3,search_inspections > get_inspection > get_inspection
+16,A,267122,final_answer,2,3,2,2,0,0,0,0,0,0,True,True,0,2382,80341.2,search_inspections > get_inspection
+17,B,267122,final_answer,2,2,1,1,0,0,0,0,0,0,True,True,0,1528,94214.1,inspection_stats > search_inspections
+18,C,267122,final_answer,3,4,3,3,0,0,0,0,0,0,True,True,0,3782,231090.0,search_inspections > get_inspection > get_inspection
+19,A,267123,final_answer,2,3,2,2,0,0,0,0,0,0,True,True,0,2382,108302.0,search_inspections > get_inspection
+20,B,267123,final_answer,2,2,1,1,0,0,0,0,0,0,True,True,0,1527,79469.6,inspection_stats > search_inspections
+21,C,267123,final_answer,3,4,3,3,0,0,0,0,0,0,True,True,0,3782,149463.9,search_inspections > get_inspection > get_inspection

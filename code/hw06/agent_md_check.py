@@ -96,7 +96,8 @@ def static_checks(code: str) -> list[dict]:
         rule("Every module starts with a docstring", "Coding conventions",
              ast.get_docstring(tree) is not None, "module docstring present" if ast.get_docstring(tree) else "missing"),
         rule("... and `from __future__ import annotations`", "Coding conventions",
-             any(isinstance(n, ast.ImportFrom) and n.module == "__future__" and any(a.name == "annotations" for a in n.names)
+             any(isinstance(n, ast.ImportFrom) and n.module == "__future__"
+                 and any(a.name == "annotations" for a in n.names)
                  for n in tree.body), "checked top-level imports"),
         rule("Type hints on all parameters and on the return value", "Coding conventions",
              all(typed(f) for f in lib_funcs), {f.name: typed(f) for f in lib_funcs}),
@@ -113,7 +114,8 @@ def static_checks(code: str) -> list[dict]:
              "raise found, no bare except" if not any(isinstance(n, ast.ExceptHandler) and n.type is None
                                                       for n in ast.walk(tree)) else "bare except found"),
         rule("Never return None to signal an error", "Coding conventions",
-             not any(isinstance(n, ast.Return) and (n.value is None or (isinstance(n.value, ast.Constant) and n.value.value is None))
+             not any(isinstance(n, ast.Return)
+                     and (n.value is None or (isinstance(n.value, ast.Constant) and n.value.value is None))
                      for f in lib_funcs for n in ast.walk(f)), "no `return None` in library functions"),
         rule("Library code does not print", "Coding conventions",
              not any(isinstance(n.func, ast.Name) and n.func.id == "print" for f in lib_funcs for n in ast.walk(f)
@@ -167,7 +169,8 @@ def main() -> None:
               "usage": client.last_usage, "static_checks": checks, "behaviour": behaviour,
               "rules_followed": passed, "rules_checked": len(checks), "behaviour_ok": behaviour_ok}
     (RAW_DIR / "agent_md_check.json").write_text(json.dumps(result, indent=2))
-    rows = "\n".join(f"| {c['category']} | {c['agent_md_rule']} | {'PASS' if c['passed'] else 'FAIL'} |" for c in checks)
+    rows = "\n".join(f"| {c['category']} | {c['agent_md_rule']} | {'PASS' if c['passed'] else 'FAIL'} |"
+                     for c in checks)
     brows = "\n".join(f"| {k} | {v} |" for k, v in behaviour.items())
     (OUT_DIR / "AGENT_MD_CHECK.md").write_text(
         f"# AGENT.md compliance of a generated function\n\nGenerated {datetime.now():%Y-%m-%d %H:%M} by "

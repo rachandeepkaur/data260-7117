@@ -96,7 +96,8 @@ def check_raw_retrieval_data() -> dict:
     if not runs_path.exists():
         return {
             "name": "raw_retrieval_data_shape",
-            "description": f"raw/retrieval_runs.csv has all {len(EXPECTED_TECHNIQUES)} techniques x 5 questions x top-{EXPECTED_TOP_K}",
+            "description": f"raw/retrieval_runs.csv has all {len(EXPECTED_TECHNIQUES)} techniques x 5 questions x "
+                           f"top-{EXPECTED_TOP_K}",
             "passed": False,
             "evidence": "raw/retrieval_runs.csv not found",
         }
@@ -111,9 +112,11 @@ def check_raw_retrieval_data() -> dict:
     )
     return {
         "name": "raw_retrieval_data_shape",
-        "description": f"raw/retrieval_runs.csv has all {len(EXPECTED_TECHNIQUES)} techniques x 5 questions x top-{EXPECTED_TOP_K}",
+        "description": f"raw/retrieval_runs.csv has all {len(EXPECTED_TECHNIQUES)} techniques x 5 questions x "
+                       f"top-{EXPECTED_TOP_K}",
         "passed": passed,
-        "evidence": f"techniques={sorted(techniques_seen)}, questions_per_technique={question_counts}, rows_per_technique={rows_per_technique}",
+        "evidence": f"techniques={sorted(techniques_seen)}, questions_per_technique={question_counts}, "
+                    f"rows_per_technique={rows_per_technique}",
     }
 
 
